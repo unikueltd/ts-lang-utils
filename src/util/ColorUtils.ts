@@ -47,23 +47,25 @@ export abstract class ColorUtils {
      *
      * @example
      * ```ts
+     * ColorUtils.hexToRgb('#fff');    // 'rgb(255, 255, 255)'
      * ColorUtils.hexToRgb('#ff0000');    // 'rgb(255, 0, 0)'
      * ```
      */
     public static hexToRgb(hex?: string): string | undefined {
+        // noinspection DuplicatedCode
         if (!hex) {
             return undefined;
         }
         const rgx = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
         const rep = hex.replace(rgx, (m, r, g, b) => r + r + g + g + b + b );
-        const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(rep);
-        if (!rgb) {
+        const arr = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(rep);
+        if (!arr || arr.length !== 4) {
             return undefined;
         }
-        const r = Number.parseInt(rgb[1], 16);
-        const g = Number.parseInt(rgb[2], 16);
-        const b = Number.parseInt(rgb[3], 16);
-        return `rgb(${r}, ${g}, ${b})`;
+        const hexR = Number.parseInt(arr[1], 16);
+        const hexG = Number.parseInt(arr[2], 16);
+        const hexB = Number.parseInt(arr[3], 16);
+        return `rgb(${hexR}, ${hexG}, ${hexB})`;
     }
 
     /**
@@ -135,5 +137,35 @@ export abstract class ColorUtils {
             return Math.round(255 * color).toString(16).padStart(2, '0');
         };
         return `#${f(0)}${f(8)}${f(4)}`;
+    }
+
+    /**
+     * Returns the reversed hex color from the given color
+     *
+     * @param hex the hex color to inspect
+     *
+     * @returns the reversed hex color from the given color
+     *
+     * @example
+     * ```ts
+     * ColorUtils.reverseHex('#000');    // 'rgb(255, 255, 255)'
+     * ColorUtils.reverseHex('#fff');    // 'rgb(0, 0, 0)'
+     * ```
+     */
+    public static reverseHex(hex?: string): string | undefined {
+        // noinspection DuplicatedCode
+        if (!hex) {
+            return undefined;
+        }
+        const rgx = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+        const rep = hex.replace(rgx, (m, r, g, b) => r + r + g + g + b + b );
+        const arr = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(rep);
+        if (!arr || arr.length !== 4) {
+            return undefined;
+        }
+        const hexR = (255 - Number.parseInt(arr[1], 16)).toString(16).padStart(2, '0');
+        const hexG = (255 - Number.parseInt(arr[2], 16)).toString(16).padStart(2, '0');
+        const hexB = (255 - Number.parseInt(arr[3], 16)).toString(16).padStart(2, '0');
+        return `#${hexR}${hexG}${hexB}`;
     }
 }

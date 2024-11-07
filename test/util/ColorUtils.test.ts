@@ -24,6 +24,7 @@ describe('ColorUtils', () => {
     });
 
     test('Testing hexToRgb', () => {
+        expect(ColorUtils.hexToRgb('#fff')).toBe('rgb(255, 255, 255)');
         expect(ColorUtils.hexToRgb('#ff0000')).toBe('rgb(255, 0, 0)');
     });
 
@@ -35,5 +36,10 @@ describe('ColorUtils', () => {
     test('Testing hslToHex', () => {
         expect(ColorUtils.hslToHex('hsl(360, 1, 0.5)')).toBe('#ff0000');
         expect(ColorUtils.hslToHex([360, 1, 0.5])).toBe('#ff0000');
+    });
+
+    test('Testing reverseHex', () => {
+        expect(ColorUtils.reverseHex('#000')).toBe('#ffffff');
+        expect(ColorUtils.reverseHex('#fff')).toBe('#000000');
     });
 });
