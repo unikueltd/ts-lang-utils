@@ -31,8 +31,8 @@ export abstract class ThreadUtils {
      *
      * @example
      * ```ts
-     * TimeUtils.sleep();
-     * TimeUtils.sleep().then(() => {});
+     * ThreadUtils.sleep();
+     * ThreadUtils.sleep().then(() => {});
      * ```
      */
     public static sleep(microseconds: number = 1000): Promise<void> {

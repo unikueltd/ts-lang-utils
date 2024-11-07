@@ -19,6 +19,7 @@ export {IgnorableError} from './error/IgnorableError';
 export {UnsupportedError} from './error/UnsupportedError';
 export {ArrayUtils} from './util/ArrayUtils';
 export {BooleanUtils} from './util/BooleanUtils';
+export {ColorUtils} from './util/ColorUtils';
 export {DateUtils} from './util/DateUtils';
 export {JsonUtils} from './util/JsonUtils';
 export {MapUtils} from './util/MapUtils';
