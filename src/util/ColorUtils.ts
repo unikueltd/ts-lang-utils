@@ -82,6 +82,7 @@ export abstract class ColorUtils {
      * ```
      */
     public static rgbToHex(rgb?: string | [r: number, g: number, b: number]): string | undefined {
+        // noinspection DuplicatedCode
         if (!rgb) {
             return undefined;
         }
@@ -167,5 +168,37 @@ export abstract class ColorUtils {
         const hexG = (255 - Number.parseInt(arr[2], 16)).toString(16).padStart(2, '0');
         const hexB = (255 - Number.parseInt(arr[3], 16)).toString(16).padStart(2, '0');
         return `#${hexR}${hexG}${hexB}`;
+    }
+
+    /**
+     * Returns the reversed rgb color from the given color
+     *
+     * @param rgb the rgb color to inspect
+     *
+     * @returns the reversed rgb color from the given color
+     *
+     * @example
+     * ```ts
+     * ColorUtils.reverseRgb('rgb(0, 0, 0)');    // 'rgb(255, 255, 255)'
+     * ColorUtils.reverseRgb([255, 255, 255]);    // 'rgb(0, 0, 0)'
+     * ```
+     */
+    public static reverseRgb(rgb?: string | [r: number, g: number, b: number]): string | undefined {
+        // noinspection DuplicatedCode
+        if (!rgb) {
+            return undefined;
+        }
+        let alias = null;
+        if (typeof rgb === 'string') {
+            const arr = rgb.match(/\d+/g);
+            if (!arr || arr.length !== 3) {
+                return undefined;
+            }
+            alias = arr.map(Number);
+        } else {
+            alias = rgb;
+        }
+        const [r, g, b] = alias;
+        return `rgb(${255 - r}, ${255 - g}, ${255 - b})`;
     }
 }

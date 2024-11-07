@@ -42,4 +42,9 @@ describe('ColorUtils', () => {
         expect(ColorUtils.reverseHex('#000')).toBe('#ffffff');
         expect(ColorUtils.reverseHex('#fff')).toBe('#000000');
     });
+
+    test('Testing reverseRgb', () => {
+        expect(ColorUtils.reverseRgb('rgb(0, 0, 0)')).toBe('rgb(255, 255, 255)');
+        expect(ColorUtils.reverseRgb([255, 255, 255])).toBe('rgb(0, 0, 0)');
+    });
 });
