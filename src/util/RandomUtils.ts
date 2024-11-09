@@ -32,7 +32,9 @@ export abstract class RandomUtils {
      * @returns the random boolean value
      *
      * @example
+     * ```ts
      * RandomUtils.randomBoolean();
+     * ```
      */
     public static randomBoolean(): boolean {
         return Math.random() >= 0.5;
@@ -46,7 +48,9 @@ export abstract class RandomUtils {
      * @returns a random element of the array
      *
      * @example
+     * ```ts
      * RandomUtils.randomElement(['1', '2', '3']);
+     * ```
      */
     public static randomElement<E>(array?: E[]): E | undefined {
         return (!array || array.length === 0) ? undefined : array.at(this.randomInteger(0, array.length) as number);
@@ -61,7 +65,9 @@ export abstract class RandomUtils {
      * @returns a random element array with the specified length within the given array
      *
      * @example
+     * ```ts
      * RandomUtils.randomElements(['1', '2', '3'], 2);
+     * ```
      */
     public static randomElements<E>(array?: E[], size?: number): E[] | undefined {
         if (!array || array.length === 0 || !size || size <= 0 || size > Number.MAX_SAFE_INTEGER) {
@@ -86,8 +92,10 @@ export abstract class RandomUtils {
      * @returns a random integer that between value range
      *
      * @example
+     * ```ts
      * RandomUtils.randomInteger(1, 10);
      * RandomUtils.randomInteger(-6, 8);
+     * ```
      */
     public static randomInteger(minValue?: number, maxValue?: number): number | undefined {
         const value = this.randomNumber(minValue, maxValue);
@@ -104,8 +112,10 @@ export abstract class RandomUtils {
      * @returns a random integer array that between value range, matching the given size
      *
      * @example
+     * ```ts
      * RandomUtils.randomIntegers(3, 1, 10);
      * RandomUtils.randomIntegers(3, -6, 8);
+     * ```
      */
     public static randomIntegers(size?: number, minValue?: number, maxValue?: number): number[] | undefined {
         if (!size || size <= 0 || size > Number.MAX_SAFE_INTEGER) {
@@ -131,9 +141,11 @@ export abstract class RandomUtils {
      * @returns a random number that between the value range
      *
      * @example
+     * ```ts
      * RandomUtils.randomNumber(1.1, 1.2);
      * RandomUtils.randomNumber(-3.6, 2.8);
      * RandomUtils.randomNumber(-3.6, -2.8);
+     * ```
      */
     public static randomNumber(minValue?: number, maxValue?: number): number | undefined {
         const min = (minValue !== undefined) ? minValue : Number.MIN_SAFE_INTEGER;
@@ -151,8 +163,10 @@ export abstract class RandomUtils {
      * @returns a random number array that between value range, matching the given size
      *
      * @example
+     * ```ts
      * RandomUtils.randomNumbers(3, 1.1, 1.2);
      * RandomUtils.randomNumbers(3, -3.6, 2.8);
+     * ```
      */
     public static randomNumbers(size?: number, minValue?: number, maxValue?: number): number[] | undefined {
         if (!size || size <= 0 || size > Number.MAX_SAFE_INTEGER) {
@@ -179,10 +193,12 @@ export abstract class RandomUtils {
      * @returns a random string that between the length range
      *
      * @example
+     * ```ts
      * RandomUtils.randomString(8);
+     * ```
      */
     public static randomString(minLength?: number, maxLength?: number, characters: string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'): string | undefined {
-        if (!minLength || minLength <= 0 || (maxLength && maxLength < minLength) || characters.length === 0) {
+        if (!minLength || minLength <= 0 || (maxLength && maxLength < minLength) || !characters) {
             return undefined;
         }
         if (maxLength === undefined && characters.length === 1) {
@@ -208,7 +224,9 @@ export abstract class RandomUtils {
      * @returns a random string array that between the length range, matching the given size
      *
      * @example
+     * ```ts
      * RandomUtils.randomStrings(3, 6, 10);
+     * ```
      */
     public static randomStrings(size?: number, minLength?: number, maxLength?: number, characters: string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'): string[] | undefined {
         if (!size || size <= 0 || size > Number.MAX_SAFE_INTEGER || !minLength || minLength <= 0) {

@@ -35,9 +35,11 @@ export abstract class BooleanUtils {
      * @returns whether all the given elements are true
      *
      * @example
+     * ```ts
      * BooleanUtils.allTrue([null, undefined]);    // false
      * BooleanUtils.allTrue([null, true]);    // false
      * BooleanUtils.allTrue([true, true]);    // true
+     * ```
      */
     public static allTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !!values && values.length > 0 && values.every(item => this.isTrue(item));
@@ -51,9 +53,11 @@ export abstract class BooleanUtils {
      * @returns whether all the given elements are not true
      *
      * @example
+     * ```ts
      * BooleanUtils.allNotTrue([null, undefined]);    // true
      * BooleanUtils.allNotTrue([null, true]);    // false
      * BooleanUtils.allNotTrue([null, false]);    // true
+     * ```
      */
     public static allNotTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !values || values.length === 0 || values.every(item => this.isNotTrue(item));
@@ -67,9 +71,11 @@ export abstract class BooleanUtils {
      * @returns whether all the given elements are false
      *
      * @example
+     * ```ts
      * BooleanUtils.allFalse([null, undefined]);    // false
      * BooleanUtils.allFalse([null, false]);    // false
      * BooleanUtils.allFalse([false, false]);    // true
+     * ```
      */
     public static allFalse(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !!values && values.length > 0 && values.every(item => this.isFalse(item));
@@ -83,9 +89,11 @@ export abstract class BooleanUtils {
      * @returns whether all the given elements are not false
      *
      * @example
+     * ```ts
      * BooleanUtils.allNotFalse([null, undefined]);    // true
      * BooleanUtils.allNotFalse([null, false]);    // false
      * BooleanUtils.allNotFalse([null, true]);    // true
+     * ```
      */
     public static allNotFalse(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !values || values.length === 0 || values.every(item => this.isNotFalse(item));
@@ -99,9 +107,11 @@ export abstract class BooleanUtils {
      * @returns whether any of the given elements is true
      *
      * @example
+     * ```ts
      * BooleanUtils.anyTrue([null, undefined]);    // false
      * BooleanUtils.anyTrue([null, true]);    // true
      * BooleanUtils.anyTrue([null, false]);    // false
+     * ```
      */
     public static anyTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !!values && values.length > 0 && values.some(item => this.isTrue(item));
@@ -115,9 +125,11 @@ export abstract class BooleanUtils {
      * @returns whether any of the given elements is not true
      *
      * @example
+     * ```ts
      * BooleanUtils.anyNotTrue([null, undefined]);    // true
      * BooleanUtils.anyNotTrue([null, true]);    // true
      * BooleanUtils.anyNotTrue([null, false]);    // true
+     * ```
      */
     public static anyNotTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !values || values.length === 0 || values.some(item => this.isNotTrue(item));
@@ -131,9 +143,11 @@ export abstract class BooleanUtils {
      * @returns whether any of the given elements is false
      *
      * @example
+     * ```ts
      * BooleanUtils.anyFalse([null, undefined]);    // false
      * BooleanUtils.anyFalse([null, true]);    // false
      * BooleanUtils.anyFalse([null, false]);    // true
+     * ```
      */
     public static anyFalse(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !!values && values.length > 0 && values.some(item => this.isFalse(item));
@@ -147,9 +161,11 @@ export abstract class BooleanUtils {
      * @returns whether any of the given elements is not false
      *
      * @example
+     * ```ts
      * BooleanUtils.anyNotFalse([null, undefined]);    // true
      * BooleanUtils.anyNotFalse([null, false]);    // true
      * BooleanUtils.anyNotFalse([false, false]);    // false
+     * ```
      */
     public static anyNotFalse(values?: Array<boolean | number | string | undefined | null>): boolean {
         return !values || values.length === 0 || values.some(item => this.isNotFalse(item));
@@ -163,12 +179,14 @@ export abstract class BooleanUtils {
      * @returns whether the given value can be converted to true
      *
      * @example
+     * ```ts
      * BooleanUtils.isTrue(true);    // true
      * BooleanUtils.isTrue(1);    // true
      * BooleanUtils.isTrue('true');    // true
      * BooleanUtils.isTrue('yes');    // true
      * BooleanUtils.isTrue('foobar');    // false
      * BooleanUtils.isTrue(() => true);    // true
+     * ```
      */
     public static isTrue(value?: boolean | number | string | null | (() => boolean)): boolean {
         if (typeof value === 'boolean') {
@@ -191,12 +209,14 @@ export abstract class BooleanUtils {
      * @returns whether the given value is nil or can be converted to false
      *
      * @example
+     * ```ts
      * BooleanUtils.isNotTrue(false);    // true
      * BooleanUtils.isNotTrue(undefined);    // true
      * BooleanUtils.isNotTrue(null);    // true
      * BooleanUtils.isNotTrue('no');    // true
      * BooleanUtils.isNotTrue('foobar');    // true
      * BooleanUtils.isNotTrue(() => false);    // true
+     * ```
      */
     public static isNotTrue(value?: boolean | number | string | null | (() => boolean)): boolean {
         return value === undefined || value === null || !this.isTrue(value);
@@ -210,12 +230,14 @@ export abstract class BooleanUtils {
      * @returns whether the given value can be converted to false
      *
      * @example
+     * ```ts
      * BooleanUtils.isFalse(false);    // true
      * BooleanUtils.isFalse(0);    // true
      * BooleanUtils.isFalse('false');    // true
      * BooleanUtils.isFalse('no');    // true
      * BooleanUtils.isFalse('foobar');    // false
      * BooleanUtils.isFalse(() => false);    // true
+     * ```
      */
     public static isFalse(value?: boolean | number | string | null | (() => boolean)): boolean {
         if (typeof value === 'boolean') {
@@ -238,12 +260,14 @@ export abstract class BooleanUtils {
      * @returns whether the given value is nil or can be converted to true
      *
      * @example
+     * ```ts
      * BooleanUtils.isNotFalse(true);    // true
      * BooleanUtils.isNotFalse(undefined);    // true
      * BooleanUtils.isNotFalse(null);    // true
      * BooleanUtils.isNotFalse('yes');    // true
      * BooleanUtils.isNotFalse('foobar');    // true
      * BooleanUtils.isNotFalse(() => true);    // true
+     * ```
      */
     public static isNotFalse(value?: boolean | number | string | null | (() => boolean)): boolean {
         return value === undefined || value === null || !this.isFalse(value);
@@ -260,7 +284,9 @@ export abstract class BooleanUtils {
      * @returns a string value from the boolean value
      *
      * @example
+     * ```ts
      * BooleanUtils.toString(undefined, 'true', 'false');    // 'true'
+     * ```
      */
     public static toString(value?: boolean, truthy?: string, falsy?: string, nil?: string): string | undefined {
         return ObjectUtils.isNil(value) ? nil : (value ? truthy : falsy);
@@ -274,7 +300,9 @@ export abstract class BooleanUtils {
      * @returns the string value of 'true'/'false' from the boolean value
      *
      * @example
+     * ```ts
      * BooleanUtils.toStringTrueFalse(true);    // 'true'
+     * ```
      */
     public static toStringTrueFalse(value?: boolean): string | undefined {
         return this.toString(value, 'true', 'false', undefined);
@@ -288,7 +316,9 @@ export abstract class BooleanUtils {
      * @returns the string value of 'on'/'off' from the boolean value
      *
      * @example
+     * ```ts
      * BooleanUtils.toStringOnOff(true);    // 'on'
+     * ```
      */
     public static toStringOnOff(value?: boolean): string | undefined {
         return this.toString(value, 'on', 'off', undefined);
@@ -302,7 +332,9 @@ export abstract class BooleanUtils {
      * @returns the string value of 'yes'/'no' from the boolean value
      *
      * @example
+     * ```ts
      * BooleanUtils.toStringYesNo(true);    // 'yes'
+     * ```
      */
     public static toStringYesNo(value?: boolean): string | undefined {
         return this.toString(value, 'yes', 'no', undefined);
@@ -316,7 +348,9 @@ export abstract class BooleanUtils {
      * @returns the string value of 'Y'/'N' from the boolean value
      *
      * @example
+     * ```ts
      * BooleanUtils.toStringYN(true);    // 'Y'
+     * ```
      */
     public static toStringYN(value?: boolean): string | undefined {
         return this.toString(value, 'Y', 'N', undefined);
@@ -330,7 +364,9 @@ export abstract class BooleanUtils {
      * @returns the string value of 'T'/'F' from the boolean value
      *
      * @example
+     * ```ts
      * BooleanUtils.toStringTF(true);    // 'T'
+     * ```
      */
     public static toStringTF(value?: boolean): string | undefined {
         return this.toString(value, 'T', 'F', undefined);
@@ -344,7 +380,9 @@ export abstract class BooleanUtils {
      * @returns the string value of '1'/'0' from the boolean value
      *
      * @example
+     * ```ts
      * BooleanUtils.toString10(true);    // '1'
+     * ```
      */
     public static toString10(value?: boolean): string | undefined {
         return this.toString(value, '1', '0', undefined);

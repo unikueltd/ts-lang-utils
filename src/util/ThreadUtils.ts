@@ -31,8 +31,10 @@ export abstract class ThreadUtils {
      * @returns a promise that could be resolved
      *
      * @example
-     * TimeUtils.sleep();
-     * TimeUtils.sleep().then(() => {});
+     * ```ts
+     * ThreadUtils.sleep();
+     * ThreadUtils.sleep().then(() => {});
+     * ```
      */
     public static sleep(microseconds: number = 1000): Promise<void> {
         return new Promise(resolve => {

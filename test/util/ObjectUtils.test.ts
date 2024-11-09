@@ -63,6 +63,17 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.getProp(ObjectUtils.defaultProps({'foo': undefined}, {'foo': 'bar'}, false), 'foo')).toBeUndefined();
     });
 
+    test('Testing forEachProp', () => {
+        const keys: string[] = [];
+        ObjectUtils.forEachProp({'foo': 'bar', 'hello': 'world'}, key => keys.push(key));
+        expect(keys.length).toBe(2);
+    });
+
+    test('Testing mapEachProp', () => {
+        const keys = ObjectUtils.mapEachProp({'foo': 'bar', 'hello': 'world'}, key => 'jest_' + key) as string[];
+        expect(keys).toStrictEqual(['jest_foo', 'jest_hello']);
+    });
+
     test('Testing isNil', () => {
         expect(ObjectUtils.isNil(undefined)).toBeTruthy();
         expect(ObjectUtils.isNil(null)).toBeTruthy();
