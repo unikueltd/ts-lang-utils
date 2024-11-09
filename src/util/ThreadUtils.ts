@@ -19,6 +19,7 @@
  * Utilities for thread
  *
  * @author David Hsing
+ * @hideconstructor
  */
 // noinspection JSUnusedGlobalSymbols
 export abstract class ThreadUtils {

@@ -25,6 +25,7 @@ import {RegexUtils} from './RegexUtils';
  * Utilities for string
  *
  * @author David Hsing
+ * @hideconstructor
  */
 // noinspection JSUnusedGlobalSymbols
 export abstract class StringUtils {

@@ -23,6 +23,7 @@ import {StringUtils} from './StringUtils';
  * Utilities for array
  *
  * @author David Hsing
+ * @hideconstructor
  */
 // noinspection JSUnusedGlobalSymbols
 export abstract class ArrayUtils {
