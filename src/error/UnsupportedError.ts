@@ -20,8 +20,7 @@
  *
  * @author David Hsing
  */
-export interface UnsupportedError extends Error {
-}
+export type UnsupportedError = Error;
 
 
 /**

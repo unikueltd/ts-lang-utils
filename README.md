@@ -10,9 +10,9 @@
 
 ✅ Utilities for array
 
-✅ Utilities for color
-
 ✅ Utilities for boolean
+
+✅ Utilities for color
 
 ✅ Utilities for date time
 
@@ -45,7 +45,19 @@ $ npm install @yookue/ts-lang-utils --save
 Then, you may import components as follows:
 
 ```jsx | pure
-import {ArrayUtils, BooleanUtils, ColorUtils, DateUtils, JsonUtils, MapUtils, NumberUtils, ObjectUtils, RandomUtils, RegexUtils, StringUtils, ThreadUtils, TreeUtils} from '@yookue/ts-lang-utils';
+import {ArrayUtils} from '@yookue/ts-lang-utils';
+import {BooleanUtils} from '@yookue/ts-lang-utils';
+import {ColorUtils} from '@yookue/ts-lang-utils';
+import {DateUtils} from '@yookue/ts-lang-utils';
+import {JsonUtils} from '@yookue/ts-lang-utils';
+import {MapUtils} from '@yookue/ts-lang-utils';
+import {NumberUtils} from '@yookue/ts-lang-utils';
+import {ObjectUtils} from '@yookue/ts-lang-utils';
+import {RandomUtils} from '@yookue/ts-lang-utils';
+import {RegexUtils} from '@yookue/ts-lang-utils';
+import {StringUtils} from '@yookue/ts-lang-utils';
+import {ThreadUtils} from '@yookue/ts-lang-utils';
+import {TreeUtils} from '@yookue/ts-lang-utils';
 ```
 
 Enjoy your coding journey with `ts-lang-utils` ✌️

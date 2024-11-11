@@ -20,8 +20,7 @@
  *
  * @author David Hsing
  */
-export interface IgnorableError extends Error {
-}
+export type IgnorableError = Error
 
 
 /**
