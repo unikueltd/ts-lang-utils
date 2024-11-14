@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) 2023 Yookue Ltd. All rights reserved.
+ *
+ * Licensed under the MIT License.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ */
+
+
+import {sum} from './sum';
+
+
+/**
+ * Utilities for number
+ *
+ * @author David Hsing
+ */
+
+
+/**
+ * Returns the average value of the given array
+ *
+ * @param values the array to calculate
+ *
+ * @returns the average value of the given array
+ *
+ * @example
+ * ```ts
+ * average([1, 2, 3]);    // 2
+ * ```
+ */
+export function average(values?: number[]): number | undefined {
+    return !values ? undefined : (sum(values) as number / values.length);
+}
