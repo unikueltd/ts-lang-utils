@@ -9,14 +9,6 @@
     "excludePrivate": true,
     "excludeProtected": true,
     "hideGenerator": true,
-    "highlightLanguages": [
-        "bash",
-        "html",
-        "js",
-        "json",
-        "jsx",
-        "ts"
-    ],
     "includeVersion": false,
     "navigationLinks": {
         "GitHub": "https://github.com/yookue/ts-lang-utils",

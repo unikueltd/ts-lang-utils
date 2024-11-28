@@ -16,6 +16,7 @@
 
 
 import {StringUtils} from '@yookue/ts-lang-utils';
+import {leftPad, repeat} from "../../src/util/StringUtils";
 
 
 describe('StringUtils', () => {
@@ -263,6 +264,13 @@ describe('StringUtils', () => {
         expect(StringUtils.left('foobar', 10)).toBe('foobar');
     });
 
+    test('Testing leftPad', () => {
+        expect(StringUtils.leftPad(undefined, -1, null)).toBeUndefined();
+        expect(StringUtils.leftPad('', 3, 'z')).toBe('zzz');
+        expect(StringUtils.leftPad('foo', 3, 'z')).toBe('foo');
+        expect(StringUtils.leftPad('foo', 8, 'yz')).toBe('yzyzyfoo');
+    });
+
     test('Testing right', () => {
         expect(StringUtils.right('foobar', 3)).toBe('bar');
         expect(StringUtils.right('foobar', 10)).toBe('foobar');
@@ -358,6 +366,12 @@ describe('StringUtils', () => {
         expect(StringUtils.removeEndIgnoreCase('foobar', 'Bar')).toBe('foo');
     });
 
+    test('Testing repeat', () => {
+        expect(StringUtils.repeat(undefined, 0)).toBeUndefined();
+        expect(StringUtils.repeat('', 3)).toBe('');
+        expect(StringUtils.repeat('z', 3)).toBe('zzz');
+    });
+
     test('Testing replaceAll', () => {
         expect(StringUtils.replaceAll(undefined, undefined, undefined)).toBeUndefined();
         expect(StringUtils.replaceAll('foobar-foobar', undefined, 'hello')).toBe('foobar-foobar');
@@ -385,6 +399,18 @@ describe('StringUtils', () => {
     test('Testing reverse', () => {
         expect(StringUtils.reverse('foobar')).toBe('raboof');
         expect(StringUtils.reverse('foobar', 1, 5)).toBe('aboo');
+    });
+
+    test('Testing right', () => {
+        expect(StringUtils.right('foobar', 3)).toBe('bar');
+        expect(StringUtils.right('foobar', 10)).toBe('foobar');
+    });
+
+    test('Testing rightPad', () => {
+        expect(StringUtils.rightPad(undefined, -1, null)).toBeUndefined();
+        expect(StringUtils.rightPad('', 3, 'z')).toBe('zzz');
+        expect(StringUtils.rightPad('foo', 3, 'z')).toBe('foo');
+        expect(StringUtils.rightPad('foo', 8, 'yz')).toBe('fooyzyzy');
     });
 
     test('Testing split', () => {
