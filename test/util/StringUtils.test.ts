@@ -254,14 +254,8 @@ describe('StringUtils', () => {
     });
 
     test('Testing join', () => {
-        expect(StringUtils.join('foobar')).toBe('foobar');
-        expect(StringUtils.join(['foo', 'bar'])).toBe('foo,bar');
-    });
-
-    test('Testing joinWith', () => {
-        expect(StringUtils.joinWith('foobar')).toBe('foobar');
-        expect(StringUtils.joinWith(['foo', 'bar'], undefined)).toBe('foobar');
-        expect(StringUtils.joinWith(['foo', 'bar', 'world'], undefined, (text => text !== 'world'))).toBe('foobar');
+        expect(StringUtils.join(['foo', 'bar'], undefined)).toBe('foobar');
+        expect(StringUtils.join(['foo', 'bar', 'world'], undefined, (text => text !== 'world'))).toBe('foobar');
     });
 
     test('Testing left', () => {
