@@ -253,6 +253,11 @@ describe('StringUtils', () => {
         expect(StringUtils.includesAnyIgnoreCase('foobar', ['world', undefined])).toBeFalsy();
     });
 
+    test('Testing join', () => {
+        expect(StringUtils.join('foobar')).toBe('foobar');
+        expect(StringUtils.join(['foo', 'bar'])).toBe('foo,bar');
+    });
+
     test('Testing joinWith', () => {
         expect(StringUtils.joinWith('foobar')).toBe('foobar');
         expect(StringUtils.joinWith(['foo', 'bar'], undefined)).toBe('foobar');
