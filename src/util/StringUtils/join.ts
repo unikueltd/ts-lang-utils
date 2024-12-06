@@ -26,27 +26,34 @@ import {defaultString} from './defaultString';
 
 
 /**
- * Returns the joined string with the given array and delimiter
+ * Returns the joined string with the given element(s) and delimiter
  *
- * @param array the source array to inspect
- * @param separator the delimiter to append between each element of the given array
- * @param filter the filter to check each element of the given array should be included
+ * @param element the source element(s) to inspect
+ * @param separator the delimiter to append between each element of the given element(s)
+ * @param filter the filter to check each element of the given element(s) should be included
  *
- * @returns the joined string with the given array and delimiter
+ * @returns the joined string with the given element(s) and delimiter
  *
  * @example
  * ```ts
+ * join('foobar');    // 'foobar'
  * join(['foo', 'bar'], undefined);    // 'foobar'
  * join(['foo', 'bar', 'world'], undefined, (text => text !== 'world'));    // 'foobar'
  * ```
  */
-export function join(array?: any[] | null, separator?: string | null, filter?: (item?: any) => boolean): string | undefined {
-    if (array === undefined || array === null || !array.length) {
+export function join(element?: any | any[] | readonly any[] | null, separator?: string | null, filter?: (item?: any) => boolean): string | undefined {
+    if (element === undefined || element === null) {
         return undefined;
     }
-    if (!filter) {
-        return array.join(defaultString(separator));
+    if (Array.isArray(element)) {
+        if (!element.length) {
+            return undefined;
+        }
+        if (!filter) {
+            return element.join(defaultString(separator));
+        }
+        const alias = element.filter(filter);
+        return (!alias || !alias.length) ? undefined : alias.join(defaultString(separator));
     }
-    const alias = array.filter(filter);
-    return (!alias || !alias.length) ? undefined : alias.join(defaultString(separator));
+    return !filter ? element.toString() : (filter(element) ? element.toString() : undefined);
 }

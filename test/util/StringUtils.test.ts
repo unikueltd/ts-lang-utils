@@ -254,6 +254,7 @@ describe('StringUtils', () => {
     });
 
     test('Testing join', () => {
+        expect(StringUtils.join('foobar')).toBe('foobar');
         expect(StringUtils.join(['foo', 'bar'], undefined)).toBe('foobar');
         expect(StringUtils.join(['foo', 'bar', 'world'], undefined, (text => text !== 'world'))).toBe('foobar');
     });
