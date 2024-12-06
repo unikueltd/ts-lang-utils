@@ -88,6 +88,7 @@ describe('ObjectUtils', () => {
     test('Testing isEmpty', () => {
         expect(ObjectUtils.isEmpty(undefined)).toBeTruthy();
         expect(ObjectUtils.isEmpty(null)).toBeTruthy();
+        expect(ObjectUtils.isEmpty(0)).toBeFalsy();
         expect(ObjectUtils.isEmpty([])).toBeTruthy();
         expect(ObjectUtils.isEmpty({})).toBeTruthy();
     });

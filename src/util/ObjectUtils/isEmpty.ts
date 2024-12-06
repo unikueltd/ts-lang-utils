@@ -36,12 +36,13 @@ import {keys} from './keys';
  * ```ts
  * isEmpty(null);    // true
  * isEmpty(undefined);    // true
+ * isEmpty(0);    // false
  * isEmpty({});    // true
  * isEmpty('foobar');    // false
  * ```
  */
 export function isEmpty(object: any): boolean {
-    if (!object) {
+    if (object === undefined || object === null) {
         return true;
     }
     if (typeof object === 'string' || Array.isArray(object)) {
