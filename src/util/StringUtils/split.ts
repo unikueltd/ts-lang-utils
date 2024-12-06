@@ -26,9 +26,9 @@
  * Returns the split array of the given string by the given delimiter
  *
  * @param text the source string to inspect
- * @param delimiter the delimiter to split strings, defaults to comma
- * @param max the max elements expected, negative means unlimited, defaults to -1
- * @param trim whether trim each element before returning, defaults to true
+ * @param delimiter the delimiter to split strings, default is comma
+ * @param max the max elements expected, negative means unlimited, default is -1
+ * @param trim whether trim each element before returning, default is true
  *
  * @returns the split array of the given string by the given delimiter
  *

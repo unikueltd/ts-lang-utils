@@ -23,27 +23,28 @@
 
 
 /**
- * Returns an integer value from the string value, or undefined if the value cannot be converted
+ * Returns an integer value from the given source
  *
- * @param value the string value to check
+ * @param source the string value to check
+ * @param defaultValue the default value if the source cannot be converted
  *
- * @returns an integer value from the string value, or undefined if the value cannot be converted
+ * @returns an integer value from the given source
  *
  * @example
  * ```ts
  * toInteger('1');    // 1
  * ```
  */
-export function toInteger(value?: string): number | undefined {
-    if (value === undefined) {
-        return undefined;
+export function toInteger(source?: string, defaultValue?: number): number | undefined {
+    if (source === undefined) {
+        return defaultValue;
     }
     try {
         // @ts-ignore
-        const result = Number.parseInt(value);
-        return Number.isNaN(result) ? undefined : result;
+        const result = Number.parseInt(source);
+        return Number.isNaN(result) ? defaultValue : result;
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (ignored) {
     }
-    return undefined;
+    return defaultValue;
 }
