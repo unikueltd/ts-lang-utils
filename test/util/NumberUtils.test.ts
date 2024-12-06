@@ -52,6 +52,8 @@ describe('NumberUtils', () => {
         expect(NumberUtils.toInteger(undefined)).toBeUndefined();
         expect(NumberUtils.toInteger('foobar')).toBeUndefined();
         expect(NumberUtils.toInteger('1')).toBe(1);
+        expect(NumberUtils.toInteger(1.3)).toBe(1);
+        expect(NumberUtils.toInteger('1.7', undefined, false)).toBe(2);
     });
 
     test('Testing toFloat', () => {

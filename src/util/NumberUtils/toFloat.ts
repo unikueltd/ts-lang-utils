@@ -35,9 +35,12 @@
  * toFloat('1.0');    // 1.0
  * ```
  */
-export function toFloat(source?: string, defaultValue?: number): number | undefined {
-    if (source === undefined) {
+export function toFloat(source?: string | number | null, defaultValue?: number): number | undefined {
+    if (source === undefined || source === null) {
         return defaultValue;
+    }
+    if (typeof source === 'number') {
+        return source;
     }
     try {
         const result = Number.parseFloat(source);

@@ -27,22 +27,27 @@
  *
  * @param source the string value to check
  * @param defaultValue the default value if the source cannot be converted
+ * @param floorValue Whether to floor the source, otherwise to ceil
  *
  * @returns an integer value from the given source
  *
  * @example
  * ```ts
  * toInteger('1');    // 1
+ * toInteger(1.3);    // 1
+ * toInteger('1.7', undefined, false);    // 2
  * ```
  */
-export function toInteger(source?: string, defaultValue?: number): number | undefined {
-    if (source === undefined) {
+export function toInteger(source?: string | number | null, defaultValue?: number, floorValue: boolean = true): number | undefined {
+    if (source === undefined || source === null) {
         return defaultValue;
     }
+    if (typeof source === 'number') {
+        return floorValue ? Math.floor(source) : Math.ceil(source);
+    }
     try {
-        // @ts-ignore
-        const result = Number.parseInt(source);
-        return Number.isNaN(result) ? defaultValue : result;
+        const result = Number.parseFloat(source);
+        return Number.isNaN(result) ? defaultValue : (floorValue ? Math.floor(result) : Math.ceil(result));
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (ignored) {
     }
