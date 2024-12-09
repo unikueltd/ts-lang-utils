@@ -22,29 +22,23 @@
  */
 
 
+import {equals} from './equals';
+
+
 /**
- * Returns the array that adds the given element
+ * Returns whether the given array equals any of the given comparisons
  *
- * @param array the arrays to inspect
- * @param element the element to add
+ * @param array the array to check
+ * @param comparisons the elements to compare
  *
- * @returns the array that adds the given element
+ * @returns whether the given array equals any of the given comparisons
  *
  * @example
  * ```ts
- * add(undefined, 'bar');    // ['bar']
- * add(['foo', 'bar'], undefined);    // ['foo', 'bar']
- * add(['foo', 'bar'], 'world');    // ['foo', 'bar', 'world']
+ * equalsAny([], [['foo', 'bar']]);    // false
+ * equalsAny(['foo', 'bar'], [['foo', 'bar'], ['bar', 'foo']]);    // true
  * ```
  */
-export function add<E>(array?: E[] | null, element?: E | null): E[] | undefined | null {
-    if (!array) {
-        return !element ? undefined : [element];
-    }
-    if (!element) {
-        return array;
-    }
-    const result = [...array];
-    result.push(element);
-    return result;
+export function equalsAny(array?: any[] | readonly any[] | null, comparisons?: any[][] | readonly any[][] | null): boolean {
+    return !!array && !!comparisons && comparisons.some(item => equals(item, array));
 }

@@ -16,6 +16,7 @@
 
 
 import {ArrayUtils} from '@yookue/ts-lang-utils';
+import {equals, equalsAny} from "../../src/util/ArrayUtils";
 
 
 describe('ArrayUtils', () => {
@@ -33,6 +34,22 @@ describe('ArrayUtils', () => {
 
     test('Testing count', () => {
         expect(ArrayUtils.count(['foo', 'bar', 'foobar'], value => value.includes('foo'))).toBe(2);
+    });
+
+    test('Testing equals', () => {
+        expect(ArrayUtils.equals(undefined, undefined)).toBeTruthy();
+        expect(ArrayUtils.equals(undefined, null)).toBeFalsy();
+        expect(ArrayUtils.equals(null, undefined)).toBeFalsy();
+        expect(ArrayUtils.equals([], [])).toBeTruthy();
+        expect(ArrayUtils.equals([], ['foo', 'bar'])).toBeFalsy();
+        expect(ArrayUtils.equals(['foo', 'bar'], ['foo', 'bar'])).toBeTruthy();
+        expect(ArrayUtils.equals(['foo', 'bar'], ['bar', 'foo'])).toBeFalsy();
+        expect(ArrayUtils.equals(['foo', 'bar'], ['bar', 'foo', 'world'])).toBeFalsy();
+    });
+
+    test('Testing equalsAny', () => {
+        expect(ArrayUtils.equalsAny([], [['foo', 'bar']])).toBeFalsy();
+        expect(ArrayUtils.equalsAny(['foo', 'bar'], [['foo', 'bar'], ['bar', 'foo']])).toBeTruthy();
     });
 
     test('Testing firstNotNil', () => {
