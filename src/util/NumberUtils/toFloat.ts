@@ -35,7 +35,7 @@
  * toFloat('1.0');    // 1.0
  * ```
  */
-export function toFloat(source?: string | number | null, defaultValue?: number): number | undefined {
+export function toFloat(source?: number | string | null, defaultValue?: number): number | undefined {
     if (source === undefined || source === null) {
         return defaultValue;
     }

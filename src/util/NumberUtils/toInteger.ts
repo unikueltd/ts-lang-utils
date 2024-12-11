@@ -38,7 +38,7 @@
  * toInteger('1.7', undefined, false);    // 2
  * ```
  */
-export function toInteger(source?: string | number | null, defaultValue?: number, floorValue: boolean = true): number | undefined {
+export function toInteger(source?: number | string | null, defaultValue?: number, floorValue: boolean = true): number | undefined {
     if (source === undefined || source === null) {
         return defaultValue;
     }

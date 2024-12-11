@@ -23,6 +23,7 @@
 
 
 export {average} from './average';
+export {compare} from './compare';
 export {isInteger} from './isInteger';
 export {isNegative} from './isNegative';
 export {isNotNegative} from './isNotNegative';
