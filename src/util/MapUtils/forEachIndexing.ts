@@ -18,7 +18,7 @@
 /**
  * Utilities for map
  *
- * @author David Hsingexport function
+ * @author David Hsing
  */
 
 
@@ -29,11 +29,11 @@
  * @param callback a callback function that processes each entry
  */
 export function forEachIndexing<K, V>(map?: Map<K, V>, callback?: (value: V, key: K, index: number) => void): void {
-    if (!map || map.size === 0 || !callback) {
+    if (!map || !map.size || !callback) {
         return;
     }
     let index = 0;
-    for (const [key, value] of map.entries()) {
-        callback(value, key, index++);
+    for (const [k, v] of map.entries()) {
+        callback(v, k, index++);
     }
 }

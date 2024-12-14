@@ -39,5 +39,5 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
  * ```
  */
 export function removeEqualsIgnoreCase(texts?: string[] | null, excludes?: string[] | null): string[] | undefined | null {
-    return (!texts || texts.length === 0 || !excludes || excludes.length === 0) ? texts : texts.filter(text => !excludes.some(exclude => equalsIgnoreCase(text, exclude)));
+    return (!texts || !texts.length || !excludes || !excludes.length) ? texts : texts.filter(text => !excludes.some(exclude => equalsIgnoreCase(text, exclude)));
 }

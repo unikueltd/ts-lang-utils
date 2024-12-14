@@ -38,10 +38,10 @@ import {isNotBlank} from './isNotBlank';
  * ```
  */
 export function filterIgnoreBlank(texts?: Array<string | undefined | null>): string[] | undefined {
-    if (!texts || texts.length === 0) {
+    if (!texts || !texts.length) {
         return undefined;
     }
     const result = texts.filter(item => isNotBlank(item));
     // @ts-ignore
-    return (!result || result.length === 0) ? undefined : result;
+    return (!result || !result.length) ? undefined : result;
 }

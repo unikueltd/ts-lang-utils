@@ -40,5 +40,5 @@ import {isNil} from './isNil';
  * ```
  */
 export function allNil(objects?: any[]): boolean {
-    return !objects || objects.length === 0 || objects?.every(item => isNil(item));
+    return !objects || !objects.length || objects?.every(item => isNil(item));
 }

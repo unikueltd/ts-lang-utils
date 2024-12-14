@@ -39,5 +39,5 @@ import {isBlank} from './isBlank';
  * ```
  */
 export function allBlank(texts?: Array<string | undefined | null>): boolean {
-    return !texts || texts.length === 0 || texts.every(item => isBlank(item));
+    return !texts || !texts.length || texts.every(item => isBlank(item));
 }

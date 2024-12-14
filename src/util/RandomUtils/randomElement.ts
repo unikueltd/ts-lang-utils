@@ -38,5 +38,5 @@ import {randomInteger} from './randomInteger';
  * ```
  */
 export function randomElement<E>(array?: E[]): E | undefined {
-    return (!array || array.length === 0) ? undefined : array.at(randomInteger(0, array.length) as number);
+    return (!array || !array.length) ? undefined : array.at(randomInteger(0, array.length) as number);
 }

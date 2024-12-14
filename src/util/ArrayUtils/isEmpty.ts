@@ -35,5 +35,5 @@
  * ```
  */
 export function isEmpty(array?: any[] | readonly any[] | null): boolean {
-    return !array || array.length === 0;
+    return !array || !array.length;
 }

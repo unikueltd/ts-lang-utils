@@ -39,7 +39,7 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
  * ```
  */
 export function equalsAnyIgnoreCase(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
-    if (!text || !comparisons || comparisons.length === 0) {
+    if (!text || !comparisons || !comparisons.length) {
         return false;
     }
     return comparisons.some(comparison => equalsIgnoreCase(text, comparison));

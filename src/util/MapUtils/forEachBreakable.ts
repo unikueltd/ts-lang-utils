@@ -18,7 +18,7 @@
 /**
  * Utilities for map
  *
- * @author David Hsingexport function
+ * @author David Hsing
  */
 
 
@@ -29,11 +29,11 @@
  * @param callback the callback function that processes each entry, returns `false` means break
  */
 export function forEachBreakable<K, V>(map?: Map<K, V>, callback?: (value: V, key: K) => boolean): void {
-    if (!map || map.size === 0 || !callback) {
+    if (!map || !map.size || !callback) {
         return;
     }
-    for (const [key, value] of map.entries()) {
-        if (!callback(value, key)) {
+    for (const [k, v] of map.entries()) {
+        if (!callback(v, k)) {
             break;
         }
     }

@@ -35,5 +35,5 @@
  * ```
  */
 export function getLast<E>(array?: E[] | readonly E[] | null): E | undefined {
-    return (!array || array.length === 0) ? undefined : array[array.length - 1];
+    return (!array || !array.length) ? undefined : array[array.length - 1];
 }

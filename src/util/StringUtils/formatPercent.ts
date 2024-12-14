@@ -45,7 +45,7 @@ import {toString} from '@/util/ObjectUtils/toString';
  * ```
  */
 export function formatPercent(text?: string | null, ...params: any[]): string | undefined | null {
-    if (!text || text.length <= 2 || !params || params.length === 0) {
+    if (!text || text.length <= 2 || !params || !params.length) {
         return text;
     }
     const matches = text.match(/%[bcdfjosxX]/g) || [];

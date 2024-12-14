@@ -43,7 +43,7 @@ export function getProp(object: any, prop?: string | null): any {
         return object[prop];
     }
     const props = prop.replace(/\[/g, '.').replace(/]/g, '').split('.');
-    if (!props || props.length === 0) {
+    if (!props || !props.length) {
         return undefined;
     }
     return (props.length === 1) ? object[props[0]] : props.reduce((value, name) => (value || {})[name], object);

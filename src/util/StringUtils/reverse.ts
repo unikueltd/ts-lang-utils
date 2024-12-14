@@ -46,7 +46,7 @@ export function reverse(text?: string | null, startInclusive?: number, endExclus
     }
     const substring = text.substring(startInclusive ?? 0, endExclusive);
     const result = toChars(substring) as string[];
-    if (!result || result.length === 0) {
+    if (!result || !result.length) {
         return undefined;
     }
     result.reverse();

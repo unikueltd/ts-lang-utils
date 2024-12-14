@@ -35,7 +35,7 @@
  * ```
  */
 export function min(values?: number[]): number | undefined {
-    if (!values || values.length === 0) {
+    if (!values || !values.length) {
         return undefined;
     }
     let result = values[0];

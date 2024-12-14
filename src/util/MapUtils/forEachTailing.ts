@@ -18,7 +18,7 @@
 /**
  * Utilities for map
  *
- * @author David Hsingexport function
+ * @author David Hsing
  */
 
 
@@ -32,15 +32,15 @@
  */
 export function forEachTailing<K, V>(map?: Map<K, V>, callback?: (value: V, key: K) => void): [K, V] | undefined {
     // noinspection DuplicatedCode
-    if (!map || map.size === 0 || !callback) {
+    if (!map || !map.size || !callback) {
         return undefined;
     }
     let index = 0;
-    for (const [key, value] of map.entries()) {
+    for (const [k, v] of map.entries()) {
         if (index < map.size - 1) {
-            callback(value, key);
+            callback(v, k);
         } else {
-            return [key, value];
+            return [k, v];
         }
         index++;
     }

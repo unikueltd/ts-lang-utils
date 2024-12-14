@@ -39,7 +39,7 @@ import {randomInteger} from './randomInteger';
  * ```
  */
 export function randomElements<E>(array?: E[], size?: number): E[] | undefined {
-    if (!array || array.length === 0 || !size || size <= 0 || size > Number.MAX_SAFE_INTEGER) {
+    if (!array || !array.length || !size || size <= 0 || size > Number.MAX_SAFE_INTEGER) {
         return undefined;
     }
     if (array.length <= size) {

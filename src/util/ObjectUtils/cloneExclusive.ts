@@ -44,7 +44,7 @@ export function cloneExclusive(source?: object, keys?: string[]): object | undef
     if (!source || !isPlain(source)) {
         return undefined;
     }
-    if (!keys || keys.length === 0) {
+    if (!keys || !keys.length) {
         return clone(source);
     }
     const result = {};

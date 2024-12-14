@@ -39,5 +39,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function anyEmpty(texts?: Array<string | undefined | null>): boolean {
-    return !texts || texts.length === 0 || texts.some(item => isEmpty(item));
+    return !texts || !texts.length || texts.some(item => isEmpty(item));
 }

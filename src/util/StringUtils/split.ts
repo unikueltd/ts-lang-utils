@@ -43,7 +43,7 @@ export function split(text?: string | null, delimiter: string = ',', max: number
         return undefined;
     }
     const result = text.split(delimiter, max);
-    if (!result || result.length === 0) {
+    if (!result || !result.length) {
         return undefined;
     }
     return !trim ? result : result.map(item => !item ? item : item.trim());

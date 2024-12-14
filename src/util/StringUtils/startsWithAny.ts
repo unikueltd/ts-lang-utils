@@ -40,7 +40,7 @@ import {startsWith} from './startsWith';
  * ```
  */
 export function startsWithAny(text?: string | null, prefixes?: Array<string | undefined | null>): boolean {
-    if (!text || !prefixes || prefixes.length === 0) {
+    if (!text || !prefixes || !prefixes.length) {
         return false;
     }
     return prefixes.some(prefix => startsWith(text, prefix));

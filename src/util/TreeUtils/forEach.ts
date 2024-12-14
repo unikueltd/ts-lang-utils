@@ -33,7 +33,7 @@ import {getProp} from '@/util/ObjectUtils/getProp';
  * @param childrenKey the property name to children node
  */
 export function forEach<T>(nodes?: T[], callback?: (node: T, nodes?: T[]) => void, childrenKey: string = 'children'): void {
-    if (!nodes || nodes.length === 0 || !callback || !childrenKey) {
+    if (!nodes || !nodes.length || !callback || !childrenKey) {
         return;
     }
     for (const node of nodes) {

@@ -46,13 +46,13 @@ export function isEmpty(object: any): boolean {
         return true;
     }
     if (typeof object === 'string' || Array.isArray(object)) {
-        return object.length === 0;
+        return !object.length;
     }
     if (object instanceof Map || object instanceof Set) {
-        return object.size === 0;
+        return !object.size;
     }
     if (typeof object === 'object') {
-        return keys(object)?.length === 0;
+        return !keys(object)?.length;
     }
     return false;
 }

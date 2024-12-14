@@ -22,10 +22,23 @@
  */
 
 
-export {forEach} from './forEach';
-export {forEachBreakable} from './forEachBreakable';
-export {forEachIndexing} from './forEachIndexing';
-export {forEachIndexingBreakable} from './forEachIndexingBreakable';
-export {forEachIndexingTailing} from './forEachIndexingTailing';
-export {forEachTailing} from './forEachTailing';
-export {getKey} from './getKey';
+/**
+ * Returns the key with the given value
+ *
+ * @param map the map to inspect
+ * @param value the value to lookup
+ * @param defaultKey the default key when nothing matches the given value
+ *
+ * @returns the key with the given value
+ */
+export function getKey<K, V>(map?: Map<K, V>, value?: V, defaultKey?: K): K | undefined {
+    if (!map || !map.size) {
+        return defaultKey;
+    }
+    for (const [k, v] of map.entries()) {
+        if (v === value) {
+            return k;
+        }
+    }
+    return defaultKey;
+}

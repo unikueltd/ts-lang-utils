@@ -40,7 +40,7 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
  * ```
  */
 export function endsWithAnyIgnoreCase(text?: string | null, suffixes?: Array<string | undefined | null>): boolean {
-    if (!text || !suffixes || suffixes.length === 0) {
+    if (!text || !suffixes || !suffixes.length) {
         return false;
     }
     return suffixes.some(suffix => endsWithIgnoreCase(text, suffix));

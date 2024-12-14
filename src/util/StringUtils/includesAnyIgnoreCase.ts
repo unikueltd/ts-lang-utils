@@ -39,7 +39,7 @@ import {includesIgnoreCase} from './includesIgnoreCase';
  * ```
  */
 export function includesAnyIgnoreCase(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
-    if (!text || !comparisons || comparisons.length === 0) {
+    if (!text || !comparisons || !comparisons.length) {
         return false;
     }
     return comparisons?.some(comparison => includesIgnoreCase(text, comparison));

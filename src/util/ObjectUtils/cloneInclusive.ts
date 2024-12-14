@@ -40,7 +40,7 @@ import {setProp} from './setProp';
  * ```
  */
 export function cloneInclusive(source?: object, keys?: string[]): object | undefined {
-    if (!source || !isPlain(source) || !keys || keys.length === 0) {
+    if (!source || !isPlain(source) || !keys || !keys.length) {
         return undefined;
     }
     const result = {};

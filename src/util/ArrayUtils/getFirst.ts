@@ -35,5 +35,5 @@
  * ```
  */
 export function getFirst<E>(array?: E[] | readonly E[] | null): E | undefined {
-    return (!array || array.length === 0) ? undefined : array[0];
+    return (!array || !array.length) ? undefined : array[0];
 }

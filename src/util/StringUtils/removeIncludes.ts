@@ -39,5 +39,5 @@ import {includes} from './includes';
  * ```
  */
 export function removeIncludes(texts?: string[] | null, excludes?: string[] | null): string[] | undefined | null {
-    return (!texts || texts.length === 0 || !excludes || excludes.length === 0) ? texts : texts.filter(text => !excludes.some(exclude => includes(text, exclude)));
+    return (!texts || !texts.length || !excludes || !excludes.length) ? texts : texts.filter(text => !excludes.some(exclude => includes(text, exclude)));
 }

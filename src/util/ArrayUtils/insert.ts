@@ -40,10 +40,10 @@
  * ```
  */
 export function insert<E>(array?: E[] | null, index?: number, elements?: E[] | null): E[] | undefined | null {
-    if (index === undefined || !elements || elements.length === 0) {
+    if (index === undefined || !elements || !elements.length) {
         return array;
     }
-    if (!array || array.length === 0) {
+    if (!array || !array.length) {
         return elements;
     }
     if (index < 0 || index >= array.length) {

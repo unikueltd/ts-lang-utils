@@ -38,10 +38,10 @@ import {isNotEmpty} from './isNotEmpty';
  * ```
  */
 export function filterIgnoreEmpty(texts?: Array<string | undefined | null>): string[] | undefined {
-    if (!texts || texts.length === 0) {
+    if (!texts || !texts.length) {
         return undefined;
     }
     const result = texts.filter(item => isNotEmpty(item));
     // @ts-ignore
-    return (!result || result.length === 0) ? undefined : result;
+    return (!result || !result.length) ? undefined : result;
 }
