@@ -15,22 +15,26 @@
  */
 
 
+import {customAlphabet} from 'nanoid'
+
+
 /**
- * Utilities for regex
+ * Utilities for nanoid
  *
  * @author David Hsing
  */
 
 
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {testResetting} from './testResetting';
+const customNanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+
+
+/**
+ * Returns an alphanumeric uppercase nanoid
+ *
+ * @param size the length expected
+ *
+ * @returns an alphanumeric uppercase nanoid
+ */
+export function getAlphanumericUpperId(size?: number): string {
+    return customNanoid(size);
+}

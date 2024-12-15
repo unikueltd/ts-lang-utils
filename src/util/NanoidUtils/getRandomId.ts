@@ -15,22 +15,23 @@
  */
 
 
+import {nanoid} from 'nanoid'
+
+
 /**
- * Utilities for regex
+ * Utilities for nanoid
  *
  * @author David Hsing
  */
 
 
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {testResetting} from './testResetting';
+/**
+ * Returns a random nanoid
+ *
+ * @param size the length expected
+ *
+ * @returns a random nanoid
+ */
+export function getRandomId(size?: number): string {
+    return nanoid(size);
+}

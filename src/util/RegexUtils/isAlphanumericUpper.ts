@@ -22,15 +22,21 @@
  */
 
 
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {testResetting} from './testResetting';
+/**
+ * Returns whether all the characters in the given text is uppercase alphanumeric
+ *
+ * @param text the text to check
+ *
+ * @returns whether all the characters in the given text is uppercase alphanumeric
+ *
+ * @example
+ * ```ts
+ * isAlphanumericUpper(undefined);    // false
+ * isAlphanumericUpper('ABC123');    // true
+ * isAlphanumericUpper('abc123');    // false
+ * isAlphanumericUpper('--$$##');    // false
+ * ```
+ */
+export function isAlphanumericUpper(text?: string): boolean {
+    return !!text && /^[A-Z\d]+$/.test(text);
+}

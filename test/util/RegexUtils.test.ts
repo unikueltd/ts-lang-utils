@@ -38,10 +38,38 @@ describe('RegexUtils', () => {
         expect(RegexUtils.isAlphabetic('123456')).toBeFalsy();
     });
 
+    test('Testing isAlphabeticLower', () => {
+        expect(RegexUtils.isAlphabeticLower('abc')).toBeTruthy();
+        expect(RegexUtils.isAlphabeticLower('abcDEF')).toBeFalsy();
+        expect(RegexUtils.isAlphabeticLower('abc123')).toBeFalsy();
+        expect(RegexUtils.isAlphabeticLower('123456')).toBeFalsy();
+    });
+
+    test('Testing isAlphabeticUpper', () => {
+        expect(RegexUtils.isAlphabeticUpper('ABC')).toBeTruthy();
+        expect(RegexUtils.isAlphabeticUpper('abc')).toBeFalsy();
+        expect(RegexUtils.isAlphabeticUpper('abc123')).toBeFalsy();
+        expect(RegexUtils.isAlphabeticUpper('123456')).toBeFalsy();
+    });
+
     test('Testing isAlphanumeric', () => {
         expect(RegexUtils.isAlphanumeric(undefined)).toBeFalsy();
         expect(RegexUtils.isAlphanumeric('abc123')).toBeTruthy();
         expect(RegexUtils.isAlphanumeric('--$$##')).toBeFalsy();
+    });
+
+    test('Testing isAlphanumericLower', () => {
+        expect(RegexUtils.isAlphanumericLower(undefined)).toBeFalsy();
+        expect(RegexUtils.isAlphanumericLower('ABC123')).toBeFalsy();
+        expect(RegexUtils.isAlphanumericLower('abc123')).toBeTruthy();
+        expect(RegexUtils.isAlphanumericLower('--$$##')).toBeFalsy();
+    });
+
+    test('Testing isAlphanumericUpper', () => {
+        expect(RegexUtils.isAlphanumericUpper(undefined)).toBeFalsy();
+        expect(RegexUtils.isAlphanumericUpper('ABC123')).toBeTruthy();
+        expect(RegexUtils.isAlphanumericUpper('abc123')).toBeFalsy();
+        expect(RegexUtils.isAlphanumericUpper('--$$##')).toBeFalsy();
     });
 
     test('Testing isNumeric', () => {

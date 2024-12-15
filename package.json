@@ -1,6 +1,6 @@
 {
     "name": "@yookue/ts-lang-utils",
-    "version": "0.1.69",
+    "version": "0.1.70",
     "title": "TsLangUtils",
     "description": "Common lang utilities for typescript",
     "homepage": "https://yookue.github.io/ts-lang-utils",
@@ -15,6 +15,7 @@
         "date-utils",
         "json-utils",
         "map-utils",
+        "nanoid-utils",
         "number-utils",
         "object-utils",
         "random-utils",
@@ -42,7 +43,8 @@
         "test:coverage": "del-cli ./coverage && jest --coverage --coverageDirectory ./coverage"
     },
     "dependencies": {
-        "@babel/runtime": "^7.26.0"
+        "@babel/runtime": "^7.26.0",
+        "nanoid": "^3.3.8"
     },
     "devDependencies": {
         "@types/jest": "^29.5.14",

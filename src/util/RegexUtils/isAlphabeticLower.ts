@@ -22,15 +22,21 @@
  */
 
 
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {testResetting} from './testResetting';
+/**
+ * Returns whether all the characters in the given text is lowercase alphabetic
+ *
+ * @param text the text to check
+ *
+ * @returns whether all the characters in the given text is lowercase alphabetic
+ *
+ * @example
+ * ```ts
+ * isAlphabeticLower('abc');    // true
+ * isAlphabeticLower('abcDEF');    // false
+ * isAlphabeticLower('abc123');    // false
+ * isAlphabeticLower('123456');    // false
+ * ```
+ */
+export function isAlphabeticLower(text?: string): boolean {
+    return !!text && /^[a-z]+$/.test(text);
+}

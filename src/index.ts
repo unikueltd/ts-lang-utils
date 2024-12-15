@@ -15,14 +15,13 @@
  */
 
 
-export {IgnorableError} from './error/IgnorableError';
-export {UnsupportedError} from './error/UnsupportedError';
 export * as ArrayUtils from './util/ArrayUtils';
 export * as BooleanUtils from './util/BooleanUtils';
 export * as ColorUtils from './util/ColorUtils';
 export * as DateUtils from './util/DateUtils';
 export * as JsonUtils from './util/JsonUtils';
 export * as MapUtils from './util/MapUtils';
+export * as NanoidUtils from './util/NanoidUtils';
 export * as NumberUtils from './util/NumberUtils';
 export * as ObjectUtils from './util/ObjectUtils';
 export * as RandomUtils from './util/RandomUtils';
@@ -30,3 +29,5 @@ export * as RegexUtils from './util/RegexUtils';
 export * as StringUtils from './util/StringUtils';
 export * as ThreadUtils from './util/ThreadUtils';
 export * as TreeUtils from './util/TreeUtils';
+export {IgnorableError} from '@/type/IgnorableError';
+export {UnsupportedError} from '@/type/UnsupportedError';

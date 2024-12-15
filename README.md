@@ -20,6 +20,8 @@
 
 ✅ Utilities for map
 
+✅ Utilities for nanoid
+
 ✅ Utilities for number
 
 ✅ Utilities for object
@@ -51,6 +53,7 @@ import {ColorUtils} from '@yookue/ts-lang-utils';
 import {DateUtils} from '@yookue/ts-lang-utils';
 import {JsonUtils} from '@yookue/ts-lang-utils';
 import {MapUtils} from '@yookue/ts-lang-utils';
+import {NanoidUtils} from '@yookue/ts-lang-utils';
 import {NumberUtils} from '@yookue/ts-lang-utils';
 import {ObjectUtils} from '@yookue/ts-lang-utils';
 import {RandomUtils} from '@yookue/ts-lang-utils';

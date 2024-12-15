@@ -16,21 +16,20 @@
 
 
 /**
- * Utilities for regex
+ * Utilities for nanoid
  *
  * @author David Hsing
  */
 
 
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {testResetting} from './testResetting';
+export {getAlphabeticId} from './getAlphabeticId';
+export {getAlphabeticLowerId} from './getAlphabeticLowerId';
+export {getAlphabeticUpperId} from './getAlphabeticUpperId';
+export {getAlphanumericId} from './getAlphanumericId';
+export {getAlphanumericLowerId} from './getAlphanumericLowerId';
+export {getAlphanumericUpperId} from './getAlphanumericUpperId';
+export {getNumericId} from './getNumericId';
+export {getPopularId} from './getPopularId';
+export {getPopularLowerId} from './getPopularLowerId';
+export {getPopularUpperId} from './getPopularUpperId';
+export {getRandomId} from './getRandomId';
