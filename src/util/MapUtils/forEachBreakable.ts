@@ -28,7 +28,7 @@
  * @param map the map to inspect
  * @param callback the callback function that processes each entry, returns `false` means break
  */
-export function forEachBreakable<K, V>(map?: Map<K, V>, callback?: (value: V, key: K) => boolean): void {
+export function forEachBreakable<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value: V, key: K) => boolean): void {
     if (!map || !map.size || !callback) {
         return;
     }

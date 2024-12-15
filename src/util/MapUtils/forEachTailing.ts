@@ -30,7 +30,7 @@
  *
  * @returns the tailing entry in the source map
  */
-export function forEachTailing<K, V>(map?: Map<K, V>, callback?: (value: V, key: K) => void): [K, V] | undefined {
+export function forEachTailing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value: V, key: K) => void): [K, V] | undefined {
     // noinspection DuplicatedCode
     if (!map || !map.size || !callback) {
         return undefined;

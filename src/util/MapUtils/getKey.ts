@@ -31,7 +31,7 @@
  *
  * @returns the key with the given value
  */
-export function getKey<K, V>(map?: Map<K, V>, value?: V, defaultKey?: K): K | undefined {
+export function getKey<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, value?: V, defaultKey?: K): K | undefined {
     if (!map || !map.size) {
         return defaultKey;
     }

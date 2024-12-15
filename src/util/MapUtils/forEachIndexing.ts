@@ -28,7 +28,7 @@
  * @param map the map to inspect
  * @param callback a callback function that processes each entry
  */
-export function forEachIndexing<K, V>(map?: Map<K, V>, callback?: (value: V, key: K, index: number) => void): void {
+export function forEachIndexing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value: V, key: K, index: number) => void): void {
     if (!map || !map.size || !callback) {
         return;
     }
