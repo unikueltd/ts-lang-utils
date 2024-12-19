@@ -27,8 +27,6 @@ export {addAll} from './addAll';
 export {count} from './count';
 export {equals} from './equals';
 export {equalsAny} from './equalsAny';
-export {firstNotEmpty} from './firstNotEmpty';
-export {firstNotNil} from './firstNotNil';
 export {getFirst} from './getFirst';
 export {getLast} from './getLast';
 export {getLength} from './getLength';

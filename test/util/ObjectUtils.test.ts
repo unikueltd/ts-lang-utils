@@ -63,6 +63,14 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.getProp(ObjectUtils.defaultProps({'foo': undefined}, {'foo': 'bar'}, false), 'foo')).toBeUndefined();
     });
 
+    test('Testing firstNotNil', () => {
+        expect(ObjectUtils.firstNotNil(null, undefined, 'foo', 'bar', {})).toBe('foo');
+    });
+
+    test('Testing firstNotEmpty', () => {
+        expect(ObjectUtils.firstNotEmpty(null, undefined, {}, 'foo', 'bar')).toBe('foo');
+    });
+
     test('Testing forEachProp', () => {
         const keys: string[] = [];
         ObjectUtils.forEachProp({'foo': 'bar', 'hello': 'world'}, key => keys.push(key));

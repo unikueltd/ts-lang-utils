@@ -52,14 +52,6 @@ describe('ArrayUtils', () => {
         expect(ArrayUtils.equalsAny(['foo', 'bar'], [['foo', 'bar'], ['bar', 'foo']])).toBeTruthy();
     });
 
-    test('Testing firstNotNil', () => {
-        expect(ArrayUtils.firstNotNil([null, undefined, 'foo', 'bar', {}])).toBe('foo');
-    });
-
-    test('Testing firstNotEmpty', () => {
-        expect(ArrayUtils.firstNotEmpty([null, undefined, {}, 'foo', 'bar'])).toBe('foo');
-    });
-
     test('Testing getFirst', () => {
         expect(ArrayUtils.getFirst(['foo', 'bar'])).toBe('foo');
     });

@@ -15,30 +15,28 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-import {isNotEmpty} from '@/util/ObjectUtils/isNotEmpty';
+import {isNotNil} from './isNotNil';
 
 
 /**
- * Utilities for array
+ * Utilities for object
  *
  * @author David Hsing
  */
 
 
 /**
- * Returns the first not empty element in the given array, or null if all elements are nil
+ * Returns the first not nil element in the given objects, or undefined if all elements are nil
  *
- * @param array the array to check
+ * @param objects the objects to check
  *
- * @returns the first not empty element in the given array, or null if all elements are nil
+ * @returns the first not nil element in the given objects, or undefined if all elements are nil
  *
  * @example
  * ```ts
- * firstNotEmpty([null, undefined, {}, 'foo', 'bar']);    // 'foo'
+ * firstNotNil(null, undefined, 'foo', 'bar', {});    // 'foo'
  * ```
  */
-export function firstNotEmpty(array?: any[] | readonly any[] | null): any {
-    // @ts-ignore
-    return isEmpty(array) ? undefined : array.find(item => isNotEmpty(item));
+export function firstNotNil(...objects: any[] | readonly any[]): any {
+    return (!objects || !objects.length) ? undefined : objects.find(item => isNotNil(item));
 }
