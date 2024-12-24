@@ -42,8 +42,7 @@ export function isJsonString(text?: string | null): boolean {
     }
     try {
         return typeof JSON.parse(text) === 'object';
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch(ignored) {
+    } catch(_ignored) {
     }
     return false;
 }

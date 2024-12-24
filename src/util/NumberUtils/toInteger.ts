@@ -48,8 +48,7 @@ export function toInteger(source?: number | string | null, defaultValue?: number
     try {
         const result = Number.parseFloat(source);
         return Number.isNaN(result) ? defaultValue : (floorValue ? Math.floor(result) : Math.ceil(result));
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (ignored) {
+    } catch (_ignored) {
     }
     return defaultValue;
 }

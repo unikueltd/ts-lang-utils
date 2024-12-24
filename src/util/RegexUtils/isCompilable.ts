@@ -44,8 +44,7 @@ export function isCompilable(pattern?: string | null, flags?: string): boolean {
     try {
         new RegExp(pattern, flags);
         return true;
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (ignored) {
+    } catch (_ignored) {
     }
     return false;
 }

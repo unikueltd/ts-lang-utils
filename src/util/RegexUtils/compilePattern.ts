@@ -41,8 +41,7 @@ export function compilePattern(pattern?: string, flags?: string): RegExp | undef
     }
     try {
         return new RegExp(pattern, flags);
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (ignored) {
+    } catch (_ignored) {
     }
     return undefined;
 }

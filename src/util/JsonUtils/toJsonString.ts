@@ -44,8 +44,7 @@ export function toJsonString(target: any): string | undefined {
             if (typeof json === 'object') {
                 return JSON.stringify(json);
             }
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        } catch(ignored) {
+        } catch(_ignored) {
         }
     }
     if (isPlain(target)) {
