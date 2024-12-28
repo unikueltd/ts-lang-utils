@@ -40,7 +40,7 @@
  * center('foobar', 10);    // '  foobar  '
  * ```
  */
-export function center(text?: string | null, width: number = -1, placeholder: string = ' '): string | undefined | null {
+export function center(text?: string | null, width: number = -1, placeholder: string = ' '): string | null | undefined {
     if (!text || width < 0 || (width > 0 && width <= text.length)) {
         return text;
     }

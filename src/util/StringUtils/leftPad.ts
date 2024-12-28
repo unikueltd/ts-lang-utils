@@ -45,7 +45,7 @@ import {repeat} from './repeat';
  * leftPad('foo', 8, 'yz')  = 'yzyzyfoo'
  * ```
  */
-export function leftPad(text?: string | null, size?: number, pad?: string | null): string | undefined | null {
+export function leftPad(text?: string | null, size?: number, pad?: string | null): string | null | undefined {
     // noinspection DuplicatedCode
     if (size === undefined || size <= 0) {
         return text;

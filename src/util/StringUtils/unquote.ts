@@ -36,6 +36,6 @@
  * unquote('"foobar"');    // 'foobar'
  * ```
  */
-export function unquote(text?: string | null): string | undefined | null {
+export function unquote(text?: string | null): string | null | undefined {
     return !text ? text : text.replace(/^['"`]|['"`]$/g, '');
 }

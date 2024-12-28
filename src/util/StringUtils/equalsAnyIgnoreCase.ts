@@ -38,7 +38,7 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
  * equalsAnyIgnoreCase('foo', ['FOO', 'bar']);    // true
  * ```
  */
-export function equalsAnyIgnoreCase(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
+export function equalsAnyIgnoreCase(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
     if (!text || !comparisons || !comparisons.length) {
         return false;
     }

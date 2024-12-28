@@ -35,6 +35,6 @@
  * fromChars(['f', 'o', 'o', 'b', 'a', 'r']);    // 'foobar'
  * ```
  */
-export function fromChars(texts?: Array<string | undefined | null>): string | undefined {
+export function fromChars(texts?: Array<string | null | undefined>): string | undefined {
     return !texts ? undefined : texts.join('');
 }

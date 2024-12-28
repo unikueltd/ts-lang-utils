@@ -38,6 +38,6 @@ import {isBlank} from './isBlank';
  * anyBlank(['foo', 'bar']);    // false
  * ```
  */
-export function anyBlank(texts?: Array<string | undefined | null>): boolean {
+export function anyBlank(texts?: Array<string | null | undefined>): boolean {
     return !texts || !texts.length || texts.some(item => isBlank(item));
 }

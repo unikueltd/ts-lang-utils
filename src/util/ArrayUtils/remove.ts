@@ -37,6 +37,6 @@
  * remove(['foo', 'bar'], 'bar');    // ['foo']
  * ```
  */
-export function remove<E>(array?: E[] | null, element?: E | null): E[] | undefined | null {
+export function remove<E>(array?: E[] | null, element?: E | null): E[] | null | undefined {
     return (!array || !element) ? array : array.filter(item => item !== element);
 }

@@ -28,6 +28,6 @@
  *
  * @returns a readonly instance of the given array
  */
-export function readonly<E>(array?: E[] | null): ReadonlyArray<E> | undefined | null {
+export function readonly<E>(array?: E[] | null): ReadonlyArray<E> | null | undefined {
     return !array ? array : Object.freeze(array);
 }

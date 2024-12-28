@@ -34,7 +34,7 @@
  * unescapeHtml('&lt;div&gt;foobar&lt;div&gt;');    // '<div>foobar<div>'
  * ```
  */
-export function unescapeHtml(text?: string | null): string | undefined | null {
+export function unescapeHtml(text?: string | null): string | null | undefined {
     if (!text) {
         return text;
     }

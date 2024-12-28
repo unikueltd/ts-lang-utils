@@ -39,6 +39,6 @@ import {isNotTrue} from './isNotTrue';
  * allNotTrue([null, false]);    // true
  * ```
  */
-export function allNotTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
+export function allNotTrue(values?: Array<boolean | number | string | null | undefined>): boolean {
     return !values || !values.length || values.every(item => isNotTrue(item));
 }

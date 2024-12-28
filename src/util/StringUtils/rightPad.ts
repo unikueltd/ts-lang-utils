@@ -45,7 +45,7 @@ import {repeat} from './repeat';
  * rightPad('foo', 8, 'yz')  = 'fooyzyzy'
  * ```
  */
-export function rightPad(text?: string | null, size?: number, pad?: string | null): string | undefined | null {
+export function rightPad(text?: string | null, size?: number, pad?: string | null): string | null | undefined {
     // noinspection DuplicatedCode
     if (size === undefined || size <= 0) {
         return text;

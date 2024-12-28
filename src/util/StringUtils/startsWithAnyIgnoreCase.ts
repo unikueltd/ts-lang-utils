@@ -39,7 +39,7 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
  * startsWithAnyIgnoreCase('hello', ['FOO', 'BAR']);    // false
  * ```
  */
-export function startsWithAnyIgnoreCase(text?: string | null, prefixes?: Array<string | undefined | null>): boolean {
+export function startsWithAnyIgnoreCase(text?: string | null, prefixes?: Array<string | null | undefined>): boolean {
     if (!text || !prefixes || !prefixes.length) {
         return false;
     }

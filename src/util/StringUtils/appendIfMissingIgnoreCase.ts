@@ -40,6 +40,6 @@ import {isEmpty} from './isEmpty';
  * appendIfMissingIgnoreCase('foobar', 'BAR');    // 'foobar'
  * ```
  */
-export function appendIfMissingIgnoreCase(text?: string | null, suffix?: string | null): string | undefined | null {
+export function appendIfMissingIgnoreCase(text?: string | null, suffix?: string | null): string | null | undefined {
     return (!text || isEmpty(suffix) || endsWithIgnoreCase(text, suffix)) ? text : (text + suffix);
 }

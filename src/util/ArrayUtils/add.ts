@@ -37,7 +37,7 @@
  * add(['foo', 'bar'], 'world');    // ['foo', 'bar', 'world']
  * ```
  */
-export function add<E>(array?: E[] | null, element?: E | null): E[] | undefined | null {
+export function add<E>(array?: E[] | null, element?: E | null): E[] | null | undefined {
     if (!array) {
         return !element ? undefined : [element];
     }

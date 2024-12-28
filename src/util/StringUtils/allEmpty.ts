@@ -38,6 +38,6 @@ import {isEmpty} from './isEmpty';
  * allEmpty([null, 'true']);    // false
  * ```
  */
-export function allEmpty(texts?: Array<string | undefined | null>): boolean {
+export function allEmpty(texts?: Array<string | null | undefined>): boolean {
     return !texts || !texts.length || texts.every(item => isEmpty(item));
 }

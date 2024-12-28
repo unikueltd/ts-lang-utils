@@ -40,6 +40,6 @@ import {isEmpty} from './isEmpty';
  * appendIfMissing('foobar', 'bar');    // 'foobar'
  * ```
  */
-export function appendIfMissing(text?: string | null, suffix?: string | null): string | undefined | null {
+export function appendIfMissing(text?: string | null, suffix?: string | null): string | null | undefined {
     return (!text || isEmpty(suffix) || endsWith(text, suffix)) ? text : (text + suffix);
 }

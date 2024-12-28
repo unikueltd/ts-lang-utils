@@ -38,7 +38,7 @@ import {includesIgnoreCase} from './includesIgnoreCase';
  * includesAnyIgnoreCase('foobar', ['FOO', 'world']);    // true
  * ```
  */
-export function includesAnyIgnoreCase(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
+export function includesAnyIgnoreCase(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
     if (!text || !comparisons || !comparisons.length) {
         return false;
     }

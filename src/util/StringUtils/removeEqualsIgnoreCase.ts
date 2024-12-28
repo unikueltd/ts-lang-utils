@@ -38,6 +38,6 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
  * removeEqualsIgnoreCase(['foo', 'bar'], ['BAR']);    // ['foo']
  * ```
  */
-export function removeEqualsIgnoreCase(texts?: string[] | null, excludes?: string[] | null): string[] | undefined | null {
+export function removeEqualsIgnoreCase(texts?: string[] | null, excludes?: string[] | null): string[] | null | undefined {
     return (!texts || !texts.length || !excludes || !excludes.length) ? texts : texts.filter(text => !excludes.some(exclude => equalsIgnoreCase(text, exclude)));
 }

@@ -19,11 +19,20 @@ import {JsonUtils} from '@yookue/ts-lang-utils';
 
 
 describe('JsonUtils', () => {
+    test('Testing isJsonObject', () => {
+        expect(JsonUtils.isJsonObject(undefined)).toBeFalsy();
+        expect(JsonUtils.isJsonObject({foo: 'bar'})).toBeTruthy();
+    });
+
     test('Testing isJsonString', () => {
         expect(JsonUtils.isJsonString('foobar')).toBeFalsy();
         expect(JsonUtils.isJsonString(`{"foo": "bar"}`)).toBeTruthy();
         expect(JsonUtils.isJsonString(`[{"foo": "bar"}]`)).toBeTruthy();
         expect(JsonUtils.isJsonString(`[{"foo": "bar"}, {"hello": "world"}]`)).toBeTruthy();
+    });
+
+    test('Testing toJsonObject', () => {
+        expect(JsonUtils.isJsonObject(JsonUtils.toJsonObject(`{"foo": "bar"}`))).toBeTruthy();
     });
 
     test('Testing toJsonString', () => {

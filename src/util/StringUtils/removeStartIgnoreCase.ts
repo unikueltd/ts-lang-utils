@@ -39,6 +39,6 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
  * removeStartIgnoreCase('foobar', 'Foo');    // 'bar'
  * ```
  */
-export function removeStartIgnoreCase(text?: string | null, remove?: string | null): string | undefined | null {
+export function removeStartIgnoreCase(text?: string | null, remove?: string | null): string | null | undefined {
     return (!text || !remove || !startsWithIgnoreCase(text, remove)) ? text : text.substring(remove.length);
 }

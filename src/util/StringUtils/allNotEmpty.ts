@@ -39,6 +39,6 @@ import {isNotEmpty} from './isNotEmpty';
  * allNotEmpty(['foo', 'bar']);    // true
  * ```
  */
-export function allNotEmpty(texts?: Array<string | undefined | null>): boolean {
+export function allNotEmpty(texts?: Array<string | null | undefined>): boolean {
     return !!texts && texts.length > 0 && texts.every(item => isNotEmpty(item));
 }

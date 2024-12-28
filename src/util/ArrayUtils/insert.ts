@@ -39,7 +39,7 @@
  * insert(['foo', 'bar'], 9, ['hello', 'world']);    // ['foo', 'bar', 'hello', 'world']
  * ```
  */
-export function insert<E>(array?: E[] | null, index?: number, elements?: E[] | null): E[] | undefined | null {
+export function insert<E>(array?: E[] | null, index?: number, elements?: E[] | null): E[] | null | undefined {
     if (index === undefined || !elements || !elements.length) {
         return array;
     }

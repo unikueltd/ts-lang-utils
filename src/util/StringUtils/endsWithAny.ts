@@ -39,7 +39,7 @@ import {endsWith} from './endsWith';
  * endsWithAny('hello', ['foo', 'bar']);    // false
  * ```
  */
-export function endsWithAny(text?: string | null, suffixes?: Array<string | undefined | null>): boolean {
+export function endsWithAny(text?: string | null, suffixes?: Array<string | null | undefined>): boolean {
     if (!text || !suffixes || !suffixes.length) {
         return false;
     }

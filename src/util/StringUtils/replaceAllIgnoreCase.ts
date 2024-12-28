@@ -41,6 +41,6 @@ import {isEmpty} from './isEmpty';
  * replaceAllIgnoreCase('foobar-foobar', 'FOOBAR', 'hello');    // 'hello-hello'
  * ```
  */
-export function replaceAllIgnoreCase(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | undefined | null {
+export function replaceAllIgnoreCase(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
     return (isEmpty(text) || !search) ? text : text?.replace(new RegExp(search, 'gi'), (replace ?? ''));
 }

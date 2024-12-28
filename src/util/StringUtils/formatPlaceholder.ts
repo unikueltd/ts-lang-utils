@@ -38,7 +38,7 @@
  * formatPlaceholder("hello {name}, foo{bar}", {name: "world", bar: "bar"});    //  "hello world, foobar"
  * ```
  */
-export function formatPlaceholder(text?: string | null, params?: {[key: string]: any}): string | undefined | null {
+export function formatPlaceholder(text?: string | null, params?: {[key: string]: any}): string | null | undefined {
     if (!text || text.length <= 2 || !params) {
         return text;
     }

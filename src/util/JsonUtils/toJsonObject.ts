@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License.
+ * Licensed under the MIT License (the "License")
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -16,24 +16,31 @@
 
 
 /**
- * Utilities for string
+ * Utilities for json
  *
  * @author David Hsing
  */
 
 
 /**
- * Returns the first letter uppercase representation of the given string
+ * Returns a JSON object that represents the given string
  *
- * @param text the source string to check
+ * @param text the string to inspect
  *
- * @returns the first letter uppercase representation of the given string
+ * @returns a JSON object that represents the given string
  *
  * @example
  * ```ts
- * capitalizeFirst('fooBar');    // 'FooBar'
+ * toJsonObject(`{"foo":"bar"}`);    // {foo: 'bar'}
  * ```
  */
-export function capitalizeFirst(text?: string | null): string | null | undefined {
-    return !text ? text : (text.charAt(0).toUpperCase() + text.substring(1));
+export function toJsonObject(text?: string | null): object | undefined {
+    if (!text) {
+        return undefined;
+    }
+    try {
+        return JSON.parse(text);
+    } catch(_ignored) {
+    }
+    return undefined;
 }

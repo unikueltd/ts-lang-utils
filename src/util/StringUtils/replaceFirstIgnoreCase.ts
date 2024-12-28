@@ -41,6 +41,6 @@ import {isEmpty} from './isEmpty';
  * replaceFirstIgnoreCase('foobar-foobar', 'FOOBAR', 'hello');    // 'hello-foobar'
  * ```
  */
-export function replaceFirstIgnoreCase(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | undefined | null {
+export function replaceFirstIgnoreCase(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
     return (isEmpty(text) || !search) ? text : text?.replace(new RegExp(search, 'i'), (replace ?? ''));
 }

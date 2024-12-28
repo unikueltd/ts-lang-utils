@@ -39,7 +39,7 @@ import {startsWith} from './startsWith';
  * startsWithAny('hello', ['foo', 'bar']);    // false
  * ```
  */
-export function startsWithAny(text?: string | null, prefixes?: Array<string | undefined | null>): boolean {
+export function startsWithAny(text?: string | null, prefixes?: Array<string | null | undefined>): boolean {
     if (!text || !prefixes || !prefixes.length) {
         return false;
     }

@@ -39,6 +39,6 @@ import {endsWith} from './endsWith';
  * removeEnd('foobar', 'bar');    // 'foo'
  * ```
  */
-export function removeEnd(text?: string | null, remove?: string | null): string | undefined | null {
+export function removeEnd(text?: string | null, remove?: string | null): string | null | undefined {
     return (!text || !remove || !endsWith(text, remove)) ? text : text.substring(0, text.length - remove.length);
 }

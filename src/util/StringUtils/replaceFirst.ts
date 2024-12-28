@@ -41,6 +41,6 @@ import {isEmpty} from './isEmpty';
  * replaceFirst('foobar-foobar', 'foobar', 'hello');    // 'hello-foobar'
  * ```
  */
-export function replaceFirst(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | undefined | null {
+export function replaceFirst(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
     return (isEmpty(text) || !search) ? text : text?.replace(search, (replace ?? ''));
 }

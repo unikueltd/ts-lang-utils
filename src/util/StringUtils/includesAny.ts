@@ -38,7 +38,7 @@ import {includes} from './includes';
  * includesAny('foobar', ['foo', 'bar']);    // true
  * ```
  */
-export function includesAny(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
+export function includesAny(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
     if (!text || !comparisons) {
         return false;
     }

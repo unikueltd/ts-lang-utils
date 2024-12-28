@@ -39,6 +39,6 @@ import {isNotFalse} from './isNotFalse';
  * anyNotFalse([false, false]);    // false
  * ```
  */
-export function anyNotFalse(values?: Array<boolean | number | string | undefined | null>): boolean {
+export function anyNotFalse(values?: Array<boolean | number | string | null | undefined>): boolean {
     return !values || !values.length || values.some(item => isNotFalse(item));
 }

@@ -38,6 +38,6 @@ import {includes} from './includes';
  * removeIncludes(['foo', 'bar'], ['ar']);    // ['foo']
  * ```
  */
-export function removeIncludes(texts?: string[] | null, excludes?: string[] | null): string[] | undefined | null {
+export function removeIncludes(texts?: string[] | null, excludes?: string[] | null): string[] | null | undefined {
     return (!texts || !texts.length || !excludes || !excludes.length) ? texts : texts.filter(text => !excludes.some(exclude => includes(text, exclude)));
 }

@@ -40,7 +40,7 @@ import {toChars} from './toChars';
  * reverse('foobar', 1, 5);    // 'aboo'
  * ```
  */
-export function reverse(text?: string | null, startInclusive?: number, endExclusive?: number): string | undefined | null {
+export function reverse(text?: string | null, startInclusive?: number, endExclusive?: number): string | null | undefined {
     if (!text) {
         return text;
     }

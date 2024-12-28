@@ -30,6 +30,6 @@
  *
  * @returns a string tag representation of the given object
  */
-export function toStringTag(object: any, nil?: string | null): string | undefined | null {
+export function toStringTag(object: any, nil?: string | null): string | null | undefined {
     return object ? object[Symbol.toStringTag] : nil;
 }

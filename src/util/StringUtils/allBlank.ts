@@ -38,6 +38,6 @@ import {isBlank} from './isBlank';
  * allBlank([null, 'true']);    // false
  * ```
  */
-export function allBlank(texts?: Array<string | undefined | null>): boolean {
+export function allBlank(texts?: Array<string | null | undefined>): boolean {
     return !texts || !texts.length || texts.every(item => isBlank(item));
 }

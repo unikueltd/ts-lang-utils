@@ -37,7 +37,7 @@
  * repeat('z', 3);    // 'zzz'
  * ```
  */
-export function repeat(text?: string | null, size?: number): string | undefined | null {
+export function repeat(text?: string | null, size?: number): string | null | undefined {
     if (!text || size === undefined || size <= 0) {
         return text;
     }

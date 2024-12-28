@@ -41,6 +41,6 @@ import {isEmpty} from './isEmpty';
  * replaceAll('foobar-foobar', 'foobar', 'hello');    // 'hello-hello'
  * ```
  */
-export function replaceAll(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | undefined | null {
+export function replaceAll(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
     return (isEmpty(text) || !search) ? text : text?.replace(new RegExp(search, 'g'), (replace ?? ''));
 }

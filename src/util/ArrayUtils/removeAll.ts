@@ -37,6 +37,6 @@
  * removeAll(['foo', 'bar'], ['bar']);    // ['foo']
  * ```
  */
-export function removeAll<E>(array?: E[] | null, elements?: E[] | null): E[] | undefined | null {
+export function removeAll<E>(array?: E[] | null, elements?: E[] | null): E[] | null | undefined {
     return (!array || !elements) ? array : array.filter(item => !elements.includes(item));
 }

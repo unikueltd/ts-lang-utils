@@ -40,6 +40,6 @@ import {replaceAllIgnoreCase} from './replaceAllIgnoreCase';
  * removeAllIgnoreCase('foobar-foobar', 'BAR');    // 'foo-foo'
  * ```
  */
-export function removeAllIgnoreCase(text?: string | null, search?: string | RegExp | null): string | undefined | null {
+export function removeAllIgnoreCase(text?: string | null, search?: string | RegExp | null): string | null | undefined {
     return replaceAllIgnoreCase(text, search, '');
 }

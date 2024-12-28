@@ -39,7 +39,7 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
  * endsWithAnyIgnoreCase('hello', ['FOO', 'BAR']);    // false
  * ```
  */
-export function endsWithAnyIgnoreCase(text?: string | null, suffixes?: Array<string | undefined | null>): boolean {
+export function endsWithAnyIgnoreCase(text?: string | null, suffixes?: Array<string | null | undefined>): boolean {
     if (!text || !suffixes || !suffixes.length) {
         return false;
     }

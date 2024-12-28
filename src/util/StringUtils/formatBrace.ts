@@ -40,7 +40,7 @@ import {toString} from '@/util/ObjectUtils/toString';
  * formatBrace('hello {}, foo{}', 'world', 'bar');    //  'hello world, foobar'
  * ```
  */
-export function formatBrace(text?: string | null, ...params: any[]): string | undefined | null {
+export function formatBrace(text?: string | null, ...params: any[]): string | null | undefined {
     if (!text || text.length <= 2 || !params || !params.length) {
         return text;
     }

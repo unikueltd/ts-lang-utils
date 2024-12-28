@@ -34,7 +34,7 @@
  * escapeHtml('<div>foobar<div>');    // '&lt;div&gt;foobar&lt;div&gt;'
  * ```
  */
-export function escapeHtml(text?: string | null): string | undefined | null {
+export function escapeHtml(text?: string | null): string | null | undefined {
     if (!text) {
         return text;
     }

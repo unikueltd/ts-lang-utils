@@ -40,6 +40,6 @@ import {replaceFirst} from './replaceFirst';
  * removeFirst('foobar-foobar', 'bar');    // 'foo-foobar'
  * ```
  */
-export function removeFirst(text?: string | null, search?: string | RegExp | null): string | undefined | null {
+export function removeFirst(text?: string | null, search?: string | RegExp | null): string | null | undefined {
     return replaceFirst(text, search, '');
 }

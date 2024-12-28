@@ -40,6 +40,6 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
  * prependIfMissingIgnoreCase('foobar', 'FOO');    // 'foobar'
  * ```
  */
-export function prependIfMissingIgnoreCase(text?: string | null, prefix?: string): string | undefined | null {
+export function prependIfMissingIgnoreCase(text?: string | null, prefix?: string): string | null | undefined {
     return (!text || isEmpty(prefix) || startsWithIgnoreCase(text, prefix)) ? text : (prefix + text);
 }

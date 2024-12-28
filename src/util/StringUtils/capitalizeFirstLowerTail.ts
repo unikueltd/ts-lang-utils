@@ -34,6 +34,6 @@
  * capitalizeFirstLowerTail('fooBar');    // 'Foobar'
  * ```
  */
-export function capitalizeFirstLowerTail(text?: string | null): string | undefined | null {
+export function capitalizeFirstLowerTail(text?: string | null): string | null | undefined {
     return !text ? text : (text.charAt(0).toUpperCase() + text.substring(1)?.toLowerCase());
 }

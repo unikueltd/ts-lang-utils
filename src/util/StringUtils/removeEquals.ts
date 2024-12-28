@@ -38,6 +38,6 @@ import {removeAll} from '@/util/ArrayUtils/removeAll';
  * removeEquals(['foo', 'bar'], ['bar']);    // ['foo']
  * ```
  */
-export function removeEquals(texts?: string[] | null, excludes?: string[] | null): string[] | undefined | null {
+export function removeEquals(texts?: string[] | null, excludes?: string[] | null): string[] | null | undefined {
     return removeAll(texts, excludes);
 }

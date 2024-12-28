@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License.
+ * Licensed under the MIT License (the "License")
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -15,25 +15,29 @@
  */
 
 
+import {isPlain} from '@/util/ObjectUtils/isPlain';
+
+
 /**
- * Utilities for string
+ * Utilities for json
  *
  * @author David Hsing
  */
 
 
 /**
- * Returns the first letter uppercase representation of the given string
+ * Returns whether the given object is a json object
  *
- * @param text the source string to check
+ * @param object the object to check
  *
- * @returns the first letter uppercase representation of the given string
+ * @returns whether the given object is a json object
  *
  * @example
  * ```ts
- * capitalizeFirst('fooBar');    // 'FooBar'
+ * isJsonObject(undefined);    // false
+ * isJsonObject({foo: 'bar'});    // true
  * ```
  */
-export function capitalizeFirst(text?: string | null): string | null | undefined {
-    return !text ? text : (text.charAt(0).toUpperCase() + text.substring(1));
+export function isJsonObject(object: any): boolean {
+    return isPlain(object);
 }

@@ -38,7 +38,7 @@ import {isEmpty} from './isEmpty';
  * trim("foobar", true);    // 'foobar'
  * ```
  */
-export function trim(text?: string | null, emptyAsNull?: boolean): string | undefined | null {
+export function trim(text?: string | null, emptyAsNull?: boolean): string | null | undefined {
     if (!text) {
         return text;
     }

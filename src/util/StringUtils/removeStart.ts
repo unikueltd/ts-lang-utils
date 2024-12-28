@@ -39,6 +39,6 @@ import {startsWith} from './startsWith';
  * removeStart('foobar', 'foo');    // 'bar'
  * ```
  */
-export function removeStart(text?: string | null, remove?: string | null): string | undefined | null {
+export function removeStart(text?: string | null, remove?: string | null): string | null | undefined {
     return (!text || !remove || !startsWith(text, remove)) ? text : text.substring(remove.length);
 }

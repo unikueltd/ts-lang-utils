@@ -39,6 +39,6 @@ import {camelCase} from 'lodash';
  * toCamelCase('__FOO_BAR__');    // 'fooBar'
  * ```
  */
-export function toCamelCase(text?: string | null): string | undefined | null {
+export function toCamelCase(text?: string | null): string | null | undefined {
     return !text ? text : camelCase(text);
 }

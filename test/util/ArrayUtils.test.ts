@@ -16,7 +16,6 @@
 
 
 import {ArrayUtils} from '@yookue/ts-lang-utils';
-import {equals, equalsAny} from "../../src/util/ArrayUtils";
 
 
 describe('ArrayUtils', () => {

@@ -36,7 +36,7 @@
  * reverse(['foo', 'bar'], 0, 1);    // ['foo']
  * ```
  */
-export function reverse<E>(array?: E[] | null, startInclusive?: number, endExclusive?: number): E[] | undefined | null {
+export function reverse<E>(array?: E[] | null, startInclusive?: number, endExclusive?: number): E[] | null | undefined {
     if (!array) {
         return array;
     }

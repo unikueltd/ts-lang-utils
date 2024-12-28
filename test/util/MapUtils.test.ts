@@ -16,7 +16,6 @@
 
 
 import {MapUtils} from '@yookue/ts-lang-utils';
-import {getKey, getValue} from "../../src/util/MapUtils";
 
 
 describe('MapUtils', () => {

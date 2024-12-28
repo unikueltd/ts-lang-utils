@@ -39,6 +39,6 @@ import {isTrue} from './isTrue';
  * allTrue([true, true]);    // true
  * ```
  */
-export function allTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
+export function allTrue(values?: Array<boolean | number | string | null | undefined>): boolean {
     return !!values && values.length > 0 && values.every(item => isTrue(item));
 }

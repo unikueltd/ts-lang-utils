@@ -40,6 +40,6 @@ import {startsWith} from './startsWith';
  * prependIfMissing('foobar', 'foo');    // 'foobar'
  * ```
  */
-export function prependIfMissing(text?: string | null, prefix?: string): string | undefined | null {
+export function prependIfMissing(text?: string | null, prefix?: string): string | null | undefined {
     return (!text || isEmpty(prefix) || startsWith(text, prefix)) ? text : (prefix + text);
 }

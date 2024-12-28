@@ -35,6 +35,6 @@
  * quoteSingle('foobar');    // '"foobar"'
  * ```
  */
-export function quoteDouble(text?: string | null): string | undefined | null {
+export function quoteDouble(text?: string | null): string | null | undefined {
     return !text ? text : `"${text}"`;
 }

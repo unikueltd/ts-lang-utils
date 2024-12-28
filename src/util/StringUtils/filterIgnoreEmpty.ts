@@ -37,7 +37,7 @@ import {isNotEmpty} from './isNotEmpty';
  * filterIgnoreEmpty([null, undefined, '', 'foobar']);    //  ['foobar']
  * ```
  */
-export function filterIgnoreEmpty(texts?: Array<string | undefined | null>): string[] | undefined {
+export function filterIgnoreEmpty(texts?: Array<string | null | undefined>): string[] | undefined {
     if (!texts || !texts.length) {
         return undefined;
     }

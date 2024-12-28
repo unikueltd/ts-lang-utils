@@ -40,7 +40,7 @@
  * abbreviate('foobar', 10);    // 'foobar'
  * ```
  */
-export function abbreviate(text?: string | null, width: number = -1, placeholder: string = '...'): string | undefined | null {
+export function abbreviate(text?: string | null, width: number = -1, placeholder: string = '...'): string | null | undefined {
     if (!text || width < 0 || width >= text.length) {
         return text;
     }

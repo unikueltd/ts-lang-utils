@@ -38,6 +38,6 @@ import {isNotEmpty} from './isNotEmpty';
  * anyNotEmpty([null, 'world']);    // true
  * ```
  */
-export function anyNotEmpty(texts?: Array<string | undefined | null>): boolean {
+export function anyNotEmpty(texts?: Array<string | null | undefined>): boolean {
     return !!texts && texts?.length > 0 && texts.some(item => isNotEmpty(item));
 }

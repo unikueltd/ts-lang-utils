@@ -39,6 +39,6 @@ import {isFalse} from './isFalse';
  * allFalse([false, false]);    // true
  * ```
  */
-export function allFalse(values?: Array<boolean | number | string | undefined | null>): boolean {
+export function allFalse(values?: Array<boolean | number | string | null | undefined>): boolean {
     return !!values && values.length > 0 && values.every(item => isFalse(item));
 }

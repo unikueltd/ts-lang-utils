@@ -38,6 +38,6 @@ import {includes} from '@/util/ArrayUtils/includes';
  * equalsAny('foo', ['foo', 'bar']);    // true
  * ```
  */
-export function equalsAny(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
+export function equalsAny(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
     return includes(comparisons, text);
 }

@@ -37,7 +37,7 @@
  * addAll(['foo', 'bar'], ['world']);    // ['foo', 'bar', 'world']
  * ```
  */
-export function addAll<E>(array?: E[] | null, elements?: E[] | null): E[] | undefined | null {
+export function addAll<E>(array?: E[] | null, elements?: E[] | null): E[] | null | undefined {
     if (!array) {
         return elements;
     }

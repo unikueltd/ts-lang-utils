@@ -38,6 +38,6 @@ import {isEmpty} from './isEmpty';
  * defaultIfEmpty(undefined, 'foobar');    // 'foobar'
  * ```
  */
-export function defaultIfEmpty(text?: string | null, defaultValue?: string | null): string | undefined | null {
+export function defaultIfEmpty(text?: string | null, defaultValue?: string | null): string | null | undefined {
     return isEmpty(text) ? defaultValue : text;
 }

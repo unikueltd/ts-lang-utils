@@ -40,6 +40,6 @@ import {replaceAll} from './replaceAll';
  * removeAll('foobar-foobar', 'bar');    // 'foo-foo'
  * ```
  */
-export function removeAll(text?: string | null, search?: string | RegExp | null): string | undefined | null {
+export function removeAll(text?: string | null, search?: string | RegExp | null): string | null | undefined {
     return replaceAll(text, search, '');
 }

@@ -36,7 +36,7 @@
  * left('foobar', 10);    // 'foobar'
  * ```
  */
-export function left(text?: string | null, length?: number): string | undefined | null {
+export function left(text?: string | null, length?: number): string | null | undefined {
     if (!text || length === undefined || length < 0) {
         return text;
     }

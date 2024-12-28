@@ -16,7 +16,6 @@
 
 
 import {StringUtils} from '@yookue/ts-lang-utils';
-import {leftPad, repeat} from "../../src/util/StringUtils";
 
 
 describe('StringUtils', () => {
