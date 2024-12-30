@@ -15,6 +15,9 @@
  */
 
 
+import {substringBeforeLast} from './substringBeforeLast';
+
+
 /**
  * Utilities for string
  *
@@ -23,21 +26,27 @@
 
 
 /**
- * Returns the substring before the first occurrence of the given separator (the separator is not returned)
+ * Returns the substring before the last occurrence of any the given separators (the separator is not returned)
  *
  * @param text the string to get a substring from
- * @param separator the string to search for
- * @returns the substring before the first occurrence of the given separator
+ * @param separators the strings to search for
+ *
+ * @returns the substring before the last occurrence of any the given separators
  *
  * @example
  * ```ts
- * substringBefore("foo/bar/foo/bar", "/");    // 'foo'
+ * substringBeforeLastAny("foo/bar/foo/bar", ["/", ";"]);    // 'foo/bar/foo'
  * ```
  */
-export function substringBefore(text?: string | null, separator?: string | null): string | null | undefined {
-    if (!text || !separator) {
+export function substringBeforeLastAny(text?: string | null, separators?: Array<string | null | undefined>): string | null | undefined {
+    if (!text || !separators || !separators.length) {
         return text;
     }
-    const index = text.indexOf(separator);
-    return (index === -1) ? text : text.substring(0, index);
+    for (const item of separators) {
+        const before = substringBeforeLast(text, item);
+        if (before) {
+            return  before;
+        }
+    }
+    return text;
 }

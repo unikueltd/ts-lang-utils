@@ -4,47 +4,47 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.txt)
 [![NPM downloads](http://img.shields.io/npm/dm/@yookue/ts-lang-utils.svg?style=flat)](https://npmjs.org/package/@yookue/ts-lang-utils)
 
-🏅 Common lang utilities for typescript 👍
+🏅 为 typescript 而生的 common lang 工具库 👍
 
-## Features
+## 特性
 
-✅ Utilities for array
+✅ array 工具库
 
-✅ Utilities for boolean
+✅ boolean 工具库
 
-✅ Utilities for color
+✅ color 工具库
 
-✅ Utilities for date time
+✅ date time 工具库
 
-✅ Utilities for json
+✅ json 工具库
 
-✅ Utilities for map
+✅ map 工具库
 
-✅ Utilities for nanoid
+✅ nanoid 工具库
 
-✅ Utilities for number
+✅ number 工具库
 
-✅ Utilities for object
+✅ object 工具库
 
-✅ Utilities for random
+✅ random 工具库
 
-✅ Utilities for regex
+✅ regex 工具库
 
-✅ Utilities for string
+✅ string 工具库
 
-✅ Utilities for thread
+✅ thread 工具库
 
-✅ Utilities for tree
+✅ tree 工具库
 
-## Quickstart
+## 快速开始
 
-You can install this package in your typescript project as follows:
+您可以在您的 typescript 项目中使用以下命令来安装工具库：
 
 ```bash
 $ npm install @yookue/ts-lang-utils --save
 ```
 
-Then, you may import components as follows:
+然后，您可以使用以下命令来导入组件：
 
 ```jsx | pure
 import {ArrayUtils} from '@yookue/ts-lang-utils';
@@ -63,20 +63,20 @@ import {ThreadUtils} from '@yookue/ts-lang-utils';
 import {TreeUtils} from '@yookue/ts-lang-utils';
 ```
 
-Enjoy your coding journey with `ts-lang-utils` ✌️
+享受您和 `ts-lang-utils` 的编程之旅吧 ✌️
 
-## Document
+## 文档
 
 - GitHub: [https://yookue.github.io/ts-lang-utils](https://yookue.github.io/ts-lang-utils)
 
-## License
+## 授权
 
-This project is under the [MIT License](https://mit-license.org/).
+本工具库授权基于 [MIT License](https://mit-license.org/) 协议
 
-## Copyright
+## 版权
 
-Beijing Yookue Network Technology Ltd.
+北京攸科网络科技有限公司
 
-## Website
+## 网站
 
 - Yookue: [https://yookue.com](https://yookue.com)

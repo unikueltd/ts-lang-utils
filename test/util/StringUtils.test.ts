@@ -16,6 +16,7 @@
 
 
 import {StringUtils} from '@yookue/ts-lang-utils';
+import {substringAfterAny} from '../../src/util/StringUtils';
 
 
 describe('StringUtils', () => {
@@ -441,16 +442,32 @@ describe('StringUtils', () => {
         expect(StringUtils.substringAfter('foo/bar/foo/bar', '/')).toBe('bar/foo/bar');
     });
 
+    test('Testing substringAfterAny', () => {
+        expect(StringUtils.substringAfterAny('foo/bar/foo/bar', ['/', ';'])).toBe('bar/foo/bar');
+    });
+
     test('Testing substringAfterLast', () => {
         expect(StringUtils.substringAfterLast('foo/bar/foo/bar', '/')).toBe('bar');
+    });
+
+    test('Testing substringAfterLastAny', () => {
+        expect(StringUtils.substringAfterLastAny('foo/bar/foo/bar', ['/', ';'])).toBe('bar');
     });
 
     test('Testing substringBefore', () => {
         expect(StringUtils.substringBefore('foo/bar/foo/bar', '/')).toBe('foo');
     });
 
+    test('Testing substringBeforeAny', () => {
+        expect(StringUtils.substringBeforeAny('foo/bar/foo/bar', ['/', ';'])).toBe('foo');
+    });
+
     test('Testing substringBeforeLast', () => {
         expect(StringUtils.substringBeforeLast('foo/bar/foo/bar', '/')).toBe('foo/bar/foo');
+    });
+
+    test('Testing substringBeforeLastAny', () => {
+        expect(StringUtils.substringBeforeLastAny('foo/bar/foo/bar', ['/', ';'])).toBe('foo/bar/foo');
     });
 
     test('Testing toChars', () => {
