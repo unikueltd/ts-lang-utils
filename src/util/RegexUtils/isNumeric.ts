@@ -36,6 +36,6 @@
  * isNumeric('123456');    // true
  * ```
  */
-export function isNumeric(text?: string): boolean {
+export function isNumeric(text?: string | null): boolean {
     return !!text && /^\d+$/.test(text);
 }

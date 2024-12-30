@@ -36,6 +36,6 @@
  * isAlphabetic('123456');    // false
  * ```
  */
-export function isAlphabetic(text?: string): boolean {
+export function isAlphabetic(text?: string | null): boolean {
     return !!text && /^[A-Za-z]+$/.test(text);
 }

@@ -36,6 +36,6 @@
  * isAlphanumeric('--$$##');    // false
  * ```
  */
-export function isAlphanumeric(text?: string): boolean {
+export function isAlphanumeric(text?: string | null): boolean {
     return !!text && /^[A-Za-z\d]+$/.test(text);
 }

@@ -37,6 +37,6 @@
  * isAlphabeticLower('123456');    // false
  * ```
  */
-export function isAlphabeticLower(text?: string): boolean {
+export function isAlphabeticLower(text?: string | null): boolean {
     return !!text && /^[a-z]+$/.test(text);
 }

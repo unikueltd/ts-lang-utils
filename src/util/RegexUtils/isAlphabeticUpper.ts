@@ -37,6 +37,6 @@
  * isAlphabeticUpper('123456');    // false
  * ```
  */
-export function isAlphabeticUpper(text?: string): boolean {
+export function isAlphabeticUpper(text?: string | null): boolean {
     return !!text && /^[A-Z]+$/.test(text);
 }

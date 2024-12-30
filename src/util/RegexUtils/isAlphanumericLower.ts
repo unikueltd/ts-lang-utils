@@ -37,6 +37,6 @@
  * isAlphanumericLower('--$$##');    // false
  * ```
  */
-export function isAlphanumericLower(text?: string): boolean {
+export function isAlphanumericLower(text?: string | null): boolean {
     return !!text && /^[a-z\d]+$/.test(text);
 }

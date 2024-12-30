@@ -35,7 +35,7 @@
  * compilePattern('[a-zA-Z0-9]+', 'g');
  * ```
  */
-export function compilePattern(pattern?: string, flags?: string): RegExp | undefined {
+export function compilePattern(pattern?: string | null, flags?: string): RegExp | undefined {
     if (!pattern) {
         return undefined;
     }

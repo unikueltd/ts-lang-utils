@@ -35,7 +35,7 @@
  * escapePattern('-+=');    // '\\-\\+='
  * ```
  */
-export function escapePattern(pattern?: string): string | undefined {
+export function escapePattern(pattern?: string | null): string | null | undefined {
     const regex = /[\\^$.*+?\-()[\]{}|]/g;
     return (!pattern || !regex.test(pattern)) ? pattern : pattern.replace(regex, '\\$&');
 }
