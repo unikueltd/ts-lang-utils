@@ -25,7 +25,7 @@ import {customAlphabet} from 'nanoid'
  */
 
 
-const customNanoid = customAlphabet('1234567890');
+const customNanoid = customAlphabet('0123456789');
 
 
 /**
