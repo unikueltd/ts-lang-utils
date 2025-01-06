@@ -16,6 +16,7 @@
 
 
 import {ArrayUtils} from '@yookue/ts-lang-utils';
+import {get} from '../../src/util/ArrayUtils';
 
 
 describe('ArrayUtils', () => {
@@ -49,6 +50,12 @@ describe('ArrayUtils', () => {
     test('Testing equalsAny', () => {
         expect(ArrayUtils.equalsAny([], [['foo', 'bar']])).toBeFalsy();
         expect(ArrayUtils.equalsAny(['foo', 'bar'], [['foo', 'bar'], ['bar', 'foo']])).toBeTruthy();
+    });
+
+    test('Testing get', () => {
+        expect(ArrayUtils.get(['foo', 'bar'], 0)).toBe('foo');
+        expect(ArrayUtils.get(['foo', 'bar'], 1)).toBe('bar');
+        expect(ArrayUtils.get(['foo', 'bar'], 2, 'world')).toBe('world');
     });
 
     test('Testing getFirst', () => {

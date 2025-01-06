@@ -23,18 +23,19 @@
 
 
 /**
- * Returns the first element of the given array
+ * Returns the indexed element of the given array
  *
  * @param array the array to inspect
+ * @param index the index in the array
  * @param defaultValue the default value if the array is empty
  *
- * @returns the first element of the given array
+ * @returns the indexed element of the given array
  *
  * @example
  * ```ts
- * getFirst(['foo', 'bar']);    // 'foo'
+ * get(['foo', 'bar'], 0);    // 'foo'
  * ```
  */
-export function getFirst<E>(array?: E[] | readonly E[] | null, defaultValue?: E | null): E | null | undefined {
-    return (!array || !array.length) ? defaultValue : array[0];
+export function get<E>(array?: E[] | readonly E[] | null, index?: number, defaultValue?: E | null): E | null | undefined {
+    return (!array || !array.length || index === undefined || index > (array.length - 1)) ? defaultValue : array[index];
 }
