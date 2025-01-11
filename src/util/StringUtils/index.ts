@@ -80,6 +80,7 @@ export {removeFirst} from './removeFirst';
 export {removeFirstIgnoreCase} from './removeFirstIgnoreCase';
 export {removeIncludes} from './removeIncludes';
 export {removeIncludesIgnoreCase} from './removeIncludesIgnoreCase';
+export {removeSpace} from './removeSpace';
 export {removeStart} from './removeStart';
 export {removeStartIgnoreCase} from './removeStartIgnoreCase';
 export {repeat} from './repeat';

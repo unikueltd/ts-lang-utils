@@ -16,7 +16,7 @@
 
 
 import {StringUtils} from '@yookue/ts-lang-utils';
-import {substringAfterAny} from '../../src/util/StringUtils';
+import {removeSpace, substringAfterAny} from '../../src/util/StringUtils';
 
 
 describe('StringUtils', () => {
@@ -344,6 +344,10 @@ describe('StringUtils', () => {
 
     test('Testing removeIncludesIgnoreCase', () => {
         expect(StringUtils.removeIncludesIgnoreCase(['foo', 'bar'], ['AR'])).toStrictEqual(['foo']);
+    });
+
+    test('Testing removeSpace', () => {
+        expect(StringUtils.removeSpace('foo bar')).toBe('foobar');
     });
 
     test('Testing removeStart', () => {
