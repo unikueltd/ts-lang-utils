@@ -23,17 +23,17 @@
 
 
 /**
- * Returns the string that removed all spaces from the given string
+ * Returns the string that removed all blanks from the given string
  *
  * @param text the text to inspect
  *
- * @returns the string that removed all spaces from the given string
+ * @returns the string that removed all blanks from the given string
  *
  * @example
  * ```ts
  * removeSpace('foo bar');    // 'foobar'
  * ```
  */
-export function removeSpace(text?: string | null): string | null | undefined {
+export function removeBlank(text?: string | null): string | null | undefined {
     return !text ? text : text.replace(/\s+/g, '');
 }

@@ -16,7 +16,7 @@
 
 
 import {StringUtils} from '@yookue/ts-lang-utils';
-import {removeSpace, substringAfterAny} from '../../src/util/StringUtils';
+import {removeBlank, substringAfterAny} from '../../src/util/StringUtils';
 
 
 describe('StringUtils', () => {
@@ -314,6 +314,10 @@ describe('StringUtils', () => {
         expect(StringUtils.removeAllIgnoreCase('foobar-foobar', 'BAR')).toBe('foo-foo');
     });
 
+    test('Testing removeBlank', () => {
+        expect(StringUtils.removeBlank('foo bar')).toBe('foobar');
+    });
+
     test('Testing removeFirst', () => {
         expect(StringUtils.removeFirst(undefined, undefined)).toBeUndefined();
         expect(StringUtils.removeFirst('foobar-foobar', undefined)).toBe('foobar-foobar');
@@ -344,10 +348,6 @@ describe('StringUtils', () => {
 
     test('Testing removeIncludesIgnoreCase', () => {
         expect(StringUtils.removeIncludesIgnoreCase(['foo', 'bar'], ['AR'])).toStrictEqual(['foo']);
-    });
-
-    test('Testing removeSpace', () => {
-        expect(StringUtils.removeSpace('foo bar')).toBe('foobar');
     });
 
     test('Testing removeStart', () => {
