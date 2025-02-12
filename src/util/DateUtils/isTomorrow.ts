@@ -20,18 +20,13 @@ import {isSameDay} from './isSameDay';
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the date is tomorrow
  *
  * @param date the date to check
  *
  * @returns whether the date is tomorrow
+ *
+ * @author David Hsing
  */
 export function isTomorrow(date?: Date): boolean {
     return !!date && isSameDay(new Date(), addDay(date, -1));

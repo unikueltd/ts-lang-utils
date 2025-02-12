@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given arrays are equal
  *
  * @param array the source array to check
  * @param comparison the target array to compare
  *
  * @returns whether the given arrays are equal
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

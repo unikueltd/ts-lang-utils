@@ -19,19 +19,14 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the leftmost given string, case-insensitive
  *
  * @param text the text to inspect
  * @param remove the string to remove, case-insensitive
  *
  * @returns the string that removed the leftmost given string, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -20,19 +20,14 @@ import {startsWith} from './startsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that concat the given prefix and text
  *
  * @param text the text to check
  * @param prefix the prefix to prepend
  *
  * @returns a string that concat the given prefix and text
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

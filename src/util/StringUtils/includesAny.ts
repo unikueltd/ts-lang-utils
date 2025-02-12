@@ -19,19 +19,14 @@ import {includes} from './includes';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given text includes to any of the comparison strings
  *
  * @param text the source string to check
  * @param comparisons the target strings to compare
  *
  * @returns whether the given text includes the comparison string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

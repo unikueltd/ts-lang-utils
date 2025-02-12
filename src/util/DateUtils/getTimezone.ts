@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the timezone of the given date
  *
  * @param date the date to inspect
  *
  * @returns the timezone of the given date
+ *
+ * @author David Hsing
  */
 export function getTimezone(date: Date = new Date()): string {
     const offset = date.getTimezoneOffset();

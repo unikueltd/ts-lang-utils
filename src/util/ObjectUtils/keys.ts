@@ -20,18 +20,13 @@ import {hasProp} from './hasProp';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string array representation of keys in the given object
  *
  * @param object the object to inspect
  *
  * @returns the keys of the given object
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

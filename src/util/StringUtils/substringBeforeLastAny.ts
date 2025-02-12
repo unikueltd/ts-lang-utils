@@ -19,19 +19,14 @@ import {substringBeforeLast} from './substringBeforeLast';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the substring before the last occurrence of any the given separators (the separator is not returned)
  *
  * @param text the string to get a substring from
  * @param separators the strings to search for
  *
  * @returns the substring before the last occurrence of any the given separators
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

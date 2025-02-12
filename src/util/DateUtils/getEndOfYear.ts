@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the end year date of the given date
  *
  * @param date the date to inspect
  *
  * @returns the end year date of the given date
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

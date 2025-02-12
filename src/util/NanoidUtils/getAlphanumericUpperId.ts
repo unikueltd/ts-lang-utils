@@ -18,13 +18,6 @@
 import {customAlphabet} from 'nanoid'
 
 
-/**
- * Utilities for nanoid
- *
- * @author David Hsing
- */
-
-
 const customNanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
 
@@ -34,6 +27,8 @@ const customNanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
  * @param size the length expected
  *
  * @returns an alphanumeric uppercase nanoid
+ *
+ * @author David Hsing
  */
 export function getAlphanumericUpperId(size?: number): string {
     return customNanoid(size);

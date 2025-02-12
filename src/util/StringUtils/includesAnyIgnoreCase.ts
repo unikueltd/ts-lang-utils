@@ -19,19 +19,14 @@ import {includesIgnoreCase} from './includesIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given text includes to any of the comparison strings, case-insensitive
  *
  * @param text the source string to check
  * @param comparisons the target strings to compare
  *
  * @returns whether the text includes the comparison string, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

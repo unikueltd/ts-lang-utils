@@ -19,18 +19,13 @@ import {isFalse} from './isFalse';
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given value is nil or can be converted to true
  *
  * @param value the source value to check
  *
  * @returns whether the given value is nil or can be converted to true
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

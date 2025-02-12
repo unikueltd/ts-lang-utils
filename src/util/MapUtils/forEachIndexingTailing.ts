@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for map
- *
- * @author David Hsing
- */
-
-
-/**
  * Processes each entry in the map, with indexing ability, but not the tailing entry, and returns it
  *
  * @param map the map to inspect
  * @param callback the callback function that processes each entry
  *
  * @returns the tailing entry in the source map
+ *
+ * @author David Hsing
  */
 export function forEachIndexingTailing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value: V, key: K, index: number) => void): [K, V] | undefined {
     // noinspection DuplicatedCode

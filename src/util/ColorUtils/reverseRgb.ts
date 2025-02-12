@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for color
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the reversed rgb color from the given color
  *
  * @param rgb the rgb color to inspect
  *
  * @returns the reversed rgb color from the given color
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

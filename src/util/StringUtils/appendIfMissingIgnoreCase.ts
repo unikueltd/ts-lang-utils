@@ -20,19 +20,14 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that concat the given text and suffix, case-insensitive
  *
  * @param text the text to check
  * @param suffix the suffix to append
  *
  * @returns a string that concat the given text and suffix, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

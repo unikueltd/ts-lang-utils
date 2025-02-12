@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the length of the given array
  *
  * @param array the array to check
  *
  * @returns the length of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns an integer value from the given source
  *
  * @param source the string value to check
@@ -30,6 +23,8 @@
  * @param floorValue Whether to floor the source, otherwise to ceil
  *
  * @returns an integer value from the given source
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

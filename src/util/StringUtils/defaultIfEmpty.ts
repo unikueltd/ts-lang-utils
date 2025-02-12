@@ -19,19 +19,14 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the default value if the given text is empty, or the text self if it is not empty
  *
  * @param text the text to check
  * @param defaultValue the default value placeholder
  *
  * @returns the default value if the given text is empty, or the text self if it is not empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

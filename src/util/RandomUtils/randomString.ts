@@ -20,13 +20,6 @@ import {randomElement} from './randomElement';
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random string that between the length range
  *
  * @param minLength the min length, inclusive
@@ -34,6 +27,8 @@ import {randomElement} from './randomElement';
  * @param characters the source characters to be generated from
  *
  * @returns a random string that between the length range
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

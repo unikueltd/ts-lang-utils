@@ -19,18 +19,13 @@ import {randomInteger} from './randomInteger';
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random element of the array
  *
  * @param array the array to random
  *
  * @returns a random element of the array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

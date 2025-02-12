@@ -19,19 +19,14 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that excludes the elements which equals to any of the given exclusions, case-insensitive
  *
  * @param texts the arrays to inspect
  * @param excludes the elements array to exclude
  *
  * @returns the array that excludes the elements which equals to any of the given exclusions, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

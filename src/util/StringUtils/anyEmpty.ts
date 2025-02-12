@@ -19,18 +19,13 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether any of the given texts is empty
  *
  * @param texts the texts to check
  *
  * @returns whether any of the given texts is empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

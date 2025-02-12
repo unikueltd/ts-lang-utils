@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the indexed element of the given array
  *
  * @param array the array to inspect
@@ -30,6 +23,8 @@
  * @param defaultValue the default value if the array is empty
  *
  * @returns the indexed element of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

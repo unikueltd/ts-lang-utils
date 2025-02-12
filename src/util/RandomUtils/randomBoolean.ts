@@ -16,16 +16,11 @@
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random boolean value
  *
  * @returns the random boolean value
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -19,13 +19,6 @@ import {defaultString} from './defaultString';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the joined string with the given element(s) and delimiter
  *
  * @param element the source element(s) to inspect
@@ -33,6 +26,8 @@ import {defaultString} from './defaultString';
  * @param filter the filter to check each element of the given element(s) should be included
  *
  * @returns the joined string with the given element(s) and delimiter
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

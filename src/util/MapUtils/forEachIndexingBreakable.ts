@@ -16,17 +16,12 @@
 
 
 /**
- * Utilities for map
- *
- * @author David Hsing
- */
-
-
-/**
  * Processes each entry in the map, with indexing and breakable ability
  *
  * @param map the map to inspect
  * @param callback the callback function that processes each entry, returns `false` means break
+ *
+ * @author David Hsing
  */
 export function forEachIndexingBreakable<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value: V, key: K, index: number) => boolean): void {
     if (!map || !map.size || !callback) {

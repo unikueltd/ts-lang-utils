@@ -19,19 +19,14 @@ import {endsWith} from './endsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the leftmost given string
  *
  * @param text the text to inspect
  * @param remove the string to remove
  *
  * @returns the string that removed the leftmost given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

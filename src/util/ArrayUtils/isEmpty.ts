@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given array is empty
  *
  * @param array the array to check
  *
  * @returns whether the given array is empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

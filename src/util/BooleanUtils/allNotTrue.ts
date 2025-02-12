@@ -19,18 +19,13 @@ import {isNotTrue} from './isNotTrue';
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the given elements are not true
  *
  * @param values the elements to check
  *
  * @returns whether all the given elements are not true
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

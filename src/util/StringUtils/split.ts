@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the split array of the given string by the given delimiter
  *
  * @param text the source string to inspect
@@ -31,6 +24,8 @@
  * @param trim whether trim each element before returning, default is true
  *
  * @returns the split array of the given string by the given delimiter
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

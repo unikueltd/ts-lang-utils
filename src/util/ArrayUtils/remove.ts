@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that removes the given element
  *
  * @param array the arrays to inspect
  * @param element the element to remove
  *
  * @returns the array that removes the given element
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

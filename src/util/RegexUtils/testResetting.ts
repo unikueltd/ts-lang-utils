@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the source text can be tested by the given regex, and resets the last index of the regex
  *
  * @param regex the regex to match
  * @param text the source text to check
  *
  * @returns whether the source text can be tested by the given pattern, and resets the last index of the regex
+ *
+ * @author David Hsing
  */
 export function testResetting(regex?: RegExp, text?: string | null): boolean {
     if (!regex || !text) {

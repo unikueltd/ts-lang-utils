@@ -18,13 +18,6 @@
 import {customAlphabet} from 'nanoid'
 
 
-/**
- * Utilities for nanoid
- *
- * @author David Hsing
- */
-
-
 const customNanoid = customAlphabet('346789ABCDEFGHJKMNPQRTWXYabcdefghjkmnpqrtwxy');
 
 
@@ -36,6 +29,8 @@ const customNanoid = customAlphabet('346789ABCDEFGHJKMNPQRTWXYabcdefghjkmnpqrtwx
  * @param size the length expected
  *
  * @returns a popular nanoid
+ *
+ * @author David Hsing
  */
 export function getPopularId(size?: number): string {
     return customNanoid(size);

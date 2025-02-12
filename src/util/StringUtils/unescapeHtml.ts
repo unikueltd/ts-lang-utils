@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the unescaped html string of the given text
  *
  * @param text the source string to inspect
  *
  * @returns the unescaped html string of the given text
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -19,18 +19,13 @@ import {isNotBlank} from './isNotBlank';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the filtered array of the gaven strings, without blanks
  *
  * @param texts the source string to inspect
  *
  * @returns the filtered array of the gaven strings, without blanks
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

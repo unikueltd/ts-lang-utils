@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for color
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the reversed hex color from the given color
  *
  * @param hex the hex color to inspect
  *
  * @returns the reversed hex color from the given color
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

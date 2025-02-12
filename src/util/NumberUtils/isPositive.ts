@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given value is positive
  *
  * @param value the number value to check
  *
  * @returns whether the given value is positive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

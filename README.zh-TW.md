@@ -16,6 +16,12 @@
 
 ✅ date time 工具庫
 
+✅ element 工具庫
+
+✅ file 工具庫
+
+✅ image 工具庫
+
 ✅ json 工具庫
 
 ✅ map 工具庫
@@ -51,6 +57,9 @@ import {ArrayUtils} from '@yookue/ts-lang-utils';
 import {BooleanUtils} from '@yookue/ts-lang-utils';
 import {ColorUtils} from '@yookue/ts-lang-utils';
 import {DateUtils} from '@yookue/ts-lang-utils';
+import {ElementUtils} from '@yookue/ts-lang-utils';
+import {FileUtils} from '@yookue/ts-lang-utils';
+import {ImageUtils} from '@yookue/ts-lang-utils';
 import {JsonUtils} from '@yookue/ts-lang-utils';
 import {MapUtils} from '@yookue/ts-lang-utils';
 import {NanoidUtils} from '@yookue/ts-lang-utils';

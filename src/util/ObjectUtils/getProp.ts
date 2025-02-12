@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the property value if property name is present on the given object
  *
  * @param object the object to inspect
@@ -30,6 +23,8 @@
  * @param defaultValue the default value if the prop cannot be found
  *
  * @returns the property value if property name is present on the given object
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

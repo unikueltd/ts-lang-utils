@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string representation of the given object
  *
  * @param object the object to inspect
  * @param nil the default string if the object is nil
  *
  * @returns a string representation of the given object
+ *
+ * @author David Hsing
  */
 export function toString(object: any, nil?: string | null): string | null | undefined {
     return object ? object.toString() : nil;

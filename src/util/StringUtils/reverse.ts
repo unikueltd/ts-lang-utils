@@ -19,13 +19,6 @@ import {toChars} from './toChars';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the reversed representation of the given string
  *
  * @param text the source string to inspect
@@ -33,6 +26,8 @@ import {toChars} from './toChars';
  * @param endExclusive the ending index, exclusive
  *
  * @returns the reversed representation of the given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

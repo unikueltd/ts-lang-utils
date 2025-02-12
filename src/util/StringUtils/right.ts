@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the rightmost length characters of the given string
  *
  * @param text the text to inspect
  * @param length the expected length
  *
  * @returns the rightmost length characters of the given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

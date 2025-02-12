@@ -22,13 +22,6 @@ import {repeat} from './repeat';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the left padded string with the given size and string, or original string if no padding is necessary
  *
  * @param text the source string to inspect
@@ -36,6 +29,8 @@ import {repeat} from './repeat';
  * @param pad the target string to fill, default is space
  *
  * @returns the left padded string with the given size and string, or original string if no padding is necessary
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

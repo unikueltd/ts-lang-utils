@@ -19,18 +19,13 @@ import {isNotEmpty} from './isNotEmpty';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the first not empty element in the given objects, or undefined if all elements are empty
  *
  * @param objects the objects to check
  *
  * @returns the first not empty element in the given objects, or undefined if all elements are empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

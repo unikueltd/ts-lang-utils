@@ -19,19 +19,14 @@ import {replaceFirst} from './replaceFirst';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the first occurrence in the given text
  *
  * @param text the text to inspect
  * @param search the string or regex to match
  *
  * @returns the string that removed the first occurrence in the given text
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

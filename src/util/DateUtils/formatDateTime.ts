@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the formatted string that represent the given date
  *
  * @param date the date to inspect
  * @param format the date/time format string
  *
  * @returns the formatted string that represent the given date
+ *
+ * @author David Hsing
  */
 export function formatDateTime(date?: Date, format?: string): string | undefined {
     if (!date || !format) {

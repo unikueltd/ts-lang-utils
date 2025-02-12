@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for color
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string is a valid hex color
  *
  * @param hex the hex color to check
  *
  * @returns whether the given string is a valid hex color
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

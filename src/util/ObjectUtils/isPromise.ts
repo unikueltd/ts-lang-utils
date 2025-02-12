@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is a promise
  *
  * @param object the object to check
  *
  * @returns whether the given object is a promise
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that represents the given string array
  *
  * @param texts the source strings to inspect
  *
  * @returns a string that represents the given string array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

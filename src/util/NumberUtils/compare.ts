@@ -19,13 +19,6 @@ import {toFloat} from './toFloat';
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns 1 if source greater than target, -1 if source less than target, 0 if equals
  *
  * @param source the first comparable
@@ -33,6 +26,8 @@ import {toFloat} from './toFloat';
  * @param nullGreater whether a nil (undefined or null) value is considered greater than another non-nil value
  *
  * @returns 1 if source greater than target, -1 if source less than target, 0 if equals
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

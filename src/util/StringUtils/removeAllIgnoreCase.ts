@@ -19,19 +19,14 @@ import {replaceAllIgnoreCase} from './replaceAllIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed all occurrences in the given text, case-insensitive
  *
  * @param text the text to inspect
  * @param search the string or regex to match
  *
  * @returns the string that removed all occurrences in the given text, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

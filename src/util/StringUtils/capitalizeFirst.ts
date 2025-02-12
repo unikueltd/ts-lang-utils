@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the first letter uppercase representation of the given string
  *
  * @param text the source string to check
  *
  * @returns the first letter uppercase representation of the given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

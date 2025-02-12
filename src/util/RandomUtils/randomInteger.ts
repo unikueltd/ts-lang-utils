@@ -19,19 +19,14 @@ import {randomNumber} from './randomNumber';
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random integer that between value range
  *
  * @param minValue the min value, inclusive
  * @param maxValue the max value, exclusive
  *
  * @returns a random integer that between value range
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

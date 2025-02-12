@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that contains all the given elements at the index of the source array
  *
  * @param array the array to inspect
@@ -30,6 +23,8 @@
  * @param elements the elements to insert
  *
  * @returns the array that contains all the given elements at the index of the source array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

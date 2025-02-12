@@ -16,17 +16,13 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-/**
  * Returns a readonly instance of the given array
  *
  * @param array the arrays to inspect
  *
  * @returns a readonly instance of the given array
+ *
+ * @author David Hsing
  */
 export function readonly<E>(array?: E[] | null): ReadonlyArray<E> | null | undefined {
     return !array ? array : Object.freeze(array);

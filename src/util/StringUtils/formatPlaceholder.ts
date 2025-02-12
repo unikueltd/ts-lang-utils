@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the replaced string of the source string (named placeholder) with the given parameters
  *
  * @param text the source string to inspect
  * @param params the parameters to replaced with, in the form of key values
  *
  * @returns the replaced string of the source string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

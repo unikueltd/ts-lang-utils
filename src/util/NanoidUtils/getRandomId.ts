@@ -19,18 +19,13 @@ import {nanoid} from 'nanoid'
 
 
 /**
- * Utilities for nanoid
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random nanoid
  *
  * @param size the length expected
  *
  * @returns a random nanoid
+ *
+ * @author David Hsing
  */
 export function getRandomId(size?: number): string {
     return nanoid(size);

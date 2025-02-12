@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for map
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the value with the given key
  *
  * @param map the map to inspect
@@ -30,6 +23,8 @@
  * @param defaultValue the default value when nothing matches the given key
  *
  * @returns the value with the given key
+ *
+ * @author David Hsing
  */
 export function getValue<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, key?: K, defaultValue?: V): V | undefined {
     if (!map || !map.size) {

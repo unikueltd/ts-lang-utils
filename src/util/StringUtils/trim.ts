@@ -19,19 +19,14 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that trimmed from the given string
  *
  * @param text the string to trim
  * @param emptyAsNull whether to return null if the trimmed result is empty
  *
  * @returns the trimmed string value from the given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

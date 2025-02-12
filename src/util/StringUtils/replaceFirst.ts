@@ -19,13 +19,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that replaced the first occurrence in the given text
  *
  * @param text the text to inspect
@@ -33,6 +26,8 @@ import {isEmpty} from './isEmpty';
  * @param replace the expected replacement string
  *
  * @returns the string that replaced the first occurrence in the given text
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

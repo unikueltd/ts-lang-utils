@@ -15,13 +15,6 @@
  */
 
 
-/**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
 import {equals} from './equals';
 
 
@@ -32,6 +25,8 @@ import {equals} from './equals';
  * @param comparisons the elements to compare
  *
  * @returns whether the given array equals any of the given comparisons
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

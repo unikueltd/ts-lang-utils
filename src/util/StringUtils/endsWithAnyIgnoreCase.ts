@@ -19,19 +19,14 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string ends with any of the suffixes, case-insensitive
  *
  * @param text the source string to check
  * @param suffixes the target strings to compare
  *
  * @returns whether the given string ends with any of the suffixes, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

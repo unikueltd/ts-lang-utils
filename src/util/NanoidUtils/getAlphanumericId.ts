@@ -18,13 +18,6 @@
 import {customAlphabet} from 'nanoid'
 
 
-/**
- * Utilities for nanoid
- *
- * @author David Hsing
- */
-
-
 const customNanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz');
 
 
@@ -34,6 +27,8 @@ const customNanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefg
  * @param size the length expected
  *
  * @returns an alphanumeric nanoid
+ *
+ * @author David Hsing
  */
 export function getAlphanumericId(size?: number): string {
     return customNanoid(size);

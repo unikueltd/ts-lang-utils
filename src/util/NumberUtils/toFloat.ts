@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a float value from the given source
  *
  * @param source the string value to check
  * @param defaultValue the default value if the source cannot be converted
  *
  * @returns a float value from the given source
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

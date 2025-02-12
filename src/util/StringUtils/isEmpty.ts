@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string is empty
  *
  * @param text the string to check
  *
  * @returns whether the given string is empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -19,18 +19,13 @@ import {sum} from './sum';
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the average value of the given array
  *
  * @param values the array to calculate
  *
  * @returns the average value of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

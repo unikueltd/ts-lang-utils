@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns an array that only contains the given element
  *
  * @param element the element to wrap
  *
  * @returns an array that only contains the given element
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

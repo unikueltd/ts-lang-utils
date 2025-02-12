@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the characters in the given text is numeric
  *
  * @param text the text to check
  *
  * @returns whether all the characters in the given text is numeric
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

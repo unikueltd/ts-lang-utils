@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for json
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string is a JSON string
  *
  * @param text the string to check
  *
  * @returns whether the given object is a JSON string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

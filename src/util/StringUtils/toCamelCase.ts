@@ -19,18 +19,13 @@ import {camelCase} from 'lodash';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the camel case representation of the given string
  *
  * @param text the source string to inspect
  *
  * @returns the camel case representation of the given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

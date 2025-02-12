@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Reverses the given array
  *
  * @param array the arrays to inspect
  * @param startInclusive the starting index, inclusive
  * @param endExclusive the ending index, exclusive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

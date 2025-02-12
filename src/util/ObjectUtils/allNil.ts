@@ -19,18 +19,13 @@ import {isNil} from './isNil';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the elements in the given objects are null or undefined
  *
  * @param objects the objects to check
  *
  * @returns whether all the elements in the given objects are null or undefined
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

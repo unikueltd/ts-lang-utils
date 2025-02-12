@@ -19,19 +19,14 @@ import {includes} from '@/util/ArrayUtils/includes';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string equals to any of the comparison strings
  *
  * @param text the source string to check
  * @param comparisons the target strings to compare
  *
  * @returns whether the given string equals to any of the comparison strings
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

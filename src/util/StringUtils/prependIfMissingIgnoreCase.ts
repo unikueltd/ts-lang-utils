@@ -20,19 +20,14 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that concat the given prefix and text, case-insensitive
  *
  * @param text the text to check
  * @param prefix the prefix to prepend
  *
  * @returns a string that concat the given prefix and text, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

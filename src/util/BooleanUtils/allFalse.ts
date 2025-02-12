@@ -19,18 +19,13 @@ import {isFalse} from './isFalse';
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the given elements are false
  *
  * @param values the elements to check
  *
  * @returns whether all the given elements are false
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the length of the given string
  *
  * @param text the source string to check
  *
  * @returns the length of the given string
+ *
+ * @author David Hsing
  */
 export function getLength(text?: string | null): number {
     return text ? text.length : 0;

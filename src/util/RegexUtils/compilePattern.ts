@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a regex that compiled by the given pattern
  *
  * @param pattern the pattern to inspect
  * @param flags any combination of <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp#flags' target='_blank'>flag values</a>
  *
  * @returns a regex that compiled by the given pattern
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

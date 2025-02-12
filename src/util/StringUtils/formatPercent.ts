@@ -21,19 +21,14 @@ import {toString} from '@/util/ObjectUtils/toString';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the replaced string of the source string ("%" placeholder) with the given parameters
  *
  * @param text the source string to inspect
  * @param params the parameters to replaced with
  *
  * @returns the replaced string of the source string
+ *
+ * @author David Hsing
  *
  * @see "https://github.com/samsonjs/format/blob/main/format.js"
  *

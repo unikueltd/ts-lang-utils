@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the characters in the given text is lowercase alphanumeric
  *
  * @param text the text to check
  *
  * @returns whether all the characters in the given text is lowercase alphanumeric
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

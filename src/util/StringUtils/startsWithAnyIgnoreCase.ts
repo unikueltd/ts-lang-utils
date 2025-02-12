@@ -19,19 +19,14 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string starts with any of the prefixes, case-insensitive
  *
  * @param text the source string to check
  * @param prefixes the target strings to compare
  *
  * @returns whether the given string starts with any of the prefixes, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -20,19 +20,14 @@ import {setProp} from './setProp';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns an object that cloned from the given object, includes the given keys only
  *
  * @param source the object to clone
  * @param keys the key names to include
  *
  * @returns an object that cloned from the given object, includes the given keys only
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

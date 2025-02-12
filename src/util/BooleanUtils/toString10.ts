@@ -19,17 +19,13 @@ import {toString} from './toString';
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-/**
  * Returns a string value of '1'/'0' from the boolean value
  *
  * @param value the boolean value to check
  *
  * @returns the string value of '1'/'0' from the boolean value
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

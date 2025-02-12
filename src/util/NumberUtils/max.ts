@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the max value of the given array
  *
  * @param values the array to calculate
  *
  * @returns the max value of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -18,13 +18,6 @@
 import {customAlphabet} from 'nanoid'
 
 
-/**
- * Utilities for nanoid
- *
- * @author David Hsing
- */
-
-
 const customNanoid = customAlphabet('0123456789abcdefghijklmnopqrstuvwxyz');
 
 
@@ -34,6 +27,8 @@ const customNanoid = customAlphabet('0123456789abcdefghijklmnopqrstuvwxyz');
  * @param size the length expected
  *
  * @returns an alphanumeric lowercase nanoid
+ *
+ * @author David Hsing
  */
 export function getAlphanumericLowerId(size?: number): string {
     return customNanoid(size);

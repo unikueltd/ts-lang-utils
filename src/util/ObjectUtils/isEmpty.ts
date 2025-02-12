@@ -19,18 +19,13 @@ import {keys} from './keys';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is empty
  *
  * @param object the object to check
  *
  * @returns whether the given object is empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns an empty value if the given text is undefined
  *
  * @param text the text to check
  *
  * @returns an empty value if the given text is undefined
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

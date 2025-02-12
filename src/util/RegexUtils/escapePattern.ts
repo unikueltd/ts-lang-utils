@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a regex pattern that escaped the given pattern
  *
  * @param pattern the pattern to inspect
  *
  * @returns a regex pattern that escaped the given pattern
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

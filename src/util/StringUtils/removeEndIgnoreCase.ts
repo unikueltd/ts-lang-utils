@@ -19,19 +19,14 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the rightmost given string, case-insensitive
  *
  * @param text the text to inspect
  * @param remove the string to remove, case-insensitive
  *
  * @returns the string that removed the rightmost given string, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

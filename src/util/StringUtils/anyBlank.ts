@@ -19,18 +19,13 @@ import {isBlank} from './isBlank';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether any of the given texts is blank
  *
  * @param texts the texts to check
  *
  * @returns whether any of the given texts is blank
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -19,18 +19,13 @@ import {isPlain} from '@/util/ObjectUtils/isPlain';
 
 
 /**
- * Utilities for json
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is a json object
  *
  * @param object the object to check
  *
  * @returns whether the given object is a json object
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

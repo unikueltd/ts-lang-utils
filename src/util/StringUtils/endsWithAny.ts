@@ -19,19 +19,14 @@ import {endsWith} from './endsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string ends with any of the suffixes
  *
  * @param text the source string to check
  * @param suffixes the target strings to compare
  *
  * @returns whether the given string ends with any of the suffixes
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

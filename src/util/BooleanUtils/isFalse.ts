@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given value can be converted to false
  *
  * @param value the source value to check
  *
  * @returns whether the given value can be converted to false
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

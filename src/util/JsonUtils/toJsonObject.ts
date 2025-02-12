@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for json
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a JSON object that represents the given string
  *
  * @param text the string to inspect
  *
  * @returns a JSON object that represents the given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

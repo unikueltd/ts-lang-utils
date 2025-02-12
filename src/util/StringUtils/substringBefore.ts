@@ -16,18 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the substring before the first occurrence of the given separator (the separator is not returned)
  *
  * @param text the string to get a substring from
  * @param separator the string to search for
+ *
  * @returns the substring before the first occurrence of the given separator
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

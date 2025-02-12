@@ -19,19 +19,14 @@ import {replaceFirstIgnoreCase} from './replaceFirstIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the first occurrence in the given text, case-insensitive
  *
  * @param text the text to inspect
  * @param search the string or regex to match
  *
  * @returns the string that removed the first occurrence in the given text, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

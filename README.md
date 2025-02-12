@@ -16,6 +16,12 @@
 
 ✅ Utilities for date time
 
+✅ Utilities for element
+
+✅ Utilities for file
+
+✅ Utilities for image
+
 ✅ Utilities for json
 
 ✅ Utilities for map
@@ -51,6 +57,9 @@ import {ArrayUtils} from '@yookue/ts-lang-utils';
 import {BooleanUtils} from '@yookue/ts-lang-utils';
 import {ColorUtils} from '@yookue/ts-lang-utils';
 import {DateUtils} from '@yookue/ts-lang-utils';
+import {ElementUtils} from '@yookue/ts-lang-utils';
+import {FileUtils} from '@yookue/ts-lang-utils';
+import {ImageUtils} from '@yookue/ts-lang-utils';
 import {JsonUtils} from '@yookue/ts-lang-utils';
 import {MapUtils} from '@yookue/ts-lang-utils';
 import {NanoidUtils} from '@yookue/ts-lang-utils';

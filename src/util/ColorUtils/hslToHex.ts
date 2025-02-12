@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for color
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the converted hex color from the given hsl color
  *
  * @param hsl the hsl color to inspect
  *
  * @returns the converted hex color from the given hsl color
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -19,18 +19,13 @@ import {isNotNil} from './isNotNil';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the first not nil element in the given objects, or undefined if all elements are nil
  *
  * @param objects the objects to check
  *
  * @returns the first not nil element in the given objects, or undefined if all elements are nil
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
