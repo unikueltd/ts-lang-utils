@@ -27,18 +27,14 @@ import {isPromise} from '@/util/ObjectUtils';
  *
  * @author David Hsing
  */
-export function detectSource(param?: string | Promise<string | undefined> | (() => string | undefined | Promise<string | undefined>), resolve?: (res?: string) => void, reject?: (err?: any) => void): void {
+export function detectSource(param?: string | Promise<string | undefined> | (() => string | undefined | Promise<string | undefined>), resolve?: (res?: string) => void, reject?: (err: any) => void): void {
     if (!param) {
-        reject?.();
-    } else if (typeof param === 'string') {
+        return;
+    }
+    if (typeof param === 'string') {
         resolve?.(param);
     } else if (typeof param === 'function') {
-        try {
-            const value = param() as string;
-            resolve?.(value);
-        } catch (err) {
-            reject?.(err);
-        }
+        detectSource(param(), resolve, reject);
     } else if (isPromise(param)) {
         (param as Promise<string | undefined>).then((res) => resolve?.(res)).catch((err) => reject?.(err));
     }
