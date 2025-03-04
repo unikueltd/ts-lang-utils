@@ -22,20 +22,27 @@ import {isPromise} from '@/util/ObjectUtils';
  * Detects the image src for the given param
  *
  * @param param the parameter to inspect
- * @param resolve the callback function when the given param is a promise
- * @param reject the callback function when the given param is a promise
+ * @param resolve the callback function when resolved
+ * @param reject the callback function when rejected
  *
  * @author David Hsing
  */
-export function detectSource(param?: string | Promise<string | undefined> | (() => string | undefined | Promise<string | undefined>), resolve?: (res?: string) => void, reject?: (err: any) => void): void {
+export function detectSource(param?: string | Promise<string | undefined> | (() => string | undefined | Promise<string | undefined>), resolve?: (res?: string) => void, reject?: () => void): void {
     if (!param) {
         return;
     }
     if (typeof param === 'string') {
         resolve?.(param);
     } else if (typeof param === 'function') {
-        detectSource(param(), resolve, reject);
+        const value = param();
+        if (typeof value === 'string') {
+            resolve?.(value);
+        } else if (isPromise(value)) {
+            (value as Promise<string | undefined>).then((res) => resolve?.(res)).catch(() => reject?.());
+        } else {
+            reject?.();
+        }
     } else if (isPromise(param)) {
-        (param as Promise<string | undefined>).then((res) => resolve?.(res)).catch((err) => reject?.(err));
+        (param as Promise<string | undefined>).then((res) => resolve?.(res)).catch(() => reject?.());
     }
 }
