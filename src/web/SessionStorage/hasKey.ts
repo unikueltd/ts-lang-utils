@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License (the "License")
+ * Licensed under the MIT License.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -16,18 +16,19 @@
 
 
 /**
- * Utilities for local storage
+ * Returns whether exists the given storage key
+ *
+ * @param key the key to inspect
+ *
+ * @returns whether exists the given storage key
  *
  * @author David Hsing
+ *
+ * @example
+ * ```ts
+ * getValue('token');
+ * ```
  */
-
-
-export {clear} from './clear';
-export {forEach} from './forEach';
-export {forEachIndexing} from './forEachIndexing';
-export {getKey} from './getKey';
-export {getLength} from './getLength';
-export {getValue} from './getValue';
-export {hasKey} from './hasKey';
-export {removeItem} from './removeItem';
-export {setItem} from './setItem';
+export function hasKey(key?: string): boolean {
+    return !!key && !!window.sessionStorage.getItem(key);
+}
