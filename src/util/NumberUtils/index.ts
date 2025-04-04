@@ -34,3 +34,4 @@ export {min} from './min';
 export {sum} from './sum';
 export {toFloat} from './toFloat';
 export {toInteger} from './toInteger';
+export {toString} from './toString';

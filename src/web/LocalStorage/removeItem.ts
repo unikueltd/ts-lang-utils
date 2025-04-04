@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License (the "License")
+ * Licensed under the MIT License.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -16,19 +16,19 @@
 
 
 /**
- * Processes each entry in the map, with indexing ability
+ * Removes the storage item of the given key
  *
- * @param map the map to inspect
- * @param callback a callback function that processes each entry
+ * @param key the key to remove
  *
  * @author David Hsing
+ *
+ * @example
+ * ```ts
+ * removeItem('token');
+ * ```
  */
-export function forEachIndexing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => void): void {
-    if (!map || !map.size || !callback) {
-        return;
-    }
-    let index = 0;
-    for (const [k, v] of map.entries()) {
-        callback(v, k, index++);
+export function removeItem(key?: string): void {
+    if (key) {
+        window.localStorage.removeItem(key);
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License (the "License")
+ * Licensed under the MIT License.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -16,19 +16,19 @@
 
 
 /**
- * Processes each entry in the map, with indexing ability
+ * Returns the storage key of the given index
  *
- * @param map the map to inspect
- * @param callback a callback function that processes each entry
+ * @param index the index to inspect
+ *
+ * @returns the storage key of the given index
  *
  * @author David Hsing
+ *
+ * @example
+ * ```ts
+ * getKey(0);
+ * ```
  */
-export function forEachIndexing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => void): void {
-    if (!map || !map.size || !callback) {
-        return;
-    }
-    let index = 0;
-    for (const [k, v] of map.entries()) {
-        callback(v, k, index++);
-    }
+export function getKey(index?: number): string | null | undefined {
+    return (index === undefined) ? undefined : window.localStorage.key(index);
 }

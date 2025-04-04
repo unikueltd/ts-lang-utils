@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License (the "License")
+ * Licensed under the MIT License.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -16,19 +16,20 @@
 
 
 /**
- * Processes each entry in the map, with indexing ability
+ * Returns a string value from the given number
  *
- * @param map the map to inspect
- * @param callback a callback function that processes each entry
+ * @param source the string value to check
+ * @param radix the radix for converting numeric value to string
+ *
+ * @returns a string value from the given number
  *
  * @author David Hsing
+ *
+ * @example
+ * ```ts
+ * toString(1);    // '1'
+ * ```
  */
-export function forEachIndexing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => void): void {
-    if (!map || !map.size || !callback) {
-        return;
-    }
-    let index = 0;
-    for (const [k, v] of map.entries()) {
-        callback(v, k, index++);
-    }
+export function toString(source?: number | null, radix?: number): string | undefined {
+    return (source === undefined || source === null) ? undefined : source.toString(radix);
 }

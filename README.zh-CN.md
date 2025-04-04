@@ -42,6 +42,10 @@
 
 ✅ tree 工具库
 
+✅ local storage 工具库
+
+✅ session storage 工具库
+
 ## 快速开始
 
 您可以在您的 typescript 项目中使用以下命令来安装工具库：
@@ -70,6 +74,8 @@ import {RegexUtils} from '@yookue/ts-lang-utils';
 import {StringUtils} from '@yookue/ts-lang-utils';
 import {ThreadUtils} from '@yookue/ts-lang-utils';
 import {TreeUtils} from '@yookue/ts-lang-utils';
+import {LocalStorage} from '@yookue/ts-lang-utils';
+import {SessionStorage} from '@yookue/ts-lang-utils';
 ```
 
 享受您和 `ts-lang-utils` 的编程之旅吧 ✌️

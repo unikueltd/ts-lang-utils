@@ -32,5 +32,7 @@ export * as RegexUtils from './util/RegexUtils';
 export * as StringUtils from './util/StringUtils';
 export * as ThreadUtils from './util/ThreadUtils';
 export * as TreeUtils from './util/TreeUtils';
+export * as LocalStorage from './web/LocalStorage';
+export * as SessionStorage from './web/SessionStorage';
 export {IgnorableError} from '@/type/IgnorableError';
 export {UnsupportedError} from '@/type/UnsupportedError';

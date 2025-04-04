@@ -26,7 +26,7 @@ import {isPlain} from './isPlain';
  *
  * @author David Hsing
  */
-export function forEachProp(object: any, callback?: (key: string, index: number) => void): void {
+export function forEachProp(object: any, callback?: (key?: string, index?: number) => void): void {
     if (!object || !isPlain(object) || !callback) {
         return;
     }

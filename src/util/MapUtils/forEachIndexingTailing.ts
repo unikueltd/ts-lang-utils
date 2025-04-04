@@ -25,7 +25,7 @@
  *
  * @author David Hsing
  */
-export function forEachIndexingTailing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value: V, key: K, index: number) => void): [K, V] | undefined {
+export function forEachIndexingTailing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => void): [K, V] | undefined {
     // noinspection DuplicatedCode
     if (!map || !map.size || !callback) {
         return undefined;

@@ -16,19 +16,17 @@
 
 
 /**
- * Processes each entry in the map, with indexing ability
- *
- * @param map the map to inspect
- * @param callback a callback function that processes each entry
+ * Utilities for session storage
  *
  * @author David Hsing
  */
-export function forEachIndexing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => void): void {
-    if (!map || !map.size || !callback) {
-        return;
-    }
-    let index = 0;
-    for (const [k, v] of map.entries()) {
-        callback(v, k, index++);
-    }
-}
+
+
+export {clear} from './clear';
+export {forEach} from './forEach';
+export {forEachIndexing} from './forEachIndexing';
+export {getKey} from './getKey';
+export {getLength} from './getLength';
+export {getValue} from './getValue';
+export {removeItem} from './removeItem';
+export {setItem} from './setItem';

@@ -23,7 +23,7 @@
  *
  * @author David Hsing
  */
-export function forEachIndexingBreakable<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value: V, key: K, index: number) => boolean): void {
+export function forEachIndexingBreakable<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => boolean): void {
     if (!map || !map.size || !callback) {
         return;
     }

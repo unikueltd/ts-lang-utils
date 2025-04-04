@@ -42,6 +42,10 @@
 
 ✅ Utilities for tree
 
+✅ Utilities for local storage
+
+✅ Utilities for session storage
+
 ## Quickstart
 
 You can install this package in your typescript project as follows:
@@ -70,6 +74,8 @@ import {RegexUtils} from '@yookue/ts-lang-utils';
 import {StringUtils} from '@yookue/ts-lang-utils';
 import {ThreadUtils} from '@yookue/ts-lang-utils';
 import {TreeUtils} from '@yookue/ts-lang-utils';
+import {LocalStorage} from '@yookue/ts-lang-utils';
+import {SessionStorage} from '@yookue/ts-lang-utils';
 ```
 
 Enjoy your coding journey with `ts-lang-utils` ✌️

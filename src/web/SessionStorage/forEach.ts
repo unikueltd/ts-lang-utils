@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License (the "License")
+ * Licensed under the MIT License.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -16,19 +16,20 @@
 
 
 /**
- * Processes each entry in the map, with indexing ability
+ * Processes each storage item
  *
- * @param map the map to inspect
- * @param callback a callback function that processes each entry
+ * @param callback the callback function that processes each storage item
  *
  * @author David Hsing
  */
-export function forEachIndexing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => void): void {
-    if (!map || !map.size || !callback) {
+export function forEach(callback?: (value?: string | null, key?: string) => void): void {
+    if (!window.sessionStorage.length || !callback) {
         return;
     }
-    let index = 0;
-    for (const [k, v] of map.entries()) {
-        callback(v, k, index++);
+    for (let i = 0; i < window.sessionStorage.length; i++) {
+        const key = window.sessionStorage.key(i);
+        if (key) {
+            callback(window.sessionStorage.getItem(key), key);
+        }
     }
 }
