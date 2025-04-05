@@ -28,7 +28,7 @@
  * setItem('token', '1234567890');
  * ```
  */
-export function setItem(key?: string , value?: boolean | number | string | object | null): void {
+export function setItem(key?: string, value?: boolean | number | string | object | null): void {
     if (!key) {
         return;
     }
