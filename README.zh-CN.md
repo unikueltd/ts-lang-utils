@@ -42,6 +42,8 @@
 
 ✅ tree 工具库
 
+✅ cookie storage 工具库
+
 ✅ local storage 工具库
 
 ✅ session storage 工具库
@@ -74,6 +76,7 @@ import {RegexUtils} from '@yookue/ts-lang-utils';
 import {StringUtils} from '@yookue/ts-lang-utils';
 import {ThreadUtils} from '@yookue/ts-lang-utils';
 import {TreeUtils} from '@yookue/ts-lang-utils';
+import {CookieStorage} from '@yookue/ts-lang-utils';
 import {LocalStorage} from '@yookue/ts-lang-utils';
 import {SessionStorage} from '@yookue/ts-lang-utils';
 ```

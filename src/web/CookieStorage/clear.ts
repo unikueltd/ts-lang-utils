@@ -16,19 +16,15 @@
 
 
 /**
- * Returns the storage key of the given index
- *
- * @param index the index to inspect
- *
- * @returns the storage key of the given index
+ * Clears all the storage items
  *
  * @author David Hsing
  *
  * @example
  * ```ts
- * getKey(0);
+ * clear();
  * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
+export function clear(): void {
+    document.cookie = document.cookie.replace(/^(.*;)?\s*[^=]+=[^;]+(;.*)?$/, `$1expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`);
 }

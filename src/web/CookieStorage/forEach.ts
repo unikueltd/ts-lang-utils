@@ -16,19 +16,24 @@
 
 
 /**
- * Returns the storage key of the given index
+ * Processes each storage item
  *
- * @param index the index to inspect
- *
- * @returns the storage key of the given index
+ * @param callback the callback function that processes each storage item
  *
  * @author David Hsing
- *
- * @example
- * ```ts
- * getKey(0);
- * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
+export function forEach(callback?: (name?: string, value?: string | null) => void): void {
+    if (!document.cookie.length || !callback) {
+        return;
+    }
+    const cookies = document.cookie.split('; ');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i];
+        if (!cookie) {
+            continue;
+        }
+        const decode = window.decodeURI(cookie);
+        const [name, value] = decode.split('=');
+        callback(name, value);
+    }
 }

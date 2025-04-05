@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023 Yookue Ltd. All rights reserved.
  *
- * Licensed under the MIT License.
+ * Licensed under the MIT License (the "License")
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -16,19 +16,18 @@
 
 
 /**
- * Returns the storage key of the given index
- *
- * @param index the index to inspect
- *
- * @returns the storage key of the given index
+ * Utilities for cookie storage
  *
  * @author David Hsing
- *
- * @example
- * ```ts
- * getKey(0);
- * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
-}
+
+
+export {clear} from './clear';
+export {forEach} from './forEach';
+export {forEachIndexing} from './forEachIndexing';
+export {getLength} from './getLength';
+export {getName} from './getName';
+export {getValue} from './getValue';
+export {hasName} from './hasName';
+export {removeItem} from './removeItem';
+export {setItem} from './setItem';

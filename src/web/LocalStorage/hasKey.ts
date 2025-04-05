@@ -26,7 +26,7 @@
  *
  * @example
  * ```ts
- * getValue('token');
+ * hasKey('token');
  * ```
  */
 export function hasKey(key?: string): boolean {

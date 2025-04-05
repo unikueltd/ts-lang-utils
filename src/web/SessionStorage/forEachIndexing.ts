@@ -22,14 +22,14 @@
  *
  * @author David Hsing
  */
-export function forEachIndexing(callback?: (value?: string | null, key?: string, index?: number) => void): void {
+export function forEachIndexing(callback?: (key?: string, value?: string | null, index?: number) => void): void {
     if (!window.sessionStorage.length || !callback) {
         return;
     }
     for (let i = 0; i < window.sessionStorage.length; i++) {
         const key = window.sessionStorage.key(i);
         if (key) {
-            callback(window.sessionStorage.getItem(key), key, i);
+            callback(key, window.sessionStorage.getItem(key), i);
         }
     }
 }

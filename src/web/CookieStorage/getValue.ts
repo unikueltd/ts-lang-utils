@@ -15,20 +15,29 @@
  */
 
 
+import Cookies, {type CookieGetOptions} from 'universal-cookie';
+
+
 /**
- * Returns the storage key of the given index
+ * Returns the storage value of the given name
  *
- * @param index the index to inspect
+ * @param name the name to inspect
+ * @param options the options to get the key
+ * @param defaultValue the default value if nil
  *
- * @returns the storage key of the given index
+ * @returns the storage value of the given key
  *
  * @author David Hsing
  *
  * @example
  * ```ts
- * getKey(0);
+ * getValue('token');
  * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
+export function getValue(name?: string, options?: CookieGetOptions, defaultValue?: string | null): string | null | undefined {
+    if (!name) {
+        return defaultValue;
+    }
+    const cookies = new Cookies(null, {path: '/'});
+    return cookies.get(name, options);
 }

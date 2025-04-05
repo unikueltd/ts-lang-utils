@@ -30,5 +30,5 @@
  * ```
  */
 export function getKey(index?: number): string | null | undefined {
-    return (index === undefined) ? undefined : window.localStorage.key(index);
+    return (index === undefined || index < 0) ? undefined : window.localStorage.key(index);
 }

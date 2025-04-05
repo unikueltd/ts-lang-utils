@@ -16,19 +16,20 @@
 
 
 /**
- * Returns the storage key of the given index
+ * Returns whether exists the given storage name
  *
- * @param index the index to inspect
+ * @param name the name to inspect
  *
- * @returns the storage key of the given index
+ * @returns whether exists the given storage name
  *
  * @author David Hsing
+ * @see "https://github.com/awibox/combo-storage/blob/master/src/components/Cookie.js"
  *
  * @example
  * ```ts
- * getKey(0);
+ * hasName('token');
  * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
+export function hasName(name?: string): boolean {
+    return !!name && !!document.cookie.match(new RegExp(`(?:^|; )${name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1')}=([^;]*)`));
 }

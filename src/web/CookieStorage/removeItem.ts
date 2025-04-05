@@ -15,20 +15,26 @@
  */
 
 
+import Cookies, {type CookieSetOptions} from 'universal-cookie';
+
+
 /**
- * Returns the storage key of the given index
+ * Removes the storage item of the given name
  *
- * @param index the index to inspect
- *
- * @returns the storage key of the given index
+ * @param name the name to remove
+ * @param options the options to remove the value
  *
  * @author David Hsing
  *
  * @example
  * ```ts
- * getKey(0);
+ * removeItem('token');
  * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
+export function removeItem(name?: string, options?: CookieSetOptions): void {
+    if (!name) {
+        return;
+    }
+    const cookies = new Cookies(null, {path: '/'});
+    cookies.remove(name, options);
 }

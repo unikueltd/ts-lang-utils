@@ -22,14 +22,14 @@
  *
  * @author David Hsing
  */
-export function forEach(callback?: (value?: string | null, key?: string) => void): void {
+export function forEach(callback?: (key?: string, value?: string | null) => void): void {
     if (!window.localStorage.length || !callback) {
         return;
     }
     for (let i = 0; i < window.localStorage.length; i++) {
         const key = window.localStorage.key(i);
         if (key) {
-            callback(window.localStorage.getItem(key), key);
+            callback(key, window.localStorage.getItem(key));
         }
     }
 }

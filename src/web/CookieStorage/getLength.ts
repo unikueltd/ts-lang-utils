@@ -16,19 +16,17 @@
 
 
 /**
- * Returns the storage key of the given index
+ * Returns the length of storage items
  *
- * @param index the index to inspect
- *
- * @returns the storage key of the given index
+ * @returns the length of storage items
  *
  * @author David Hsing
  *
  * @example
  * ```ts
- * getKey(0);
+ * getLength();
  * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
+export function getLength(): number {
+    return document.cookie.length;
 }

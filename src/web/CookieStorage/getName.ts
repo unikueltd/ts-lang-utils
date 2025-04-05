@@ -15,6 +15,10 @@
  */
 
 
+import {get} from '@/util/ArrayUtils/get';
+import {substringBefore} from '@/util/StringUtils/substringBefore';
+
+
 /**
  * Returns the storage key of the given index
  *
@@ -26,9 +30,18 @@
  *
  * @example
  * ```ts
- * getKey(0);
+ * getName(0);
  * ```
  */
-export function getKey(index?: number): string | null | undefined {
-    return (index === undefined || index < 0) ? undefined : window.sessionStorage.key(index);
+export function getName(index?: number): string | null | undefined {
+    if (index === undefined || index < 0) {
+        return undefined;
+    }
+    const cookies = document.cookie.split('; ');
+    const cookie = get(cookies, index);
+    if (!cookie) {
+        return undefined;
+    }
+    const decode = window.decodeURI(cookie);
+    return substringBefore(decode, '=');
 }
