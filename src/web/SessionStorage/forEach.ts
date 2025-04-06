@@ -22,14 +22,14 @@
  *
  * @author David Hsing
  */
-export function forEach(callback?: (key?: string, value?: string | null) => void): void {
+export function forEach(callback?: (value?: string | null, key?: string) => void): void {
     if (!window.sessionStorage.length || !callback) {
         return;
     }
     for (let i = 0; i < window.sessionStorage.length; i++) {
         const key = window.sessionStorage.key(i);
         if (key) {
-            callback(key, window.sessionStorage.getItem(key));
+            callback(window.sessionStorage.getItem(key), key);
         }
     }
 }

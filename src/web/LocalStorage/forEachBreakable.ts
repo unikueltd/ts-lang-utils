@@ -16,20 +16,22 @@
 
 
 /**
- * Processes each storage item, with indexing ability
+ * Processes each storage item, with breakable ability
  *
- * @param callback the callback function that processes each storage item
+ * @param callback the callback function that processes each storage item, returns `false` means break
  *
  * @author David Hsing
  */
-export function forEachIndexing(callback?: (value?: string | null, key?: string, index?: number) => void): void {
-    if (!window.sessionStorage.length || !callback) {
+export function forEachBreakable(callback?: (value?: string | null, key?: string) => boolean): void {
+    if (!window.localStorage.length || !callback) {
         return;
     }
-    for (let i = 0; i < window.sessionStorage.length; i++) {
-        const key = window.sessionStorage.key(i);
+    for (let i = 0; i < window.localStorage.length; i++) {
+        const key = window.localStorage.key(i);
         if (key) {
-            callback(window.sessionStorage.getItem(key), key, i);
+            if (!callback(window.localStorage.getItem(key), key)) {
+                break;
+            }
         }
     }
 }

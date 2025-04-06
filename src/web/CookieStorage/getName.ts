@@ -42,6 +42,6 @@ export function getName(index?: number): string | null | undefined {
     if (!cookie) {
         return undefined;
     }
-    const decode = window.decodeURI(cookie);
+    const decode = window.decodeURIComponent(cookie);
     return substringBefore(decode, '=');
 }

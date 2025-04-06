@@ -24,6 +24,7 @@
 
 export {clear} from './clear';
 export {forEach} from './forEach';
+export {forEachBreakable} from './forEachBreakable';
 export {forEachIndexing} from './forEachIndexing';
 export {getKey} from './getKey';
 export {getLength} from './getLength';

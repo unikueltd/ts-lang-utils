@@ -22,7 +22,7 @@
  *
  * @author David Hsing
  */
-export function forEach(callback?: (name?: string, value?: string | null) => void): void {
+export function forEach(callback?: (value?: string | null, name?: string) => void): void {
     if (!document.cookie.length || !callback) {
         return;
     }
@@ -32,8 +32,8 @@ export function forEach(callback?: (name?: string, value?: string | null) => voi
         if (!cookie) {
             continue;
         }
-        const decode = window.decodeURI(cookie);
+        const decode = window.decodeURIComponent(cookie);
         const [name, value] = decode.split('=');
-        callback(name, value);
+        callback(value, name);
     }
 }
