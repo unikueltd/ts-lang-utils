@@ -26,9 +26,9 @@ import {defineConfig} from 'father';
 export default defineConfig({
     cjs: {},
     esm: {},
-    umd: {
-        name: 'TsLangUtils',
-    },
+    // umd: {
+    //     name: 'TsLangUtils',
+    // },
     alias: {
         '@': nodePath.resolve(__dirname, './src'),
         '@yookue/ts-lang-utils': nodePath.resolve(__dirname, './src'),
