@@ -40,7 +40,7 @@ export function toFloat(source?: number | string | null, defaultValue?: number):
     try {
         const result = Number.parseFloat(source);
         return Number.isNaN(result) ? defaultValue : result;
-    } catch (_ignored) {
+    } catch (ignored) {
     }
     return defaultValue;
 }

@@ -45,6 +45,7 @@ export default [
             '@typescript-eslint/no-inferrable-types': 'off',
             '@typescript-eslint/no-invalid-void-type': 'off',
             '@typescript-eslint/no-this-alias': 'off',
+            '@typescript-eslint/no-unused-vars': 'off',
             '@typescript-eslint/no-var-requires': 'off',
             '@typescript-eslint/triple-slash-reference': 'off',
         },

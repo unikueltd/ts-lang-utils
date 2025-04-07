@@ -36,7 +36,7 @@ export function compilePattern(pattern?: string | null, flags?: string): RegExp 
     }
     try {
         return new RegExp(pattern, flags);
-    } catch (_ignored) {
+    } catch (ignored) {
     }
     return undefined;
 }

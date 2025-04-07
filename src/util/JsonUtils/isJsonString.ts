@@ -37,7 +37,7 @@ export function isJsonString(text?: string | null): boolean {
     }
     try {
         return typeof JSON.parse(text) === 'object';
-    } catch(_ignored) {
+    } catch(ignored) {
     }
     return false;
 }

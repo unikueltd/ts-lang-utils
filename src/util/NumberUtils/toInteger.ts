@@ -43,7 +43,7 @@ export function toInteger(source?: number | string | null, defaultValue?: number
     try {
         const result = Number.parseFloat(source);
         return Number.isNaN(result) ? defaultValue : (floorValue ? Math.floor(result) : Math.ceil(result));
-    } catch (_ignored) {
+    } catch (ignored) {
     }
     return defaultValue;
 }

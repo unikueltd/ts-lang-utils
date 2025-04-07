@@ -83,7 +83,7 @@ export function formatPercent(text?: string | null, ...params: any[]): string | 
                             result = result.replace(`%${pattern}`, '0x' + (value as number).toString(16).toUpperCase());
                         }
                     }
-                } catch (_ignored) {
+                } catch (ignored) {
                     throw new TypeError(`Invalid parameter type of '${param}', index ${i}`);
                 }
                 break;
@@ -100,7 +100,7 @@ export function formatPercent(text?: string | null, ...params: any[]): string | 
                     if (value) {
                         result = result.replace(`%${pattern}`, '0x' + (value as number).toString());
                     }
-                } catch (_ignored) {
+                } catch (ignored) {
                     throw new TypeError(`Invalid parameter type of '${param}', index ${i}`);
                 }
                 break;
