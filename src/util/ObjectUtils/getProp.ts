@@ -16,35 +16,34 @@
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the property value if property name is present on the given object
  *
  * @param object the object to inspect
  * @param prop the property name to inspect, parent property and child property are concat with dot (.)
+ * @param defaultValue the default value if the prop cannot be found
  *
  * @returns the property value if property name is present on the given object
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
  * getProp({foo: {bar: 'foobar'}}, 'foo.bar');    // foobar
  * ```
  */
-export function getProp(object: any, prop?: string | null): any {
+export function getProp(object: any, prop?: string | null, defaultValue?: any): any {
     if (typeof object !== 'object' || !prop) {
-        return undefined;
+        return defaultValue;
     }
     if (!prop.includes('.')) {
-        return object[prop];
+        return object[prop] ?? defaultValue;
     }
     const props = prop.replace(/\[/g, '.').replace(/]/g, '').split('.');
-    if (!props || props.length === 0) {
-        return undefined;
+    if (!props || !props.length) {
+        return defaultValue;
     }
-    return (props.length === 1) ? object[props[0]] : props.reduce((value, name) => (value || {})[name], object);
+    if (props.length === 1) {
+        return object[props[0]] ?? defaultValue;
+    }
+    return props.reduce((value, name) => (value || {})[name], object) ?? defaultValue;
 }

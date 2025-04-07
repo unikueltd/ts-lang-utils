@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given array includes the given element
  *
  * @param array the array to check
  * @param element the element to compare
  *
  * @returns whether the given array includes the given element
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

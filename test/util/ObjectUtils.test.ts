@@ -63,9 +63,17 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.getProp(ObjectUtils.defaultProps({'foo': undefined}, {'foo': 'bar'}, false), 'foo')).toBeUndefined();
     });
 
+    test('Testing firstNotNil', () => {
+        expect(ObjectUtils.firstNotNil(null, undefined, 'foo', 'bar', {})).toBe('foo');
+    });
+
+    test('Testing firstNotEmpty', () => {
+        expect(ObjectUtils.firstNotEmpty(null, undefined, {}, 'foo', 'bar')).toBe('foo');
+    });
+
     test('Testing forEachProp', () => {
         const keys: string[] = [];
-        ObjectUtils.forEachProp({'foo': 'bar', 'hello': 'world'}, key => keys.push(key));
+        ObjectUtils.forEachProp({'foo': 'bar', 'hello': 'world'}, key => keys.push(key as string));
         expect(keys.length).toBe(2);
     });
 
@@ -88,6 +96,7 @@ describe('ObjectUtils', () => {
     test('Testing isEmpty', () => {
         expect(ObjectUtils.isEmpty(undefined)).toBeTruthy();
         expect(ObjectUtils.isEmpty(null)).toBeTruthy();
+        expect(ObjectUtils.isEmpty(0)).toBeFalsy();
         expect(ObjectUtils.isEmpty([])).toBeTruthy();
         expect(ObjectUtils.isEmpty({})).toBeTruthy();
     });

@@ -19,18 +19,13 @@ import {isPlain} from './isPlain';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns an object that cloned from the given object
  *
  * @param source the object to clone
  *
  * @returns an object that cloned from the given object
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for color
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the converted hex color from the given rgb color
  *
  * @param rgb the rgb color to inspect
  *
  * @returns the converted hex color from the given rgb color
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the characters in the given text is numeric
  *
  * @param text the text to check
  *
  * @returns whether all the characters in the given text is numeric
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -36,6 +31,6 @@
  * isNumeric('123456');    // true
  * ```
  */
-export function isNumeric(text?: string): boolean {
+export function isNumeric(text?: string | null): boolean {
     return !!text && /^\d+$/.test(text);
 }

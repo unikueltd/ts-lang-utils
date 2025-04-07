@@ -19,13 +19,6 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given text equals to any of the comparison strings, case-insensitive
  *
  * @param text the source string to check
@@ -33,13 +26,15 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
  *
  * @returns whether the given string equals to any of the comparison strings, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * equalsAnyIgnoreCase('foo', ['FOO', 'bar']);    // true
  * ```
  */
-export function equalsAnyIgnoreCase(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
-    if (!text || !comparisons || comparisons.length === 0) {
+export function equalsAnyIgnoreCase(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
+    if (!text || !comparisons || !comparisons.length) {
         return false;
     }
     return comparisons.some(comparison => equalsIgnoreCase(text, comparison));

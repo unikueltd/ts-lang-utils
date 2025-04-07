@@ -19,21 +19,16 @@ import {getProp} from '@/util/ObjectUtils/getProp';
 
 
 /**
- * Utilities for tree
- *
- * @author David Hsing
- */
-
-
-/**
  * Traverses the target nodes with the given callback function
  *
  * @param nodes the nodes to traverse
  * @param callback the function to execute during traversing
  * @param childrenKey the property name to children node
+ *
+ * @author David Hsing
  */
 export function forEach<T>(nodes?: T[], callback?: (node: T, nodes?: T[]) => void, childrenKey: string = 'children'): void {
-    if (!nodes || nodes.length === 0 || !callback || !childrenKey) {
+    if (!nodes || !nodes.length || !callback || !childrenKey) {
         return;
     }
     for (const node of nodes) {

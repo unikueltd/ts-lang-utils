@@ -21,13 +21,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether each element in the given array is the expected type
  *
  * @param array the array to check
@@ -35,6 +28,8 @@ import {isEmpty} from './isEmpty';
  * @param relaxed treat null as string or object
  *
  * @returns whether each element in the given array is the expected type
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

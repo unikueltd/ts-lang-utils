@@ -16,28 +16,24 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the substring before the first occurrence of the given separator (the separator is not returned)
  *
  * @param text the string to get a substring from
- * @param separator the String to search for
+ * @param separator the string to search for
+ *
  * @returns the substring before the first occurrence of the given separator
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
  * substringBefore("foo/bar/foo/bar", "/");    // 'foo'
  * ```
  */
-export function substringBefore(text?: string | null, separator?: string | null): string | undefined {
+export function substringBefore(text?: string | null, separator?: string | null): string | null | undefined {
     if (!text || !separator) {
-        return undefined;
+        return text;
     }
     const index = text.indexOf(separator);
-    return (index === -1) ? undefined : text.substring(0, index);
+    return (index === -1) ? text : text.substring(0, index);
 }

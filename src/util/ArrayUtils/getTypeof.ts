@@ -19,18 +19,13 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the element types of the given array
  *
  * @param array the array to check
  *
  * @returns the element types of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

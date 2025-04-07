@@ -21,19 +21,14 @@ import {toString} from '@/util/ObjectUtils/toString';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the replaced string of the source string ("%" placeholder) with the given parameters
  *
  * @param text the source string to inspect
  * @param params the parameters to replaced with
  *
  * @returns the replaced string of the source string
+ *
+ * @author David Hsing
  *
  * @see "https://github.com/samsonjs/format/blob/main/format.js"
  *
@@ -44,8 +39,8 @@ import {toString} from '@/util/ObjectUtils/toString';
  * formatPercent("hello %s, foo%s", "world", "bar");    // "hello world, foobar"
  * ```
  */
-export function formatPercent(text?: string | null, ...params: any[]): string | undefined | null {
-    if (!text || text.length <= 2 || !params || params.length === 0) {
+export function formatPercent(text?: string | null, ...params: any[]): string | null | undefined {
+    if (!text || text.length <= 2 || !params || !params.length) {
         return text;
     }
     const matches = text.match(/%[bcdfjosxX]/g) || [];
@@ -88,8 +83,7 @@ export function formatPercent(text?: string | null, ...params: any[]): string | 
                             result = result.replace(`%${pattern}`, '0x' + (value as number).toString(16).toUpperCase());
                         }
                     }
-                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                } catch (ignored) {
+                } catch (_ignored) {
                     throw new TypeError(`Invalid parameter type of '${param}', index ${i}`);
                 }
                 break;
@@ -106,8 +100,7 @@ export function formatPercent(text?: string | null, ...params: any[]): string | 
                     if (value) {
                         result = result.replace(`%${pattern}`, '0x' + (value as number).toString());
                     }
-                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                } catch (ignored) {
+                } catch (_ignored) {
                     throw new TypeError(`Invalid parameter type of '${param}', index ${i}`);
                 }
                 break;

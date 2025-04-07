@@ -20,13 +20,6 @@ import {setProp} from './setProp';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns an object that merged the given props, when the key of props is missing, or the value of matching key is null or undefined
  *
  * @param target the object to inspect
@@ -34,6 +27,8 @@ import {setProp} from './setProp';
  * @param overrideNil whether to override the value of target, when it is null or undefined
  *
  * @returns an object that merged the given props, when the key of props is missing, or the value of matching key is null or undefined
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

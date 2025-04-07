@@ -16,24 +16,20 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the last element of the given array
  *
  * @param array the array to inspect
+ * @param defaultValue the default value if the array is empty
  *
  * @returns the last element of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
  * getLast(['foo', 'bar']);    // 'bar'
  * ```
  */
-export function getLast<E>(array?: E[] | readonly E[] | null): E | undefined {
-    return (!array || array.length === 0) ? undefined : array[array.length - 1];
+export function getLast<E>(array?: E[] | readonly E[] | null, defaultValue?: E | null): E | null | undefined {
+    return (!array || !array.length) ? defaultValue : array[array.length - 1];
 }

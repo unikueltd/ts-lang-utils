@@ -34,6 +34,8 @@ export {clone} from './clone';
 export {cloneExclusive} from './cloneExclusive';
 export {cloneInclusive} from './cloneInclusive';
 export {defaultProps} from './defaultProps';
+export {firstNotEmpty} from './firstNotEmpty';
+export {firstNotNil} from './firstNotNil';
 export {forEachProp} from './forEachProp';
 export {getProp} from './getProp';
 export {hasProp} from './hasProp';

@@ -19,13 +19,6 @@ import {randomString} from './randomString';
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random string array that between the length range, matching the given size
  *
  * @param size the size of the expected array
@@ -34,6 +27,8 @@ import {randomString} from './randomString';
  * @param characters the source characters to be generated from
  *
  * @returns a random string array that between the length range, matching the given size
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

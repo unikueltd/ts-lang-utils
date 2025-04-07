@@ -19,18 +19,13 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the given texts are empty
  *
  * @param texts the texts to check
  *
  * @returns whether all the given texts are empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -38,6 +33,6 @@ import {isEmpty} from './isEmpty';
  * allEmpty([null, 'true']);    // false
  * ```
  */
-export function allEmpty(texts?: Array<string | undefined | null>): boolean {
-    return !texts || texts.length === 0 || texts.every(item => isEmpty(item));
+export function allEmpty(texts?: Array<string | null | undefined>): boolean {
+    return !texts || !texts.length || texts.every(item => isEmpty(item));
 }

@@ -19,13 +19,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that replaced the first occurrence in the given text, case-insensitive
  *
  * @param text the text to inspect
@@ -34,6 +27,8 @@ import {isEmpty} from './isEmpty';
  *
  * @returns the string that replaced the first occurrence in the given text, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * replaceFirstIgnoreCase(undefined, undefined, undefined);    // undefined
@@ -41,6 +36,6 @@ import {isEmpty} from './isEmpty';
  * replaceFirstIgnoreCase('foobar-foobar', 'FOOBAR', 'hello');    // 'hello-foobar'
  * ```
  */
-export function replaceFirstIgnoreCase(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | undefined | null {
+export function replaceFirstIgnoreCase(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
     return (isEmpty(text) || !search) ? text : text?.replace(new RegExp(search, 'i'), (replace ?? ''));
 }

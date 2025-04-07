@@ -35,12 +35,26 @@ describe('ArrayUtils', () => {
         expect(ArrayUtils.count(['foo', 'bar', 'foobar'], value => value.includes('foo'))).toBe(2);
     });
 
-    test('Testing firstNotNil', () => {
-        expect(ArrayUtils.firstNotNil([null, undefined, 'foo', 'bar', {}])).toBe('foo');
+    test('Testing equals', () => {
+        expect(ArrayUtils.equals(undefined, undefined)).toBeTruthy();
+        expect(ArrayUtils.equals(undefined, null)).toBeFalsy();
+        expect(ArrayUtils.equals(null, undefined)).toBeFalsy();
+        expect(ArrayUtils.equals([], [])).toBeTruthy();
+        expect(ArrayUtils.equals([], ['foo', 'bar'])).toBeFalsy();
+        expect(ArrayUtils.equals(['foo', 'bar'], ['foo', 'bar'])).toBeTruthy();
+        expect(ArrayUtils.equals(['foo', 'bar'], ['bar', 'foo'])).toBeFalsy();
+        expect(ArrayUtils.equals(['foo', 'bar'], ['bar', 'foo', 'world'])).toBeFalsy();
     });
 
-    test('Testing firstNotEmpty', () => {
-        expect(ArrayUtils.firstNotEmpty([null, undefined, {}, 'foo', 'bar'])).toBe('foo');
+    test('Testing equalsAny', () => {
+        expect(ArrayUtils.equalsAny([], [['foo', 'bar']])).toBeFalsy();
+        expect(ArrayUtils.equalsAny(['foo', 'bar'], [['foo', 'bar'], ['bar', 'foo']])).toBeTruthy();
+    });
+
+    test('Testing get', () => {
+        expect(ArrayUtils.get(['foo', 'bar'], 0)).toBe('foo');
+        expect(ArrayUtils.get(['foo', 'bar'], 1)).toBe('bar');
+        expect(ArrayUtils.get(['foo', 'bar'], 2, 'world')).toBe('world');
     });
 
     test('Testing getFirst', () => {

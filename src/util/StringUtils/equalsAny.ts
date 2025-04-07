@@ -19,13 +19,6 @@ import {includes} from '@/util/ArrayUtils/includes';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string equals to any of the comparison strings
  *
  * @param text the source string to check
@@ -33,11 +26,13 @@ import {includes} from '@/util/ArrayUtils/includes';
  *
  * @returns whether the given string equals to any of the comparison strings
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * equalsAny('foo', ['foo', 'bar']);    // true
  * ```
  */
-export function equalsAny(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
+export function equalsAny(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
     return includes(comparisons, text);
 }

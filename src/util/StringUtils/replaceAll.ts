@@ -19,13 +19,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that replaced all occurrences in the given text
  *
  * @param text the text to inspect
@@ -34,6 +27,8 @@ import {isEmpty} from './isEmpty';
  *
  * @returns the string that replaced all occurrences in the given text
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * replaceAll(undefined, undefined, undefined);    // undefined
@@ -41,6 +36,6 @@ import {isEmpty} from './isEmpty';
  * replaceAll('foobar-foobar', 'foobar', 'hello');    // 'hello-hello'
  * ```
  */
-export function replaceAll(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | undefined | null {
+export function replaceAll(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
     return (isEmpty(text) || !search) ? text : text?.replace(new RegExp(search, 'g'), (replace ?? ''));
 }

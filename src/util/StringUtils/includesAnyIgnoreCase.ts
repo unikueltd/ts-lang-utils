@@ -19,13 +19,6 @@ import {includesIgnoreCase} from './includesIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given text includes to any of the comparison strings, case-insensitive
  *
  * @param text the source string to check
@@ -33,13 +26,15 @@ import {includesIgnoreCase} from './includesIgnoreCase';
  *
  * @returns whether the text includes the comparison string, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * includesAnyIgnoreCase('foobar', ['FOO', 'world']);    // true
  * ```
  */
-export function includesAnyIgnoreCase(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
-    if (!text || !comparisons || comparisons.length === 0) {
+export function includesAnyIgnoreCase(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
+    if (!text || !comparisons || !comparisons.length) {
         return false;
     }
     return comparisons?.some(comparison => includesIgnoreCase(text, comparison));

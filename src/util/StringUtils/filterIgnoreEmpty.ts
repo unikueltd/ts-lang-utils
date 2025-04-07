@@ -19,29 +19,24 @@ import {isNotEmpty} from './isNotEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the filtered array of the gaven strings, without empties
  *
  * @param texts the source string to inspect
  *
  * @returns the filtered array of the gaven strings, without empties
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * filterIgnoreEmpty([null, undefined, '', 'foobar']);    //  ['foobar']
  * ```
  */
-export function filterIgnoreEmpty(texts?: Array<string | undefined | null>): string[] | undefined {
-    if (!texts || texts.length === 0) {
+export function filterIgnoreEmpty(texts?: Array<string | null | undefined>): string[] | undefined {
+    if (!texts || !texts.length) {
         return undefined;
     }
     const result = texts.filter(item => isNotEmpty(item));
     // @ts-ignore
-    return (!result || result.length === 0) ? undefined : result;
+    return (!result || !result.length) ? undefined : result;
 }

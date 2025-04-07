@@ -19,19 +19,14 @@ import {replaceAllIgnoreCase} from './replaceAllIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed all occurrences in the given text, case-insensitive
  *
  * @param text the text to inspect
  * @param search the string or regex to match
  *
  * @returns the string that removed all occurrences in the given text, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -40,6 +35,6 @@ import {replaceAllIgnoreCase} from './replaceAllIgnoreCase';
  * removeAllIgnoreCase('foobar-foobar', 'BAR');    // 'foo-foo'
  * ```
  */
-export function removeAllIgnoreCase(text?: string | null, search?: string | RegExp | null): string | undefined | null {
+export function removeAllIgnoreCase(text?: string | null, search?: string | RegExp | null): string | null | undefined {
     return replaceAllIgnoreCase(text, search, '');
 }

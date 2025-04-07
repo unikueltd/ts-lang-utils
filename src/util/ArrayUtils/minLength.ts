@@ -20,18 +20,13 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the min length of the given arrays
  *
  * @param arrays the arrays to check
  *
  * @returns the min length of the given arrays
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

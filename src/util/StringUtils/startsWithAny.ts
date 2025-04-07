@@ -19,13 +19,6 @@ import {startsWith} from './startsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string starts with any of the prefixes
  *
  * @param text the source string to check
@@ -33,14 +26,16 @@ import {startsWith} from './startsWith';
  *
  * @returns whether the given string starts with any of the prefixes
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * startsWithAny('foobar', ['foo', 'bar']);    // true
  * startsWithAny('hello', ['foo', 'bar']);    // false
  * ```
  */
-export function startsWithAny(text?: string | null, prefixes?: Array<string | undefined | null>): boolean {
-    if (!text || !prefixes || prefixes.length === 0) {
+export function startsWithAny(text?: string | null, prefixes?: Array<string | null | undefined>): boolean {
+    if (!text || !prefixes || !prefixes.length) {
         return false;
     }
     return prefixes.some(prefix => startsWith(text, prefix));

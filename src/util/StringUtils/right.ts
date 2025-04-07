@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the rightmost length characters of the given string
  *
  * @param text the text to inspect
@@ -30,13 +23,15 @@
  *
  * @returns the rightmost length characters of the given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * right('foobar', 3);    // 'bar'
  * right('foobar', 10);    // 'foobar'
  * ```
  */
-export function right(text?: string | null, length?: number): string | undefined | null {
+export function right(text?: string | null, length?: number): string | null | undefined {
     if (!text || length === undefined || length < 0) {
         return text;
     }

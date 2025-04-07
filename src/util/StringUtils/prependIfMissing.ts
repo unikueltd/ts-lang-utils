@@ -20,13 +20,6 @@ import {startsWith} from './startsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that concat the given prefix and text
  *
  * @param text the text to check
@@ -34,12 +27,14 @@ import {startsWith} from './startsWith';
  *
  * @returns a string that concat the given prefix and text
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * prependIfMissing('bar', 'foo');    // 'foobar'
  * prependIfMissing('foobar', 'foo');    // 'foobar'
  * ```
  */
-export function prependIfMissing(text?: string | null, prefix?: string): string | undefined | null {
+export function prependIfMissing(text?: string | null, prefix?: string): string | null | undefined {
     return (!text || isEmpty(prefix) || startsWith(text, prefix)) ? text : (prefix + text);
 }

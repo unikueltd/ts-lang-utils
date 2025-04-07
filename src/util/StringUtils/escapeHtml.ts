@@ -16,25 +16,20 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the escaped html string of the given text
  *
  * @param text the source string to inspect
  *
  * @returns the escaped html string of the given text
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * escapeHtml('<div>foobar<div>');    // '&lt;div&gt;foobar&lt;div&gt;'
  * ```
  */
-export function escapeHtml(text?: string | null): string | undefined | null {
+export function escapeHtml(text?: string | null): string | null | undefined {
     if (!text) {
         return text;
     }

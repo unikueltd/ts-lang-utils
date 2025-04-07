@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string value from the boolean value
  *
  * @param value the boolean value to check
@@ -31,6 +24,8 @@
  * @param nil the string to represent undefined or null
  *
  * @returns a string value from the boolean value
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -19,18 +19,13 @@ import {kebabCase} from 'lodash';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the kebab case representation of the given string
  *
  * @param text the source string to inspect
  *
  * @returns the kebab case representation of the given string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -39,6 +34,6 @@ import {kebabCase} from 'lodash';
  * toKebabCase('__FOO_BAR__');    // 'foo-bar'
  * ```
  */
-export function toKebabCase(text?: string | null): string | undefined | null {
+export function toKebabCase(text?: string | null): string | null | undefined {
     return !text ? text : kebabCase(text);
 }

@@ -19,18 +19,13 @@ import {isBlank} from './isBlank';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether any of the given texts is blank
  *
  * @param texts the texts to check
  *
  * @returns whether any of the given texts is blank
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -38,6 +33,6 @@ import {isBlank} from './isBlank';
  * anyBlank(['foo', 'bar']);    // false
  * ```
  */
-export function anyBlank(texts?: Array<string | undefined | null>): boolean {
-    return !texts || texts.length === 0 || texts.some(item => isBlank(item));
+export function anyBlank(texts?: Array<string | null | undefined>): boolean {
+    return !texts || !texts.length || texts.some(item => isBlank(item));
 }

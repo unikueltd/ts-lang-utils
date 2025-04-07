@@ -19,13 +19,6 @@ import {toChars} from './toChars';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the reversed representation of the given string
  *
  * @param text the source string to inspect
@@ -34,19 +27,21 @@ import {toChars} from './toChars';
  *
  * @returns the reversed representation of the given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * reverse('foobar');    // 'raboof'
  * reverse('foobar', 1, 5);    // 'aboo'
  * ```
  */
-export function reverse(text?: string | null, startInclusive?: number, endExclusive?: number): string | undefined | null {
+export function reverse(text?: string | null, startInclusive?: number, endExclusive?: number): string | null | undefined {
     if (!text) {
         return text;
     }
     const substring = text.substring(startInclusive ?? 0, endExclusive);
     const result = toChars(substring) as string[];
-    if (!result || result.length === 0) {
+    if (!result || !result.length) {
         return undefined;
     }
     result.reverse();

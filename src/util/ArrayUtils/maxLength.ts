@@ -20,18 +20,13 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the max length of the given arrays
  *
  * @param arrays the arrays to check
  *
  * @returns the max length of the given arrays
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

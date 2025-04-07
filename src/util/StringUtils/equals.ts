@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given strings are equal
  *
  * @param text the source string to check
  * @param comparison the target string to compare
  *
  * @returns whether the given strings are equal
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

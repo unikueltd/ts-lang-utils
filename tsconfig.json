@@ -10,9 +10,6 @@
         "skipLibCheck": true,
         "strict": true,
         "paths": {
-            "@": [
-                "./src"
-            ],
             "@/*": [
                 "./src/*"
             ],
@@ -21,12 +18,11 @@
             ],
             "@yookue/ts-lang-utils/*": [
                 "./src/*",
-                "*"
             ]
         }
     },
     "include": [
-        "src/**/*"
+        "src"
     ],
     "exclude": [
         "node_modules",

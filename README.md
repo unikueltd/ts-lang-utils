@@ -16,9 +16,17 @@
 
 ✅ Utilities for date time
 
+✅ Utilities for element
+
+✅ Utilities for file
+
+✅ Utilities for image
+
 ✅ Utilities for json
 
 ✅ Utilities for map
+
+✅ Utilities for nanoid
 
 ✅ Utilities for number
 
@@ -33,6 +41,12 @@
 ✅ Utilities for thread
 
 ✅ Utilities for tree
+
+✅ Utilities for cookie storage
+
+✅ Utilities for local storage
+
+✅ Utilities for session storage
 
 ## Quickstart
 
@@ -49,8 +63,12 @@ import {ArrayUtils} from '@yookue/ts-lang-utils';
 import {BooleanUtils} from '@yookue/ts-lang-utils';
 import {ColorUtils} from '@yookue/ts-lang-utils';
 import {DateUtils} from '@yookue/ts-lang-utils';
+import {ElementUtils} from '@yookue/ts-lang-utils';
+import {FileUtils} from '@yookue/ts-lang-utils';
+import {ImageUtils} from '@yookue/ts-lang-utils';
 import {JsonUtils} from '@yookue/ts-lang-utils';
 import {MapUtils} from '@yookue/ts-lang-utils';
+import {NanoidUtils} from '@yookue/ts-lang-utils';
 import {NumberUtils} from '@yookue/ts-lang-utils';
 import {ObjectUtils} from '@yookue/ts-lang-utils';
 import {RandomUtils} from '@yookue/ts-lang-utils';
@@ -58,17 +76,24 @@ import {RegexUtils} from '@yookue/ts-lang-utils';
 import {StringUtils} from '@yookue/ts-lang-utils';
 import {ThreadUtils} from '@yookue/ts-lang-utils';
 import {TreeUtils} from '@yookue/ts-lang-utils';
+import {CookieStorage} from '@yookue/ts-lang-utils';
+import {LocalStorage} from '@yookue/ts-lang-utils';
+import {SessionStorage} from '@yookue/ts-lang-utils';
 ```
 
 Enjoy your coding journey with `ts-lang-utils` ✌️
 
 ## Document
 
-- GitHub pages: [https://yookue.github.io/ts-lang-utils](https://yookue.github.io/ts-lang-utils)
+- GitHub: [https://yookue.github.io/ts-lang-utils](https://yookue.github.io/ts-lang-utils)
 
 ## License
 
 This project is under the [MIT License](https://mit-license.org/).
+
+## Copyright
+
+Beijing Yookue Network Technology Ltd.
 
 ## Website
 

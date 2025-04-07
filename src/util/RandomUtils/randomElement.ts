@@ -19,18 +19,13 @@ import {randomInteger} from './randomInteger';
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random element of the array
  *
  * @param array the array to random
  *
  * @returns a random element of the array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -38,5 +33,5 @@ import {randomInteger} from './randomInteger';
  * ```
  */
 export function randomElement<E>(array?: E[]): E | undefined {
-    return (!array || array.length === 0) ? undefined : array.at(randomInteger(0, array.length) as number);
+    return (!array || !array.length) ? undefined : array.at(randomInteger(0, array.length) as number);
 }

@@ -20,13 +20,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that concat the given text and suffix, case-insensitive
  *
  * @param text the text to check
@@ -34,12 +27,14 @@ import {isEmpty} from './isEmpty';
  *
  * @returns a string that concat the given text and suffix, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * appendIfMissingIgnoreCase('foo', 'bar');    // 'foobar'
  * appendIfMissingIgnoreCase('foobar', 'BAR');    // 'foobar'
  * ```
  */
-export function appendIfMissingIgnoreCase(text?: string | null, suffix?: string | null): string | undefined | null {
+export function appendIfMissingIgnoreCase(text?: string | null, suffix?: string | null): string | null | undefined {
     return (!text || isEmpty(suffix) || endsWithIgnoreCase(text, suffix)) ? text : (text + suffix);
 }

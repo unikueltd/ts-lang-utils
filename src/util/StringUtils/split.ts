@@ -16,21 +16,16 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the split array of the given string by the given delimiter
  *
  * @param text the source string to inspect
- * @param delimiter the delimiter to split strings, defaults to comma
- * @param max the max elements expected, negative means unlimited, defaults to -1
- * @param trim whether trim each element before returning, defaults to true
+ * @param delimiter the delimiter to split strings, default is comma
+ * @param max the max elements expected, negative means unlimited, default is -1
+ * @param trim whether trim each element before returning, default is true
  *
  * @returns the split array of the given string by the given delimiter
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -43,7 +38,7 @@ export function split(text?: string | null, delimiter: string = ',', max: number
         return undefined;
     }
     const result = text.split(delimiter, max);
-    if (!result || result.length === 0) {
+    if (!result || !result.length) {
         return undefined;
     }
     return !trim ? result : result.map(item => !item ? item : item.trim());

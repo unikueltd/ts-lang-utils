@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is null
  *
  * @param object the object to check
  *
  * @returns whether the given object is null
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

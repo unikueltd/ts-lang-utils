@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string starts with the prefix
  *
  * @param text the source string to check
  * @param prefix the target string to compare
  *
  * @returns whether the given string starts with the prefix
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

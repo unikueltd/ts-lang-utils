@@ -19,13 +19,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the default value if the given text is empty, or the text self if it is not empty
  *
  * @param text the text to check
@@ -33,11 +26,13 @@ import {isEmpty} from './isEmpty';
  *
  * @returns the default value if the given text is empty, or the text self if it is not empty
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * defaultIfEmpty(undefined, 'foobar');    // 'foobar'
  * ```
  */
-export function defaultIfEmpty(text?: string | null, defaultValue?: string | null): string | undefined | null {
+export function defaultIfEmpty(text?: string | null, defaultValue?: string | null): string | null | undefined {
     return isEmpty(text) ? defaultValue : text;
 }

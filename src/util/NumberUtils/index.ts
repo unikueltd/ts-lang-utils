@@ -23,6 +23,7 @@
 
 
 export {average} from './average';
+export {compare} from './compare';
 export {isInteger} from './isInteger';
 export {isNegative} from './isNegative';
 export {isNotNegative} from './isNotNegative';
@@ -33,3 +34,4 @@ export {min} from './min';
 export {sum} from './sum';
 export {toFloat} from './toFloat';
 export {toInteger} from './toInteger';
+export {toString} from './toString';

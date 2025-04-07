@@ -19,18 +19,13 @@ import {isNotFalse} from './isNotFalse';
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether any of the given elements is not false
  *
  * @param values the elements to check
  *
  * @returns whether any of the given elements is not false
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -39,6 +34,6 @@ import {isNotFalse} from './isNotFalse';
  * anyNotFalse([false, false]);    // false
  * ```
  */
-export function anyNotFalse(values?: Array<boolean | number | string | undefined | null>): boolean {
-    return !values || values.length === 0 || values.some(item => isNotFalse(item));
+export function anyNotFalse(values?: Array<boolean | number | string | null | undefined>): boolean {
+    return !values || !values.length || values.some(item => isNotFalse(item));
 }

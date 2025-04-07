@@ -19,13 +19,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that trimmed from the given string
  *
  * @param text the string to trim
@@ -33,12 +26,14 @@ import {isEmpty} from './isEmpty';
  *
  * @returns the trimmed string value from the given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * trim("foobar", true);    // 'foobar'
  * ```
  */
-export function trim(text?: string | null, emptyAsNull?: boolean): string | undefined | null {
+export function trim(text?: string | null, emptyAsNull?: boolean): string | null | undefined {
     if (!text) {
         return text;
     }

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given date is the first day of month
  *
  * @param date the date to check
  *
  * @returns whether the date is the first day of month
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

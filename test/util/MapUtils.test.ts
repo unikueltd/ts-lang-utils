@@ -90,4 +90,24 @@ describe('MapUtils', () => {
         MapUtils.forEachTailing(map, (value) => result.push(value));
         expect(result.length).toBe(2);
     });
+
+    test('Testing getKey', () => {
+        const map = new Map<number, string>([
+            [1, 'red'],
+            [2, 'yellow'],
+            [3, 'blue'],
+        ]);
+        expect(MapUtils.getKey(map, 'red')).toBe(1);
+        expect(MapUtils.getKey(map, 'black')).toBeUndefined();
+    });
+
+    test('Testing getValue', () => {
+        const map = new Map<number, string>([
+            [1, 'red'],
+            [2, 'yellow'],
+            [3, 'blue'],
+        ]);
+        expect(MapUtils.getValue(map, 1)).toBe('red');
+        expect(MapUtils.getValue(map, 6)).toBeUndefined();
+    });
 });

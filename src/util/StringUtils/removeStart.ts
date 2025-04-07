@@ -19,13 +19,6 @@ import {startsWith} from './startsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the leftmost given string
  *
  * @param text the text to inspect
@@ -33,12 +26,14 @@ import {startsWith} from './startsWith';
  *
  * @returns the string that removed the leftmost given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * removeStart('foobar', 'hello');    // 'foobar'
  * removeStart('foobar', 'foo');    // 'bar'
  * ```
  */
-export function removeStart(text?: string | null, remove?: string | null): string | undefined | null {
+export function removeStart(text?: string | null, remove?: string | null): string | null | undefined {
     return (!text || !remove || !startsWith(text, remove)) ? text : text.substring(remove.length);
 }

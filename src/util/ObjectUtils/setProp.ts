@@ -19,18 +19,13 @@ import {isPlain} from './isPlain';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Sets the property value on the given object
  *
  * @param object the object to inspect
  * @param prop the property name to inspect
  * @param value the value to set
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

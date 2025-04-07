@@ -20,13 +20,6 @@ import {setProp} from './setProp';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns an object that cloned from the given object, includes the given keys only
  *
  * @param source the object to clone
@@ -34,13 +27,15 @@ import {setProp} from './setProp';
  *
  * @returns an object that cloned from the given object, includes the given keys only
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * cloneInclusive({'foo': 'bar'}, ['foo']);
  * ```
  */
 export function cloneInclusive(source?: object, keys?: string[]): object | undefined {
-    if (!source || !isPlain(source) || !keys || keys.length === 0) {
+    if (!source || !isPlain(source) || !keys || !keys.length) {
         return undefined;
     }
     const result = {};

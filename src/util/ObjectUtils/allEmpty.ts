@@ -19,18 +19,13 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the elements in the given objects are empty
  *
  * @param objects the objects to check
  *
  * @returns whether all the elements in the given objects are empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -39,5 +34,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function allEmpty(objects?: any[]): boolean {
-    return !objects || objects.length === 0 || objects.every(item => isEmpty(item));
+    return !objects || !objects.length || objects.every(item => isEmpty(item));
 }

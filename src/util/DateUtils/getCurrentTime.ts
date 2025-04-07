@@ -19,18 +19,13 @@ import {formatDateTime} from './formatDateTime';
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the current time
  *
  * @param format the time format string
  *
  * @returns the current time
+ *
+ * @author David Hsing
  */
 export function getCurrentTime(format = 'hh:mm:ss'): string {
     return formatDateTime(new Date(), format) as string;

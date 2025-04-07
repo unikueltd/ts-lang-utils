@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a regex that compiled by the given pattern
  *
  * @param pattern the pattern to inspect
@@ -30,19 +23,20 @@
  *
  * @returns a regex that compiled by the given pattern
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * compilePattern('[a-zA-Z0-9]+', 'g');
  * ```
  */
-export function compilePattern(pattern?: string, flags?: string): RegExp | undefined {
+export function compilePattern(pattern?: string | null, flags?: string): RegExp | undefined {
     if (!pattern) {
         return undefined;
     }
     try {
         return new RegExp(pattern, flags);
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (ignored) {
+    } catch (_ignored) {
     }
     return undefined;
 }

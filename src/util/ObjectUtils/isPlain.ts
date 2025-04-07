@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is a plain object
  *
  * @param object the object to check
  *
  * @returns whether the given object is a plain object
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

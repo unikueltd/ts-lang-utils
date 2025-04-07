@@ -19,18 +19,13 @@ import {isNull} from './isNull';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is not null
  *
  * @param object the object to check
  *
  * @returns whether the given object is not null
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

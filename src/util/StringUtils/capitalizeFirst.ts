@@ -16,24 +16,19 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the first letter uppercase representation of the given string
  *
  * @param text the source string to check
  *
  * @returns the first letter uppercase representation of the given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * capitalizeFirst('fooBar');    // 'FooBar'
  * ```
  */
-export function capitalizeFirst(text?: string | null): string | undefined | null {
+export function capitalizeFirst(text?: string | null): string | null | undefined {
     return !text ? text : (text.charAt(0).toUpperCase() + text.substring(1));
 }

@@ -19,13 +19,6 @@ import {endsWith} from './endsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the leftmost given string
  *
  * @param text the text to inspect
@@ -33,12 +26,14 @@ import {endsWith} from './endsWith';
  *
  * @returns the string that removed the leftmost given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * removeEnd('foobar', 'hello');    // 'foobar'
  * removeEnd('foobar', 'bar');    // 'foo'
  * ```
  */
-export function removeEnd(text?: string | null, remove?: string | null): string | undefined | null {
+export function removeEnd(text?: string | null, remove?: string | null): string | null | undefined {
     return (!text || !remove || !endsWith(text, remove)) ? text : text.substring(0, text.length - remove.length);
 }

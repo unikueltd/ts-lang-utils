@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that double quotes the given text
  *
  * @param text the text to inspect
  *
  * @returns a string that double quotes the given text
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -35,6 +30,6 @@
  * quoteSingle('foobar');    // '"foobar"'
  * ```
  */
-export function quoteDouble(text?: string | null): string | undefined | null {
+export function quoteDouble(text?: string | null): string | null | undefined {
     return !text ? text : `"${text}"`;
 }

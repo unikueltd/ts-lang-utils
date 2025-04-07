@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that adds the given element
  *
  * @param array the arrays to inspect
  * @param element the element to add
  *
  * @returns the array that adds the given element
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -37,7 +32,7 @@
  * add(['foo', 'bar'], 'world');    // ['foo', 'bar', 'world']
  * ```
  */
-export function add<E>(array?: E[] | null, element?: E | null): E[] | undefined | null {
+export function add<E>(array?: E[] | null, element?: E | null): E[] | null | undefined {
     if (!array) {
         return !element ? undefined : [element];
     }
@@ -45,6 +40,6 @@ export function add<E>(array?: E[] | null, element?: E | null): E[] | undefined 
         return array;
     }
     const result = [...array];
-    result[result.length] = element;
+    result.push(element);
     return result;
 }

@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that removes the given elements
  *
  * @param array the arrays to inspect
  * @param elements the elements to remove
  *
  * @returns the array that removes the given elements
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -37,6 +32,6 @@
  * removeAll(['foo', 'bar'], ['bar']);    // ['foo']
  * ```
  */
-export function removeAll<E>(array?: E[] | null, elements?: E[] | null): E[] | undefined | null {
+export function removeAll<E>(array?: E[] | null, elements?: E[] | null): E[] | null | undefined {
     return (!array || !elements) ? array : array.filter(item => !elements.includes(item));
 }

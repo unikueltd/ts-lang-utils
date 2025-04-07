@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for json
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string is a JSON string
  *
  * @param text the string to check
  *
  * @returns whether the given object is a JSON string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -42,8 +37,7 @@ export function isJsonString(text?: string | null): boolean {
     }
     try {
         return typeof JSON.parse(text) === 'object';
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch(ignored) {
+    } catch(_ignored) {
     }
     return false;
 }

@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object has the specified property
  *
  * @param object the object to check
  * @param prop the property name to check
  *
  * @returns whether the object has the specified property
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that contains all the given elements at the index of the source array
  *
  * @param array the array to inspect
@@ -30,6 +23,8 @@
  * @param elements the elements to insert
  *
  * @returns the array that contains all the given elements at the index of the source array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -39,11 +34,11 @@
  * insert(['foo', 'bar'], 9, ['hello', 'world']);    // ['foo', 'bar', 'hello', 'world']
  * ```
  */
-export function insert<E>(array?: E[] | null, index?: number, elements?: E[] | null): E[] | undefined | null {
-    if (index === undefined || !elements || elements.length === 0) {
+export function insert<E>(array?: E[] | null, index?: number, elements?: E[] | null): E[] | null | undefined {
+    if (index === undefined || !elements || !elements.length) {
         return array;
     }
-    if (!array || array.length === 0) {
+    if (!array || !array.length) {
         return elements;
     }
     if (index < 0 || index >= array.length) {

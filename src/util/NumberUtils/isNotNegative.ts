@@ -19,18 +19,13 @@ import {isNegative} from './isNegative';
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given value is not negative
  *
  * @param value the number value to check
  *
  * @returns whether the given value is not negative
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

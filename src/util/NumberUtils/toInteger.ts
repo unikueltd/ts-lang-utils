@@ -16,34 +16,34 @@
 
 
 /**
- * Utilities for number
+ * Returns an integer value from the given source
+ *
+ * @param source the string value to check
+ * @param defaultValue the default value if the source cannot be converted
+ * @param floorValue Whether to floor the source, otherwise to ceil
+ *
+ * @returns an integer value from the given source
  *
  * @author David Hsing
- */
-
-
-/**
- * Returns an integer value from the string value, or undefined if the value cannot be converted
- *
- * @param value the string value to check
- *
- * @returns an integer value from the string value, or undefined if the value cannot be converted
  *
  * @example
  * ```ts
  * toInteger('1');    // 1
+ * toInteger(1.3);    // 1
+ * toInteger('1.7', undefined, false);    // 2
  * ```
  */
-export function toInteger(value?: string): number | undefined {
-    if (value === undefined) {
-        return undefined;
+export function toInteger(source?: number | string | null, defaultValue?: number, floorValue: boolean = true): number | undefined {
+    if (source === undefined || source === null) {
+        return defaultValue;
+    }
+    if (typeof source === 'number') {
+        return floorValue ? Math.floor(source) : Math.ceil(source);
     }
     try {
-        // @ts-ignore
-        const result = Number.parseInt(value);
-        return Number.isNaN(result) ? undefined : result;
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (ignored) {
+        const result = Number.parseFloat(source);
+        return Number.isNaN(result) ? defaultValue : (floorValue ? Math.floor(result) : Math.ceil(result));
+    } catch (_ignored) {
     }
-    return undefined;
+    return defaultValue;
 }

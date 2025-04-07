@@ -19,18 +19,13 @@ import {isTrue} from './isTrue';
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether any of the given elements is true
  *
  * @param values the elements to check
  *
  * @returns whether any of the given elements is true
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -39,6 +34,6 @@ import {isTrue} from './isTrue';
  * anyTrue([null, false]);    // false
  * ```
  */
-export function anyTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
+export function anyTrue(values?: Array<boolean | number | string | null | undefined>): boolean {
     return !!values && values.length > 0 && values.some(item => isTrue(item));
 }

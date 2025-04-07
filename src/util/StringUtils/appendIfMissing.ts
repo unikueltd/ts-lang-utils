@@ -20,13 +20,6 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that concat the given text and suffix
  *
  * @param text the text to check
@@ -34,12 +27,14 @@ import {isEmpty} from './isEmpty';
  *
  * @returns a string that concat the given text and suffix
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * appendIfMissing('foo', 'bar');    // 'foobar'
  * appendIfMissing('foobar', 'bar');    // 'foobar'
  * ```
  */
-export function appendIfMissing(text?: string | null, suffix?: string | null): string | undefined | null {
+export function appendIfMissing(text?: string | null, suffix?: string | null): string | null | undefined {
     return (!text || isEmpty(suffix) || endsWith(text, suffix)) ? text : (text + suffix);
 }

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that represents the given string array
  *
  * @param texts the source strings to inspect
  *
  * @returns a string that represents the given string array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -35,6 +30,6 @@
  * fromChars(['f', 'o', 'o', 'b', 'a', 'r']);    // 'foobar'
  * ```
  */
-export function fromChars(texts?: Array<string | undefined | null>): string | undefined {
+export function fromChars(texts?: Array<string | null | undefined>): string | undefined {
     return !texts ? undefined : texts.join('');
 }

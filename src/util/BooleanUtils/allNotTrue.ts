@@ -19,18 +19,13 @@ import {isNotTrue} from './isNotTrue';
 
 
 /**
- * Utilities for boolean
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the given elements are not true
  *
  * @param values the elements to check
  *
  * @returns whether all the given elements are not true
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -39,6 +34,6 @@ import {isNotTrue} from './isNotTrue';
  * allNotTrue([null, false]);    // true
  * ```
  */
-export function allNotTrue(values?: Array<boolean | number | string | undefined | null>): boolean {
-    return !values || values.length === 0 || values.every(item => isNotTrue(item));
+export function allNotTrue(values?: Array<boolean | number | string | null | undefined>): boolean {
+    return !values || !values.length || values.every(item => isNotTrue(item));
 }

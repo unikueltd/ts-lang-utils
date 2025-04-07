@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether all the characters in the given text is alphanumeric
  *
  * @param text the text to check
  *
  * @returns whether all the characters in the given text is alphanumeric
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -36,6 +31,6 @@
  * isAlphanumeric('--$$##');    // false
  * ```
  */
-export function isAlphanumeric(text?: string): boolean {
+export function isAlphanumeric(text?: string | null): boolean {
     return !!text && /^[A-Za-z\d]+$/.test(text);
 }

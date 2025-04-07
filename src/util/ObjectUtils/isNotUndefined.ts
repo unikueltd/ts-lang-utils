@@ -19,18 +19,13 @@ import {isUndefined} from './isUndefined';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is not undefined
  *
  * @param object the object to check
  *
  * @returns whether the given object is not undefined
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

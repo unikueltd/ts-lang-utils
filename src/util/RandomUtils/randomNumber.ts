@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random number that between the value range
  *
  * @param minValue the min value, inclusive
  * @param maxValue the max value, exclusive
  *
  * @returns a random number that between the value range
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -19,13 +19,6 @@ import {endsWith} from './endsWith';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string ends with any of the suffixes
  *
  * @param text the source string to check
@@ -33,14 +26,16 @@ import {endsWith} from './endsWith';
  *
  * @returns whether the given string ends with any of the suffixes
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * endsWithAny('foobar', ['foo', 'bar']);    // true
  * endsWithAny('hello', ['foo', 'bar']);    // false
  * ```
  */
-export function endsWithAny(text?: string | null, suffixes?: Array<string | undefined | null>): boolean {
-    if (!text || !suffixes || suffixes.length === 0) {
+export function endsWithAny(text?: string | null, suffixes?: Array<string | null | undefined>): boolean {
+    if (!text || !suffixes || !suffixes.length) {
         return false;
     }
     return suffixes.some(suffix => endsWith(text, suffix));

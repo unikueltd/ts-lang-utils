@@ -16,24 +16,19 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the first letter uppercase and others lowercase representation of the given string
  *
  * @param text the source string to check
  *
  * @returns the letter uppercase and others lowercase representation of the given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * capitalizeFirstLowerTail('fooBar');    // 'Foobar'
  * ```
  */
-export function capitalizeFirstLowerTail(text?: string | null): string | undefined | null {
+export function capitalizeFirstLowerTail(text?: string | null): string | null | undefined {
     return !text ? text : (text.charAt(0).toUpperCase() + text.substring(1)?.toLowerCase());
 }

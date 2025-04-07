@@ -19,13 +19,6 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string ends with any of the suffixes, case-insensitive
  *
  * @param text the source string to check
@@ -33,14 +26,16 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
  *
  * @returns whether the given string ends with any of the suffixes, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * endsWithAnyIgnoreCase('foobar', ['FOO', 'BAR']);    // true
  * endsWithAnyIgnoreCase('hello', ['FOO', 'BAR']);    // false
  * ```
  */
-export function endsWithAnyIgnoreCase(text?: string | null, suffixes?: Array<string | undefined | null>): boolean {
-    if (!text || !suffixes || suffixes.length === 0) {
+export function endsWithAnyIgnoreCase(text?: string | null, suffixes?: Array<string | null | undefined>): boolean {
+    if (!text || !suffixes || !suffixes.length) {
         return false;
     }
     return suffixes.some(suffix => endsWithIgnoreCase(text, suffix));

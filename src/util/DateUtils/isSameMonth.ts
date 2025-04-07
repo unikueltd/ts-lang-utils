@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given date is same month with the comparison date
  *
  * @param date the date to check
@@ -30,6 +23,8 @@
  * @param deepCompare whether compare deeply with year
  *
  * @returns whether the given date is same month with the comparison date
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

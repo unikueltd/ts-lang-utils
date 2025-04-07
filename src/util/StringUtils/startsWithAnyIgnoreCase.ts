@@ -19,13 +19,6 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string starts with any of the prefixes, case-insensitive
  *
  * @param text the source string to check
@@ -33,14 +26,16 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
  *
  * @returns whether the given string starts with any of the prefixes, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * startsWithAnyIgnoreCase('foobar', ['FOO', 'BAR']);    // true
  * startsWithAnyIgnoreCase('hello', ['FOO', 'BAR']);    // false
  * ```
  */
-export function startsWithAnyIgnoreCase(text?: string | null, prefixes?: Array<string | undefined | null>): boolean {
-    if (!text || !prefixes || prefixes.length === 0) {
+export function startsWithAnyIgnoreCase(text?: string | null, prefixes?: Array<string | null | undefined>): boolean {
+    if (!text || !prefixes || !prefixes.length) {
         return false;
     }
     return prefixes.some(prefix => startsWithIgnoreCase(text, prefix));

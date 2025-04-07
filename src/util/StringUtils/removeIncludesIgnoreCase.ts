@@ -19,13 +19,6 @@ import {includesIgnoreCase} from './includesIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that excludes the elements which includes any of the given exclusions, case-insensitive
  *
  * @param texts the arrays to inspect
@@ -33,11 +26,13 @@ import {includesIgnoreCase} from './includesIgnoreCase';
  *
  * @returns the array that excludes the elements which includes any of the given exclusions, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * removeIncludesIgnoreCase(['foo', 'bar'], ['AR']);    // ['foo']
  * ```
  */
-export function removeIncludesIgnoreCase(texts?: string[] | null, excludes?: string[] | null): string[] | undefined | null {
-    return (!texts || texts.length === 0 || !excludes || excludes.length === 0) ? texts : texts.filter(text => !excludes.some(exclude => includesIgnoreCase(text, exclude)));
+export function removeIncludesIgnoreCase(texts?: string[] | null, excludes?: string[] | null): string[] | null | undefined {
+    return (!texts || !texts.length || !excludes || !excludes.length) ? texts : texts.filter(text => !excludes.some(exclude => includesIgnoreCase(text, exclude)));
 }

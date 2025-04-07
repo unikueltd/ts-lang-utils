@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the max value of the given array
  *
  * @param values the array to calculate
  *
  * @returns the max value of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -35,7 +30,7 @@
  * ```
  */
 export function max(values?: number[]): number | undefined {
-    if (!values || values.length === 0) {
+    if (!values || !values.length) {
         return undefined;
     }
     let result = values[0];

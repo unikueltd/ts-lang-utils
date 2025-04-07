@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for number
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given value is an integer
  *
  * @param value the number value to check
  *
  * @returns whether the given value is an integer
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

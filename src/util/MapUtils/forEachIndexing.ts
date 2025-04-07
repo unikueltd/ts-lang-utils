@@ -16,24 +16,19 @@
 
 
 /**
- * Utilities for map
- *
- * @author David Hsingexport function
- */
-
-
-/**
  * Processes each entry in the map, with indexing ability
  *
  * @param map the map to inspect
  * @param callback a callback function that processes each entry
+ *
+ * @author David Hsing
  */
-export function forEachIndexing<K, V>(map?: Map<K, V>, callback?: (value: V, key: K, index: number) => void): void {
-    if (!map || map.size === 0 || !callback) {
+export function forEachIndexing<K, V>(map?: Map<K, V> | ReadonlyMap<K, V>, callback?: (value?: V, key?: K, index?: number) => void): void {
+    if (!map || !map.size || !callback) {
         return;
     }
     let index = 0;
-    for (const [key, value] of map.entries()) {
-        callback(value, key, index++);
+    for (const [k, v] of map.entries()) {
+        callback(v, k, index++);
     }
 }

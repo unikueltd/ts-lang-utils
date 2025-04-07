@@ -19,29 +19,24 @@ import {isNotBlank} from './isNotBlank';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the filtered array of the gaven strings, without blanks
  *
  * @param texts the source string to inspect
  *
  * @returns the filtered array of the gaven strings, without blanks
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * filterIgnoreEmpty([null, undefined, ' ', 'foobar']);    //  ['foobar']
  * ```
  */
-export function filterIgnoreBlank(texts?: Array<string | undefined | null>): string[] | undefined {
-    if (!texts || texts.length === 0) {
+export function filterIgnoreBlank(texts?: Array<string | null | undefined>): string[] | undefined {
+    if (!texts || !texts.length) {
         return undefined;
     }
     const result = texts.filter(item => isNotBlank(item));
     // @ts-ignore
-    return (!result || result.length === 0) ? undefined : result;
+    return (!result || !result.length) ? undefined : result;
 }

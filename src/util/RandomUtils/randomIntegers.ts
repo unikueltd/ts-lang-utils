@@ -19,13 +19,6 @@ import {randomInteger} from './randomInteger';
 
 
 /**
- * Utilities for random
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a random integer array that between value range, matching the given size
  *
  * @param size the size of the expected array
@@ -33,6 +26,8 @@ import {randomInteger} from './randomInteger';
  * @param maxValue the max value, exclusive
  *
  * @returns a random integer array that between value range, matching the given size
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

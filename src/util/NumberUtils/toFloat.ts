@@ -16,33 +16,31 @@
 
 
 /**
- * Utilities for number
+ * Returns a float value from the given source
+ *
+ * @param source the string value to check
+ * @param defaultValue the default value if the source cannot be converted
+ *
+ * @returns a float value from the given source
  *
  * @author David Hsing
- */
-
-
-/**
- * Returns a float value from the string value, or undefined if the value cannot be converted
- *
- * @param value the string value to check
- *
- * @returns a float value from the string value, or undefined if the value cannot be converted
  *
  * @example
  * ```ts
  * toFloat('1.0');    // 1.0
  * ```
  */
-export function toFloat(value?: string): number | undefined {
-    if (value === undefined) {
-        return undefined;
+export function toFloat(source?: number | string | null, defaultValue?: number): number | undefined {
+    if (source === undefined || source === null) {
+        return defaultValue;
+    }
+    if (typeof source === 'number') {
+        return source;
     }
     try {
-        const result = Number.parseFloat(value);
-        return Number.isNaN(result) ? undefined : result;
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (ignored) {
+        const result = Number.parseFloat(source);
+        return Number.isNaN(result) ? defaultValue : result;
+    } catch (_ignored) {
     }
-    return undefined;
+    return defaultValue;
 }

@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for regex
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a regex pattern that escaped the given pattern
  *
  * @param pattern the pattern to inspect
  *
  * @returns a regex pattern that escaped the given pattern
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -35,7 +30,7 @@
  * escapePattern('-+=');    // '\\-\\+='
  * ```
  */
-export function escapePattern(pattern?: string): string | undefined {
+export function escapePattern(pattern?: string | null): string | null | undefined {
     const regex = /[\\^$.*+?\-()[\]{}|]/g;
     return (!pattern || !regex.test(pattern)) ? pattern : pattern.replace(regex, '\\$&');
 }

@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that abbreviates the given text using placeholder
  *
  * @param text the text to inspect
@@ -30,6 +23,8 @@
  * @param placeholder the placeholder to append
  *
  * @returns a string that abbreviates the given text using placeholder
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -40,7 +35,7 @@
  * abbreviate('foobar', 10);    // 'foobar'
  * ```
  */
-export function abbreviate(text?: string | null, width: number = -1, placeholder: string = '...'): string | undefined | null {
+export function abbreviate(text?: string | null, width: number = -1, placeholder: string = '...'): string | null | undefined {
     if (!text || width < 0 || width >= text.length) {
         return text;
     }

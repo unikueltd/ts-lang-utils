@@ -19,18 +19,13 @@ import {isEmpty} from './isEmpty';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is not empty
  *
  * @param object the object to check
  *
  * @returns whether the given object is not empty
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

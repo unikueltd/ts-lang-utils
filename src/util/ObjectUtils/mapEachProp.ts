@@ -19,17 +19,12 @@ import {isPlain} from './isPlain';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Processes and map each prop key in the object
  *
  * @param object the object to inspect
  * @param callback the callback function that processes each prop key
+ *
+ * @author David Hsing
  */
 export function mapEachProp(object: any, callback?: (key: string, index: number) => any): any[] | undefined {
     if (!object || !isPlain(object) || !callback) {

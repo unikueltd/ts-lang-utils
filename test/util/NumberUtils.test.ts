@@ -19,6 +19,18 @@ import {NumberUtils} from '@yookue/ts-lang-utils';
 
 
 describe('NumberUtils', () => {
+    test('Testing average', () => {
+        expect(NumberUtils.average([1, 2, 3])).toBe(2);
+    });
+
+    test('Testing compare', () => {
+        expect(NumberUtils.compare(undefined, null)).toBe(0);
+        expect(NumberUtils.compare(3, undefined, true)).toBe(-1);
+        expect(NumberUtils.compare(3, undefined, false)).toBe(1);
+        expect(NumberUtils.compare(3, 2)).toBe(1);
+        expect(NumberUtils.compare(2, 3)).toBe(-1);
+    });
+
     test('Testing isInteger', () => {
         expect(NumberUtils.isInteger(undefined)).toBeFalsy();
         expect(NumberUtils.isInteger(1)).toBeTruthy();
@@ -48,18 +60,6 @@ describe('NumberUtils', () => {
         expect(NumberUtils.isNotNegative(-1)).toBeFalsy();
     });
 
-    test('Testing toInteger', () => {
-        expect(NumberUtils.toInteger(undefined)).toBeUndefined();
-        expect(NumberUtils.toInteger('foobar')).toBeUndefined();
-        expect(NumberUtils.toInteger('1')).toBe(1);
-    });
-
-    test('Testing toFloat', () => {
-        expect(NumberUtils.toFloat(undefined)).toBeUndefined();
-        expect(NumberUtils.toFloat('foobar')).toBeUndefined();
-        expect(NumberUtils.toFloat('1.0')).toBe(1.0);
-    });
-
     test('Testing max', () => {
         expect(NumberUtils.max([1, 2, 3])).toBe(3);
     });
@@ -72,7 +72,17 @@ describe('NumberUtils', () => {
         expect(NumberUtils.sum([1, 2, 3])).toBe(6);
     });
 
-    test('Testing average', () => {
-        expect(NumberUtils.average([1, 2, 3])).toBe(2);
+    test('Testing toInteger', () => {
+        expect(NumberUtils.toInteger(undefined)).toBeUndefined();
+        expect(NumberUtils.toInteger('foobar')).toBeUndefined();
+        expect(NumberUtils.toInteger('1')).toBe(1);
+        expect(NumberUtils.toInteger(1.3)).toBe(1);
+        expect(NumberUtils.toInteger('1.7', undefined, false)).toBe(2);
+    });
+
+    test('Testing toFloat', () => {
+        expect(NumberUtils.toFloat(undefined)).toBeUndefined();
+        expect(NumberUtils.toFloat('foobar')).toBeUndefined();
+        expect(NumberUtils.toFloat('1.0')).toBe(1.0);
     });
 });

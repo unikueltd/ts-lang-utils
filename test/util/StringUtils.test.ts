@@ -16,6 +16,7 @@
 
 
 import {StringUtils} from '@yookue/ts-lang-utils';
+import {removeBlank, substringAfterAny} from '../../src/util/StringUtils';
 
 
 describe('StringUtils', () => {
@@ -252,15 +253,22 @@ describe('StringUtils', () => {
         expect(StringUtils.includesAnyIgnoreCase('foobar', ['world', undefined])).toBeFalsy();
     });
 
-    test('Testing joinWith', () => {
-        expect(StringUtils.joinWith('foobar')).toBe('foobar');
-        expect(StringUtils.joinWith(['foo', 'bar'], undefined)).toBe('foobar');
-        expect(StringUtils.joinWith(['foo', 'bar', 'world'], undefined, (text => text !== 'world'))).toBe('foobar');
+    test('Testing join', () => {
+        expect(StringUtils.join('foobar')).toBe('foobar');
+        expect(StringUtils.join(['foo', 'bar'], undefined)).toBe('foobar');
+        expect(StringUtils.join(['foo', 'bar', 'world'], undefined, (text => text !== 'world'))).toBe('foobar');
     });
 
     test('Testing left', () => {
         expect(StringUtils.left('foobar', 3)).toBe('foo');
         expect(StringUtils.left('foobar', 10)).toBe('foobar');
+    });
+
+    test('Testing leftPad', () => {
+        expect(StringUtils.leftPad(undefined, -1, null)).toBeUndefined();
+        expect(StringUtils.leftPad('', 3, 'z')).toBe('zzz');
+        expect(StringUtils.leftPad('foo', 3, 'z')).toBe('foo');
+        expect(StringUtils.leftPad('foo', 8, 'yz')).toBe('yzyzyfoo');
     });
 
     test('Testing right', () => {
@@ -304,6 +312,10 @@ describe('StringUtils', () => {
         expect(StringUtils.removeAllIgnoreCase(undefined, undefined)).toBeUndefined();
         expect(StringUtils.removeAllIgnoreCase('foobar-foobar', undefined)).toBe('foobar-foobar');
         expect(StringUtils.removeAllIgnoreCase('foobar-foobar', 'BAR')).toBe('foo-foo');
+    });
+
+    test('Testing removeBlank', () => {
+        expect(StringUtils.removeBlank('foo bar')).toBe('foobar');
     });
 
     test('Testing removeFirst', () => {
@@ -358,6 +370,12 @@ describe('StringUtils', () => {
         expect(StringUtils.removeEndIgnoreCase('foobar', 'Bar')).toBe('foo');
     });
 
+    test('Testing repeat', () => {
+        expect(StringUtils.repeat(undefined, 0)).toBeUndefined();
+        expect(StringUtils.repeat('', 3)).toBe('');
+        expect(StringUtils.repeat('z', 3)).toBe('zzz');
+    });
+
     test('Testing replaceAll', () => {
         expect(StringUtils.replaceAll(undefined, undefined, undefined)).toBeUndefined();
         expect(StringUtils.replaceAll('foobar-foobar', undefined, 'hello')).toBe('foobar-foobar');
@@ -385,6 +403,18 @@ describe('StringUtils', () => {
     test('Testing reverse', () => {
         expect(StringUtils.reverse('foobar')).toBe('raboof');
         expect(StringUtils.reverse('foobar', 1, 5)).toBe('aboo');
+    });
+
+    test('Testing right', () => {
+        expect(StringUtils.right('foobar', 3)).toBe('bar');
+        expect(StringUtils.right('foobar', 10)).toBe('foobar');
+    });
+
+    test('Testing rightPad', () => {
+        expect(StringUtils.rightPad(undefined, -1, null)).toBeUndefined();
+        expect(StringUtils.rightPad('', 3, 'z')).toBe('zzz');
+        expect(StringUtils.rightPad('foo', 3, 'z')).toBe('foo');
+        expect(StringUtils.rightPad('foo', 8, 'yz')).toBe('fooyzyzy');
     });
 
     test('Testing split', () => {
@@ -416,16 +446,32 @@ describe('StringUtils', () => {
         expect(StringUtils.substringAfter('foo/bar/foo/bar', '/')).toBe('bar/foo/bar');
     });
 
+    test('Testing substringAfterAny', () => {
+        expect(StringUtils.substringAfterAny('foo/bar/foo/bar', ['/', ';'])).toBe('bar/foo/bar');
+    });
+
     test('Testing substringAfterLast', () => {
         expect(StringUtils.substringAfterLast('foo/bar/foo/bar', '/')).toBe('bar');
+    });
+
+    test('Testing substringAfterLastAny', () => {
+        expect(StringUtils.substringAfterLastAny('foo/bar/foo/bar', ['/', ';'])).toBe('bar');
     });
 
     test('Testing substringBefore', () => {
         expect(StringUtils.substringBefore('foo/bar/foo/bar', '/')).toBe('foo');
     });
 
+    test('Testing substringBeforeAny', () => {
+        expect(StringUtils.substringBeforeAny('foo/bar/foo/bar', ['/', ';'])).toBe('foo');
+    });
+
     test('Testing substringBeforeLast', () => {
         expect(StringUtils.substringBeforeLast('foo/bar/foo/bar', '/')).toBe('foo/bar/foo');
+    });
+
+    test('Testing substringBeforeLastAny', () => {
+        expect(StringUtils.substringBeforeLastAny('foo/bar/foo/bar', ['/', ';'])).toBe('foo/bar/foo');
     });
 
     test('Testing toChars', () => {

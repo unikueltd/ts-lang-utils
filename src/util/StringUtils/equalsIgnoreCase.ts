@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given strings are equal, case-insensitive
  *
  * @param text the source string to check
  * @param comparison the target string to compare
  *
  * @returns whether the given strings are equal, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given date is same year with the comparison date
  *
  * @param date the date to check
  * @param comparison the date to compare
  *
  * @returns whether the given date is same year with the comparison date
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

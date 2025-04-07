@@ -19,19 +19,14 @@ import {toString} from '@/util/ObjectUtils/toString';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the replaced string of the source string ("{}" placeholder) with the given parameters
  *
  * @param text the source string to inspect
  * @param params the parameters to replaced with
  *
  * @returns the replaced string of the source string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -40,8 +35,8 @@ import {toString} from '@/util/ObjectUtils/toString';
  * formatBrace('hello {}, foo{}', 'world', 'bar');    //  'hello world, foobar'
  * ```
  */
-export function formatBrace(text?: string | null, ...params: any[]): string | undefined | null {
-    if (!text || text.length <= 2 || !params || params.length === 0) {
+export function formatBrace(text?: string | null, ...params: any[]): string | null | undefined {
+    if (!text || text.length <= 2 || !params || !params.length) {
         return text;
     }
     let result = text;

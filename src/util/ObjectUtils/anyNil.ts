@@ -19,18 +19,13 @@ import {isNil} from './isNil';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether any of the elements in the given objects is null or undefined
  *
  * @param objects the objects to check
  *
  * @returns whether any the elements in the given objects is null or undefined
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -40,5 +35,5 @@ import {isNil} from './isNil';
  * ```
  */
 export function anyNil(objects?: any[]): boolean {
-    return !objects || objects.length === 0 || objects.some(item => isNil(item));
+    return !objects || !objects.length || objects.some(item => isNil(item));
 }

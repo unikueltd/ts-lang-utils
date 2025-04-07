@@ -16,13 +16,6 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the leftmost length characters of the given string
  *
  * @param text the text to inspect
@@ -30,13 +23,15 @@
  *
  * @returns the leftmost length characters of the given string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * left('foobar', 3);    // 'foo'
  * left('foobar', 10);    // 'foobar'
  * ```
  */
-export function left(text?: string | null, length?: number): string | undefined | null {
+export function left(text?: string | null, length?: number): string | null | undefined {
     if (!text || length === undefined || length < 0) {
         return text;
     }

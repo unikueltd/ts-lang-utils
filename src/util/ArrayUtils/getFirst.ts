@@ -16,24 +16,20 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the first element of the given array
  *
  * @param array the array to inspect
+ * @param defaultValue the default value if the array is empty
  *
  * @returns the first element of the given array
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
  * getFirst(['foo', 'bar']);    // 'foo'
  * ```
  */
-export function getFirst<E>(array?: E[] | readonly E[] | null): E | undefined {
-    return (!array || array.length === 0) ? undefined : array[0];
+export function getFirst<E>(array?: E[] | readonly E[] | null, defaultValue?: E | null): E | null | undefined {
+    return (!array || !array.length) ? defaultValue : array[0];
 }

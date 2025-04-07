@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for thread
- *
- * @author David Hsing
- */
-
-
-/**
  * Sleeps current thread for a specified amount of time
  *
  * @param microseconds the amount of time to sleep, in microseconds
  *
  * @returns a promise that could be resolved
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

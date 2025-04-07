@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string ends with the suffix, case-insensitive
  *
  * @param text the source string to check
  * @param suffix the target string to compare
  *
  * @returns whether the given string ends with the suffix, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

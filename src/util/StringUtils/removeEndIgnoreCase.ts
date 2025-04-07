@@ -19,13 +19,6 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the rightmost given string, case-insensitive
  *
  * @param text the text to inspect
@@ -33,12 +26,14 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
  *
  * @returns the string that removed the rightmost given string, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * removeEndIgnoreCase('foobar', 'Hello');    // 'foobar'
  * removeEndIgnoreCase('foobar', 'Bar');    // 'foo'
  * ```
  */
-export function removeEndIgnoreCase(text?: string | null, remove?: string | null): string | undefined | null {
+export function removeEndIgnoreCase(text?: string | null, remove?: string | null): string | null | undefined {
     return (!text || !remove || !endsWithIgnoreCase(text, remove)) ? text : text.substring(0, text.length - remove.length);
 }

@@ -19,13 +19,6 @@ import {includes} from './includes';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given text includes to any of the comparison strings
  *
  * @param text the source string to check
@@ -33,12 +26,14 @@ import {includes} from './includes';
  *
  * @returns whether the given text includes the comparison string
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * includesAny('foobar', ['foo', 'bar']);    // true
  * ```
  */
-export function includesAny(text?: string | null, comparisons?: Array<string | undefined | null>): boolean {
+export function includesAny(text?: string | null, comparisons?: Array<string | null | undefined>): boolean {
     if (!text || !comparisons) {
         return false;
     }

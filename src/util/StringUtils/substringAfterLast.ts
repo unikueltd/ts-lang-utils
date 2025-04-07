@@ -16,29 +16,24 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the substring after the last occurrence of the given separator (the separator is not returned)
  *
  * @param text the string to get a substring from
- * @param separator the String to search for
+ * @param separator the string to search for
  *
  * @returns the substring after the last occurrence of the given separator
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
  * substringAfterLast("foo/bar/foo/bar", "/");    // 'bar'
  * ```
  */
-export function substringAfterLast(text?: string | null, separator?: string | null): string | undefined {
+export function substringAfterLast(text?: string | null, separator?: string | null): string | null | undefined {
     if (!text || !separator) {
-        return undefined;
+        return text;
     }
     const index = text.lastIndexOf(separator);
-    return (index === -1) ? undefined : text.substring(index + separator.length);
+    return (index === -1) ? text : text.substring(index + separator.length);
 }

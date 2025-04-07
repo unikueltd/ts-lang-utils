@@ -22,5 +22,7 @@
  */
 
 
+export {isJsonObject} from './isJsonObject';
 export {isJsonString} from './isJsonString';
+export {toJsonObject} from './toJsonObject';
 export {toJsonString} from './toJsonString';

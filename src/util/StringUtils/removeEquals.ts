@@ -19,13 +19,6 @@ import {removeAll} from '@/util/ArrayUtils/removeAll';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the array that excludes the elements which equals to any of the given exclusions
  *
  * @param texts the arrays to inspect
@@ -33,11 +26,13 @@ import {removeAll} from '@/util/ArrayUtils/removeAll';
  *
  * @returns the array that excludes the elements which equals to any of the given exclusions
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * removeEquals(['foo', 'bar'], ['bar']);    // ['foo']
  * ```
  */
-export function removeEquals(texts?: string[] | null, excludes?: string[] | null): string[] | undefined | null {
+export function removeEquals(texts?: string[] | null, excludes?: string[] | null): string[] | null | undefined {
     return removeAll(texts, excludes);
 }

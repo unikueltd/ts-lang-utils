@@ -16,19 +16,14 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given text includes the comparison string
  *
  * @param text the source string to check
  * @param comparison the target string to compare
  *
  * @returns whether the given text includes the comparison string
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

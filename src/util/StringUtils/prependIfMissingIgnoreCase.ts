@@ -20,13 +20,6 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns a string that concat the given prefix and text, case-insensitive
  *
  * @param text the text to check
@@ -34,12 +27,14 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
  *
  * @returns a string that concat the given prefix and text, case-insensitive
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * prependIfMissingIgnoreCase('bar', 'foo');    // 'foobar'
  * prependIfMissingIgnoreCase('foobar', 'FOO');    // 'foobar'
  * ```
  */
-export function prependIfMissingIgnoreCase(text?: string | null, prefix?: string): string | undefined | null {
+export function prependIfMissingIgnoreCase(text?: string | null, prefix?: string): string | null | undefined {
     return (!text || isEmpty(prefix) || startsWithIgnoreCase(text, prefix)) ? text : (prefix + text);
 }

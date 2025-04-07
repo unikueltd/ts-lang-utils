@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for array
- *
- * @author David Hsing
- */
-
-
-/**
  * Reverses the given array
  *
  * @param array the arrays to inspect
  * @param startInclusive the starting index, inclusive
  * @param endExclusive the ending index, exclusive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -36,7 +31,7 @@
  * reverse(['foo', 'bar'], 0, 1);    // ['foo']
  * ```
  */
-export function reverse<E>(array?: E[] | null, startInclusive?: number, endExclusive?: number): E[] | undefined | null {
+export function reverse<E>(array?: E[] | null, startInclusive?: number, endExclusive?: number): E[] | null | undefined {
     if (!array) {
         return array;
     }

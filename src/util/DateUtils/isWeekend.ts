@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for date and time
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the date is a weekend
  *
  * @param date the date to check
  *
  * @returns whether the date is a weekend
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts

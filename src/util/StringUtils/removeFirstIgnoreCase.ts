@@ -19,19 +19,14 @@ import {replaceFirstIgnoreCase} from './replaceFirstIgnoreCase';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed the first occurrence in the given text, case-insensitive
  *
  * @param text the text to inspect
  * @param search the string or regex to match
  *
  * @returns the string that removed the first occurrence in the given text, case-insensitive
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -40,6 +35,6 @@ import {replaceFirstIgnoreCase} from './replaceFirstIgnoreCase';
  * removeFirstIgnoreCase('foobar-foobar', 'BAR');    // 'foo-foobar'
  * ```
  */
-export function removeFirstIgnoreCase(text?: string | null, search?: string | RegExp | null): string | undefined | null {
+export function removeFirstIgnoreCase(text?: string | null, search?: string | RegExp | null): string | null | undefined {
     return replaceFirstIgnoreCase(text, search, '');
 }

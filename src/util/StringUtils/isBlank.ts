@@ -16,18 +16,13 @@
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given string is blank
  *
  * @param text the string to check
  *
  * @returns whether the given string is blank
+ *
+ * @author David Hsing
  *
  * @remarks
  * check if all the characters in the given string are whitespace or line separators

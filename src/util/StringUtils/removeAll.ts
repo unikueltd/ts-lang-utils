@@ -19,19 +19,14 @@ import {replaceAll} from './replaceAll';
 
 
 /**
- * Utilities for string
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns the string that removed all occurrences in the given text
  *
  * @param text the text to inspect
  * @param search the string or regex to match
  *
  * @returns the string that removed all occurrences in the given text
+ *
+ * @author David Hsing
  *
  * @example
  * ```ts
@@ -40,6 +35,6 @@ import {replaceAll} from './replaceAll';
  * removeAll('foobar-foobar', 'bar');    // 'foo-foo'
  * ```
  */
-export function removeAll(text?: string | null, search?: string | RegExp | null): string | undefined | null {
+export function removeAll(text?: string | null, search?: string | RegExp | null): string | null | undefined {
     return replaceAll(text, search, '');
 }

@@ -19,39 +19,35 @@ import {keys} from './keys';
 
 
 /**
- * Utilities for object
- *
- * @author David Hsing
- */
-
-
-/**
  * Returns whether the given object is empty
  *
  * @param object the object to check
  *
  * @returns whether the given object is empty
  *
+ * @author David Hsing
+ *
  * @example
  * ```ts
  * isEmpty(null);    // true
  * isEmpty(undefined);    // true
+ * isEmpty(0);    // false
  * isEmpty({});    // true
  * isEmpty('foobar');    // false
  * ```
  */
 export function isEmpty(object: any): boolean {
-    if (!object) {
+    if (object === undefined || object === null) {
         return true;
     }
     if (typeof object === 'string' || Array.isArray(object)) {
-        return object.length === 0;
+        return !object.length;
     }
     if (object instanceof Map || object instanceof Set) {
-        return object.size === 0;
+        return !object.size;
     }
     if (typeof object === 'object') {
-        return keys(object)?.length === 0;
+        return !keys(object)?.length;
     }
     return false;
 }
