@@ -73,7 +73,7 @@ describe('ObjectUtils', () => {
 
     test('Testing forEachProp', () => {
         const keys: string[] = [];
-        ObjectUtils.forEachProp({'foo': 'bar', 'hello': 'world'}, key => keys.push(key));
+        ObjectUtils.forEachProp({'foo': 'bar', 'hello': 'world'}, key => keys.push(key as string));
         expect(keys.length).toBe(2);
     });
 
