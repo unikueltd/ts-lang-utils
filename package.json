@@ -50,6 +50,7 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.27.0",
+        "lodash": "^4.17.21",
         "nanoid": "^3.3.8",
         "universal-cookie": "^8.0.1"
     },
