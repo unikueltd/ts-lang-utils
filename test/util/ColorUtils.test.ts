@@ -21,6 +21,7 @@ import {ColorUtils} from '@yookue/ts-lang-utils';
 describe('ColorUtils', () => {
     test('Testing isHex', () => {
         expect(ColorUtils.isHex('#ff0000')).toBeTruthy();
+        expect(ColorUtils.isHex('#1890ff')).toBeTruthy();
     });
 
     test('Testing hexToRgb', () => {
