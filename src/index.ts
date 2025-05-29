@@ -35,5 +35,6 @@ export * as TreeUtils from './util/TreeUtils';
 export * as CookieStorage from './web/CookieStorage';
 export * as LocalStorage from './web/LocalStorage';
 export * as SessionStorage from './web/SessionStorage';
+export * from './type/declaration';
 export {IgnorableError} from '@/type/IgnorableError';
 export {UnsupportedError} from '@/type/UnsupportedError';

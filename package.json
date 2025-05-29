@@ -1,6 +1,6 @@
 {
     "name": "@yookue/ts-lang-utils",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "title": "TsLangUtils",
     "description": "Common lang utilities for typescript",
     "homepage": "https://yookue.github.io/ts-lang-utils",
@@ -40,8 +40,7 @@
     "sideEffects": false,
     "scripts": {
         "build": "del-cli ./dist && father build",
-        "build:doctor": "father doctor",
-        "build:watch": "father dev",
+        "doctor": "father doctor",
         "docs:build": "typedoc --out ./docs-dist",
         "docs:publish": "gh-pages -d ./docs-dist",
         "lint": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
@@ -49,7 +48,7 @@
         "test:coverage": "del-cli ./coverage && jest --coverage --coverageDirectory ./coverage"
     },
     "dependencies": {
-        "@babel/runtime": "^7.27.0",
+        "@babel/runtime": "^7.27.3",
         "lodash": "^4.17.21",
         "nanoid": "^3.3.8",
         "universal-cookie": "^8.0.1"
@@ -58,17 +57,17 @@
         "@eslint/eslintrc": "^3.3.1",
         "@eslint/js": "^9.24.0",
         "@types/jest": "^29.5.14",
-        "@types/lodash": "^4.17.16",
-        "@typescript-eslint/eslint-plugin": "^8.29.0",
+        "@types/lodash": "^4.17.17",
+        "@typescript-eslint/eslint-plugin": "^8.33.0",
         "@yookue/babel-plugin-remove-comment": "^0.2.0",
         "@yookue/typedoc-plugin-raw-content": "~0.3.0",
         "@yookue/typedoc-theme-dumi": "~0.4.0",
         "del-cli": "^6.0.0",
-        "father": "^4.5.2",
+        "father": "^4.5.5",
         "gh-pages": "^6.3.0",
-        "globals": "^16.0.0",
-        "ts-jest": "^29.3.1",
-        "typedoc": "~0.28.2",
+        "globals": "^16.2.0",
+        "ts-jest": "^29.3.4",
+        "typedoc": "~0.28.5",
         "typescript": "^5.8.3"
     },
     "peerDependencies": {
