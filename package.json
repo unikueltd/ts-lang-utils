@@ -1,6 +1,6 @@
 {
     "name": "@yookue/ts-lang-utils",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "title": "TsLangUtils",
     "description": "Common lang utilities for typescript",
     "homepage": "https://yookue.github.io/ts-lang-utils",
@@ -13,6 +13,7 @@
         "boolean-utils",
         "color-utils",
         "date-utils",
+        "duration-utils",
         "element-utils",
         "file-utils",
         "image-utils",
@@ -49,13 +50,14 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.27.3",
+        "@imranbarbhuiya/duration": "^5.1.8",
         "lodash": "^4.17.21",
         "nanoid": "^3.3.8",
         "universal-cookie": "^8.0.1"
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.1",
-        "@eslint/js": "^9.24.0",
+        "@eslint/js": "^9.28.0",
         "@types/jest": "^29.5.14",
         "@types/lodash": "^4.17.17",
         "@typescript-eslint/eslint-plugin": "^8.33.0",

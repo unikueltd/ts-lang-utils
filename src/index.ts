@@ -19,6 +19,7 @@ export * as ArrayUtils from './util/ArrayUtils';
 export * as BooleanUtils from './util/BooleanUtils';
 export * as ColorUtils from './util/ColorUtils';
 export * as DateUtils from './util/DateUtils';
+export * as DurationUtils from './util/DurationUtils';
 export * as ElementUtils from './util/ElementUtils';
 export * as FileUtils from './util/FileUtils';
 export * as ImageUtils from './util/ImageUtils';

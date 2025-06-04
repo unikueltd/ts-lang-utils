@@ -16,6 +16,8 @@
 
 ✅ date time 工具庫
 
+✅ duration 工具庫
+
 ✅ element 工具庫
 
 ✅ file 工具庫
@@ -63,6 +65,7 @@ import {ArrayUtils} from '@yookue/ts-lang-utils';
 import {BooleanUtils} from '@yookue/ts-lang-utils';
 import {ColorUtils} from '@yookue/ts-lang-utils';
 import {DateUtils} from '@yookue/ts-lang-utils';
+import {DurationUtils} from '@yookue/ts-lang-utils';
 import {ElementUtils} from '@yookue/ts-lang-utils';
 import {FileUtils} from '@yookue/ts-lang-utils';
 import {ImageUtils} from '@yookue/ts-lang-utils';
