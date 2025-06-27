@@ -20,30 +20,30 @@ import {setProp} from './setProp';
 
 
 /**
- * Returns an object that merged the given props, when the key of props is missing, or the value of matching key is null or undefined
+ * Returns an object that merged the given source, when the key of source is missing, or the value of matching key is null or undefined
  *
- * @param target the object to inspect
- * @param props the properties to assign
+ * @param target the target object to assign to
+ * @param source the source object to assign from
  * @param overrideNil whether to override the value of target, when it is null or undefined
  *
- * @returns an object that merged the given props, when the key of props is missing, or the value of matching key is null or undefined
+ * @returns an object that merged the given source, when the key of source is missing, or the value of matching key is null or undefined
  *
  * @author David Hsing
  *
  * @example
  * ```ts
- * defaultProps({}, {'foo': 'bar'});
+ * mergeProps({}, {'foo': 'bar'});
  * ```
  */
-export function defaultProps(target?: object, props?: object, overrideNil = true): object | undefined {
+export function mergeProps(target?: object, source?: object, overrideNil = true): object | undefined {
     if (!target || !isPlain(target)) {
-        return props;
+        return source;
     }
-    if (!props || !isPlain(props)) {
+    if (!source || !isPlain(source)) {
         return target;
     }
     const attributes = {};
-    Object.entries(props).filter(item => {
+    Object.entries(source).filter(item => {
         return !Object.prototype.hasOwnProperty.call(target, item[0]) || (overrideNil && (target[item[0] as keyof typeof target] === undefined || target[item[0] as keyof typeof target] === null));
     }).forEach(item => setProp(attributes, item[0], item[1]));
     return Object.assign(target, attributes);

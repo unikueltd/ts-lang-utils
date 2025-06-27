@@ -56,13 +56,6 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.getProp(ObjectUtils.cloneInclusive({'foo': 'bar'}, ['bar']), 'foo')).toBeUndefined();
     });
 
-    test('Testing defaultProps', () => {
-        expect(ObjectUtils.getProp(ObjectUtils.defaultProps({}, {'foo': 'bar'}), 'foo')).toBe('bar');
-        expect(ObjectUtils.getProp(ObjectUtils.defaultProps({'foo': 'world'}, {'foo': 'bar'}), 'foo')).toBe('world');
-        expect(ObjectUtils.getProp(ObjectUtils.defaultProps({'foo': undefined}, {'foo': 'bar'}, true), 'foo')).toBe('bar');
-        expect(ObjectUtils.getProp(ObjectUtils.defaultProps({'foo': undefined}, {'foo': 'bar'}, false), 'foo')).toBeUndefined();
-    });
-
     test('Testing firstNotNil', () => {
         expect(ObjectUtils.firstNotNil(null, undefined, 'foo', 'bar', {})).toBe('foo');
     });
@@ -80,6 +73,13 @@ describe('ObjectUtils', () => {
     test('Testing mapEachProp', () => {
         const keys = ObjectUtils.mapEachProp({'foo': 'bar', 'hello': 'world'}, key => 'jest_' + key) as string[];
         expect(keys).toStrictEqual(['jest_foo', 'jest_hello']);
+    });
+
+    test('Testing mergeProps', () => {
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({}, {'foo': 'bar'}), 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({'foo': 'world'}, {'foo': 'bar'}), 'foo')).toBe('world');
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({'foo': undefined}, {'foo': 'bar'}, true), 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({'foo': undefined}, {'foo': 'bar'}, false), 'foo')).toBeUndefined();
     });
 
     test('Testing isNil', () => {
