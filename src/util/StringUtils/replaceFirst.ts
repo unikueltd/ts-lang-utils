@@ -15,9 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-
-
 /**
  * Returns the string that replaced the first occurrence in the given text
  *
@@ -37,5 +34,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function replaceFirst(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
-    return (isEmpty(text) || !search) ? text : text?.replace(search, (replace ?? ''));
+    return (!text || !search) ? text : text?.replace(search, (replace ?? ''));
 }

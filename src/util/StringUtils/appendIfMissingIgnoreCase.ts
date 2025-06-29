@@ -16,7 +16,6 @@
 
 
 import {endsWithIgnoreCase} from './endsWithIgnoreCase';
-import {isEmpty} from './isEmpty';
 
 
 /**
@@ -36,5 +35,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function appendIfMissingIgnoreCase(text?: string | null, suffix?: string | null): string | null | undefined {
-    return (!text || isEmpty(suffix) || endsWithIgnoreCase(text, suffix)) ? text : (text + suffix);
+    return (!text || !suffix || endsWithIgnoreCase(text, suffix)) ? text : (text + suffix);
 }

@@ -22,6 +22,7 @@
  * @param delimiter the delimiter to split strings, default is comma
  * @param max the max elements expected, negative means unlimited, default is -1
  * @param trim whether trim each element before returning, default is true
+ * @param skipEmptys whether skip all empty elements, default is true
  *
  * @returns the split array of the given string by the given delimiter
  *
@@ -33,12 +34,12 @@
  * split('hello | world | wonderful', '|', 2);    // ['hello', 'world']
  * ```
  */
-export function split(text?: string | null, delimiter: string = ',', max: number = -1, trim: boolean = true): string[] | undefined {
+export function split(text?: string | null, delimiter: string = ',', max: number = -1, trim: boolean = true, skipEmptys: boolean = true): string[] | undefined {
     if (!text) {
         return undefined;
     }
     const result = text.split(delimiter, max);
-    if (!result || !result.length) {
+    if (!result || !result.length || (skipEmptys && result.every((item) => !item))) {
         return undefined;
     }
     return !trim ? result : result.map(item => !item ? item : item.trim());

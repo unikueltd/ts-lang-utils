@@ -16,7 +16,6 @@
 
 
 import {endsWith} from './endsWith';
-import {isEmpty} from './isEmpty';
 
 
 /**
@@ -36,5 +35,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function appendIfMissing(text?: string | null, suffix?: string | null): string | null | undefined {
-    return (!text || isEmpty(suffix) || endsWith(text, suffix)) ? text : (text + suffix);
+    return (!text || !suffix || endsWith(text, suffix)) ? text : (text + suffix);
 }

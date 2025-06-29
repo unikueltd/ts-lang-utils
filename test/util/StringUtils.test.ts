@@ -16,7 +16,6 @@
 
 
 import {StringUtils} from '@yookue/ts-lang-utils';
-import {removeBlank, substringAfterAny} from '../../src/util/StringUtils';
 
 
 describe('StringUtils', () => {
@@ -420,6 +419,7 @@ describe('StringUtils', () => {
     test('Testing split', () => {
         expect(StringUtils.split('foo,bar')).toStrictEqual(['foo', 'bar']);
         expect(StringUtils.split('hello | world | wonderful', '|', 2)).toStrictEqual(['hello', 'world']);
+        expect(StringUtils.split(',,')).toBeUndefined();
     });
 
     test('Testing startsWith', () => {

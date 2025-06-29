@@ -15,9 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-
-
 /**
  * Returns whether any of the given texts is empty
  *
@@ -34,5 +31,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function anyEmpty(texts?: Array<string | null | undefined>): boolean {
-    return !texts || !texts.length || texts.some(item => isEmpty(item));
+    return !texts || !texts.length || texts.some(item => !item);
 }

@@ -15,9 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-
-
 /**
  * Returns the string that replaced all occurrences in the given text
  *
@@ -37,5 +34,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function replaceAll(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
-    return (isEmpty(text) || !search) ? text : text?.replace(new RegExp(search, 'g'), (replace ?? ''));
+    return (!text || !search) ? text : text?.replace(new RegExp(search, 'g'), (replace ?? ''));
 }

@@ -15,7 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
 import {startsWithIgnoreCase} from './startsWithIgnoreCase';
 
 
@@ -36,5 +35,5 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
  * ```
  */
 export function prependIfMissingIgnoreCase(text?: string | null, prefix?: string): string | null | undefined {
-    return (!text || isEmpty(prefix) || startsWithIgnoreCase(text, prefix)) ? text : (prefix + text);
+    return (!text || !prefix || startsWithIgnoreCase(text, prefix)) ? text : (prefix + text);
 }

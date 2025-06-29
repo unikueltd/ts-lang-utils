@@ -15,9 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-
-
 /**
  * Returns a string that trimmed from the given string
  *
@@ -38,5 +35,5 @@ export function trim(text?: string | null, emptyAsNull?: boolean): string | null
         return text;
     }
     const result = text.trim();
-    return (emptyAsNull && isEmpty(result)) ? null : result;
+    return (emptyAsNull && !result) ? null : result;
 }

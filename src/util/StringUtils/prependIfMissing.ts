@@ -15,7 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
 import {startsWith} from './startsWith';
 
 
@@ -36,5 +35,5 @@ import {startsWith} from './startsWith';
  * ```
  */
 export function prependIfMissing(text?: string | null, prefix?: string): string | null | undefined {
-    return (!text || isEmpty(prefix) || startsWith(text, prefix)) ? text : (prefix + text);
+    return (!text || !prefix || startsWith(text, prefix)) ? text : (prefix + text);
 }

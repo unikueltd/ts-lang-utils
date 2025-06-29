@@ -15,9 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-
-
 /**
  * Returns the default value if the given text is empty, or the text self if it is not empty
  *
@@ -34,5 +31,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function defaultIfEmpty(text?: string | null, defaultValue?: string | null): string | null | undefined {
-    return isEmpty(text) ? defaultValue : text;
+    return !text ? defaultValue : text;
 }

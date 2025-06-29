@@ -15,9 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-
-
 /**
  * Returns whether the given string is not empty
  *
@@ -33,5 +30,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function isNotEmpty(text?: string | null): boolean {
-    return !isEmpty(text);
+    return !!text;
 }

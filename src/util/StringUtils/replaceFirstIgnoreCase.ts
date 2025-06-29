@@ -15,9 +15,6 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-
-
 /**
  * Returns the string that replaced the first occurrence in the given text, case-insensitive
  *
@@ -37,5 +34,5 @@ import {isEmpty} from './isEmpty';
  * ```
  */
 export function replaceFirstIgnoreCase(text?: string | null, search?: string | RegExp | null, replace?: string | null): string | null | undefined {
-    return (isEmpty(text) || !search) ? text : text?.replace(new RegExp(search, 'i'), (replace ?? ''));
+    return (!text || !search) ? text : text?.replace(new RegExp(search, 'i'), (replace ?? ''));
 }

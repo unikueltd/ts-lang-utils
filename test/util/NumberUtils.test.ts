@@ -16,7 +16,6 @@
 
 
 import {NumberUtils} from '@yookue/ts-lang-utils';
-import {divide100, multiply100} from '../../src/util/NumberUtils';
 
 
 describe('NumberUtils', () => {
