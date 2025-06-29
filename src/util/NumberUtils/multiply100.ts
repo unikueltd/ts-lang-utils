@@ -15,32 +15,36 @@
  */
 
 
+import {endsWith} from '../StringUtils/endsWith';
+import {toFloat} from './toFloat';
+
+
 /**
- * Returns a float value from the given source
+ * Returns a float value from the given source which multiply 100
  *
  * @param source the source value to inspect
  * @param defaultValue the default value if the source cannot be converted
  *
- * @returns a float value from the given source
+ * @returns a float value from the given source which multiply 100
  *
  * @author David Hsing
  *
  * @example
  * ```ts
- * toFloat('1.0');    // 1.0
+ * multiply100('0.82');    // 82
+ * multiply100('82%');    // 82
  * ```
  */
-export function toFloat(source?: number | string | null, defaultValue?: number): number | undefined {
+export function multiply100(source?: number | string | null, defaultValue?: number): number | undefined {
     if (source === undefined || source === null) {
         return defaultValue;
     }
     if (typeof source === 'number') {
-        return source;
+        return source * 100;
     }
-    try {
-        const result = Number.parseFloat(source);
-        return Number.isNaN(result) ? defaultValue : result;
-    } catch (ignored) {
+    if (endsWith(source, '%')) {
+        return toFloat(source.replace('%', ''), defaultValue);
     }
-    return defaultValue;
+    const alias = toFloat(source);
+    return (alias === undefined || alias === null) ? defaultValue : (alias * 100);
 }

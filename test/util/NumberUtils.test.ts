@@ -16,6 +16,7 @@
 
 
 import {NumberUtils} from '@yookue/ts-lang-utils';
+import {divide100, multiply100} from '../../src/util/NumberUtils';
 
 
 describe('NumberUtils', () => {
@@ -29,6 +30,12 @@ describe('NumberUtils', () => {
         expect(NumberUtils.compare(3, undefined, false)).toBe(1);
         expect(NumberUtils.compare(3, 2)).toBe(1);
         expect(NumberUtils.compare(2, 3)).toBe(-1);
+    });
+
+    test('Testing divide100', () => {
+        expect(NumberUtils.divide100(undefined)).toBeUndefined();
+        expect(NumberUtils.divide100(3)).toBe(0.03);
+        expect(NumberUtils.divide100('50')).toBe(0.5);
     });
 
     test('Testing isInteger', () => {
@@ -66,6 +73,12 @@ describe('NumberUtils', () => {
 
     test('Testing min', () => {
         expect(NumberUtils.min([1, 2, 3])).toBe(1);
+    });
+
+    test('Testing multiply100', () => {
+        expect(NumberUtils.multiply100(0.1)).toBe(10);
+        expect(NumberUtils.multiply100('0.1')).toBe(10);
+        expect(NumberUtils.multiply100('10%')).toBe(10);
     });
 
     test('Testing sum', () => {

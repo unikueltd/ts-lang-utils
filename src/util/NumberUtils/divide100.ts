@@ -15,32 +15,26 @@
  */
 
 
+import {toFloat} from './toFloat';
+
+
 /**
- * Returns a float value from the given source
+ * Returns a float value from the given source which divide 100
  *
  * @param source the source value to inspect
  * @param defaultValue the default value if the source cannot be converted
  *
- * @returns a float value from the given source
+ * @returns a float value from the given source which divide 100
  *
  * @author David Hsing
  *
  * @example
  * ```ts
- * toFloat('1.0');    // 1.0
+ * divide100(82);    // 0.82
+ * divide100('82');    // 0.82
  * ```
  */
-export function toFloat(source?: number | string | null, defaultValue?: number): number | undefined {
-    if (source === undefined || source === null) {
-        return defaultValue;
-    }
-    if (typeof source === 'number') {
-        return source;
-    }
-    try {
-        const result = Number.parseFloat(source);
-        return Number.isNaN(result) ? defaultValue : result;
-    } catch (ignored) {
-    }
-    return defaultValue;
+export function divide100(source?: number | string | null, defaultValue?: number): number | undefined {
+    const alias = toFloat(source);
+    return (alias === undefined || alias === null) ? defaultValue : (alias / 100);
 }
