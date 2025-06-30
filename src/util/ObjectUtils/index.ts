@@ -54,6 +54,7 @@ export {isUndefined} from './isUndefined';
 export {keys} from './keys';
 export {mapEachProp} from './mapEachProp';
 export {mergeProps} from './mergeProps';
+export {regenProps} from './regenProps';
 export {setProp} from './setProp';
 export {toString} from './toString';
 export {toStringTag} from './toStringTag';

@@ -133,6 +133,11 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.hasProp({foo: 'bar'}, 'bar')).toBeFalsy();
     });
 
+    test('Testing regenProps', () => {
+        expect(ObjectUtils.getProp(ObjectUtils.regenProps({foo: 'bar'}, () => 'foobar'), 'foo')).toBe('foobar');
+        expect(ObjectUtils.getProp(ObjectUtils.regenProps({foo: 'bar'}, () => undefined), 'foo')).toBeUndefined();
+    });
+
     test('Testing setProp', () => {
         const record = {};
         ObjectUtils.setProp(record, 'foo', 'bar');
