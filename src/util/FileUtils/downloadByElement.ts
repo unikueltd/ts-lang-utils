@@ -16,11 +16,19 @@
 
 
 /**
- * Utilities for file
+ * Popup a download dialog by creating a fake download link
  *
- * @author David Hsing
+ * @param url the url to download
+ * @param fileName the default file name to save, when popup the download dialog
  */
-
-
-export {downloadByElement} from './downloadByElement';
-export {readAsDataUrl} from './readAsDataUrl';
+export function downloadByElement(url?: string, fileName?: string): void {
+    if (!url || !fileName) {
+        return;
+    }
+    const link = document.createElement('a');
+    link.download = fileName;
+    link.href = url;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
