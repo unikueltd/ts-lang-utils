@@ -18,12 +18,18 @@
 /**
  * Returns the length of the given string
  *
- * @param text the source string to check
+ * @param source the source string to check
  *
  * @returns the length of the given string
  *
  * @author David Hsing
  */
-export function getLength(text?: string | null): number {
-    return text ? text.length : 0;
+export function getLength(source?: string | number | null): number {
+    if (source === undefined || source === null) {
+        return 0;
+    }
+    if (typeof source === 'number') {
+        return source.toString().length;
+    }
+    return source.length;
 }

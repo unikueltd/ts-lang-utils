@@ -204,6 +204,7 @@ describe('StringUtils', () => {
         expect(StringUtils.getLength(undefined)).toBe(0);
         expect(StringUtils.getLength('')).toBe(0);
         expect(StringUtils.getLength('foobar')).toBe(6);
+        expect(StringUtils.getLength(123456789)).toBe(9);
     });
 
     test('Testing isEmpty', () => {
