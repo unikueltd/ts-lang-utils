@@ -35,7 +35,7 @@ export function toJsonObject(text?: string | null): object | undefined {
     }
     try {
         return JSON.parse(text);
-    } catch(ignored) {
+    } catch {
     }
     return undefined;
 }

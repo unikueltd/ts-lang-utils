@@ -23,7 +23,7 @@ describe('IgnorableError', () => {
         try {
             // noinspection ExceptionCaughtLocallyJS
             throw IgnorableError('Oops, ignorable error');
-        } catch (ignored) {
+        } catch {
             // console.log('IgnorableError has thrown, ignored');
         }
     });

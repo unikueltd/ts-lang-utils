@@ -23,7 +23,7 @@ describe('UnsupportedError', () => {
         try {
             // noinspection ExceptionCaughtLocallyJS
             throw UnsupportedError('Oops, unsupported error');
-        } catch (ignored) {
+        } catch {
             // console.log('UnsupportedError has thrown, ignored');
         }
     });

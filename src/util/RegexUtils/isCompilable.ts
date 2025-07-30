@@ -39,7 +39,7 @@ export function isCompilable(pattern?: string | null, flags?: string): boolean {
     try {
         new RegExp(pattern, flags);
         return true;
-    } catch (ignored) {
+    } catch {
     }
     return false;
 }

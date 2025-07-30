@@ -39,7 +39,7 @@ export function toJsonString(target: any): string | undefined {
             if (typeof json === 'object') {
                 return JSON.stringify(json);
             }
-        } catch(ignored) {
+        } catch {
         }
     }
     if (isPlain(target)) {
