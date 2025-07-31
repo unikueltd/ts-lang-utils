@@ -64,6 +64,7 @@ export {isEmpty} from './isEmpty';
 export {isNotBlank} from './isNotBlank';
 export {isNotEmpty} from './isNotEmpty';
 export {join} from './join';
+export {joinWith} from './joinWith';
 export {left} from './left';
 export {leftPad} from './leftPad';
 export {prependIfMissing} from './prependIfMissing';

@@ -15,7 +15,7 @@
  */
 
 
-import {endsWith} from '../StringUtils/endsWith';
+import {endsWith} from '@/util/StringUtils';
 import {toFloat} from './toFloat';
 
 
