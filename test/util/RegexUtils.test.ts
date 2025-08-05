@@ -16,6 +16,7 @@
 
 
 import {RegexUtils} from '@yookue/ts-lang-utils';
+import {unescapePattern} from '../../src/util/RegexUtils';
 
 
 describe('RegexUtils', () => {
@@ -25,7 +26,7 @@ describe('RegexUtils', () => {
 
     test('Testing escapePattern', () => {
         expect(RegexUtils.escapePattern('\\')).toBe('\\\\');
-        expect(RegexUtils.escapePattern('-+=')).toBe('\\-\\+=');
+        expect(RegexUtils.escapePattern('+-=')).toBe('\\+\\-=');
     });
 
     test('Testing extractWords', () => {
@@ -72,16 +73,21 @@ describe('RegexUtils', () => {
         expect(RegexUtils.isAlphanumericUpper('--$$##')).toBeFalsy();
     });
 
+    test('Testing isCompilable', () => {
+        expect(RegexUtils.isCompilable(undefined)).toBeFalsy();
+        expect(RegexUtils.isCompilable('foobar')).toBeTruthy();
+        expect(RegexUtils.isCompilable('[a-zA-Z0-9]+', 'g')).toBeTruthy();
+    });
+
     test('Testing isNumeric', () => {
         expect(RegexUtils.isNumeric(undefined)).toBeFalsy();
         expect(RegexUtils.isNumeric('abc123')).toBeFalsy();
         expect(RegexUtils.isNumeric('123456')).toBeTruthy();
     });
 
-    test('Testing isCompilable', () => {
-        expect(RegexUtils.isCompilable(undefined)).toBeFalsy();
-        expect(RegexUtils.isCompilable('foobar')).toBeTruthy();
-        expect(RegexUtils.isCompilable('[a-zA-Z0-9]+', 'g')).toBeTruthy();
+    test('Testing normalizePattern', () => {
+        expect(RegexUtils.normalizePattern(undefined)).toBeUndefined();
+        expect(RegexUtils.normalizePattern('\\\\d')).toBe('\\d');
     });
 
     test('Testing testResetting', () => {
@@ -90,5 +96,11 @@ describe('RegexUtils', () => {
         expect(RegexUtils.testResetting(pattern, '11')).toBeTruthy();
         expect(RegexUtils.testResetting(pattern, '1122')).toBeTruthy();
         expect(RegexUtils.testResetting(pattern, '112233')).toBeTruthy();
+    });
+
+    test('Testing unescapePattern', () => {
+        expect(RegexUtils.unescapePattern(undefined)).toBeUndefined();
+        expect(RegexUtils.unescapePattern('\\\\')).toBe('\\');
+        expect(RegexUtils.unescapePattern('\\+\\-=')).toBe('+-=');
     });
 });

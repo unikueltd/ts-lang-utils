@@ -16,23 +16,21 @@
 
 
 /**
- * Utilities for regex
+ * Returns a regex pattern that unescaped the given pattern
+ *
+ * @param pattern the pattern to inspect
+ *
+ * @returns a regex pattern that unescaped the given pattern
  *
  * @author David Hsing
+ *
+ * @example
+ * ```ts
+ * unescapePattern('\\\\');    // '\\'
+ * unescapePattern('\\+\\-=');    // '+-='
+ * ```
  */
-
-
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {normalizePattern} from './normalizePattern';
-export {testResetting} from './testResetting';
-export {unescapePattern} from './unescapePattern';
+export function unescapePattern(pattern?: string | null): string | null | undefined {
+    const regex = /\\[\\^$.*+?\-()[\]{}|]/g;
+    return !pattern ? pattern : pattern.replace(regex, (match) => match.substring(1));
+}

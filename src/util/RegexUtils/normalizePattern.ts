@@ -16,23 +16,28 @@
 
 
 /**
- * Utilities for regex
+ * Returns a regex pattern that normalized the given pattern
+ *
+ * @param pattern the pattern to inspect
+ *
+ * @returns a regex pattern that normalized the given pattern
  *
  * @author David Hsing
+ *
+ * @example
+ * ```ts
+ * normalizePattern('\\\\d');    // '\d'
+ * ```
  */
-
-
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {normalizePattern} from './normalizePattern';
-export {testResetting} from './testResetting';
-export {unescapePattern} from './unescapePattern';
+export function normalizePattern(pattern?: string | null): string | null | undefined {
+    if (!pattern) {
+        return pattern;
+    }
+    return pattern
+    .replace(/\\\\/g, '\\')           // \\ -> \
+    .replace(/\\n/g, '\n')            // \n -> 换行符
+    .replace(/\\t/g, '\t')            // \t -> 制表符
+    .replace(/\\r/g, '\r')            // \r -> 回车符
+    .replace(/\\"/g, '"')             // \" -> "
+    .replace(/\\'/g, "'");            // \' -> '
+}

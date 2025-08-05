@@ -27,7 +27,7 @@
  * @example
  * ```ts
  * escapePattern('\\');    // '\\\\'
- * escapePattern('-+=');    // '\\-\\+='
+ * escapePattern('+-=');    // '\\+\\-='
  * ```
  */
 export function escapePattern(pattern?: string | null): string | null | undefined {
