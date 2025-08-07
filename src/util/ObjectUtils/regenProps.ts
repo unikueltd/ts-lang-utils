@@ -22,8 +22,8 @@ import {setProp} from './setProp';
 /**
  * Returns an object that regenerated the given source, processing each property value and assigning it back
  *
- * @param object the source object to assign to
- * @param callback the callback function that processes each prop key
+ * @param object The source object to assign to
+ * @param callback The callback function that processes each prop key
  *
  * @returns an object that regenerated the given source, processing each property value and assigning it back
  *

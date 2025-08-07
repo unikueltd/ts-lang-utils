@@ -18,9 +18,9 @@
 /**
  * Returns the array that contains all the given elements at the index of the source array
  *
- * @param array the array to inspect
- * @param index the index to insert, negative or greater than the length of source array, means at the end of the source array
- * @param elements the elements to insert
+ * @param array The array to inspect
+ * @param index The index to insert, negative or greater than the length of source array, means at the end of the source array
+ * @param elements The elements to insert
  *
  * @returns the array that contains all the given elements at the index of the source array
  *

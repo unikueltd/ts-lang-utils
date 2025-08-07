@@ -21,9 +21,9 @@ import {isPromise} from '@/util/ObjectUtils';
 /**
  * Detects the image src for the given param
  *
- * @param param the parameter to inspect
- * @param resolve the callback function when resolved
- * @param reject the callback function when rejected
+ * @param param The parameter to inspect
+ * @param resolve The callback function when resolved
+ * @param reject The callback function when rejected
  *
  * @author David Hsing
  */

@@ -21,7 +21,7 @@ import {isPositive} from './isPositive';
 /**
  * Returns whether the given value is not positive
  *
- * @param value the number value to check
+ * @param value The number value to check
  *
  * @returns whether the given value is not positive
  *

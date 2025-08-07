@@ -22,7 +22,7 @@ import {substringBefore} from '@/util/StringUtils/substringBefore';
 /**
  * Returns the storage key of the given index
  *
- * @param index the index to inspect
+ * @param index The index to inspect
  *
  * @returns the storage key of the given index
  *

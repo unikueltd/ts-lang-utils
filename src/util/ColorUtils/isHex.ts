@@ -18,7 +18,7 @@
 /**
  * Returns whether the given string is a valid hex color
  *
- * @param hex the hex color to check
+ * @param hex The hex color to check
  *
  * @returns whether the given string is a valid hex color
  *

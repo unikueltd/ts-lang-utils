@@ -18,8 +18,8 @@
 /**
  * Processes each entry in the map, with indexing ability
  *
- * @param map the map to inspect
- * @param callback a callback function that processes each entry
+ * @param map The map to inspect
+ * @param callback A callback function that processes each entry
  *
  * @author David Hsing
  */

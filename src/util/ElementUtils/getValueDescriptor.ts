@@ -18,7 +18,7 @@
 /**
  * Returns the value property descriptor of the given element
  *
- * @param element the element to inspect
+ * @param element The element to inspect
  *
  * @returns the value property descriptor of the given element
  *

@@ -21,9 +21,9 @@ import {getProp} from '@/util/ObjectUtils/getProp';
 /**
  * Traverses the target nodes with the given callback function
  *
- * @param nodes the nodes to traverse
- * @param callback the function to execute during traversing
- * @param childrenKey the property name to children node
+ * @param nodes The nodes to traverse
+ * @param callback The function to execute during traversing
+ * @param childrenKey The property name to children node
  *
  * @author David Hsing
  */

@@ -18,7 +18,7 @@
 /**
  * Returns whether the given string is empty
  *
- * @param text the string to check
+ * @param text The string to check
  *
  * @returns whether the given string is empty
  *

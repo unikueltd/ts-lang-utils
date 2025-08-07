@@ -18,9 +18,9 @@
 /**
  * Returns whether the given date is same day with the comparison date
  *
- * @param date the date to check
- * @param comparison the date to compare
- * @param deepCompare whether compare deeply with year
+ * @param date The date to check
+ * @param comparison The date to compare
+ * @param deepCompare Whether compare deeply with year
  *
  * @returns whether the given date is same day with the comparison date
  *

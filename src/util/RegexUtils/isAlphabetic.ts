@@ -18,7 +18,7 @@
 /**
  * Returns whether all the characters in the given text is alphabetic
  *
- * @param text the text to check
+ * @param text The text to check
  *
  * @returns whether all the characters in the given text is alphabetic
  *

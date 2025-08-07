@@ -18,8 +18,8 @@
 /**
  * Returns the day calculated date with the source date and the specified amount
  *
- * @param date the date to inspect
- * @param amount the amount to add, negative number means minus
+ * @param date The date to inspect
+ * @param amount The amount to add, negative number means minus
  *
  * @returns the day calculated date with the source date and the specified amount
  *

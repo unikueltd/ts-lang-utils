@@ -18,8 +18,8 @@
 /**
  * Returns the formatted string that represent the given date
  *
- * @param date the date to inspect
- * @param format the date/time format string
+ * @param date The date to inspect
+ * @param format The date/time format string
  *
  * @returns the formatted string that represent the given date
  *

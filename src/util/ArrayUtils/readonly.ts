@@ -18,7 +18,7 @@
 /**
  * Returns a readonly instance of the given array
  *
- * @param array the arrays to inspect
+ * @param array The arrays to inspect
  *
  * @returns a readonly instance of the given array
  *

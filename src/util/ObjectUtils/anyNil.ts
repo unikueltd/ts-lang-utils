@@ -21,7 +21,7 @@ import {isNil} from './isNil';
 /**
  * Returns whether any of the elements in the given objects is null or undefined
  *
- * @param objects the objects to check
+ * @param objects The objects to check
  *
  * @returns whether any the elements in the given objects is null or undefined
  *

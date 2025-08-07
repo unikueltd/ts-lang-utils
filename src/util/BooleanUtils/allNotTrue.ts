@@ -21,7 +21,7 @@ import {isNotTrue} from './isNotTrue';
 /**
  * Returns whether all the given elements are not true
  *
- * @param values the elements to check
+ * @param values The elements to check
  *
  * @returns whether all the given elements are not true
  *

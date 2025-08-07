@@ -18,8 +18,8 @@
 /**
  * Returns whether the given array includes the given element
  *
- * @param array the array to check
- * @param element the element to compare
+ * @param array The array to check
+ * @param element The element to compare
  *
  * @returns whether the given array includes the given element
  *

@@ -22,9 +22,9 @@ import {randomElement} from './randomElement';
 /**
  * Returns a random string that between the length range
  *
- * @param minLength the min length, inclusive
- * @param maxLength the max length, exclusive
- * @param characters the source characters to be generated from
+ * @param minLength The min length, inclusive
+ * @param maxLength The max length, exclusive
+ * @param characters The source characters to be generated from
  *
  * @returns a random string that between the length range
  *

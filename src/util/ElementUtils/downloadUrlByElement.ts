@@ -18,10 +18,10 @@
 /**
  * Popup a download dialog by creating a fake download link
  *
- * @param url the url to download
- * @param fileName the default file name to save, when popup the download dialog
+ * @param url The url to download
+ * @param fileName The default file name to save, when popup the download dialog
  */
-export function downloadByElement(url?: string, fileName?: string): void {
+export function downloadUrlByElement(url?: string, fileName?: string): void {
     if (!url || !fileName) {
         return;
     }

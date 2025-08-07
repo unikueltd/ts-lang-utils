@@ -18,7 +18,7 @@
 /**
  * Returns a string that represents the given string array
  *
- * @param texts the source strings to inspect
+ * @param texts The source strings to inspect
  *
  * @returns a string that represents the given string array
  *

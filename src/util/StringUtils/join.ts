@@ -21,9 +21,9 @@ import {defaultString} from './defaultString';
 /**
  * Returns the joined string with the given element(s) and delimiter
  *
- * @param element the source element(s) to inspect
- * @param separator the delimiter to append between each element of the given element(s)
- * @param filter the filter to check each element of the given element(s) should be included
+ * @param element The source element(s) to inspect
+ * @param separator The delimiter to append between each element of the given element(s)
+ * @param filter The filter to check each element of the given element(s) should be included
  *
  * @returns the joined string with the given element(s) and delimiter
  *

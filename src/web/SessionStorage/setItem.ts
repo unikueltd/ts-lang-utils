@@ -18,8 +18,8 @@
 /**
  * Sets the storage value of the given key
  *
- * @param key the key to inspect
- * @param value the value to set
+ * @param key The key to inspect
+ * @param value The value to set
  *
  * @author David Hsing
  *

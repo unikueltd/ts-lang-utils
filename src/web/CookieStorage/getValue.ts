@@ -21,9 +21,9 @@ import Cookies, {type CookieGetOptions} from 'universal-cookie';
 /**
  * Returns the storage value of the given name
  *
- * @param name the name to inspect
- * @param options the options to get the key
- * @param defaultValue the default value if nil
+ * @param name The name to inspect
+ * @param options The options to get the key
+ * @param defaultValue The default value if nil
  *
  * @returns the storage value of the given key
  *

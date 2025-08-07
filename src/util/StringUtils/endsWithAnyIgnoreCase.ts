@@ -21,8 +21,8 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
 /**
  * Returns whether the given string ends with any of the suffixes, case-insensitive
  *
- * @param text the source string to check
- * @param suffixes the target strings to compare
+ * @param text The source string to check
+ * @param suffixes The target strings to compare
  *
  * @returns whether the given string ends with any of the suffixes, case-insensitive
  *

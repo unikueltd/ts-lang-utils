@@ -21,8 +21,8 @@ import {endsWith} from './endsWith';
 /**
  * Returns a string that concat the given text and suffix
  *
- * @param text the text to check
- * @param suffix the suffix to append
+ * @param text The text to check
+ * @param suffix The suffix to append
  *
  * @returns a string that concat the given text and suffix
  *

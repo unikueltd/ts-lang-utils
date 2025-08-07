@@ -21,8 +21,8 @@ import {equals} from './equals';
 /**
  * Returns whether the given array equals any of the given comparisons
  *
- * @param array the array to check
- * @param comparisons the elements to compare
+ * @param array The array to check
+ * @param comparisons The elements to compare
  *
  * @returns whether the given array equals any of the given comparisons
  *

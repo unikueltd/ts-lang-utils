@@ -18,8 +18,8 @@
 /**
  * Returns whether the given strings are equal
  *
- * @param text the source string to check
- * @param comparison the target string to compare
+ * @param text The source string to check
+ * @param comparison The target string to compare
  *
  * @returns whether the given strings are equal
  *

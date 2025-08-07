@@ -22,9 +22,9 @@ import {setProp} from './setProp';
 /**
  * Returns an object that merged the given source, when the key of source is missing, or the value of matching key is null or undefined
  *
- * @param target the target object to assign to
- * @param source the source object to assign from
- * @param overrideNil whether to override the value of target, when it is null or undefined
+ * @param target The target object to assign to
+ * @param source The source object to assign from
+ * @param overrideNil Whether to override the value of target, when it is null or undefined
  *
  * @returns an object that merged the given source, when the key of source is missing, or the value of matching key is null or undefined
  *

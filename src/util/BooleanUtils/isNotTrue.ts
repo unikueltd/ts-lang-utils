@@ -21,7 +21,7 @@ import {isTrue} from './isTrue';
 /**
  * Returns whether the given value is nil or can be converted to false
  *
- * @param value the source value to check
+ * @param value The source value to check
  *
  * @returns whether the given value is nil or can be converted to false
  *

@@ -21,9 +21,9 @@ import {toFloat} from './toFloat';
 /**
  * Returns 1 if source greater than target, -1 if source less than target, 0 if equals
  *
- * @param source the first comparable
- * @param target the second comparable
- * @param nullGreater whether a nil (undefined or null) value is considered greater than another non-nil value
+ * @param source The first comparable
+ * @param target The second comparable
+ * @param nullGreater Whether a nil (undefined or null) value is considered greater than another non-nil value
  *
  * @returns 1 if source greater than target, -1 if source less than target, 0 if equals
  *

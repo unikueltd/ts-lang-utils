@@ -22,7 +22,7 @@ import {isSameDay} from './isSameDay';
 /**
  * Returns whether the date is tomorrow
  *
- * @param date the date to check
+ * @param date The date to check
  *
  * @returns whether the date is tomorrow
  *

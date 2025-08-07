@@ -18,7 +18,7 @@
 /**
  * Processes each storage item, with indexing ability
  *
- * @param callback the callback function that processes each storage item
+ * @param callback The callback function that processes each storage item
  *
  * @author David Hsing
  */

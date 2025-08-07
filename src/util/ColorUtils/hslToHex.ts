@@ -18,7 +18,7 @@
 /**
  * Returns the converted hex color from the given hsl color
  *
- * @param hsl the hsl color to inspect
+ * @param hsl The hsl color to inspect
  *
  * @returns the converted hex color from the given hsl color
  *

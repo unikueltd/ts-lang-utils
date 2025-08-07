@@ -21,7 +21,7 @@ import {randomInteger} from './randomInteger';
 /**
  * Returns a random element of the array
  *
- * @param array the array to random
+ * @param array The array to random
  *
  * @returns a random element of the array
  *

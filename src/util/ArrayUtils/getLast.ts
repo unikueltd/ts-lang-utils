@@ -18,8 +18,8 @@
 /**
  * Returns the last element of the given array
  *
- * @param array the array to inspect
- * @param defaultValue the default value if the array is empty
+ * @param array The array to inspect
+ * @param defaultValue The default value if the array is empty
  *
  * @returns the last element of the given array
  *

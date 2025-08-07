@@ -18,7 +18,7 @@
 /**
  * Returns whether exists the given storage key
  *
- * @param key the key to inspect
+ * @param key The key to inspect
  *
  * @returns whether exists the given storage key
  *

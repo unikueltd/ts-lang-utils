@@ -18,8 +18,8 @@
 /**
  * Returns whether the given object has the specified property
  *
- * @param object the object to check
- * @param prop the property name to check
+ * @param object The object to check
+ * @param prop The property name to check
  *
  * @returns whether the object has the specified property
  *

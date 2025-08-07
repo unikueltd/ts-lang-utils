@@ -18,8 +18,8 @@
 /**
  * Processes each entry in the map, with indexing and breakable ability
  *
- * @param map the map to inspect
- * @param callback the callback function that processes each entry, returns `false` means break
+ * @param map The map to inspect
+ * @param callback The callback function that processes each entry, returns `false` means break
  *
  * @author David Hsing
  */

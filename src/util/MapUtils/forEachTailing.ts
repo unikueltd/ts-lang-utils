@@ -18,8 +18,8 @@
 /**
  * Processes each entry in the map, but not the tailing entry, and returns it
  *
- * @param map the map to inspect
- * @param callback the callback function that processes each entry
+ * @param map The map to inspect
+ * @param callback The callback function that processes each entry
  *
  * @returns the tailing entry in the source map
  *

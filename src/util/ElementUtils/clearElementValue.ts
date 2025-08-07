@@ -21,8 +21,8 @@ import {setElementValue} from './setElementValue';
 /**
  * Clears value for the given element
  *
- * @param element the element to inspect
- * @param callback the function to execute after value been set
+ * @param element The element to inspect
+ * @param callback The function to execute after value been set
  *
  * @author David Hsing
  */

@@ -21,9 +21,9 @@ import Cookies, {type CookieSetOptions} from 'universal-cookie';
 /**
  * Sets the storage value of the given key
  *
- * @param name the key to inspect
- * @param options the options to set the value
- * @param value the value to set
+ * @param name The key to inspect
+ * @param options The options to set the value
+ * @param value The value to set
  *
  * @author David Hsing
  *

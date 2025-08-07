@@ -24,7 +24,7 @@ const customNanoid = customAlphabet('0123456789');
 /**
  * Returns a numeric nanoid
  *
- * @param size the length expected
+ * @param size The length expected
  *
  * @returns a numeric nanoid
  *

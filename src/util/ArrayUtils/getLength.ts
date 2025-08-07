@@ -18,7 +18,7 @@
 /**
  * Returns the length of the given array
  *
- * @param array the array to check
+ * @param array The array to check
  *
  * @returns the length of the given array
  *

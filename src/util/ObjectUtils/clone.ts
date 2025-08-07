@@ -21,7 +21,7 @@ import {isPlain} from './isPlain';
 /**
  * Returns an object that cloned from the given object
  *
- * @param source the object to clone
+ * @param source The object to clone
  *
  * @returns an object that cloned from the given object
  *

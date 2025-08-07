@@ -18,8 +18,8 @@
 /**
  * Returns whether the source text can be tested by the given regex, and resets the last index of the regex
  *
- * @param regex the regex to match
- * @param text the source text to check
+ * @param regex The regex to match
+ * @param text The source text to check
  *
  * @returns whether the source text can be tested by the given pattern, and resets the last index of the regex
  *

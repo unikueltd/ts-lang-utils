@@ -18,7 +18,7 @@
 /**
  * Returns whether the date or year is a leap year
  *
- * @param dateYear the date or year to check
+ * @param dateYear The date or year to check
  *
  * @returns whether the date or year is a leap year
  *

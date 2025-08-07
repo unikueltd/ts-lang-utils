@@ -26,7 +26,7 @@ const customNanoid = customAlphabet('346789ABCDEFGHJKMNPQRTWXYabcdefghjkmnpqrtwx
  * <p>
  * Without lookalikes: 1, l, I, 0, O, o, u, v, 5, S, s, 2, Z
  *
- * @param size the length expected
+ * @param size The length expected
  *
  * @returns a popular nanoid
  *

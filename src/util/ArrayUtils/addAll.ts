@@ -18,8 +18,8 @@
 /**
  * Returns the array that adds all the given elements
  *
- * @param array the arrays to inspect
- * @param elements the elements to remove
+ * @param array The arrays to inspect
+ * @param elements The elements to remove
  *
  * @returns the array that adds all the given elements
  *

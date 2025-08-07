@@ -18,8 +18,8 @@
 /**
  * Returns the storage value of the given key
  *
- * @param key the key to inspect
- * @param defaultValue the default value if nil
+ * @param key The key to inspect
+ * @param defaultValue The default value if nil
  *
  * @returns the storage value of the given key
  *

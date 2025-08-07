@@ -21,9 +21,9 @@ import {toChars} from './toChars';
 /**
  * Returns the reversed representation of the given string
  *
- * @param text the source string to inspect
- * @param startInclusive the starting index, inclusive
- * @param endExclusive the ending index, exclusive
+ * @param text The source string to inspect
+ * @param startInclusive The starting index, inclusive
+ * @param endExclusive The ending index, exclusive
  *
  * @returns the reversed representation of the given string
  *

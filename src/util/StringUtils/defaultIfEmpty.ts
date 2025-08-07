@@ -18,8 +18,8 @@
 /**
  * Returns the default value if the given text is empty, or the text self if it is not empty
  *
- * @param text the text to check
- * @param defaultValue the default value placeholder
+ * @param text The text to check
+ * @param defaultValue The default value placeholder
  *
  * @returns the default value if the given text is empty, or the text self if it is not empty
  *

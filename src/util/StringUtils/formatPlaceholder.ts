@@ -18,8 +18,8 @@
 /**
  * Returns the replaced string of the source string (named placeholder) with the given parameters
  *
- * @param text the source string to inspect
- * @param params the parameters to replaced with, in the form of key values
+ * @param text The source string to inspect
+ * @param params The parameters to replaced with, in the form of key values
  *
  * @returns the replaced string of the source string
  *

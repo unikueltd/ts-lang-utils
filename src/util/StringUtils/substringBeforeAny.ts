@@ -20,8 +20,8 @@ import {substringBefore} from './substringBefore';
 /**
  * Returns the substring before the first occurrence of any the given separators (the separator is not returned)
  *
- * @param text the string to get a substring from
- * @param separators the strings to search for
+ * @param text The string to get a substring from
+ * @param separators The strings to search for
  *
  * @returns the substring before the first occurrence of any the given separators
  *

@@ -21,7 +21,7 @@ import {sum} from './sum';
 /**
  * Returns the average value of the given array
  *
- * @param values the array to calculate
+ * @param values The array to calculate
  *
  * @returns the average value of the given array
  *

@@ -18,7 +18,7 @@
 /**
  * Sleeps current thread for a specified amount of time
  *
- * @param microseconds the amount of time to sleep, in microseconds
+ * @param microseconds The amount of time to sleep, in microseconds
  *
  * @returns a promise that could be resolved
  *

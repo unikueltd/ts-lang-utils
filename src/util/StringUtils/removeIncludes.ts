@@ -21,8 +21,8 @@ import {includes} from './includes';
 /**
  * Returns the array that excludes the elements which includes any of the given exclusions
  *
- * @param texts the arrays to inspect
- * @param excludes the elements array to exclude
+ * @param texts The arrays to inspect
+ * @param excludes The elements array to exclude
  *
  * @returns the array that excludes the elements which includes any of the given exclusions
  *

@@ -18,8 +18,8 @@
 /**
  * Returns the repeated string with the given text and size
  *
- * @param text the source string to inspect
- * @param size the size to pad to
+ * @param text The source string to inspect
+ * @param size The size to pad to
  *
  * @returns the repeated string with the given text and size
  *

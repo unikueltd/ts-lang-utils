@@ -21,9 +21,9 @@ import {randomNumber} from './randomNumber';
 /**
  * Returns a random number array that between the value range, matching the given size
  *
- * @param size the size of the expected array
- * @param minValue the min value, inclusive
- * @param maxValue the max value, exclusive
+ * @param size The size of the expected array
+ * @param minValue The min value, inclusive
+ * @param maxValue The max value, exclusive
  *
  * @returns a random number array that between value range, matching the given size
  *

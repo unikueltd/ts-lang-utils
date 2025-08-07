@@ -21,8 +21,8 @@ import Cookies, {type CookieSetOptions} from 'universal-cookie';
 /**
  * Removes the storage item of the given name
  *
- * @param name the name to remove
- * @param options the options to remove the value
+ * @param name The name to remove
+ * @param options The options to remove the value
  *
  * @author David Hsing
  *

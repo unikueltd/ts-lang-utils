@@ -22,5 +22,4 @@
  */
 
 
-export {downloadByElement} from './downloadByElement';
 export {readAsDataUrl} from './readAsDataUrl';

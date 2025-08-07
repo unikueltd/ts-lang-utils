@@ -24,9 +24,9 @@ import {repeat} from './repeat';
 /**
  * Returns the right padded string with the given size and string, or original string if no padding is necessary
  *
- * @param text the source string to inspect
- * @param size the size to pad to
- * @param pad the target string to fill, default is space
+ * @param text The source string to inspect
+ * @param size The size to pad to
+ * @param pad The target string to fill, default is space
  *
  * @returns the right padded string with the given size and string, or original string if no padding is necessary
  *

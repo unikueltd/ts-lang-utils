@@ -24,7 +24,7 @@ const customNanoid = customAlphabet('0123456789abcdefghijklmnopqrstuvwxyz');
 /**
  * Returns an alphanumeric lowercase nanoid
  *
- * @param size the length expected
+ * @param size The length expected
  *
  * @returns an alphanumeric lowercase nanoid
  *

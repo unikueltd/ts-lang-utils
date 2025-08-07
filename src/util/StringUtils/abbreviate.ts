@@ -18,9 +18,9 @@
 /**
  * Returns a string that abbreviates the given text using placeholder
  *
- * @param text the text to inspect
- * @param width the max width of the expected string
- * @param placeholder the placeholder to append
+ * @param text The text to inspect
+ * @param width The max width of the expected string
+ * @param placeholder The placeholder to append
  *
  * @returns a string that abbreviates the given text using placeholder
  *

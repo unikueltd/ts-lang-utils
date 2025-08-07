@@ -18,7 +18,7 @@
 /**
  * Processes each storage item, with breakable ability
  *
- * @param callback the callback function that processes each storage item, returns `false` means break
+ * @param callback The callback function that processes each storage item, returns `false` means break
  *
  * @author David Hsing
  */

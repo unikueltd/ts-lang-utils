@@ -18,7 +18,7 @@
 /**
  * Returns the start month date of the given date
  *
- * @param date the date to inspect
+ * @param date The date to inspect
  *
  * @returns the start month date of the given date
  *

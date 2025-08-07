@@ -18,9 +18,9 @@
 /**
  * Returns the indexed element of the given array
  *
- * @param array the array to inspect
- * @param index the index in the array
- * @param defaultValue the default value if the array is empty
+ * @param array The array to inspect
+ * @param index The index in the array
+ * @param defaultValue The default value if the array is empty
  *
  * @returns the indexed element of the given array
  *

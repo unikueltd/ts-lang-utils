@@ -18,8 +18,8 @@
 /**
  * Returns a random number that between the value range
  *
- * @param minValue the min value, inclusive
- * @param maxValue the max value, exclusive
+ * @param minValue The min value, inclusive
+ * @param maxValue The max value, exclusive
  *
  * @returns a random number that between the value range
  *

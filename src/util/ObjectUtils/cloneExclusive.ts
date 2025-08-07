@@ -23,8 +23,8 @@ import {setProp} from './setProp';
 /**
  * Returns an object that cloned from the given object, excludes all the given keys
  *
- * @param source the object to clone
- * @param keys the key names to exclude
+ * @param source The object to clone
+ * @param keys The key names to exclude
  *
  * @returns an object that cloned from the given object, excludes all the given keys
  *

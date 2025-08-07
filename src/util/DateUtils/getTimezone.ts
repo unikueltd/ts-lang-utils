@@ -18,7 +18,7 @@
 /**
  * Returns the timezone of the given date
  *
- * @param date the date to inspect
+ * @param date The date to inspect
  *
  * @returns the timezone of the given date
  *

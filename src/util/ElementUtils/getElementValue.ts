@@ -21,7 +21,7 @@ import {getValueDescriptor} from './getValueDescriptor';
 /**
  * Returns the value of the given element
  *
- * @param element the element to inspect
+ * @param element The element to inspect
  *
  * @returns the value of the given element
  *

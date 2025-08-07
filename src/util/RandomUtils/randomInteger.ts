@@ -21,8 +21,8 @@ import {randomNumber} from './randomNumber';
 /**
  * Returns a random integer that between value range
  *
- * @param minValue the min value, inclusive
- * @param maxValue the max value, exclusive
+ * @param minValue The min value, inclusive
+ * @param maxValue The max value, exclusive
  *
  * @returns a random integer that between value range
  *

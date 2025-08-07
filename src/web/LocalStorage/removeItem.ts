@@ -18,7 +18,7 @@
 /**
  * Removes the storage item of the given key
  *
- * @param key the key to remove
+ * @param key The key to remove
  *
  * @author David Hsing
  *

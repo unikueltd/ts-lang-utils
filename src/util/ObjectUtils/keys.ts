@@ -22,7 +22,7 @@ import {hasProp} from './hasProp';
 /**
  * Returns a string array representation of keys in the given object
  *
- * @param object the object to inspect
+ * @param object The object to inspect
  *
  * @returns the keys of the given object
  *

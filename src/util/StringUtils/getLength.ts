@@ -18,7 +18,7 @@
 /**
  * Returns the length of the given string
  *
- * @param source the source string to check
+ * @param source The source string to check
  *
  * @returns the length of the given string
  *

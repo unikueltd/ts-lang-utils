@@ -18,7 +18,7 @@
 /**
  * Returns whether exists the given storage name
  *
- * @param name the name to inspect
+ * @param name The name to inspect
  *
  * @returns whether exists the given storage name
  *

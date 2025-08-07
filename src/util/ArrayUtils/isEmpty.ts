@@ -18,7 +18,7 @@
 /**
  * Returns whether the given array is empty
  *
- * @param array the array to check
+ * @param array The array to check
  *
  * @returns whether the given array is empty
  *

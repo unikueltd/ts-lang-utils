@@ -18,9 +18,9 @@
 /**
  * Read and convert the given file to data url
  *
- * @param file the file to inspect
- * @param resolve the callback function to execute when the `file` read success
- * @param reject the callback function to execute when the `file` read failure
+ * @param file The file to inspect
+ * @param resolve The callback function to execute when the `file` read success
+ * @param reject The callback function to execute when the `file` read failure
  *
  * @author David Hsing
  */

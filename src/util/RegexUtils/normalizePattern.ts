@@ -18,7 +18,7 @@
 /**
  * Returns a regex pattern that normalized the given pattern
  *
- * @param pattern the pattern to inspect
+ * @param pattern The pattern to inspect
  *
  * @returns a regex pattern that normalized the given pattern
  *

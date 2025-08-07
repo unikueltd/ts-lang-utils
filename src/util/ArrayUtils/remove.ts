@@ -18,8 +18,8 @@
 /**
  * Returns the array that removes the given element
  *
- * @param array the arrays to inspect
- * @param element the element to remove
+ * @param array The arrays to inspect
+ * @param element The element to remove
  *
  * @returns the array that removes the given element
  *

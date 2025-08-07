@@ -21,9 +21,9 @@ import {isPlain} from './isPlain';
 /**
  * Sets the property value on the given object
  *
- * @param object the object to inspect
- * @param prop the property name to inspect
- * @param value the value to set
+ * @param object The object to inspect
+ * @param prop The property name to inspect
+ * @param value The value to set
  *
  * @author David Hsing
  *

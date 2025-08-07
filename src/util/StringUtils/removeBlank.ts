@@ -18,7 +18,7 @@
 /**
  * Returns the string that removed all blanks from the given string
  *
- * @param text the text to inspect
+ * @param text The text to inspect
  *
  * @returns the string that removed all blanks from the given string
  *

@@ -21,7 +21,7 @@ import {kebabCase} from 'lodash';
 /**
  * Returns the kebab case representation of the given string
  *
- * @param text the source string to inspect
+ * @param text The source string to inspect
  *
  * @returns the kebab case representation of the given string
  *

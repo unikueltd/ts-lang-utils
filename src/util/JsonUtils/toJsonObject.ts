@@ -18,7 +18,7 @@
 /**
  * Returns a JSON object that represents the given string
  *
- * @param text the string to inspect
+ * @param text The string to inspect
  *
  * @returns a JSON object that represents the given string
  *

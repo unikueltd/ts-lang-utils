@@ -18,8 +18,8 @@
 /**
  * Returns the string tag representation of the given object
  *
- * @param object the object to inspect
- * @param nil the default string if the object is nil
+ * @param object The object to inspect
+ * @param nil The default string if the object is nil
  *
  * @returns a string tag representation of the given object
  *

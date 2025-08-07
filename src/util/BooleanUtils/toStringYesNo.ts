@@ -21,7 +21,7 @@ import {toString} from './toString';
 /**
  * Returns a string value of 'yes'/'no' from the boolean value
  *
- * @param value the boolean value to check
+ * @param value The boolean value to check
  *
  * @returns the string value of 'yes'/'no' from the boolean value
  *

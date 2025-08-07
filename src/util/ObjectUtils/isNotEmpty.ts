@@ -21,7 +21,7 @@ import {isEmpty} from './isEmpty';
 /**
  * Returns whether the given object is not empty
  *
- * @param object the object to check
+ * @param object The object to check
  *
  * @returns whether the given object is not empty
  *

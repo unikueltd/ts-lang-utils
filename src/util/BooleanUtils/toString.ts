@@ -18,10 +18,10 @@
 /**
  * Returns a string value from the boolean value
  *
- * @param value the boolean value to check
- * @param truthy the string to represent true
- * @param falsy the string to represent false
- * @param nil the string to represent undefined or null
+ * @param value The boolean value to check
+ * @param truthy The string to represent true
+ * @param falsy The string to represent false
+ * @param nil The string to represent undefined or null
  *
  * @returns a string value from the boolean value
  *

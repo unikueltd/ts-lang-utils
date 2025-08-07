@@ -18,7 +18,7 @@
 /**
  * Returns a string that double quotes the given text
  *
- * @param text the text to inspect
+ * @param text The text to inspect
  *
  * @returns a string that double quotes the given text
  *

@@ -21,7 +21,7 @@ import {nanoid} from 'nanoid'
 /**
  * Returns a random nanoid
  *
- * @param size the length expected
+ * @param size The length expected
  *
  * @returns a random nanoid
  *

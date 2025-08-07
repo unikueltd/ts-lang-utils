@@ -21,8 +21,8 @@ import {startsWith} from './startsWith';
 /**
  * Returns whether the given string starts with any of the prefixes
  *
- * @param text the source string to check
- * @param prefixes the target strings to compare
+ * @param text The source string to check
+ * @param prefixes The target strings to compare
  *
  * @returns whether the given string starts with any of the prefixes
  *

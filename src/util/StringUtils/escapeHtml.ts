@@ -18,7 +18,7 @@
 /**
  * Returns the escaped html string of the given text
  *
- * @param text the source string to inspect
+ * @param text The source string to inspect
  *
  * @returns the escaped html string of the given text
  *

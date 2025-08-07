@@ -21,7 +21,7 @@ import {isFalse} from './isFalse';
 /**
  * Returns whether any of the given elements is false
  *
- * @param values the elements to check
+ * @param values The elements to check
  *
  * @returns whether any of the given elements is false
  *

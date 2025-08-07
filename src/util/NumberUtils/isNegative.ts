@@ -18,7 +18,7 @@
 /**
  * Returns whether the given value is negative
  *
- * @param value the number value to check
+ * @param value The number value to check
  *
  * @returns whether the given value is negative
  *

@@ -18,7 +18,7 @@
 /**
  * Returns whether the given value can be converted to false
  *
- * @param value the source value to check
+ * @param value The source value to check
  *
  * @returns whether the given value can be converted to false
  *

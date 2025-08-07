@@ -18,8 +18,8 @@
 /**
  * Returns a float value from the given source
  *
- * @param source the source value to inspect
- * @param defaultValue the default value if the source cannot be converted
+ * @param source The source value to inspect
+ * @param defaultValue The default value if the source cannot be converted
  *
  * @returns a float value from the given source
  *

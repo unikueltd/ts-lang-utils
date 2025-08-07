@@ -18,8 +18,8 @@
 /**
  * Returns whether the given arrays are equal
  *
- * @param array the source array to check
- * @param comparison the target array to compare
+ * @param array The source array to check
+ * @param comparison The target array to compare
  *
  * @returns whether the given arrays are equal
  *

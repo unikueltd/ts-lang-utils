@@ -29,7 +29,7 @@ import {isNotNil} from '@/util/ObjectUtils/isNotNil';
 /**
  * Returns the first not nil element in the given array, or null if all elements are nil
  *
- * @param array the array to check
+ * @param array The array to check
  *
  * @returns the first not nil element in the given array, or null if all elements are nil
  *

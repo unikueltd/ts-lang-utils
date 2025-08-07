@@ -21,8 +21,8 @@ import {equalsIgnoreCase} from './equalsIgnoreCase';
 /**
  * Returns whether the given text equals to any of the comparison strings, case-insensitive
  *
- * @param text the source string to check
- * @param comparisons the target strings to compare
+ * @param text The source string to check
+ * @param comparisons The target strings to compare
  *
  * @returns whether the given string equals to any of the comparison strings, case-insensitive
  *

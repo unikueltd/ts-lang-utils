@@ -18,7 +18,7 @@
 /**
  * Returns whether the given string is a JSON string
  *
- * @param text the string to check
+ * @param text The string to check
  *
  * @returns whether the given object is a JSON string
  *

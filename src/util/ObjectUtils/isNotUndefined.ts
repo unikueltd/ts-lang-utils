@@ -21,7 +21,7 @@ import {isUndefined} from './isUndefined';
 /**
  * Returns whether the given object is not undefined
  *
- * @param object the object to check
+ * @param object The object to check
  *
  * @returns whether the given object is not undefined
  *

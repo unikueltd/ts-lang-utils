@@ -18,8 +18,8 @@
 /**
  * Returns whether the given string ends with the suffix, case-insensitive
  *
- * @param text the source string to check
- * @param suffix the target string to compare
+ * @param text The source string to check
+ * @param suffix The target string to compare
  *
  * @returns whether the given string ends with the suffix, case-insensitive
  *

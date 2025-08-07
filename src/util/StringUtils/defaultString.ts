@@ -18,7 +18,7 @@
 /**
  * Returns an empty value if the given text is undefined
  *
- * @param text the text to check
+ * @param text The text to check
  *
  * @returns an empty value if the given text is undefined
  *

@@ -21,8 +21,8 @@ import {startsWithIgnoreCase} from './startsWithIgnoreCase';
 /**
  * Returns a string that concat the given prefix and text, case-insensitive
  *
- * @param text the text to check
- * @param prefix the prefix to prepend
+ * @param text The text to check
+ * @param prefix The prefix to prepend
  *
  * @returns a string that concat the given prefix and text, case-insensitive
  *

@@ -21,7 +21,7 @@ import {isNotEmpty} from './isNotEmpty';
 /**
  * Returns the first not empty element in the given objects, or undefined if all elements are empty
  *
- * @param objects the objects to check
+ * @param objects The objects to check
  *
  * @returns the first not empty element in the given objects, or undefined if all elements are empty
  *

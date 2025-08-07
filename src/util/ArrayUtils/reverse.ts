@@ -18,9 +18,9 @@
 /**
  * Reverses the given array
  *
- * @param array the arrays to inspect
- * @param startInclusive the starting index, inclusive
- * @param endExclusive the ending index, exclusive
+ * @param array The arrays to inspect
+ * @param startInclusive The starting index, inclusive
+ * @param endExclusive The ending index, exclusive
  *
  * @author David Hsing
  *

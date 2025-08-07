@@ -21,8 +21,8 @@ import {randomInteger} from './randomInteger';
 /**
  * Returns a random element array with the specified length within the given array
  *
- * @param array the array to random
- * @param size the size to generate
+ * @param array The array to random
+ * @param size The size to generate
  *
  * @returns a random element array with the specified length within the given array
  *

@@ -18,9 +18,9 @@
 /**
  * Returns the property value if property name is present on the given object
  *
- * @param object the object to inspect
- * @param prop the property name to inspect, parent property and child property are concat with dot (.)
- * @param defaultValue the default value if the prop cannot be found
+ * @param object The object to inspect
+ * @param prop The property name to inspect, parent property and child property are concat with dot (.)
+ * @param defaultValue The default value if the prop cannot be found
  *
  * @returns the property value if property name is present on the given object
  *

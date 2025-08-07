@@ -18,9 +18,9 @@
 /**
  * Returns the key with the given value
  *
- * @param map the map to inspect
- * @param value the value to lookup
- * @param defaultKey the default key when nothing matches the given value
+ * @param map The map to inspect
+ * @param value The value to lookup
+ * @param defaultKey The default key when nothing matches the given value
  *
  * @returns the key with the given value
  *

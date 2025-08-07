@@ -18,7 +18,7 @@
 /**
  * Returns the max value of the given array
  *
- * @param values the array to calculate
+ * @param values The array to calculate
  *
  * @returns the max value of the given array
  *

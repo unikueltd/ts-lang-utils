@@ -18,7 +18,7 @@
 /**
  * Returns the sum value of the given array
  *
- * @param values the array to calculate
+ * @param values The array to calculate
  *
  * @returns the sum value of the given array
  *

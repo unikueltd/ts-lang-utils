@@ -21,8 +21,8 @@ import {isPlain} from './isPlain';
 /**
  * Processes each prop key in the object
  *
- * @param object the object to inspect
- * @param callback the callback function that processes each prop key
+ * @param object The object to inspect
+ * @param callback The callback function that processes each prop key
  *
  * @author David Hsing
  */

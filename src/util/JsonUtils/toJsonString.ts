@@ -21,7 +21,7 @@ import {isPlain} from '@/util/ObjectUtils/isPlain';
 /**
  * Returns a JSON string that represents the given object
  *
- * @param target the object to inspect
+ * @param target The object to inspect
  *
  * @returns a JSON string that represents the given object
  *

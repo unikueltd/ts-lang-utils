@@ -21,7 +21,7 @@ import {isTrue} from './isTrue';
 /**
  * Returns whether all the given elements are true
  *
- * @param values the elements to check
+ * @param values The elements to check
  *
  * @returns whether all the given elements are true
  *

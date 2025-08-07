@@ -23,8 +23,8 @@ import {toString} from '@/util/ObjectUtils/toString';
 /**
  * Returns the replaced string of the source string ("%" placeholder) with the given parameters
  *
- * @param text the source string to inspect
- * @param params the parameters to replaced with
+ * @param text The source string to inspect
+ * @param params The parameters to replaced with
  *
  * @returns the replaced string of the source string
  *

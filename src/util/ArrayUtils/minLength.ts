@@ -22,7 +22,7 @@ import {isEmpty} from './isEmpty';
 /**
  * Returns the min length of the given arrays
  *
- * @param arrays the arrays to check
+ * @param arrays The arrays to check
  *
  * @returns the min length of the given arrays
  *

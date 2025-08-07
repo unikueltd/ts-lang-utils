@@ -18,8 +18,8 @@
 /**
  * Returns a string value from the given number
  *
- * @param source the source value to inspect
- * @param radix the radix for converting numeric value to string
+ * @param source The source value to inspect
+ * @param radix The radix for converting numeric value to string
  *
  * @returns a string value from the given number
  *

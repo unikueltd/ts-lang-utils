@@ -21,8 +21,8 @@ import {startsWith} from './startsWith';
 /**
  * Returns the string that removed the leftmost given string
  *
- * @param text the text to inspect
- * @param remove the string to remove
+ * @param text The text to inspect
+ * @param remove The string to remove
  *
  * @returns the string that removed the leftmost given string
  *

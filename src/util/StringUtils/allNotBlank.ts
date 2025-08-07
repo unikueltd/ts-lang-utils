@@ -21,7 +21,7 @@ import {isNotBlank} from './isNotBlank';
 /**
  * Returns whether all the given texts are not blank
  *
- * @param texts the texts to check
+ * @param texts The texts to check
  *
  * @returns whether all the given texts are not blank
  *

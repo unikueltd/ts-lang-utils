@@ -18,8 +18,8 @@
 /**
  * Returns the leftmost length characters of the given string
  *
- * @param text the text to inspect
- * @param length the expected length
+ * @param text The text to inspect
+ * @param length The expected length
  *
  * @returns the leftmost length characters of the given string
  *

@@ -18,7 +18,7 @@
 /**
  * Returns an array that only contains the given element
  *
- * @param element the element to wrap
+ * @param element The element to wrap
  *
  * @returns an array that only contains the given element
  *

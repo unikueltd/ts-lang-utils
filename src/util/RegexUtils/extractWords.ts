@@ -18,8 +18,8 @@
 /**
  * Returns the array of strings that match the given pattern in the text
  *
- * @param text the text to inspect
- * @param search the string or regex to match
+ * @param text The text to inspect
+ * @param search The string or regex to match
  *
  * @returns the array of strings that match the given pattern in the text
  *

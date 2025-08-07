@@ -22,8 +22,8 @@ import {setProp} from './setProp';
 /**
  * Returns an object that cloned from the given object, includes the given keys only
  *
- * @param source the object to clone
- * @param keys the key names to include
+ * @param source The object to clone
+ * @param keys The key names to include
  *
  * @returns an object that cloned from the given object, includes the given keys only
  *

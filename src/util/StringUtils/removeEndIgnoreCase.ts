@@ -21,8 +21,8 @@ import {endsWithIgnoreCase} from './endsWithIgnoreCase';
 /**
  * Returns the string that removed the rightmost given string, case-insensitive
  *
- * @param text the text to inspect
- * @param remove the string to remove, case-insensitive
+ * @param text The text to inspect
+ * @param remove The string to remove, case-insensitive
  *
  * @returns the string that removed the rightmost given string, case-insensitive
  *

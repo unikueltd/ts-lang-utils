@@ -21,7 +21,7 @@ import {formatDateTime} from './formatDateTime';
 /**
  * Returns the current date
  *
- * @param format the date format string
+ * @param format The date format string
  *
  * @returns the current date
  *

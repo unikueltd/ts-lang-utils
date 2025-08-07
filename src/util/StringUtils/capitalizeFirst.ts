@@ -18,7 +18,7 @@
 /**
  * Returns the first letter uppercase representation of the given string
  *
- * @param text the source string to check
+ * @param text The source string to check
  *
  * @returns the first letter uppercase representation of the given string
  *

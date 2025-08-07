@@ -18,7 +18,7 @@
 /**
  * Returns whether the given file is a gif file
  *
- * @param file the file to inspect
+ * @param file The file to inspect
  *
  * @returns whether the given file is a gif file
  *

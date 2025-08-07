@@ -18,8 +18,8 @@
 /**
  * Returns the substring before the last occurrence of the given separator (the separator is not returned)
  *
- * @param text the string to get a substring from
- * @param separator the string to search for
+ * @param text The string to get a substring from
+ * @param separator The string to search for
  *
  * @returns the substring before the last occurrence of the given separator
  *

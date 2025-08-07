@@ -23,7 +23,7 @@ import {isSameDay} from './isSameDay';
 /**
  * Returns whether the given date is the last day of month
  *
- * @param date the date to check
+ * @param date The date to check
  *
  * @returns whether the date is the last day of month
  *

@@ -18,8 +18,8 @@
 /**
  * Returns whether the given date is same year with the comparison date
  *
- * @param date the date to check
- * @param comparison the date to compare
+ * @param date The date to check
+ * @param comparison The date to compare
  *
  * @returns whether the given date is same year with the comparison date
  *

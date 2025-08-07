@@ -21,7 +21,7 @@ import {isNotFalse} from './isNotFalse';
 /**
  * Returns whether any of the given elements is not false
  *
- * @param values the elements to check
+ * @param values The elements to check
  *
  * @returns whether any of the given elements is not false
  *

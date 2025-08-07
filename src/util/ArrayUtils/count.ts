@@ -18,8 +18,8 @@
 /**
  * Returns the count of elements in the given array which match the given filter
  *
- * @param array the array to inspect
- * @param predicate the function to filter the given array
+ * @param array The array to inspect
+ * @param predicate The function to filter the given array
  *
  * @returns the count of elements in the given array which match the given filter
  *

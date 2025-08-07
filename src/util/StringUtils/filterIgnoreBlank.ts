@@ -21,7 +21,7 @@ import {isNotBlank} from './isNotBlank';
 /**
  * Returns the filtered array of the gaven strings, without blanks
  *
- * @param texts the source string to inspect
+ * @param texts The source string to inspect
  *
  * @returns the filtered array of the gaven strings, without blanks
  *

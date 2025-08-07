@@ -21,7 +21,7 @@ import {isNotNil} from './isNotNil';
 /**
  * Returns the first not nil element in the given objects, or undefined if all elements are nil
  *
- * @param objects the objects to check
+ * @param objects The objects to check
  *
  * @returns the first not nil element in the given objects, or undefined if all elements are nil
  *

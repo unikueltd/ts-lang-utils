@@ -18,9 +18,9 @@
 /**
  * Returns the string that replaced all occurrences in the given text
  *
- * @param text the text to inspect
- * @param search the string or regex to match
- * @param replace the expected replacement string
+ * @param text The text to inspect
+ * @param search The string or regex to match
+ * @param replace The expected replacement string
  *
  * @returns the string that replaced all occurrences in the given text
  *

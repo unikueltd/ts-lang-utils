@@ -21,10 +21,10 @@ import {randomString} from './randomString';
 /**
  * Returns a random string array that between the length range, matching the given size
  *
- * @param size the size of the expected array
- * @param minLength the min length, inclusive
- * @param maxLength the max length, exclusive
- * @param characters the source characters to be generated from
+ * @param size The size of the expected array
+ * @param minLength The min length, inclusive
+ * @param maxLength The max length, exclusive
+ * @param characters The source characters to be generated from
  *
  * @returns a random string array that between the length range, matching the given size
  *

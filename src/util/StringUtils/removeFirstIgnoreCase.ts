@@ -21,8 +21,8 @@ import {replaceFirstIgnoreCase} from './replaceFirstIgnoreCase';
 /**
  * Returns the string that removed the first occurrence in the given text, case-insensitive
  *
- * @param text the text to inspect
- * @param search the string or regex to match
+ * @param text The text to inspect
+ * @param search The string or regex to match
  *
  * @returns the string that removed the first occurrence in the given text, case-insensitive
  *

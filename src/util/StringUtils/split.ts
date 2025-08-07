@@ -18,11 +18,11 @@
 /**
  * Returns the split array of the given string by the given delimiter
  *
- * @param text the source string to inspect
- * @param delimiter the delimiter to split strings, default is comma
- * @param max the max elements expected, negative means unlimited, default is -1
- * @param trim whether trim each element before returning, default is true
- * @param skipEmpties whether skip all empty elements, default is true
+ * @param text The source string to inspect
+ * @param delimiter The delimiter to split strings, default is comma
+ * @param max The max elements expected, negative means unlimited, default is -1
+ * @param trim Whether trim each element before returning, default is true
+ * @param skipEmpties Whether skip all empty elements, default is true
  *
  * @returns the split array of the given string by the given delimiter
  *

@@ -21,7 +21,7 @@ import {isNotEmpty} from './isNotEmpty';
 /**
  * Returns whether any of the elements in the given objects is not empty
  *
- * @param objects the objects to check
+ * @param objects The objects to check
  *
  * @returns whether any of the elements in the given objects is not empty
  *

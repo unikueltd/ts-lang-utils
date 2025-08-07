@@ -18,8 +18,8 @@
 /**
  * Returns an integer value from the given source
  *
- * @param source the source value to inspect
- * @param defaultValue the default value if the source cannot be converted
+ * @param source The source value to inspect
+ * @param defaultValue The default value if the source cannot be converted
  * @param floorValue Whether to floor the source, otherwise to ceil
  *
  * @returns an integer value from the given source

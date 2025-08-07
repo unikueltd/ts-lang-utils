@@ -18,7 +18,7 @@
 /**
  * Returns the reversed hex color from the given color
  *
- * @param hex the hex color to inspect
+ * @param hex The hex color to inspect
  *
  * @returns the reversed hex color from the given color
  *

@@ -23,9 +23,9 @@ import {isEmpty} from './isEmpty';
 /**
  * Returns whether each element in the given array is the expected type
  *
- * @param array the array to check
- * @param type the expected element type
- * @param relaxed treat null as string or object
+ * @param array The array to check
+ * @param type The expected element type
+ * @param relaxed Whether to treat null as string or object
  *
  * @returns whether each element in the given array is the expected type
  *

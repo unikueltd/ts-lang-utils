@@ -18,8 +18,8 @@
 /**
  * Returns a string that trimmed from the given string
  *
- * @param text the string to trim
- * @param emptyAsNull whether to return null if the trimmed result is empty
+ * @param text The string to trim
+ * @param emptyAsNull Whether to return null if the trimmed result is empty
  *
  * @returns the trimmed string value from the given string
  *
