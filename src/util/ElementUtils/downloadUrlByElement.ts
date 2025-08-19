@@ -15,6 +15,24 @@
  */
 
 
+const specialExtensions = [
+    // Microsoft Office
+    'doc', 'docx', 'docm', 'dot', 'dotx', 'dotm',
+    'xls', 'xlsx', 'xlsm', 'xlsb', 'xlam', 'xlt', 'xltx', 'xltm',
+    'ppt', 'pptx', 'pptm', 'pot', 'potx', 'potm', 'ppsx', 'ppsm', 'pps',
+    // WPS Office
+    'wps', 'wpt', 'et', 'ett', 'dps', 'dpt',
+    // China Office
+    'eio', 'eti', 'edp', 'uof', 'uot', 'uos', 'uop', 'smd', 'smt', 'smp',
+    // PDF
+    'pdf',
+    // Archive
+    'zip', 'rar', '7z', 'tar', 'gz', 'bz2',
+    // Other packages
+    'exe', 'msi', 'dmg', 'iso'
+];
+
+
 /**
  * Popup a download dialog by creating a fake download link
  *
@@ -22,13 +40,40 @@
  * @param fileName The default file name to save, when popup the download dialog
  */
 export function downloadUrlByElement(url?: string, fileName?: string): void {
-    if (!url || !fileName) {
+    if (!url) {
         return;
     }
-    const link = document.createElement('a');
-    link.download = fileName;
-    link.href = url;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const sameOrigin = new URL(url, window.location.href).origin === window.location.origin;
+    const fileExtension = fileName?.split('.').pop()?.toLowerCase();
+    const blobHandle = !sameOrigin || specialExtensions.includes(fileExtension ?? '');
+    if (!blobHandle) {
+        const link = document.createElement('a');
+        if (fileName) {
+            link.download = fileName;
+        }
+        link.href = url;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        return;
+    }
+    window.fetch(url).then(response => {
+        if (!response.ok) {
+            throw new Error('Network response is not ok');
+        }
+        return response.blob();
+    }).then(blob => {
+        const blobUrl = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        if (fileName) {
+            link.download = fileName;
+        }
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(blobUrl);
+    }).catch(() => {
+        window.open(url, '_blank');
+    });
 }
