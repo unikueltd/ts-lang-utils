@@ -30,6 +30,7 @@
  *
  * @example
  * ```ts
+ * split('foo,');    // ['foo']
  * split('foo,bar');    // ['foo', 'bar']
  * split('hello | world | wonderful', '|', 2);    // ['hello', 'world']
  * ```
@@ -38,8 +39,11 @@ export function split(text?: string | null, delimiter: string = ',', max: number
     if (!text) {
         return undefined;
     }
-    const result = text.split(delimiter, max);
-    if (!result || !result.length || (skipEmpties && result.every((item) => !item))) {
+    let result = text.split(delimiter, max);
+    if (skipEmpties) {
+        result = result.filter(item => !trim ? item?.length : item?.trim()?.length);
+    }
+    if (!result || !result.length) {
         return undefined;
     }
     return !trim ? result : result.map(item => !item ? item : item.trim());
