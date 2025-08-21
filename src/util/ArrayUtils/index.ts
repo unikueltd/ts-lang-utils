@@ -29,6 +29,7 @@ export {equals} from './equals';
 export {equalsAny} from './equalsAny';
 export {firstNotEmpty} from './firstNotEmpty';
 export {firstNotNil} from './firstNotNil';
+export {fixLength} from './fixLength';
 export {get} from './get';
 export {getFirst} from './getFirst';
 export {getLast} from './getLast';

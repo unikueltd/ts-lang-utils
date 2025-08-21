@@ -16,6 +16,7 @@
 
 
 import {ArrayUtils} from '@yookue/ts-lang-utils';
+import {fixLength} from '../../src/util/ArrayUtils';
 
 
 describe('ArrayUtils', () => {
@@ -49,6 +50,13 @@ describe('ArrayUtils', () => {
     test('Testing equalsAny', () => {
         expect(ArrayUtils.equalsAny([], [['foo', 'bar']])).toBeFalsy();
         expect(ArrayUtils.equalsAny(['foo', 'bar'], [['foo', 'bar'], ['bar', 'foo']])).toBeTruthy();
+    });
+
+    test('Testing fixLength', () => {
+        expect(ArrayUtils.fixLength(undefined, -1)).toStrictEqual([]);
+        expect(ArrayUtils.fixLength(['foo', 'bar'], 1)).toStrictEqual(['foo']);
+        expect(ArrayUtils.fixLength(['foo', 'bar'], 2)).toStrictEqual(['foo', 'bar']);
+        expect(ArrayUtils.fixLength(['foo', 'bar'], 3)).toStrictEqual(['foo', 'bar', undefined]);
     });
 
     test('Testing get', () => {
