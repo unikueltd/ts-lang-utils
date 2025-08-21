@@ -16,13 +16,13 @@
 
 
 /**
- * Returns a length-fixed array from the given element
+ * Returns a length-fixed array from the given array
  *
  * @param array The arrays to inspect
  * @param length The length to fix
  * @param fillValue The fill value if the array is shorter than the length
  *
- * @returns a length-fixed array from the given element
+ * @returns a length-fixed array from the given array
  *
  * @author David Hsing
  *

@@ -418,11 +418,11 @@ describe('StringUtils', () => {
     });
 
     test('Testing split', () => {
-        expect(StringUtils.split('foo,')).toStrictEqual(['foo']);
+        expect(StringUtils.split('foo,')).toStrictEqual(['foo', '']);
         expect(StringUtils.split('foo,0')).toStrictEqual(['foo', '0']);
         expect(StringUtils.split('foo,bar')).toStrictEqual(['foo', 'bar']);
         expect(StringUtils.split('hello | world | wonderful', '|', 2)).toStrictEqual(['hello', 'world']);
-        expect(StringUtils.split(',,')).toBeUndefined();
+        expect(StringUtils.split(',,', ',', -1, true, true)).toBeUndefined();
     });
 
     test('Testing startsWith', () => {

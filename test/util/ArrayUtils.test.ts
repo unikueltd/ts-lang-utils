@@ -16,7 +16,7 @@
 
 
 import {ArrayUtils} from '@yookue/ts-lang-utils';
-import {fixLength} from '../../src/util/ArrayUtils';
+import {emptyAsNull, emptyAsUndefined, fixLength} from '../../src/util/ArrayUtils';
 
 
 describe('ArrayUtils', () => {
@@ -34,6 +34,18 @@ describe('ArrayUtils', () => {
 
     test('Testing count', () => {
         expect(ArrayUtils.count(['foo', 'bar', 'foobar'], value => value.includes('foo'))).toBe(2);
+    });
+
+    test('Testing emptyAsNull', () => {
+        expect(ArrayUtils.emptyAsNull(['foo', 'bar'])).toStrictEqual(['foo', 'bar']);
+        expect(ArrayUtils.emptyAsNull(['foo', ''])).toStrictEqual(['foo', null]);
+        expect(ArrayUtils.emptyAsNull(['', 'bar'])).toStrictEqual([null, 'bar']);
+    });
+
+    test('Testing emptyAsUndefined', () => {
+        expect(ArrayUtils.emptyAsUndefined(['foo', 'bar'])).toStrictEqual(['foo', 'bar']);
+        expect(ArrayUtils.emptyAsUndefined(['foo', ''])).toStrictEqual(['foo', undefined]);
+        expect(ArrayUtils.emptyAsUndefined(['', 'bar'])).toStrictEqual([undefined, 'bar']);
     });
 
     test('Testing equals', () => {

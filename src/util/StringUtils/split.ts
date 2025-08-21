@@ -30,12 +30,12 @@
  *
  * @example
  * ```ts
- * split('foo,');    // ['foo']
+ * split('foo,');    // ['foo', '']
  * split('foo,bar');    // ['foo', 'bar']
  * split('hello | world | wonderful', '|', 2);    // ['hello', 'world']
  * ```
  */
-export function split(text?: string | null, delimiter: string = ',', max: number = -1, trim: boolean = true, skipEmpties: boolean = true): string[] | undefined {
+export function split(text?: string | null, delimiter: string = ',', max: number = -1, trim: boolean = true, skipEmpties: boolean = false): string[] | undefined {
     if (!text) {
         return undefined;
     }
