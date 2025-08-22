@@ -44,6 +44,8 @@
 
 ✅ Utilities for tree
 
+✅ Utilities for uri
+
 ✅ Utilities for cookie storage
 
 ✅ Utilities for local storage

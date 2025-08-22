@@ -44,6 +44,8 @@
 
 ✅ tree 工具库
 
+✅ uri 工具库
+
 ✅ cookie storage 工具库
 
 ✅ local storage 工具库
