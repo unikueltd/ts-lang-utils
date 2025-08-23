@@ -16,6 +16,7 @@
 
 
 import {ObjectUtils} from '@yookue/ts-lang-utils';
+import {getPropIgnoreCase} from '../../src/util/ObjectUtils';
 
 
 describe('ObjectUtils', () => {
@@ -126,6 +127,12 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.getProp({foo: 'bar'}, 'foo')).toBe('bar');
         expect(ObjectUtils.getProp({foo: {bar: 'foobar'}}, 'foobar')).toBeUndefined();
         expect(ObjectUtils.getProp({foo: {bar: 'foobar'}}, 'foo.bar')).toBe('foobar');
+    });
+
+    test('Testing getPropIgnoreCase', () => {
+        expect(ObjectUtils.getPropIgnoreCase({foo: 'bar'}, 'FOO')).toBe('bar');
+        expect(ObjectUtils.getPropIgnoreCase({foo: {bar: 'foobar'}}, 'foobar')).toBeUndefined();
+        expect(ObjectUtils.getPropIgnoreCase({foo: {bar: 'foobar'}}, 'FOO.BAR')).toBe('foobar');
     });
 
     test('Testing hasProp', () => {

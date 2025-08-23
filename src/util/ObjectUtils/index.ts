@@ -37,6 +37,7 @@ export {firstNotEmpty} from './firstNotEmpty';
 export {firstNotNil} from './firstNotNil';
 export {forEachProp} from './forEachProp';
 export {getProp} from './getProp';
+export {getPropIgnoreCase} from './getPropIgnoreCase';
 export {hasProp} from './hasProp';
 export {isEmpty} from './isEmpty';
 export {isNil} from './isNil';

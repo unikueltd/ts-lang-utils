@@ -28,6 +28,7 @@
  *
  * @example
  * ```ts
+ * getProp({foo: 'bar'}, 'foo');    // 'bar'
  * getProp({foo: {bar: 'foobar'}}, 'foo.bar');    // foobar
  * ```
  */
