@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2023 Unikue Ltd. All rights reserved.
  *
  * Licensed under the MIT License.
  *
@@ -15,14 +15,14 @@
  */
 
 
-import {UriUtils} from '@yookue/ts-lang-utils';
+import {UriUtils} from '@unikue/ts-lang-utils';
 
 
 describe('UriUtils', () => {
     test('Testing appendParam', () => {
         expect(UriUtils.appendParam(undefined, 'foo=bar')).toBe('foo=bar');
-        expect(UriUtils.appendParam('yookue.com/donation', undefined)).toBe('yookue.com/donation');
-        expect(UriUtils.appendParam('yookue.com/donation', 'foo=bar')).toBe('yookue.com/donation?foo=bar');
-        expect(UriUtils.appendParam('yookue.com/donation?from=today', 'foo=bar')).toBe('yookue.com/donation?from=today&foo=bar');
+        expect(UriUtils.appendParam('unikue.cn/donation', undefined)).toBe('unikue.cn/donation');
+        expect(UriUtils.appendParam('unikue.cn/donation', 'foo=bar')).toBe('unikue.cn/donation?foo=bar');
+        expect(UriUtils.appendParam('unikue.cn/donation?from=today', 'foo=bar')).toBe('unikue.cn/donation?from=today&foo=bar');
     });
 });

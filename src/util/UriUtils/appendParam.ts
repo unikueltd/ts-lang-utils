@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2023 Unikue Ltd. All rights reserved.
  *
  * Licensed under the MIT License (the "License")
  *
@@ -28,9 +28,9 @@
  * @example
  * ```ts
  * appendParam(undefined, 'foo=bar');    // 'foo=bar'
- * appendParam('yookue.com/donation', undefined);    // 'yookue.com/donation'
- * appendParam('yookue.com/donation', 'foo=bar');    // 'yookue.com/donation?foo=bar'
- * appendParam('yookue.com/donation?from=today', 'foo=bar');    // 'yookue.com/donation?from=today&foo=bar'
+ * appendParam('unikue.cn/donation', undefined);    // 'unikue.cn/donation'
+ * appendParam('unikue.cn/donation', 'foo=bar');    // 'unikue.cn/donation?foo=bar'
+ * appendParam('unikue.cn/donation?from=today', 'foo=bar');    // 'unikue.cn/donation?from=today&foo=bar'
  * ```
  */
 export function appendParam(source?: string | null, param?: string | null): string | null | undefined {

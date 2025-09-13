@@ -13,10 +13,10 @@
             "@/*": [
                 "./src/*"
             ],
-            "@yookue/ts-lang-utils": [
+            "@unikue/ts-lang-utils": [
                 "./src"
             ],
-            "@yookue/ts-lang-utils/*": [
+            "@unikue/ts-lang-utils/*": [
                 "./src/*",
             ]
         }

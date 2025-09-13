@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Yookue Ltd. All rights reserved.
+ * Copyright (c) 2023 Unikue Ltd. All rights reserved.
  *
  * Licensed under the MIT License.
  *
@@ -15,7 +15,7 @@
  */
 
 
-import {ArrayUtils} from '@yookue/ts-lang-utils';
+import {ArrayUtils} from '@unikue/ts-lang-utils';
 import {emptyAsNull, emptyAsUndefined, fixLength} from '../../src/util/ArrayUtils';
 
 
