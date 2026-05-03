@@ -26,6 +26,7 @@ describe('MapUtils', () => {
             [3, 'blue'],
         ]);
         const result = [];
+        // @ts-ignore
         MapUtils.forEach(map, (value) => result.push(value));
         expect(result.length).toBe(3);
     });
@@ -38,6 +39,7 @@ describe('MapUtils', () => {
         ]);
         const result = [];
         MapUtils.forEachBreakable(map, (value) => {
+            // @ts-ignore
             result.push(value);
             return value === 'red';
         });
@@ -51,6 +53,7 @@ describe('MapUtils', () => {
             [3, 'blue'],
         ]);
         const result = [];
+        // @ts-ignore
         MapUtils.forEachIndexing(map, (value) => result.push(value));
         expect(result.length).toBe(3);
     });
@@ -63,6 +66,7 @@ describe('MapUtils', () => {
         ]);
         const result = [];
         MapUtils.forEachIndexingBreakable(map, (value) => {
+            // @ts-ignore
             result.push(value);
             return value === 'red';
         });
@@ -76,6 +80,7 @@ describe('MapUtils', () => {
             [3, 'blue'],
         ]);
         const result = [];
+        // @ts-ignore
         MapUtils.forEachIndexingTailing(map, (value) => result.push(value));
         expect(result.length).toBe(2);
     });
@@ -87,6 +92,7 @@ describe('MapUtils', () => {
             [3, 'blue'],
         ]);
         const result = [];
+        // @ts-ignore
         MapUtils.forEachTailing(map, (value) => result.push(value));
         expect(result.length).toBe(2);
     });

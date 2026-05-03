@@ -16,7 +16,6 @@
 
 
 import {RegexUtils} from '@unikue/ts-lang-utils';
-import {unescapePattern} from '../../src/util/RegexUtils';
 
 
 describe('RegexUtils', () => {

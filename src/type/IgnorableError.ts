@@ -36,4 +36,4 @@ export interface IgnorableErrorConstructor extends ErrorConstructor {
 /**
  * @ignore
  */
-export let IgnorableError: IgnorableErrorConstructor;
+export const IgnorableError: IgnorableErrorConstructor = Error as IgnorableErrorConstructor;

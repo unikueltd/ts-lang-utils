@@ -20,11 +20,9 @@ import {IgnorableError} from '@unikue/ts-lang-utils';
 
 describe('IgnorableError', () => {
     test('Testing throws', () => {
-        try {
+        expect(() => {
             // noinspection ExceptionCaughtLocallyJS
             throw IgnorableError('Oops, ignorable error');
-        } catch {
-            // console.log('IgnorableError has thrown, ignored');
-        }
+        }).toThrow();
     });
 });

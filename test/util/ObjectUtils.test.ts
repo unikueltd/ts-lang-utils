@@ -16,7 +16,6 @@
 
 
 import {ObjectUtils} from '@unikue/ts-lang-utils';
-import {getPropIgnoreCase} from '../../src/util/ObjectUtils';
 
 
 describe('ObjectUtils', () => {

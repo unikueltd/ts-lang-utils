@@ -20,11 +20,9 @@ import {UnsupportedError} from '@unikue/ts-lang-utils';
 
 describe('UnsupportedError', () => {
     test('Testing throws', () => {
-        try {
+        expect(() => {
             // noinspection ExceptionCaughtLocallyJS
             throw UnsupportedError('Oops, unsupported error');
-        } catch {
-            // console.log('UnsupportedError has thrown, ignored');
-        }
+        }).toThrow();
     });
 });

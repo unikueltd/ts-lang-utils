@@ -16,7 +16,6 @@
 
 
 import {ArrayUtils} from '@unikue/ts-lang-utils';
-import {emptyAsNull, emptyAsUndefined, fixLength} from '../../src/util/ArrayUtils';
 
 
 describe('ArrayUtils', () => {

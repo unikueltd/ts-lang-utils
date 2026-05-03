@@ -47,6 +47,7 @@ describe('TreeUtils', () => {
             }
         ];
         const keys = [];
+        // @ts-ignore
         TreeUtils.forEach(tree, node => keys.push(node?.key));
         expect(keys.length).toEqual(10);
     });

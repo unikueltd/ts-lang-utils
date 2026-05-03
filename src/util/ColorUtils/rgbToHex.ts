@@ -35,7 +35,7 @@ export function rgbToHex(rgb?: string | [r: number, g: number, b: number]): stri
     if (!rgb) {
         return undefined;
     }
-    let alias = null;
+    let alias: number[];
     if (typeof rgb === 'string') {
         const arr = rgb.match(/\d+/g);
         if (!arr || arr.length !== 3) {

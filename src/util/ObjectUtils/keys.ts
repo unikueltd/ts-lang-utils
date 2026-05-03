@@ -40,7 +40,7 @@ export function keys(object: any): string[] {
     if (!isPrototype(object)) {
         return Object.keys(object);
     }
-    const result = [];
+    const result: string[] = [];
     for (const key in Object(object)) {
         if (key !== 'constructor' && hasProp(object, key)) {
             result.push(key);

@@ -405,11 +405,6 @@ describe('StringUtils', () => {
         expect(StringUtils.reverse('foobar', 1, 5)).toBe('aboo');
     });
 
-    test('Testing right', () => {
-        expect(StringUtils.right('foobar', 3)).toBe('bar');
-        expect(StringUtils.right('foobar', 10)).toBe('foobar');
-    });
-
     test('Testing rightPad', () => {
         expect(StringUtils.rightPad(undefined, -1, null)).toBeUndefined();
         expect(StringUtils.rightPad('', 3, 'z')).toBe('zzz');

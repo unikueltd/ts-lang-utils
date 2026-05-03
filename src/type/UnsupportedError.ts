@@ -36,4 +36,4 @@ export interface UnsupportedErrorConstructor extends ErrorConstructor {
 /**
  * @ignore
  */
-export let UnsupportedError: UnsupportedErrorConstructor;
+export const UnsupportedError: UnsupportedErrorConstructor = Error as UnsupportedErrorConstructor;

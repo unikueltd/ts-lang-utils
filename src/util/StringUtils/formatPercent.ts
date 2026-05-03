@@ -60,7 +60,7 @@ export function formatPercent(text?: string | null, ...params: any[]): string | 
             case 'x':
             case 'X':
                 try {
-                    let value = undefined;
+                    let value: number | undefined;
                     if (typeof param === 'string') {
                         value = Number.parseInt(param);
                     } else if (param instanceof String) {
@@ -89,7 +89,7 @@ export function formatPercent(text?: string | null, ...params: any[]): string | 
                 break;
             case 'f':
                 try {
-                    let value = undefined;
+                    let value: number | undefined;
                     if (typeof param === 'string') {
                         value = Number.parseFloat(param);
                     } else if (param instanceof String) {

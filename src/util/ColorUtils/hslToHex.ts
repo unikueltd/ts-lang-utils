@@ -34,7 +34,7 @@ export function hslToHex(hsl?: string | [h: number, s: number, l: number]): stri
     if (!hsl) {
         return undefined;
     }
-    let alias = null;
+    let alias: number[];
     if (typeof hsl === 'string') {
         const arr = /hsl\((\d+),\s*([\d.]+),\s*([\d.]+)\)/.exec(hsl);
         if (!arr || arr.length !== 4) {

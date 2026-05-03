@@ -27,13 +27,14 @@ describe('ThreadUtils', () => {
         jest.useRealTimers();
     });
 
-    test('Testing sleep', () => {
+    test('Testing sleep', async () => {
         const start = Date.now();
-        ThreadUtils.sleep().then(() => {
+        const promise = ThreadUtils.sleep().then(() => {
             const end = Date.now();
             const elapsed = end - start;
             expect(elapsed).toBe(1000);
         });
         jest.advanceTimersByTime(1000);
+        await promise;
     });
 });
