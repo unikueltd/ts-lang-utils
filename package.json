@@ -1,6 +1,6 @@
 {
     "name": "@unikue/ts-lang-utils",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "title": "TsLangUtils",
     "description": "Common lang utilities for typescript",
     "homepage": "https://unikueltd.github.io/ts-lang-utils",
@@ -61,7 +61,6 @@
         "@eslint/js": "^10.0.1",
         "@types/jest": "^30.0.0",
         "@types/lodash": "^4.17.24",
-        "@typescript-eslint/eslint-plugin": "^8.59.1",
         "@unikue/babel-plugin-remove-comment": "^1.2.0",
         "@unikue/typedoc-plugin-raw-content": "^1.1.0",
         "@unikue/typedoc-theme-dumi": "^1.1.0",
