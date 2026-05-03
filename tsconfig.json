@@ -22,7 +22,6 @@
                 "./src"
             ],
             "@unikue/ts-lang-utils/*": [
-                "./*",
                 "./src/*"
             ]
         }
