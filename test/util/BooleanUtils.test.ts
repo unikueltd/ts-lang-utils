@@ -15,7 +15,7 @@
  */
 
 
-import {BooleanUtils} from '@unikue/ts-lang-utils';
+import { BooleanUtils } from '@unikue/ts-lang-utils';
 
 
 describe('BooleanUtils', () => {

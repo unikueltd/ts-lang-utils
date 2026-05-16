@@ -22,9 +22,9 @@
  */
 
 
-export {hexToRgb} from './hexToRgb';
-export {hslToHex} from './hslToHex';
-export {isHex} from './isHex';
-export {reverseHex} from './reverseHex';
-export {reverseRgb} from './reverseRgb';
-export {rgbToHex} from './rgbToHex';
+export { hexToRgb } from './hexToRgb';
+export { hslToHex } from './hslToHex';
+export { isHex } from './isHex';
+export { reverseHex } from './reverseHex';
+export { reverseRgb } from './reverseRgb';
+export { rgbToHex } from './rgbToHex';

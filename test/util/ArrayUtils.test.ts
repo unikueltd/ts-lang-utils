@@ -15,7 +15,7 @@
  */
 
 
-import {ArrayUtils} from '@unikue/ts-lang-utils';
+import { ArrayUtils } from '@unikue/ts-lang-utils';
 
 
 describe('ArrayUtils', () => {

@@ -22,4 +22,4 @@
  */
 
 
-export {forEach} from './forEach';
+export { forEach } from './forEach';

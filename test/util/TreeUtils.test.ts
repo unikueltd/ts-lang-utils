@@ -15,7 +15,7 @@
  */
 
 
-import {TreeUtils} from '@unikue/ts-lang-utils';
+import { TreeUtils } from '@unikue/ts-lang-utils';
 
 
 describe('TreeUtils', () => {

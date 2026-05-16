@@ -15,7 +15,7 @@
  */
 
 
-import {isUndefined} from './isUndefined';
+import { isUndefined } from './isUndefined';
 
 
 /**

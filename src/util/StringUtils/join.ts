@@ -15,7 +15,7 @@
  */
 
 
-import {defaultString} from './defaultString';
+import { defaultString } from './defaultString';
 
 
 /**

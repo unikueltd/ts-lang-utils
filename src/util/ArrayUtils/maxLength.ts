@@ -15,8 +15,8 @@
  */
 
 
-import {getLength} from './getLength';
-import {isEmpty} from './isEmpty';
+import { getLength } from './getLength';
+import { isEmpty } from './isEmpty';
 
 
 /**

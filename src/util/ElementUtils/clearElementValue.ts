@@ -15,7 +15,7 @@
  */
 
 
-import {setElementValue} from './setElementValue';
+import { setElementValue } from './setElementValue';
 
 
 /**

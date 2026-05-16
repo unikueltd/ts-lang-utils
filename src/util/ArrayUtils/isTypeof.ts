@@ -15,9 +15,9 @@
  */
 
 
-import {equalsAny} from '@/util/StringUtils/equalsAny';
-import {isBlank} from '@/util/StringUtils/isBlank';
-import {isEmpty} from './isEmpty';
+import { equalsAny } from '@/util/StringUtils/equalsAny';
+import { isBlank } from '@/util/StringUtils/isBlank';
+import { isEmpty } from './isEmpty';
 
 
 /**

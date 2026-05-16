@@ -15,7 +15,7 @@
  */
 
 
-import {toFloat} from './toFloat';
+import { toFloat } from './toFloat';
 
 
 /**

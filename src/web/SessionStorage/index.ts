@@ -22,13 +22,13 @@
  */
 
 
-export {clear} from './clear';
-export {forEach} from './forEach';
-export {forEachBreakable} from './forEachBreakable';
-export {forEachIndexing} from './forEachIndexing';
-export {getKey} from './getKey';
-export {getLength} from './getLength';
-export {getValue} from './getValue';
-export {hasKey} from './hasKey';
-export {removeItem} from './removeItem';
-export {setItem} from './setItem';
+export { clear } from './clear';
+export { forEach } from './forEach';
+export { forEachBreakable } from './forEachBreakable';
+export { forEachIndexing } from './forEachIndexing';
+export { getKey } from './getKey';
+export { getLength } from './getLength';
+export { getValue } from './getValue';
+export { hasKey } from './hasKey';
+export { removeItem } from './removeItem';
+export { setItem } from './setItem';

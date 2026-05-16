@@ -22,4 +22,4 @@
  */
 
 
-export {readAsDataUrl} from './readAsDataUrl';
+export { readAsDataUrl } from './readAsDataUrl';

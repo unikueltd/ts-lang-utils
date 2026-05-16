@@ -15,7 +15,7 @@
  */
 
 
-import {isFalse} from './isFalse';
+import { isFalse } from './isFalse';
 
 
 /**

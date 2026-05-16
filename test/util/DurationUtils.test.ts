@@ -15,7 +15,7 @@
  */
 
 
-import {DurationUtils} from '@unikue/ts-lang-utils';
+import { DurationUtils } from '@unikue/ts-lang-utils';
 
 
 describe('DurationUtils', () => {

@@ -15,7 +15,7 @@
  */
 
 
-import {isPromise} from '@/util/ObjectUtils';
+import { isPromise } from '@/util/ObjectUtils';
 
 
 /**

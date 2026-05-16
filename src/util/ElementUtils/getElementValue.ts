@@ -15,7 +15,7 @@
  */
 
 
-import {getValueDescriptor} from './getValueDescriptor';
+import { getValueDescriptor } from './getValueDescriptor';
 
 
 /**

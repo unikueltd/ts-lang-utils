@@ -15,7 +15,7 @@
  */
 
 
-import {UriUtils} from '@unikue/ts-lang-utils';
+import { UriUtils } from '@unikue/ts-lang-utils';
 
 
 describe('UriUtils', () => {

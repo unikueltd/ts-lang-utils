@@ -22,17 +22,17 @@
  */
 
 
-export {compilePattern} from './compilePattern';
-export {escapePattern} from './escapePattern';
-export {extractWords} from './extractWords';
-export {isAlphabetic} from './isAlphabetic';
-export {isAlphabeticLower} from './isAlphabeticLower';
-export {isAlphabeticUpper} from './isAlphabeticUpper';
-export {isAlphanumeric} from './isAlphanumeric';
-export {isAlphanumericLower} from './isAlphanumericLower';
-export {isAlphanumericUpper} from './isAlphanumericUpper';
-export {isCompilable} from './isCompilable';
-export {isNumeric} from './isNumeric';
-export {normalizePattern} from './normalizePattern';
-export {testResetting} from './testResetting';
-export {unescapePattern} from './unescapePattern';
+export { compilePattern } from './compilePattern';
+export { escapePattern } from './escapePattern';
+export { extractWords } from './extractWords';
+export { isAlphabetic } from './isAlphabetic';
+export { isAlphabeticLower } from './isAlphabeticLower';
+export { isAlphabeticUpper } from './isAlphabeticUpper';
+export { isAlphanumeric } from './isAlphanumeric';
+export { isAlphanumericLower } from './isAlphanumericLower';
+export { isAlphanumericUpper } from './isAlphanumericUpper';
+export { isCompilable } from './isCompilable';
+export { isNumeric } from './isNumeric';
+export { normalizePattern } from './normalizePattern';
+export { testResetting } from './testResetting';
+export { unescapePattern } from './unescapePattern';

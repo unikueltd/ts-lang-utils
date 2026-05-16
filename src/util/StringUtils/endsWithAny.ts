@@ -15,7 +15,7 @@
  */
 
 
-import {endsWith} from './endsWith';
+import { endsWith } from './endsWith';
 
 
 /**

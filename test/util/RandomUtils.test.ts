@@ -15,7 +15,7 @@
  */
 
 
-import {RandomUtils} from '@unikue/ts-lang-utils';
+import { RandomUtils } from '@unikue/ts-lang-utils';
 
 
 describe('RandomUtils', () => {

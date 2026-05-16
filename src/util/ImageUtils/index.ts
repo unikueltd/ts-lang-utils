@@ -22,9 +22,9 @@
  */
 
 
-export {detectDimension} from './detectDimension';
-export {detectSource} from './detectSource';
-export {isImage} from './isImage';
-export {isGifImage} from './isGifImage';
-export {isJpgImage} from './isJpgImage';
-export {isPngImage} from './isPngImage';
+export { detectDimension } from './detectDimension';
+export { detectSource } from './detectSource';
+export { isImage } from './isImage';
+export { isGifImage } from './isGifImage';
+export { isJpgImage } from './isJpgImage';
+export { isPngImage } from './isPngImage';

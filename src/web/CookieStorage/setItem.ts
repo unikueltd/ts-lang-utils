@@ -15,7 +15,7 @@
  */
 
 
-import Cookies, {type CookieSetOptions} from 'universal-cookie';
+import Cookies, { type CookieSetOptions } from 'universal-cookie';
 
 
 /**
@@ -36,7 +36,7 @@ export function setItem(name?: string, value?: boolean | number | string | objec
     if (!name) {
         return;
     }
-    const cookies = new Cookies(null, {path: '/'});
+    const cookies = new Cookies(null, { path: '/' });
     if (value === undefined || value === null) {
         cookies.remove(name);
         return;

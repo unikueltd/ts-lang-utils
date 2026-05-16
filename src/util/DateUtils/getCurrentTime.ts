@@ -15,7 +15,7 @@
  */
 
 
-import {formatDateTime} from './formatDateTime';
+import { formatDateTime } from './formatDateTime';
 
 
 /**

@@ -15,7 +15,7 @@
  */
 
 
-import {includes} from './includes';
+import { includes } from './includes';
 
 
 /**

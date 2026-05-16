@@ -15,7 +15,7 @@
  */
 
 
-import {kebabCase} from 'lodash';
+import { kebabCase } from 'lodash';
 
 
 /**

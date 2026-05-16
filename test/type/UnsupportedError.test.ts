@@ -15,7 +15,7 @@
  */
 
 
-import {UnsupportedError} from '@unikue/ts-lang-utils';
+import { UnsupportedError } from '@unikue/ts-lang-utils';
 
 
 describe('UnsupportedError', () => {

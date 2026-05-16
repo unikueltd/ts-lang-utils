@@ -15,7 +15,7 @@
  */
 
 
-import {RegexUtils} from '@unikue/ts-lang-utils';
+import { RegexUtils } from '@unikue/ts-lang-utils';
 
 
 describe('RegexUtils', () => {

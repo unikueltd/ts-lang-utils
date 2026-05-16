@@ -15,7 +15,7 @@
  */
 
 
-import {IgnorableError} from '@unikue/ts-lang-utils';
+import { IgnorableError } from '@unikue/ts-lang-utils';
 
 
 describe('IgnorableError', () => {

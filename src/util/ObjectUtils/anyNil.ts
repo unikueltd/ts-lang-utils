@@ -15,7 +15,7 @@
  */
 
 
-import {isNil} from './isNil';
+import { isNil } from './isNil';
 
 
 /**

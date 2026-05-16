@@ -15,7 +15,7 @@
  */
 
 
-import {downloadUrlByElement} from './downloadUrlByElement';
+import { downloadUrlByElement } from './downloadUrlByElement';
 
 
 /**

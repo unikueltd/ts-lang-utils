@@ -15,7 +15,7 @@
  */
 
 
-import {isNull} from './isNull';
+import { isNull } from './isNull';
 
 
 /**

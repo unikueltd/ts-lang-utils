@@ -22,11 +22,11 @@
  */
 
 
-export {parseToDays} from './parseToDays';
-export {parseToHours} from './parseToHours';
-export {parseToMillis} from './parseToMillis';
-export {parseToMinutes} from './parseToMinutes';
-export {parseToMonths} from './parseToMonths';
-export {parseToSeconds} from './parseToSeconds';
-export {parseToWeeks} from './parseToWeeks';
-export {parseToYears} from './parseToYears';
+export { parseToDays } from './parseToDays';
+export { parseToHours } from './parseToHours';
+export { parseToMillis } from './parseToMillis';
+export { parseToMinutes } from './parseToMinutes';
+export { parseToMonths } from './parseToMonths';
+export { parseToSeconds } from './parseToSeconds';
+export { parseToWeeks } from './parseToWeeks';
+export { parseToYears } from './parseToYears';

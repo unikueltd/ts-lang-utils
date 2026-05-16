@@ -15,8 +15,8 @@
  */
 
 
-import {addDay} from './addDay';
-import {isSameDay} from './isSameDay';
+import { addDay } from './addDay';
+import { isSameDay } from './isSameDay';
 
 
 /**

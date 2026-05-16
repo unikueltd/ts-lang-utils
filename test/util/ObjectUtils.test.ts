@@ -15,7 +15,7 @@
  */
 
 
-import {ObjectUtils} from '@unikue/ts-lang-utils';
+import { ObjectUtils } from '@unikue/ts-lang-utils';
 
 
 describe('ObjectUtils', () => {
@@ -43,17 +43,17 @@ describe('ObjectUtils', () => {
     });
 
     test('Testing clone', () => {
-        expect(ObjectUtils.getProp(ObjectUtils.clone({'foo': 'bar'}), 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp(ObjectUtils.clone({ 'foo': 'bar' }), 'foo')).toBe('bar');
     });
 
     test('Testing cloneExclusive', () => {
-        expect(ObjectUtils.getProp(ObjectUtils.cloneExclusive({'foo': 'bar'}, ['foo']), 'foo')).toBeUndefined();
-        expect(ObjectUtils.getProp(ObjectUtils.cloneExclusive({'foo': 'bar'}, ['bar']), 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp(ObjectUtils.cloneExclusive({ 'foo': 'bar' }, ['foo']), 'foo')).toBeUndefined();
+        expect(ObjectUtils.getProp(ObjectUtils.cloneExclusive({ 'foo': 'bar' }, ['bar']), 'foo')).toBe('bar');
     });
 
     test('Testing cloneInclusive', () => {
-        expect(ObjectUtils.getProp(ObjectUtils.cloneInclusive({'foo': 'bar'}, ['foo']), 'foo')).toBe('bar');
-        expect(ObjectUtils.getProp(ObjectUtils.cloneInclusive({'foo': 'bar'}, ['bar']), 'foo')).toBeUndefined();
+        expect(ObjectUtils.getProp(ObjectUtils.cloneInclusive({ 'foo': 'bar' }, ['foo']), 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp(ObjectUtils.cloneInclusive({ 'foo': 'bar' }, ['bar']), 'foo')).toBeUndefined();
     });
 
     test('Testing firstNotNil', () => {
@@ -66,20 +66,20 @@ describe('ObjectUtils', () => {
 
     test('Testing forEachProp', () => {
         const keys: string[] = [];
-        ObjectUtils.forEachProp({'foo': 'bar', 'hello': 'world'}, key => keys.push(key as string));
+        ObjectUtils.forEachProp({ 'foo': 'bar', 'hello': 'world' }, key => keys.push(key as string));
         expect(keys.length).toBe(2);
     });
 
     test('Testing mapEachProp', () => {
-        const keys = ObjectUtils.mapEachProp({'foo': 'bar', 'hello': 'world'}, key => 'jest_' + key) as string[];
+        const keys = ObjectUtils.mapEachProp({ 'foo': 'bar', 'hello': 'world' }, key => 'jest_' + key) as string[];
         expect(keys).toStrictEqual(['jest_foo', 'jest_hello']);
     });
 
     test('Testing mergeProps', () => {
-        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({}, {'foo': 'bar'}), 'foo')).toBe('bar');
-        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({'foo': 'world'}, {'foo': 'bar'}), 'foo')).toBe('world');
-        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({'foo': undefined}, {'foo': 'bar'}, true), 'foo')).toBe('bar');
-        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({'foo': undefined}, {'foo': 'bar'}, false), 'foo')).toBeUndefined();
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({}, { 'foo': 'bar' }), 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({ 'foo': 'world' }, { 'foo': 'bar' }), 'foo')).toBe('world');
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({ 'foo': undefined }, { 'foo': 'bar' }, true), 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp(ObjectUtils.mergeProps({ 'foo': undefined }, { 'foo': 'bar' }, false), 'foo')).toBeUndefined();
     });
 
     test('Testing isNil', () => {
@@ -109,11 +109,11 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.isPrimitive(undefined)).toBeTruthy();
         expect(ObjectUtils.isPrimitive(true)).toBeTruthy();
         expect(ObjectUtils.isPrimitive('foobar')).toBeTruthy();
-        expect(ObjectUtils.isPrimitive({foo: 'bar'})).toBeFalsy();
+        expect(ObjectUtils.isPrimitive({ foo: 'bar' })).toBeFalsy();
     });
 
     test('Testing isPrototype', () => {
-        expect(ObjectUtils.isPrototype({foo: 'bar'})).toBeFalsy();
+        expect(ObjectUtils.isPrototype({ foo: 'bar' })).toBeFalsy();
         expect(ObjectUtils.isPrototype('foobar')).toBeFalsy();
     });
 
@@ -123,25 +123,25 @@ describe('ObjectUtils', () => {
     });
 
     test('Testing getProp', () => {
-        expect(ObjectUtils.getProp({foo: 'bar'}, 'foo')).toBe('bar');
-        expect(ObjectUtils.getProp({foo: {bar: 'foobar'}}, 'foobar')).toBeUndefined();
-        expect(ObjectUtils.getProp({foo: {bar: 'foobar'}}, 'foo.bar')).toBe('foobar');
+        expect(ObjectUtils.getProp({ foo: 'bar' }, 'foo')).toBe('bar');
+        expect(ObjectUtils.getProp({ foo: { bar: 'foobar' } }, 'foobar')).toBeUndefined();
+        expect(ObjectUtils.getProp({ foo: { bar: 'foobar' } }, 'foo.bar')).toBe('foobar');
     });
 
     test('Testing getPropIgnoreCase', () => {
-        expect(ObjectUtils.getPropIgnoreCase({foo: 'bar'}, 'FOO')).toBe('bar');
-        expect(ObjectUtils.getPropIgnoreCase({foo: {bar: 'foobar'}}, 'foobar')).toBeUndefined();
-        expect(ObjectUtils.getPropIgnoreCase({foo: {bar: 'foobar'}}, 'FOO.BAR')).toBe('foobar');
+        expect(ObjectUtils.getPropIgnoreCase({ foo: 'bar' }, 'FOO')).toBe('bar');
+        expect(ObjectUtils.getPropIgnoreCase({ foo: { bar: 'foobar' } }, 'foobar')).toBeUndefined();
+        expect(ObjectUtils.getPropIgnoreCase({ foo: { bar: 'foobar' } }, 'FOO.BAR')).toBe('foobar');
     });
 
     test('Testing hasProp', () => {
-        expect(ObjectUtils.hasProp({foo: 'bar'}, 'foo')).toBeTruthy();
-        expect(ObjectUtils.hasProp({foo: 'bar'}, 'bar')).toBeFalsy();
+        expect(ObjectUtils.hasProp({ foo: 'bar' }, 'foo')).toBeTruthy();
+        expect(ObjectUtils.hasProp({ foo: 'bar' }, 'bar')).toBeFalsy();
     });
 
     test('Testing regenProps', () => {
-        expect(ObjectUtils.getProp(ObjectUtils.regenProps({foo: 'bar'}, () => 'foobar'), 'foo')).toBe('foobar');
-        expect(ObjectUtils.getProp(ObjectUtils.regenProps({foo: 'bar'}, () => undefined), 'foo')).toBeUndefined();
+        expect(ObjectUtils.getProp(ObjectUtils.regenProps({ foo: 'bar' }, () => 'foobar'), 'foo')).toBe('foobar');
+        expect(ObjectUtils.getProp(ObjectUtils.regenProps({ foo: 'bar' }, () => undefined), 'foo')).toBeUndefined();
     });
 
     test('Testing setProp', () => {
@@ -155,20 +155,20 @@ describe('ObjectUtils', () => {
         expect(ObjectUtils.isPlain(null)).toBeFalsy();
         expect(ObjectUtils.isPlain('foobar')).toBeFalsy();
         expect(ObjectUtils.isPlain(['foo', 'bar'])).toBeFalsy();
-        expect(ObjectUtils.isPlain({foo: 'bar'})).toBeTruthy();
+        expect(ObjectUtils.isPlain({ foo: 'bar' })).toBeTruthy();
     });
 
     test('Testing isPromise', () => {
         expect(ObjectUtils.isPromise(undefined)).toBeFalsy();
-        expect(ObjectUtils.isPromise({foo: 'bar'})).toBeFalsy()
+        expect(ObjectUtils.isPromise({ foo: 'bar' })).toBeFalsy()
         const promise = Promise.resolve();
         expect(ObjectUtils.isPromise(promise)).toBeTruthy();
     });
 
     test('Testing keys', () => {
         expect(ObjectUtils.keys([1, 2, 3])).toContain('1');
-        expect(ObjectUtils.keys({foo: 'bar'})).toContain('foo');
-        expect(ObjectUtils.keys({foo: 'bar'})).not.toContain('bar');
+        expect(ObjectUtils.keys({ foo: 'bar' })).toContain('foo');
+        expect(ObjectUtils.keys({ foo: 'bar' })).not.toContain('bar');
     });
 
     test('Testing toString', () => {

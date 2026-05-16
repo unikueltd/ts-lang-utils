@@ -15,7 +15,7 @@
  */
 
 
-import {NumberUtils} from '@unikue/ts-lang-utils';
+import { NumberUtils } from '@unikue/ts-lang-utils';
 
 
 describe('NumberUtils', () => {

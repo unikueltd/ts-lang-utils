@@ -15,7 +15,7 @@
  */
 
 
-import {substringBefore} from './substringBefore';
+import { substringBefore } from './substringBefore';
 
 /**
  * Returns the substring before the first occurrence of any the given separators (the separator is not returned)

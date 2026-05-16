@@ -15,7 +15,7 @@
  */
 
 
-import {DateUtils} from '@unikue/ts-lang-utils';
+import { DateUtils } from '@unikue/ts-lang-utils';
 
 
 describe('DateUtils', () => {

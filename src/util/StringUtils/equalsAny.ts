@@ -15,7 +15,7 @@
  */
 
 
-import {includes} from '@/util/ArrayUtils/includes';
+import { includes } from '@/util/ArrayUtils/includes';
 
 
 /**

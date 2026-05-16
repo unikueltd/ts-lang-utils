@@ -15,7 +15,7 @@
  */
 
 
-import {getProp} from '@/util/ObjectUtils/getProp';
+import { getProp } from '@/util/ObjectUtils/getProp';
 
 
 /**

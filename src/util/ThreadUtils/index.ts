@@ -22,4 +22,4 @@
  */
 
 
-export {sleep} from './sleep';
+export { sleep } from './sleep';

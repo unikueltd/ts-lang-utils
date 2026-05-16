@@ -15,8 +15,8 @@
  */
 
 
-import {isPrototype} from './isPrototype';
-import {hasProp} from './hasProp';
+import { isPrototype } from './isPrototype';
+import { hasProp } from './hasProp';
 
 
 /**

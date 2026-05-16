@@ -15,7 +15,7 @@
  */
 
 
-import Cookies, {type CookieSetOptions} from 'universal-cookie';
+import Cookies, { type CookieSetOptions } from 'universal-cookie';
 
 
 /**
@@ -35,6 +35,6 @@ export function removeItem(name?: string, options?: CookieSetOptions): void {
     if (!name) {
         return;
     }
-    const cookies = new Cookies(null, {path: '/'});
+    const cookies = new Cookies(null, { path: '/' });
     cookies.remove(name, options);
 }

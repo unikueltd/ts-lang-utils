@@ -22,14 +22,14 @@
  */
 
 
-export {getAlphabeticId} from './getAlphabeticId';
-export {getAlphabeticLowerId} from './getAlphabeticLowerId';
-export {getAlphabeticUpperId} from './getAlphabeticUpperId';
-export {getAlphanumericId} from './getAlphanumericId';
-export {getAlphanumericLowerId} from './getAlphanumericLowerId';
-export {getAlphanumericUpperId} from './getAlphanumericUpperId';
-export {getNumericId} from './getNumericId';
-export {getPopularId} from './getPopularId';
-export {getPopularLowerId} from './getPopularLowerId';
-export {getPopularUpperId} from './getPopularUpperId';
-export {getRandomId} from './getRandomId';
+export { getAlphabeticId } from './getAlphabeticId';
+export { getAlphabeticLowerId } from './getAlphabeticLowerId';
+export { getAlphabeticUpperId } from './getAlphabeticUpperId';
+export { getAlphanumericId } from './getAlphanumericId';
+export { getAlphanumericLowerId } from './getAlphanumericLowerId';
+export { getAlphanumericUpperId } from './getAlphanumericUpperId';
+export { getNumericId } from './getNumericId';
+export { getPopularId } from './getPopularId';
+export { getPopularLowerId } from './getPopularLowerId';
+export { getPopularUpperId } from './getPopularUpperId';
+export { getRandomId } from './getRandomId';

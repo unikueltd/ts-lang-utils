@@ -15,7 +15,7 @@
  */
 
 
-import {isPlain} from './isPlain';
+import { isPlain } from './isPlain';
 
 
 /**

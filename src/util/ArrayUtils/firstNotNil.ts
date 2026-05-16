@@ -15,8 +15,8 @@
  */
 
 
-import {isEmpty} from './isEmpty';
-import {isNotNil} from '@/util/ObjectUtils/isNotNil';
+import { isEmpty } from './isEmpty';
+import { isNotNil } from '@/util/ObjectUtils/isNotNil';
 
 
 /**

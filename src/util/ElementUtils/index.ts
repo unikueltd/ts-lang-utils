@@ -22,10 +22,10 @@
  */
 
 
-export {clearElementValue} from './clearElementValue';
-export {downloadCanvasElement} from './downloadCanvasElement';
-export {downloadSvgElement} from './downloadSvgElement';
-export {downloadUrlByElement} from './downloadUrlByElement';
-export {getElementValue} from './getElementValue';
-export {getValueDescriptor} from './getValueDescriptor';
-export {setElementValue} from './setElementValue';
+export { clearElementValue } from './clearElementValue';
+export { downloadCanvasElement } from './downloadCanvasElement';
+export { downloadSvgElement } from './downloadSvgElement';
+export { downloadUrlByElement } from './downloadUrlByElement';
+export { getElementValue } from './getElementValue';
+export { getValueDescriptor } from './getValueDescriptor';
+export { setElementValue } from './setElementValue';

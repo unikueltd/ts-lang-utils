@@ -15,7 +15,7 @@
  */
 
 
-import {replaceFirstIgnoreCase} from './replaceFirstIgnoreCase';
+import { replaceFirstIgnoreCase } from './replaceFirstIgnoreCase';
 
 
 /**

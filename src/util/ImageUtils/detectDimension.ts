@@ -15,7 +15,7 @@
  */
 
 
-import {isImage} from './isImage';
+import { isImage } from './isImage';
 
 
 /**

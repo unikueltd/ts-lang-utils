@@ -15,7 +15,7 @@
  */
 
 
-import {MapUtils} from '@unikue/ts-lang-utils';
+import { MapUtils } from '@unikue/ts-lang-utils';
 
 
 describe('MapUtils', () => {

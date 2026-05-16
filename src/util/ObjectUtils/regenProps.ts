@@ -15,8 +15,8 @@
  */
 
 
-import {isPlain} from './isPlain';
-import {setProp} from './setProp';
+import { isPlain } from './isPlain';
+import { setProp } from './setProp';
 
 
 /**
@@ -38,7 +38,7 @@ export function regenProps(object: any, callback?: (key?: string, index?: number
     if (!object || !isPlain(object) || !callback) {
         return object;
     }
-    const result = {};
+    const result = { };
     Object.keys(object).filter(key => Object.prototype.hasOwnProperty.call(object, key)).forEach((key: string, index: number) => {
         setProp(result, key, callback(key, index));
     });

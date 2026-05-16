@@ -15,7 +15,7 @@
  */
 
 
-import {NanoidUtils, RegexUtils} from '@unikue/ts-lang-utils';
+import { NanoidUtils, RegexUtils } from '@unikue/ts-lang-utils';
 
 
 describe('NanoidUtils', () => {

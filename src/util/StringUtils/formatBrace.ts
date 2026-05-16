@@ -15,7 +15,7 @@
  */
 
 
-import {toString} from '@/util/ObjectUtils/toString';
+import { toString } from '@/util/ObjectUtils/toString';
 
 
 /**

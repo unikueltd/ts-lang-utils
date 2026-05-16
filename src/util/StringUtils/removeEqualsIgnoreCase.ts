@@ -15,7 +15,7 @@
  */
 
 
-import {equalsIgnoreCase} from './equalsIgnoreCase';
+import { equalsIgnoreCase } from './equalsIgnoreCase';
 
 
 /**

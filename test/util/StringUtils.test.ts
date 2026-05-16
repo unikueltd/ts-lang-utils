@@ -15,7 +15,7 @@
  */
 
 
-import {StringUtils} from '@unikue/ts-lang-utils';
+import { StringUtils } from '@unikue/ts-lang-utils';
 
 
 describe('StringUtils', () => {
@@ -189,10 +189,10 @@ describe('StringUtils', () => {
     });
 
     test('Testing formatPlaceholder', () => {
-        expect(StringUtils.formatPlaceholder('foo{bar}', {bar: 'bar'})).toBe('foobar');
+        expect(StringUtils.formatPlaceholder('foo{bar}', { bar: 'bar' })).toBe('foobar');
         expect(StringUtils.formatPlaceholder('foobar{none}', {})).toBe('foobar{none}');
-        expect(StringUtils.formatPlaceholder('hello {name}, foo{bar}', {name: 'world', bar: 'bar'})).toBe('hello world, foobar');
-        expect(StringUtils.formatPlaceholder('welcome {a} {b} {c}', {a: 'to', b: 'the', c: 'world'})).toBe('welcome to the world');
+        expect(StringUtils.formatPlaceholder('hello {name}, foo{bar}', { name: 'world', bar: 'bar' })).toBe('hello world, foobar');
+        expect(StringUtils.formatPlaceholder('welcome {a} {b} {c}', { a: 'to', b: 'the', c: 'world' })).toBe('welcome to the world');
     });
 
     test('Testing fromChars', () => {

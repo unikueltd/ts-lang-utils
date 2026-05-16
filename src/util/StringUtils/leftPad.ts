@@ -15,10 +15,10 @@
  */
 
 
-import {defaultIfBlank} from './defaultIfBlank';
-import {defaultString} from './defaultString';
-import {getLength} from './getLength';
-import {repeat} from './repeat';
+import { defaultIfBlank } from './defaultIfBlank';
+import { defaultString } from './defaultString';
+import { getLength } from './getLength';
+import { repeat } from './repeat';
 
 
 /**

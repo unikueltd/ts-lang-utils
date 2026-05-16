@@ -15,7 +15,7 @@
  */
 
 
-import {parse} from '@imranbarbhuiya/duration';
+import { parse } from '@imranbarbhuiya/duration';
 
 
 /**

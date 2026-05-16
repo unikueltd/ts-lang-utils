@@ -15,7 +15,7 @@
  */
 
 
-import {ThreadUtils} from '@unikue/ts-lang-utils';
+import { ThreadUtils } from '@unikue/ts-lang-utils';
 
 
 describe('ThreadUtils', () => {

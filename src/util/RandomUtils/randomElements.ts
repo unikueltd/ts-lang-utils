@@ -15,7 +15,7 @@
  */
 
 
-import {randomInteger} from './randomInteger';
+import { randomInteger } from './randomInteger';
 
 
 /**

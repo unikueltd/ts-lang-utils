@@ -15,7 +15,7 @@
  */
 
 
-import {substringAfter} from './substringAfter';
+import { substringAfter } from './substringAfter';
 
 
 /**

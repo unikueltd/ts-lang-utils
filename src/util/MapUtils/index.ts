@@ -22,11 +22,11 @@
  */
 
 
-export {forEach} from './forEach';
-export {forEachBreakable} from './forEachBreakable';
-export {forEachIndexing} from './forEachIndexing';
-export {forEachIndexingBreakable} from './forEachIndexingBreakable';
-export {forEachIndexingTailing} from './forEachIndexingTailing';
-export {forEachTailing} from './forEachTailing';
-export {getKey} from './getKey';
-export {getValue} from './getValue';
+export { forEach } from './forEach';
+export { forEachBreakable } from './forEachBreakable';
+export { forEachIndexing } from './forEachIndexing';
+export { forEachIndexingBreakable } from './forEachIndexingBreakable';
+export { forEachIndexingTailing } from './forEachIndexingTailing';
+export { forEachTailing } from './forEachTailing';
+export { getKey } from './getKey';
+export { getValue } from './getValue';

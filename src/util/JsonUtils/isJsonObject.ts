@@ -15,7 +15,7 @@
  */
 
 
-import {isPlain} from '@/util/ObjectUtils/isPlain';
+import { isPlain } from '@/util/ObjectUtils/isPlain';
 
 
 /**

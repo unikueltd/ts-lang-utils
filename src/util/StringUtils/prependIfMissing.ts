@@ -15,7 +15,7 @@
  */
 
 
-import {startsWith} from './startsWith';
+import { startsWith } from './startsWith';
 
 
 /**

@@ -15,7 +15,7 @@
  */
 
 
-import {toString} from './toString';
+import { toString } from './toString';
 
 
 /**

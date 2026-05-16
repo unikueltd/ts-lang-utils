@@ -15,7 +15,7 @@
  */
 
 
-import {randomNumber} from './randomNumber';
+import { randomNumber } from './randomNumber';
 
 
 /**

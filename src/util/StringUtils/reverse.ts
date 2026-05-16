@@ -15,7 +15,7 @@
  */
 
 
-import {toChars} from './toChars';
+import { toChars } from './toChars';
 
 
 /**

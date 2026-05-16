@@ -15,9 +15,9 @@
  */
 
 
-import {getEndOfDay} from './getEndOfDay';
-import {getEndOfMonth} from './getEndOfMonth';
-import {isSameDay} from './isSameDay';
+import { getEndOfDay } from './getEndOfDay';
+import { getEndOfMonth } from './getEndOfMonth';
+import { isSameDay } from './isSameDay';
 
 
 /**

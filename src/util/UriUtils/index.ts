@@ -22,4 +22,4 @@
  */
 
 
-export {appendParam} from './appendParam';
+export { appendParam } from './appendParam';

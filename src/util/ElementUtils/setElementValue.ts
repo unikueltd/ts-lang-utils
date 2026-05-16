@@ -15,7 +15,7 @@
  */
 
 
-import {getValueDescriptor} from './getValueDescriptor';
+import { getValueDescriptor } from './getValueDescriptor';
 
 
 /**
@@ -36,7 +36,7 @@ export function setElementValue(element?: HTMLElement | null, value?: string, ca
     }
     const previous = descriptor.get?.call(element) || '';
     descriptor.set?.call(element, value || '');
-    element?.dispatchEvent(new Event('change', {bubbles: true}));
+    element?.dispatchEvent(new Event('change', { bubbles: true }));
     if (callback) {
         callback(previous);
     }

@@ -15,7 +15,7 @@
  */
 
 
-import {isNotBlank} from './isNotBlank';
+import { isNotBlank } from './isNotBlank';
 
 
 /**

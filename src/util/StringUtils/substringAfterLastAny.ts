@@ -15,7 +15,7 @@
  */
 
 
-import {substringAfterLast} from './substringAfterLast';
+import { substringAfterLast } from './substringAfterLast';
 
 
 /**

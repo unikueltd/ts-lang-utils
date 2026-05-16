@@ -15,8 +15,8 @@
  */
 
 
-import {isPlain} from './isPlain';
-import {setProp} from './setProp';
+import { isPlain } from './isPlain';
+import { setProp } from './setProp';
 
 
 /**
@@ -42,7 +42,7 @@ export function mergeProps(target?: object, source?: object, overrideNil = true)
     if (!source || !isPlain(source)) {
         return target;
     }
-    const attributes = {};
+    const attributes = { };
     Object.entries(source).filter(item => {
         return !Object.prototype.hasOwnProperty.call(target, item[0]) || (overrideNil && (target[item[0] as keyof typeof target] === undefined || target[item[0] as keyof typeof target] === null));
     }).forEach(item => setProp(attributes, item[0], item[1]));

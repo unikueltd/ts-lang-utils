@@ -15,7 +15,7 @@
  */
 
 
-import Cookies, {type CookieGetOptions} from 'universal-cookie';
+import Cookies, { type CookieGetOptions } from 'universal-cookie';
 
 
 /**
@@ -38,6 +38,6 @@ export function getValue(name?: string, options?: CookieGetOptions, defaultValue
     if (!name) {
         return defaultValue;
     }
-    const cookies = new Cookies(null, {path: '/'});
+    const cookies = new Cookies(null, { path: '/' });
     return cookies.get(name, options);
 }

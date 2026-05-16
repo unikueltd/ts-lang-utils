@@ -15,7 +15,7 @@
  */
 
 
-import {equals} from './equals';
+import { equals } from './equals';
 
 
 /**

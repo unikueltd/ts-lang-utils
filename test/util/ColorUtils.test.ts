@@ -15,7 +15,7 @@
  */
 
 
-import {ColorUtils} from '@unikue/ts-lang-utils';
+import { ColorUtils } from '@unikue/ts-lang-utils';
 
 
 describe('ColorUtils', () => {

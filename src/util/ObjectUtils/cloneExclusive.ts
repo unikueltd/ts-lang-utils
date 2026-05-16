@@ -15,9 +15,9 @@
  */
 
 
-import {clone} from './clone';
-import {isPlain} from './isPlain';
-import {setProp} from './setProp';
+import { clone } from './clone';
+import { isPlain } from './isPlain';
+import { setProp } from './setProp';
 
 
 /**
@@ -42,7 +42,7 @@ export function cloneExclusive(source?: object, keys?: string[]): object | undef
     if (!keys || !keys.length) {
         return clone(source);
     }
-    const result = {};
+    const result = { };
     Object.entries(source).filter(item => !keys.includes(item[0])).forEach(item => setProp(result, item[0], item[1]));
     return result;
 }

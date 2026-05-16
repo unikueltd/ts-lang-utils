@@ -15,7 +15,7 @@
  */
 
 
-import {downloadUrlByElement} from './downloadUrlByElement';
+import { downloadUrlByElement } from './downloadUrlByElement';
 
 
 /**
@@ -33,7 +33,7 @@ export function downloadSvgElement(element?: HTMLElement | null, fileName?: stri
     const target = element.querySelector<SVGElement>('svg');
     if (target) {
         const data = new XMLSerializer().serializeToString(target!);
-        const blob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+        const blob = new Blob([data], { type: 'image/svg+xml;charset=utf-8' });
         const url = URL.createObjectURL(blob);
         downloadUrlByElement(url, fileName);
     }

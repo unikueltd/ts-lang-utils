@@ -15,13 +15,13 @@
  */
 
 
-import {JsonUtils} from '@unikue/ts-lang-utils';
+import { JsonUtils } from '@unikue/ts-lang-utils';
 
 
 describe('JsonUtils', () => {
     test('Testing isJsonObject', () => {
         expect(JsonUtils.isJsonObject(undefined)).toBeFalsy();
-        expect(JsonUtils.isJsonObject({foo: 'bar'})).toBeTruthy();
+        expect(JsonUtils.isJsonObject({ foo: 'bar' })).toBeTruthy();
     });
 
     test('Testing isJsonString', () => {
@@ -40,6 +40,6 @@ describe('JsonUtils', () => {
         expect(JsonUtils.toJsonString(null)).toBeUndefined();
         expect(JsonUtils.toJsonString('foobar')).toBeUndefined();
         expect(JsonUtils.toJsonString(`{"foo": "bar"}`)).toBe(`{"foo":"bar"}`);
-        expect(JsonUtils.toJsonString({foo: 'bar'})).toBe(`{"foo":"bar"}`);
+        expect(JsonUtils.toJsonString({ foo: 'bar' })).toBe(`{"foo":"bar"}`);
     });
 });

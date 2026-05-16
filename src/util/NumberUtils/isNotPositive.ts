@@ -15,7 +15,7 @@
  */
 
 
-import {isPositive} from './isPositive';
+import { isPositive } from './isPositive';
 
 
 /**

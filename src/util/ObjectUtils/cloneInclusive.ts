@@ -15,8 +15,8 @@
  */
 
 
-import {isPlain} from './isPlain';
-import {setProp} from './setProp';
+import { isPlain } from './isPlain';
+import { setProp } from './setProp';
 
 
 /**
@@ -38,7 +38,7 @@ export function cloneInclusive(source?: object, keys?: string[]): object | undef
     if (!source || !isPlain(source) || !keys || !keys.length) {
         return undefined;
     }
-    const result = {};
+    const result = { };
     Object.entries(source).filter(item => keys.includes(item[0])).forEach(item => setProp(result, item[0], item[1]));
     return result;
 }

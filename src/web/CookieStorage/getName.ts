@@ -15,8 +15,8 @@
  */
 
 
-import {get} from '@/util/ArrayUtils/get';
-import {substringBefore} from '@/util/StringUtils/substringBefore';
+import { get } from '@/util/ArrayUtils/get';
+import { substringBefore } from '@/util/StringUtils/substringBefore';
 
 
 /**

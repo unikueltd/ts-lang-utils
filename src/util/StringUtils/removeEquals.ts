@@ -15,7 +15,7 @@
  */
 
 
-import {removeAll} from '@/util/ArrayUtils/removeAll';
+import { removeAll } from '@/util/ArrayUtils/removeAll';
 
 
 /**

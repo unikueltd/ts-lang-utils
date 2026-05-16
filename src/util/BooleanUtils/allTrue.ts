@@ -15,7 +15,7 @@
  */
 
 
-import {isTrue} from './isTrue';
+import { isTrue } from './isTrue';
 
 
 /**

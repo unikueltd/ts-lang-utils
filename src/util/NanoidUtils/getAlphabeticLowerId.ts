@@ -15,7 +15,7 @@
  */
 
 
-import {customAlphabet} from 'nanoid'
+import { customAlphabet } from 'nanoid';
 
 
 const customNanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz');

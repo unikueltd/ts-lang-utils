@@ -15,7 +15,7 @@
  */
 
 
-import {replaceFirst} from './replaceFirst';
+import { replaceFirst } from './replaceFirst';
 
 
 /**
