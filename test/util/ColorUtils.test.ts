@@ -18,7 +18,7 @@
 import { ColorUtils } from '@unikue/ts-lang-utils';
 
 
-describe('ColorUtils', () => {
+describe('ColorUtils.test', () => {
     test('Testing isHex', () => {
         expect(ColorUtils.isHex('#ff0000')).toBeTruthy();
         expect(ColorUtils.isHex('#1890ff')).toBeTruthy();

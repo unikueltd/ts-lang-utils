@@ -18,7 +18,7 @@
 import { DateUtils } from '@unikue/ts-lang-utils';
 
 
-describe('DateUtils', () => {
+describe('DateUtils.test', () => {
     test('Testing addYear', () => {
         expect((DateUtils.addYear(new Date(2023, 8, 30), 1) as Date).getFullYear()).toBe(2024);
     });
@@ -31,6 +31,20 @@ describe('DateUtils', () => {
         const result = DateUtils.addDay(new Date(2023, 8, 30), 1) as Date;
         expect(result.getMonth()).toBe(9);    // Starts with index 0
         expect(result.getDate()).toBe(1);
+    });
+
+    test('Testing compareDate', () => {
+        // Normal comparison
+        expect(DateUtils.compareDate(new Date('2023-01-02'), new Date('2023-01-01'))).toBe(1);
+        expect(DateUtils.compareDate(new Date('2023-01-01'), new Date('2023-01-02'))).toBe(-1);
+        expect(DateUtils.compareDate(new Date('2023-01-01'), '2023-01-01')).toBe(0);
+        // null/undefined handling
+        expect(DateUtils.compareDate(undefined, null)).toBe(0);
+        expect(DateUtils.compareDate(null, null)).toBe(0);
+        expect(DateUtils.compareDate(undefined, new Date(), true)).toBe(1);
+        expect(DateUtils.compareDate(undefined, new Date(), false)).toBe(-1);
+        expect(DateUtils.compareDate(new Date(), undefined, true)).toBe(-1);
+        expect(DateUtils.compareDate(new Date(), undefined, false)).toBe(1);
     });
 
     test('Testing getCurrentDate', () => {
@@ -70,5 +84,13 @@ describe('DateUtils', () => {
 
     test('Testing isWeekend', () => {
         expect(DateUtils.isWeekend(new Date(2023, 8, 30))).toBeTruthy();
+    });
+
+    test('Testing toTimestamp', () => {
+        expect(DateUtils.toTimestamp('2023-01-01')).toBe(new Date('2023-01-01').getTime());
+        expect(DateUtils.toTimestamp(new Date('2023-01-01'))).toBe(new Date('2023-01-01').getTime());
+        expect(DateUtils.toTimestamp('invalid')).toBeUndefined();
+        expect(DateUtils.toTimestamp(null)).toBeUndefined();
+        expect(DateUtils.toTimestamp(undefined)).toBeUndefined();
     });
 });

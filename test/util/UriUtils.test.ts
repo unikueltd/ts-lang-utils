@@ -18,7 +18,7 @@
 import { UriUtils } from '@unikue/ts-lang-utils';
 
 
-describe('UriUtils', () => {
+describe('UriUtils.test', () => {
     test('Testing appendParam', () => {
         expect(UriUtils.appendParam(undefined, 'foo=bar')).toBe('foo=bar');
         expect(UriUtils.appendParam('unikue.cn/donation', undefined)).toBe('unikue.cn/donation');

@@ -18,7 +18,7 @@
 import { UnsupportedError } from '@unikue/ts-lang-utils';
 
 
-describe('UnsupportedError', () => {
+describe('UnsupportedError.test', () => {
     test('Testing throws', () => {
         expect(() => {
             // noinspection ExceptionCaughtLocallyJS

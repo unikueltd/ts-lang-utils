@@ -18,7 +18,7 @@
 import { BooleanUtils } from '@unikue/ts-lang-utils';
 
 
-describe('BooleanUtils', () => {
+describe('BooleanUtils.test', () => {
     test('Testing allTrue', () => {
         expect(BooleanUtils.allTrue([null, undefined])).toBeFalsy();
         expect(BooleanUtils.allTrue([null, true])).toBeFalsy();

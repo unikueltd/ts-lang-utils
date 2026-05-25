@@ -18,7 +18,7 @@
 import { RegexUtils } from '@unikue/ts-lang-utils';
 
 
-describe('RegexUtils', () => {
+describe('RegexUtils.test', () => {
     test('Testing compilePattern', () => {
         expect(RegexUtils.compilePattern('[a-zA-Z0-9]+', 'g')).toBeDefined();
     });

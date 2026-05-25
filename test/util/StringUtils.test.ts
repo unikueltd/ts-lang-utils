@@ -18,7 +18,7 @@
 import { StringUtils } from '@unikue/ts-lang-utils';
 
 
-describe('StringUtils', () => {
+describe('StringUtils.test', () => {
     test('Testing allEmpty', () => {
         expect(StringUtils.allEmpty([undefined, ''])).toBeTruthy();
         expect(StringUtils.allEmpty([undefined, ' '])).toBeFalsy();

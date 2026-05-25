@@ -18,7 +18,7 @@
 import { JsonUtils } from '@unikue/ts-lang-utils';
 
 
-describe('JsonUtils', () => {
+describe('JsonUtils.test', () => {
     test('Testing isJsonObject', () => {
         expect(JsonUtils.isJsonObject(undefined)).toBeFalsy();
         expect(JsonUtils.isJsonObject({ foo: 'bar' })).toBeTruthy();

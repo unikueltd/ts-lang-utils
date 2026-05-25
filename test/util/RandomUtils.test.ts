@@ -18,7 +18,7 @@
 import { RandomUtils } from '@unikue/ts-lang-utils';
 
 
-describe('RandomUtils', () => {
+describe('RandomUtils.test', () => {
     test('Testing randomBoolean', () => {
         expect(RandomUtils.randomBoolean()).toBeDefined();
     });

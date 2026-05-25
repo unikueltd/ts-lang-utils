@@ -18,7 +18,7 @@
 import { MapUtils } from '@unikue/ts-lang-utils';
 
 
-describe('MapUtils', () => {
+describe('MapUtils.test', () => {
     test('Testing forEach', () => {
         const map = new Map<number, string>([
             [1, 'red'],

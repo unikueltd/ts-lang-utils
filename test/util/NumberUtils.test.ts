@@ -18,7 +18,7 @@
 import { NumberUtils } from '@unikue/ts-lang-utils';
 
 
-describe('NumberUtils', () => {
+describe('NumberUtils.test', () => {
     test('Testing average', () => {
         expect(NumberUtils.average([1, 2, 3])).toBe(2);
     });

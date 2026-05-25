@@ -6,6 +6,7 @@
         "lib": ["dom", "es2022"],
         "declaration": true,
         "esModuleInterop": true,
+        "isolatedModules": true,
         "module": "nodenext",
         "moduleResolution": "nodenext",
         "noImplicitAny": false,

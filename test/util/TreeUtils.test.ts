@@ -18,7 +18,7 @@
 import { TreeUtils } from '@unikue/ts-lang-utils';
 
 
-describe('TreeUtils', () => {
+describe('TreeUtils.test', () => {
     test('Testing forEach', () => {
         const tree = [
             {

@@ -18,7 +18,7 @@
 import { ArrayUtils } from '@unikue/ts-lang-utils';
 
 
-describe('ArrayUtils', () => {
+describe('ArrayUtils.test', () => {
     test('Testing add', () => {
         expect(ArrayUtils.add(undefined, 'bar')).toStrictEqual(['bar']);
         expect(ArrayUtils.add(['foo', 'bar'], undefined)).toStrictEqual(['foo', 'bar']);

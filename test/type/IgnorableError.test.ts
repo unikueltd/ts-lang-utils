@@ -18,7 +18,7 @@
 import { IgnorableError } from '@unikue/ts-lang-utils';
 
 
-describe('IgnorableError', () => {
+describe('IgnorableError.test', () => {
     test('Testing throws', () => {
         expect(() => {
             // noinspection ExceptionCaughtLocallyJS

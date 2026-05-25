@@ -18,7 +18,7 @@
 import { ThreadUtils } from '@unikue/ts-lang-utils';
 
 
-describe('ThreadUtils', () => {
+describe('ThreadUtils.test', () => {
     beforeAll(() => {
         jest.useFakeTimers();
     });

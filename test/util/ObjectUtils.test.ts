@@ -18,7 +18,7 @@
 import { ObjectUtils } from '@unikue/ts-lang-utils';
 
 
-describe('ObjectUtils', () => {
+describe('ObjectUtils.test', () => {
     test('Testing allNil', () => {
         expect(ObjectUtils.allNil([undefined, null])).toBeTruthy();
         expect(ObjectUtils.allNil([undefined, {}])).toBeFalsy();

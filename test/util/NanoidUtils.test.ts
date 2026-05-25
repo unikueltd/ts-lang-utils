@@ -18,7 +18,7 @@
 import { NanoidUtils, RegexUtils } from '@unikue/ts-lang-utils';
 
 
-describe('NanoidUtils', () => {
+describe('NanoidUtils.test', () => {
     test('Testing getAlphabeticId', () => {
         expect(RegexUtils.isAlphabetic(NanoidUtils.getAlphabeticId())).toBeTruthy();
     });

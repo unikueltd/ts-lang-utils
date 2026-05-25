@@ -18,7 +18,7 @@
 import { DurationUtils } from '@unikue/ts-lang-utils';
 
 
-describe('DurationUtils', () => {
+describe('DurationUtils.test', () => {
     test('Testing parseToDays', () => {
         expect(DurationUtils.parseToDays('1d')).toBe(1);
     });

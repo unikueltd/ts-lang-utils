@@ -25,6 +25,7 @@
 export { addDay } from './addDay';
 export { addMonth } from './addMonth';
 export { addYear } from './addYear';
+export { compareDate } from './compareDate';
 export { formatDateTime } from './formatDateTime';
 export { getCurrentDate } from './getCurrentDate';
 export { getCurrentDateTime } from './getCurrentDateTime';
@@ -45,3 +46,4 @@ export { isSameYear } from './isSameYear';
 export { isTomorrow } from './isTomorrow';
 export { isWeekend } from './isWeekend';
 export { isYesterday } from './isYesterday';
+export { toTimestamp } from './toTimestamp';
