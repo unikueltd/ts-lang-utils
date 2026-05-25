@@ -21,10 +21,23 @@ import { DateUtils } from '@unikue/ts-lang-utils';
 describe('DateUtils.test', () => {
     test('Testing addYear', () => {
         expect((DateUtils.addYear(new Date(2023, 8, 30), 1) as Date).getFullYear()).toBe(2024);
+        // Leap year clamping: Feb 29, 2024 + 1 year => Feb 28, 2025
+        const feb29 = DateUtils.addYear(new Date(2024, 1, 29), 1) as Date;
+        expect(feb29.getFullYear()).toBe(2025);
+        expect(feb29.getMonth()).toBe(1);
+        expect(feb29.getDate()).toBe(28);
     });
 
     test('Testing addMonth', () => {
         expect((DateUtils.addMonth(new Date(2023, 8, 30), 1) as Date).getMonth()).toBe(9);    // Starts with index 0
+        // End-of-month clamping: Jan 31 + 1 month => Feb 28 (2023 is not leap year)
+        const jan31 = DateUtils.addMonth(new Date(2023, 0, 31), 1) as Date;
+        expect(jan31.getMonth()).toBe(1);
+        expect(jan31.getDate()).toBe(28);
+        // End-of-month clamping: Mar 31 - 1 month => Feb 28
+        const mar31 = DateUtils.addMonth(new Date(2023, 2, 31), -1) as Date;
+        expect(mar31.getMonth()).toBe(1);
+        expect(mar31.getDate()).toBe(28);
     });
 
     test('Testing addDay', () => {

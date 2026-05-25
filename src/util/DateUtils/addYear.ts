@@ -18,6 +18,8 @@
 /**
  * Returns the year calculated date with the source date and the specified amount
  *
+ * If the target year does not have the same day (e.g. Feb 29 in a non-leap year), the result is clamped to the last day of the target month
+ *
  * @param date The date to inspect
  * @param amount The amount to add, negative number means minus
  *
@@ -28,13 +30,19 @@
  * @example
  * ```ts
  * addYear(new Date(2023, 8, 30), 1);    // Date(2024, 8, 30)
+ * addYear(new Date(2024, 1, 29), 1);    // Date(2025, 1, 28)
  * ```
  */
 export function addYear(date?: Date, amount?: number): Date | undefined {
     if (!date || !amount) {
         return date;
     }
+    const day = date.getDate();
     const result = new Date(date);
     result.setFullYear(date.getFullYear() + amount);
+    // If the day changed due to year overflow (e.g. Feb 29 in a non-leap year), snap to the last day of the target month
+    if (result.getDate() !== day) {
+        result.setDate(0);
+    }
     return result;
 }

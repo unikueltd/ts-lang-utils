@@ -18,6 +18,8 @@
 /**
  * Returns the month calculated date with the source date and the specified amount
  *
+ * If the target month does not have the same day, the result is clamped to the last day of the target month
+ *
  * @param date The date to inspect
  * @param amount The amount to add, negative number means minus
  *
@@ -28,13 +30,20 @@
  * @example
  * ```ts
  * addMonth(new Date(2023, 8, 30), 1);    // Date(2023, 9, 30)
+ * addMonth(new Date(2023, 0, 31), 1);    // Date(2023, 1, 28)
+ * addMonth(new Date(2023, 2, 31), -1);    // Date(2023, 1, 28)
  * ```
  */
 export function addMonth(date?: Date, amount?: number): Date | undefined {
     if (!date || !amount) {
         return date;
     }
+    const day = date.getDate();
     const result = new Date(date);
     result.setMonth(date.getMonth() + amount);
+    // If the day changed due to month overflow, snap to the last day of the target month
+    if (result.getDate() !== day) {
+        result.setDate(0);
+    }
     return result;
 }
