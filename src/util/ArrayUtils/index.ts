@@ -46,6 +46,7 @@ export { isNotEmpty } from './isNotEmpty';
 export { isTypeof } from './isTypeof';
 export { maxLength } from './maxLength';
 export { minLength } from './minLength';
+export { normalize } from './normalize';
 export { readonly } from './readonly';
 export { remove } from './remove';
 export { removeAll } from './removeAll';

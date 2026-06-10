@@ -141,6 +141,13 @@ describe('ArrayUtils.test', () => {
         expect(ArrayUtils.minLength(['foo', 'bar'], ['hello', 'word'])).toBe(2);
     });
 
+    test('Testing normalize', () => {
+        expect(ArrayUtils.normalize(undefined)).toStrictEqual([]);
+        expect(ArrayUtils.normalize(null)).toStrictEqual([]);
+        expect(ArrayUtils.normalize('foobar')).toStrictEqual(['foobar']);
+        expect(ArrayUtils.normalize(['foo', 'bar'])).toStrictEqual(['foo', 'bar']);
+    });
+
     test('Testing readonly', () => {
         expect(ArrayUtils.getLength(ArrayUtils.readonly(['foo', 'bar']))).toBe(2);
     });
