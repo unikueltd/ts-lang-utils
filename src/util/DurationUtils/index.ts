@@ -22,6 +22,7 @@
  */
 
 
+export { formatSeconds } from './formatSeconds';
 export { parseToDays } from './parseToDays';
 export { parseToHours } from './parseToHours';
 export { parseToMillis } from './parseToMillis';
