@@ -29,7 +29,7 @@
  * getStartOfYear(new Date(2023, 8, 30));    // Date(2023, 0, 1, 0, 0, 0)
  * ```
  */
-export function getStartOfYear(date?: Date): Date | undefined {
+export function getStartOfYear(date?: Date | null): Date | undefined {
     if (!date) {
         return undefined;
     }

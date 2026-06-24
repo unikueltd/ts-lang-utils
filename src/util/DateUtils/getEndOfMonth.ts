@@ -29,7 +29,7 @@
  * getEndOfMonth(new Date(2023, 8, 1));    // Date(2023, 8, 30, 23, 59, 59)
  * ```
  */
-export function getEndOfMonth(date?: Date): Date | undefined {
+export function getEndOfMonth(date?: Date | null): Date | undefined {
     if (!date) {
         return undefined;
     }

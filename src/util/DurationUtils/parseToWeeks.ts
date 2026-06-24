@@ -32,5 +32,5 @@ export function parseToWeeks(duration?: string | null): number | undefined {
         return undefined;
     }
     const result = parse(duration);
-    return (result === undefined) ? undefined : result / (1000 * 86400 / 7);
+    return (result === undefined) ? undefined : Math.round(result / (1000 * 86400 / 7));
 }

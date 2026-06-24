@@ -28,6 +28,6 @@ import { isSameDay } from './isSameDay';
  *
  * @author David Hsing
  */
-export function isTomorrow(date?: Date): boolean {
+export function isTomorrow(date?: Date | null): boolean {
     return !!date && isSameDay(new Date(), addDay(date, -1));
 }

@@ -25,7 +25,7 @@
  *
  * @author David Hsing
  */
-export function formatDateTime(date?: Date, format?: string): string | undefined {
+export function formatDateTime(date?: Date | null, format?: string): string | undefined {
     if (!date || !format) {
         return undefined;
     }

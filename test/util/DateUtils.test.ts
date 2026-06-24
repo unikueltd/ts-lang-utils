@@ -60,8 +60,89 @@ describe('DateUtils.test', () => {
         expect(DateUtils.compareDate(new Date(), undefined, false)).toBe(1);
     });
 
+    test('Testing formatDateTime', () => {
+        const date = new Date(2023, 8, 30, 13, 5, 9);
+        expect(DateUtils.formatDateTime(date, 'yyyy-MM-dd')).toBe('2023-09-30');
+        expect(DateUtils.formatDateTime(date, 'yyyy-MM-dd HH:mm:ss')).toBe('2023-09-30 13:05:09');
+        expect(DateUtils.formatDateTime(date, 'hh:mm:ss')).toBe('01:05:09');
+        expect(DateUtils.formatDateTime()).toBeUndefined();
+        expect(DateUtils.formatDateTime(undefined)).toBeUndefined();
+        expect(DateUtils.formatDateTime(null)).toBeUndefined();
+        expect(DateUtils.formatDateTime(date)).toBeUndefined();
+    });
+
+    test('Testing getCurrentDateTime', () => {
+        expect(DateUtils.getCurrentDateTime()).toBeDefined();
+        expect(DateUtils.getCurrentDateTime()).toEqual(expect.any(String));
+    });
+
+    test('Testing getCurrentTime', () => {
+        expect(DateUtils.getCurrentTime()).toBeDefined();
+        expect(DateUtils.getCurrentTime()).toEqual(expect.any(String));
+    });
+
     test('Testing getCurrentDate', () => {
         expect(DateUtils.getCurrentDate()).toBeDefined();
+    });
+
+    test('Testing getEndOfDay', () => {
+        const result = DateUtils.getEndOfDay(new Date(2023, 8, 30, 12, 12, 12)) as Date;
+        expect(result.getHours()).toBe(23);
+        expect(result.getMinutes()).toBe(59);
+        expect(result.getSeconds()).toBe(59);
+        expect(DateUtils.getEndOfDay()).toBeUndefined();
+        expect(DateUtils.getEndOfDay(undefined)).toBeUndefined();
+        expect(DateUtils.getEndOfDay(null)).toBeUndefined();
+    });
+
+    test('Testing getEndOfMonth', () => {
+        const result = DateUtils.getEndOfMonth(new Date(2023, 8, 1)) as Date;
+        expect(result.getFullYear()).toBe(2023);
+        expect(result.getMonth()).toBe(8);
+        expect(result.getDate()).toBe(30);
+        expect(DateUtils.getEndOfMonth()).toBeUndefined();
+        expect(DateUtils.getEndOfMonth(undefined)).toBeUndefined();
+        expect(DateUtils.getEndOfMonth(null)).toBeUndefined();
+    });
+
+    test('Testing getEndOfYear', () => {
+        const result = DateUtils.getEndOfYear(new Date(2023, 8, 30)) as Date;
+        expect(result.getFullYear()).toBe(2023);
+        expect(result.getMonth()).toBe(11);
+        expect(result.getDate()).toBe(31);
+        expect(DateUtils.getEndOfYear()).toBeUndefined();
+        expect(DateUtils.getEndOfYear(undefined)).toBeUndefined();
+        expect(DateUtils.getEndOfYear(null)).toBeUndefined();
+    });
+
+    test('Testing getStartOfDay', () => {
+        const result = DateUtils.getStartOfDay(new Date(2023, 8, 30, 12, 12, 12)) as Date;
+        expect(result.getHours()).toBe(0);
+        expect(result.getMinutes()).toBe(0);
+        expect(result.getSeconds()).toBe(0);
+        expect(DateUtils.getStartOfDay()).toBeUndefined();
+        expect(DateUtils.getStartOfDay(undefined)).toBeUndefined();
+        expect(DateUtils.getStartOfDay(null)).toBeUndefined();
+    });
+
+    test('Testing getStartOfMonth', () => {
+        const result = DateUtils.getStartOfMonth(new Date(2023, 8, 30)) as Date;
+        expect(result.getFullYear()).toBe(2023);
+        expect(result.getMonth()).toBe(8);
+        expect(result.getDate()).toBe(1);
+        expect(DateUtils.getStartOfMonth()).toBeUndefined();
+        expect(DateUtils.getStartOfMonth(undefined)).toBeUndefined();
+        expect(DateUtils.getStartOfMonth(null)).toBeUndefined();
+    });
+
+    test('Testing getStartOfYear', () => {
+        const result = DateUtils.getStartOfYear(new Date(2023, 8, 30)) as Date;
+        expect(result.getFullYear()).toBe(2023);
+        expect(result.getMonth()).toBe(0);
+        expect(result.getDate()).toBe(1);
+        expect(DateUtils.getStartOfYear()).toBeUndefined();
+        expect(DateUtils.getStartOfYear(undefined)).toBeUndefined();
+        expect(DateUtils.getStartOfYear(null)).toBeUndefined();
     });
 
     test('Testing getTimezone', () => {
@@ -97,6 +178,18 @@ describe('DateUtils.test', () => {
 
     test('Testing isWeekend', () => {
         expect(DateUtils.isWeekend(new Date(2023, 8, 30))).toBeTruthy();
+    });
+
+    test('Testing isTomorrow', () => {
+        expect(DateUtils.isTomorrow()).toBeFalsy();
+        expect(DateUtils.isTomorrow(undefined)).toBeFalsy();
+        expect(DateUtils.isTomorrow(null)).toBeFalsy();
+    });
+
+    test('Testing isYesterday', () => {
+        expect(DateUtils.isYesterday()).toBeFalsy();
+        expect(DateUtils.isYesterday(undefined)).toBeFalsy();
+        expect(DateUtils.isYesterday(null)).toBeFalsy();
     });
 
     test('Testing toTimestamp', () => {

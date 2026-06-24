@@ -97,4 +97,11 @@ describe('NumberUtils.test', () => {
         expect(NumberUtils.toFloat('foobar')).toBeUndefined();
         expect(NumberUtils.toFloat('1.0')).toBe(1.0);
     });
+
+    test('Testing toString', () => {
+        expect(NumberUtils.toString(undefined)).toBeUndefined();
+        expect(NumberUtils.toString(null)).toBeUndefined();
+        expect(NumberUtils.toString(1)).toBe('1');
+        expect(NumberUtils.toString(255, 16)).toBe('ff');
+    });
 });

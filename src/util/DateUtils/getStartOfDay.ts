@@ -29,7 +29,7 @@
  * getStartOfDay(new Date(2023, 8, 30, 12, 12, 12));    // Date(2023, 8, 30, 0, 0, 0)
  * ```
  */
-export function getStartOfDay(date?: Date): Date | undefined {
+export function getStartOfDay(date?: Date | null): Date | undefined {
     if (!date) {
         return undefined;
     }

@@ -123,5 +123,7 @@ describe('BooleanUtils.test', () => {
         expect(BooleanUtils.toStringTF(false)).toBe('F');
         expect(BooleanUtils.toString10(true)).toBe('1');
         expect(BooleanUtils.toString10(false)).toBe('0');
+        expect(BooleanUtils.toStringOnOff(true)).toBe('on');
+        expect(BooleanUtils.toStringOnOff(false)).toBe('off');
     });
 });

@@ -70,6 +70,24 @@ describe('ArrayUtils.test', () => {
         expect(ArrayUtils.fixLength(['foo', 'bar'], 3)).toStrictEqual(['foo', 'bar', undefined]);
     });
 
+    test('Testing firstNotEmpty', () => {
+        expect(ArrayUtils.firstNotEmpty()).toBeUndefined();
+        expect(ArrayUtils.firstNotEmpty(undefined)).toBeUndefined();
+        expect(ArrayUtils.firstNotEmpty(null)).toBeUndefined();
+        expect(ArrayUtils.firstNotEmpty([])).toBeUndefined();
+        expect(ArrayUtils.firstNotEmpty([null, undefined, {}, 'foo', 'bar'])).toBe('foo');
+        expect(ArrayUtils.firstNotEmpty([null, undefined, '', 'foo'])).toBe('foo');
+    });
+
+    test('Testing firstNotNil', () => {
+        expect(ArrayUtils.firstNotNil()).toBeUndefined();
+        expect(ArrayUtils.firstNotNil(undefined)).toBeUndefined();
+        expect(ArrayUtils.firstNotNil(null)).toBeUndefined();
+        expect(ArrayUtils.firstNotNil([])).toBeUndefined();
+        expect(ArrayUtils.firstNotNil([null, undefined, 'foo', 'bar'])).toBe('foo');
+        expect(ArrayUtils.firstNotNil([null, undefined, 0, 'bar'])).toBe(0);
+    });
+
     test('Testing get', () => {
         expect(ArrayUtils.get(['foo', 'bar'], 0)).toBe('foo');
         expect(ArrayUtils.get(['foo', 'bar'], 1)).toBe('bar');

@@ -177,4 +177,72 @@ describe('ObjectUtils.test', () => {
         expect(ObjectUtils.toString(undefined, 'foobar')).toBe('foobar');
         expect(ObjectUtils.toString('hello', 'foobar')).toBe('hello');
     });
+
+    test('Testing allEmpty', () => {
+        expect(ObjectUtils.allEmpty(undefined)).toBeTruthy();
+        expect(ObjectUtils.allEmpty([])).toBeTruthy();
+        expect(ObjectUtils.allEmpty([null, undefined])).toBeTruthy();
+        expect(ObjectUtils.allEmpty([null, {}])).toBeTruthy();
+        expect(ObjectUtils.allEmpty([null, 'foo'])).toBeFalsy();
+    });
+
+    test('Testing allNotEmpty', () => {
+        expect(ObjectUtils.allNotEmpty(undefined)).toBeFalsy();
+        expect(ObjectUtils.allNotEmpty([])).toBeFalsy();
+        expect(ObjectUtils.allNotEmpty([null, undefined])).toBeFalsy();
+        expect(ObjectUtils.allNotEmpty([null, {}])).toBeFalsy();
+        expect(ObjectUtils.allNotEmpty(['foo', 'bar'])).toBeTruthy();
+    });
+
+    test('Testing anyEmpty', () => {
+        expect(ObjectUtils.anyEmpty(undefined)).toBeTruthy();
+        expect(ObjectUtils.anyEmpty([])).toBeTruthy();
+        expect(ObjectUtils.anyEmpty([null, undefined])).toBeTruthy();
+        expect(ObjectUtils.anyEmpty([null, 'foo'])).toBeTruthy();
+        expect(ObjectUtils.anyEmpty(['foo', 'bar'])).toBeFalsy();
+    });
+
+    test('Testing anyNotEmpty', () => {
+        expect(ObjectUtils.anyNotEmpty(undefined)).toBeFalsy();
+        expect(ObjectUtils.anyNotEmpty([])).toBeFalsy();
+        expect(ObjectUtils.anyNotEmpty([null, undefined])).toBeFalsy();
+        expect(ObjectUtils.anyNotEmpty([null, 'foo'])).toBeTruthy();
+        expect(ObjectUtils.anyNotEmpty([null, {}])).toBeFalsy();
+    });
+
+    test('Testing isNull', () => {
+        expect(ObjectUtils.isNull(null)).toBeTruthy();
+        expect(ObjectUtils.isNull(undefined)).toBeFalsy();
+        expect(ObjectUtils.isNull({})).toBeFalsy();
+        expect(ObjectUtils.isNull('foobar')).toBeFalsy();
+    });
+
+    test('Testing isNotNull', () => {
+        expect(ObjectUtils.isNotNull(null)).toBeFalsy();
+        expect(ObjectUtils.isNotNull(undefined)).toBeTruthy();
+        expect(ObjectUtils.isNotNull('foobar')).toBeTruthy();
+        expect(ObjectUtils.isNotNull({})).toBeTruthy();
+    });
+
+    test('Testing isUndefined', () => {
+        expect(ObjectUtils.isUndefined(undefined)).toBeTruthy();
+        expect(ObjectUtils.isUndefined(null)).toBeFalsy();
+        expect(ObjectUtils.isUndefined({})).toBeFalsy();
+        expect(ObjectUtils.isUndefined('foobar')).toBeFalsy();
+    });
+
+    test('Testing isNotUndefined', () => {
+        expect(ObjectUtils.isNotUndefined(undefined)).toBeFalsy();
+        expect(ObjectUtils.isNotUndefined(null)).toBeTruthy();
+        expect(ObjectUtils.isNotUndefined('foobar')).toBeTruthy();
+        expect(ObjectUtils.isNotUndefined({})).toBeTruthy();
+    });
+
+    test('Testing toStringTag', () => {
+        expect(ObjectUtils.toStringTag(undefined)).toBeUndefined();
+        expect(ObjectUtils.toStringTag(undefined, null)).toBeNull();
+        expect(ObjectUtils.toStringTag(undefined, 'default')).toBe('default');
+        expect(ObjectUtils.toStringTag({})).toBeUndefined();
+        expect(ObjectUtils.toStringTag(new Map())).toBe('Map');
+    });
 });

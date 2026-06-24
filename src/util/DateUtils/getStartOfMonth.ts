@@ -29,7 +29,7 @@
  * getStartOfMonth(new Date(2023, 8, 30));    // Date(2023, 8, 1, 0, 0, 0)
  * ```
  */
-export function getStartOfMonth(date?: Date): Date | undefined {
+export function getStartOfMonth(date?: Date | null): Date | undefined {
     if (!date) {
         return undefined;
     }

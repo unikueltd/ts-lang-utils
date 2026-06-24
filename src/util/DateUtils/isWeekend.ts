@@ -29,6 +29,6 @@
  * isWeekend(new Date(2023, 8, 30));    // true
  * ```
  */
-export function isWeekend(date?: Date): boolean {
+export function isWeekend(date?: Date | null): boolean {
     return !!date && (date.getDay() === 0 || date.getDay() === 6);
 }

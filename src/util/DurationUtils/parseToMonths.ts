@@ -32,5 +32,5 @@ export function parseToMonths(duration?: string | null): number | undefined {
         return undefined;
     }
     const result = parse(duration);
-    return (result === undefined) ? undefined : result / (1000 * 31556952 / 12);
+    return (result === undefined) ? undefined : Math.round(result / (1000 * 31556952 / 12));
 }

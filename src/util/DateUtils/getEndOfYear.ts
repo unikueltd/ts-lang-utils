@@ -29,7 +29,7 @@
  * getEndOfYear(new Date(2023, 8, 30));    // Date(2023, 11, 31, 23, 59, 59)
  * ```
  */
-export function getEndOfYear(date?: Date): Date | undefined {
+export function getEndOfYear(date?: Date | null): Date | undefined {
     if (!date) {
         return undefined;
     }

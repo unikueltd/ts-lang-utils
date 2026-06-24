@@ -29,7 +29,7 @@
  * getEndOfDay(new Date(2023, 8, 30, 12, 12, 12));    // Date(2023, 8, 30, 23, 59, 59)
  * ```
  */
-export function getEndOfDay(date?: Date): Date | undefined {
+export function getEndOfDay(date?: Date | null): Date | undefined {
     if (!date) {
         return undefined;
     }
