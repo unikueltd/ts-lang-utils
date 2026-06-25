@@ -63,27 +63,27 @@ $ npm install @unikue/ts-lang-utils --save
 然后，您可以使用以下命令来导入组件：
 
 ```jsx | pure
-import {ArrayUtils} from '@unikue/ts-lang-utils';
-import {BooleanUtils} from '@unikue/ts-lang-utils';
-import {ColorUtils} from '@unikue/ts-lang-utils';
-import {DateUtils} from '@unikue/ts-lang-utils';
-import {DurationUtils} from '@unikue/ts-lang-utils';
-import {ElementUtils} from '@unikue/ts-lang-utils';
-import {FileUtils} from '@unikue/ts-lang-utils';
-import {ImageUtils} from '@unikue/ts-lang-utils';
-import {JsonUtils} from '@unikue/ts-lang-utils';
-import {MapUtils} from '@unikue/ts-lang-utils';
-import {NanoidUtils} from '@unikue/ts-lang-utils';
-import {NumberUtils} from '@unikue/ts-lang-utils';
-import {ObjectUtils} from '@unikue/ts-lang-utils';
-import {RandomUtils} from '@unikue/ts-lang-utils';
-import {RegexUtils} from '@unikue/ts-lang-utils';
-import {StringUtils} from '@unikue/ts-lang-utils';
-import {ThreadUtils} from '@unikue/ts-lang-utils';
-import {TreeUtils} from '@unikue/ts-lang-utils';
-import {CookieStorage} from '@unikue/ts-lang-utils';
-import {LocalStorage} from '@unikue/ts-lang-utils';
-import {SessionStorage} from '@unikue/ts-lang-utils';
+import { ArrayUtils } from '@unikue/ts-lang-utils';
+import { BooleanUtils } from '@unikue/ts-lang-utils';
+import { ColorUtils } from '@unikue/ts-lang-utils';
+import { DateUtils } from '@unikue/ts-lang-utils';
+import { DurationUtils } from '@unikue/ts-lang-utils';
+import { ElementUtils } from '@unikue/ts-lang-utils';
+import { FileUtils } from '@unikue/ts-lang-utils';
+import { ImageUtils } from '@unikue/ts-lang-utils';
+import { JsonUtils } from '@unikue/ts-lang-utils';
+import { MapUtils } from '@unikue/ts-lang-utils';
+import { NanoidUtils } from '@unikue/ts-lang-utils';
+import { NumberUtils } from '@unikue/ts-lang-utils';
+import { ObjectUtils } from '@unikue/ts-lang-utils';
+import { RandomUtils } from '@unikue/ts-lang-utils';
+import { RegexUtils } from '@unikue/ts-lang-utils';
+import { StringUtils } from '@unikue/ts-lang-utils';
+import { ThreadUtils } from '@unikue/ts-lang-utils';
+import { TreeUtils } from '@unikue/ts-lang-utils';
+import { CookieStorage } from '@unikue/ts-lang-utils';
+import { LocalStorage } from '@unikue/ts-lang-utils';
+import { SessionStorage } from '@unikue/ts-lang-utils';
 ```
 
 享受您和 `ts-lang-utils` 的编程之旅吧 ✌️
