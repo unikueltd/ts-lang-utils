@@ -16,12 +16,24 @@
 
 
 /**
- * Utilities for uri
+ * Checks whether the given url started with 'https://', case insensitive
+ *
+ * @param url The url to test
+ *
+ * @returns `true` if the url started with 'https://', otherwise `false`
  *
  * @author David Hsing
+ *
+ * @example
+ * ```ts
+ * isHttps('https://example.com');     // true
+ * isHttps('HTTPS://EXAMPLE.COM');     // true
+ * isHttps('http://example.com');      // false
+ * isHttps('ftp://example.com');       // false
+ * isHttps(undefined);                 // false
+ * isHttps(null);                      // false
+ * ```
  */
-
-
-export { appendParam } from './appendParam';
-export { isHttp } from './isHttp';
-export { isHttps } from './isHttps';
+export function isHttps(url?: string | null): boolean {
+    return !!url && url.toLowerCase().startsWith('https://');
+}

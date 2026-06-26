@@ -25,4 +25,28 @@ describe('UriUtils.test', () => {
         expect(UriUtils.appendParam('unikue.cn/donation', 'foo=bar')).toBe('unikue.cn/donation?foo=bar');
         expect(UriUtils.appendParam('unikue.cn/donation?from=today', 'foo=bar')).toBe('unikue.cn/donation?from=today&foo=bar');
     });
+
+    test('Testing isHttp', () => {
+        expect(UriUtils.isHttp('http://example.com')).toBe(true);
+        expect(UriUtils.isHttp('HTTP://EXAMPLE.COM')).toBe(true);
+        expect(UriUtils.isHttp('Http://Example.Com')).toBe(true);
+        expect(UriUtils.isHttp('https://example.com')).toBe(false);
+        expect(UriUtils.isHttp('HTTPS://EXAMPLE.COM')).toBe(false);
+        expect(UriUtils.isHttp('ftp://example.com')).toBe(false);
+        expect(UriUtils.isHttp(undefined)).toBe(false);
+        expect(UriUtils.isHttp(null)).toBe(false);
+        expect(UriUtils.isHttp('')).toBe(false);
+    });
+
+    test('Testing isHttps', () => {
+        expect(UriUtils.isHttps('https://example.com')).toBe(true);
+        expect(UriUtils.isHttps('HTTPS://EXAMPLE.COM')).toBe(true);
+        expect(UriUtils.isHttps('Https://Example.Com')).toBe(true);
+        expect(UriUtils.isHttps('http://example.com')).toBe(false);
+        expect(UriUtils.isHttps('HTTP://EXAMPLE.COM')).toBe(false);
+        expect(UriUtils.isHttps('ftp://example.com')).toBe(false);
+        expect(UriUtils.isHttps(undefined)).toBe(false);
+        expect(UriUtils.isHttps(null)).toBe(false);
+        expect(UriUtils.isHttps('')).toBe(false);
+    });
 });
