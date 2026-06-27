@@ -263,6 +263,7 @@ describe('StringUtils.test', () => {
         expect(StringUtils.joinWith('foobar')).toBe('foobar');
         expect(StringUtils.joinWith(['foo', 'bar'], '-')).toBe('foo-bar');
         expect(StringUtils.joinWith(['foo', 'bar', 'world'], undefined, (text => text !== 'world'))).toBe('foobar');
+        expect(StringUtils.joinWith(['a', 'b', 'c'], ',', (text => text !== 'b'))).toBe('a,c');
         expect(StringUtils.joinWith(undefined)).toBeUndefined();
         expect(StringUtils.joinWith([])).toBeUndefined();
     });

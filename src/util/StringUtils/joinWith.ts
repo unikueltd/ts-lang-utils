@@ -39,6 +39,7 @@ import { defaultString } from './defaultString';
  * joinWith('foobar');    // 'foobar'
  * joinWith(['foo', 'bar'], undefined);    // 'foobar'
  * joinWith(['foo', 'bar', 'world'], undefined, (text => text !== 'world'));    // 'foobar'
+ * joinWith(['a', 'b', 'c'], ',', (text => text !== 'b'));    // 'a,c'
  * ```
  */
 export function joinWith(texts?: string | string[] | null, separator?: string | null, filter?: (text?: string) => boolean): string | undefined {
