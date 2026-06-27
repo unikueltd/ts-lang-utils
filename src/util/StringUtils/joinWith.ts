@@ -40,9 +40,10 @@ import { defaultString } from './defaultString';
  * joinWith(['foo', 'bar'], undefined);    // 'foobar'
  * joinWith(['foo', 'bar', 'world'], undefined, (text => text !== 'world'));    // 'foobar'
  * joinWith(['a', 'b', 'c'], ',', (text => text !== 'b'));    // 'a,c'
+ * joinWith(['a', null, undefined], ',', (text => !!text));    // 'a'
  * ```
  */
-export function joinWith(texts?: string | string[] | null, separator?: string | null, filter?: (text?: string) => boolean): string | undefined {
+export function joinWith(texts?: string | (string | null | undefined)[] | null, separator?: string | null, filter?: (text?: string | null) => boolean): string | undefined {
     if (!texts || (Array.isArray(texts) && texts.length === 0)) {
         return undefined;
     }
