@@ -24,6 +24,7 @@
         "object-utils",
         "random-utils",
         "regex-utils",
+        "sensitive-utils",
         "string-utils",
         "thread-utils",
         "tree-utils",
