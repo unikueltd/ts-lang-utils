@@ -38,6 +38,8 @@
 
 ✅ Utilities for regex
 
+✅ Utilities for sensitive
+
 ✅ Utilities for string
 
 ✅ Utilities for thread
@@ -78,6 +80,7 @@ import { NumberUtils } from '@unikue/ts-lang-utils';
 import { ObjectUtils } from '@unikue/ts-lang-utils';
 import { RandomUtils } from '@unikue/ts-lang-utils';
 import { RegexUtils } from '@unikue/ts-lang-utils';
+import { SensitiveUtils } from '@unikue/ts-lang-utils';
 import { StringUtils } from '@unikue/ts-lang-utils';
 import { ThreadUtils } from '@unikue/ts-lang-utils';
 import { TreeUtils } from '@unikue/ts-lang-utils';
