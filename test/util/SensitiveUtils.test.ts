@@ -83,6 +83,21 @@ describe('SensitiveUtils.test', () => {
         expect(SensitiveUtils.maskChineseName('张三··李四')).toBeUndefined();
     });
 
+    test('Testing maskMobile', () => {
+        expect(SensitiveUtils.maskMobile(undefined)).toBeUndefined();
+        expect(SensitiveUtils.maskMobile('')).toBeUndefined();
+        expect(SensitiveUtils.maskMobile('13800138000', 'CN')).toBe('138****8000');
+        expect(SensitiveUtils.maskMobile('+8613800138000')).toBe('138****8000');
+        expect(SensitiveUtils.maskMobile('+86-13812345678')).toBe('138****5678');
+        expect(SensitiveUtils.maskMobile('13812345678', '+86')).toBe('138****5678');
+        expect(SensitiveUtils.maskMobile('13812345678', 'cn')).toBe('138****5678');
+        expect(SensitiveUtils.maskMobile('5551234567', 'US')).toBe('55****4567');
+        expect(SensitiveUtils.maskMobile('+12025550123')).toBe('20****0123');
+        expect(SensitiveUtils.maskMobile('+447911123456')).toBe('79****3456');
+        expect(SensitiveUtils.maskMobile('invalid')).toBeUndefined();
+        expect(SensitiveUtils.maskMobile('123', 'CN')).toBeUndefined();
+    });
+
     test('Testing maskEmail', () => {
         expect(SensitiveUtils.maskEmail(undefined)).toBeUndefined();
         expect(SensitiveUtils.maskEmail('')).toBeUndefined();

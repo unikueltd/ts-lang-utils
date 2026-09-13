@@ -27,3 +27,4 @@ export { maskChineseIdCard } from './maskChineseIdCard';
 export { maskChineseMobile } from './maskChineseMobile';
 export { maskChineseName } from './maskChineseName';
 export { maskEmail } from './maskEmail';
+export { maskMobile } from './maskMobile';

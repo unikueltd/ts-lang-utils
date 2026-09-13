@@ -141,6 +141,11 @@ describe('RegexUtils.test', () => {
         expect(RegexUtils.isMobile('1125551234', /^[2-9]\d{2}[2-9]\d{6}$/)).toBeFalsy();
         expect(RegexUtils.isMobile('13812345678', '[invalid')).toBeFalsy();
         expect(RegexUtils.isMobile('13812345678', /^1[3-9]\d{9}$/)).toBeTruthy();
+        expect(RegexUtils.isMobile('13812345678', 'CN')).toBeTruthy();
+        expect(RegexUtils.isMobile('+8613812345678', 'CN')).toBeTruthy();
+        expect(RegexUtils.isMobile('2125551234', 'US')).toBeTruthy();
+        expect(RegexUtils.isMobile('1234567890', 'US')).toBeFalsy();
+        expect(RegexUtils.isMobile('invalid', 'CN')).toBeFalsy();
     });
 
     test('Testing isNumeric', () => {
